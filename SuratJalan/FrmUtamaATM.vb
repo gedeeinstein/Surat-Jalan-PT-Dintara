@@ -650,6 +650,8 @@ Public Class FrmUtamaATM
 
 
         If txtNoOrder.TextLength = 0 Then
+            SplashScreen1.Text = "Loading Form Dintara"
+            SplashScreen1.ShowDialog()
             FrmUtama.Show()
             Me.Visible = False
         Else
@@ -660,6 +662,10 @@ Public Class FrmUtamaATM
     End Sub
 
     Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMasterSurat.Click
+
+    End Sub
+
+    Private Sub Label_TotalBarang_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label_TotalBarang.Click
 
     End Sub
 End Class

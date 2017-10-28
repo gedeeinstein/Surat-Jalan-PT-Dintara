@@ -644,6 +644,9 @@ Public Class FrmUtama
     Private Sub btnFrmATM_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnFrmATM.Click
 
         If txtNoOrder.TextLength = 0 Then
+
+            SplashScreen1.Text = "Loading Form ATM"
+            SplashScreen1.ShowDialog()
             FrmUtamaATM.Show()
             Me.Visible = False
         Else
