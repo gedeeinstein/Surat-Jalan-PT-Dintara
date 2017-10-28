@@ -64,6 +64,11 @@ Partial Class FrmUtamaATM
         Me.btnMasterSurat = New System.Windows.Forms.Button()
         Me.btnFrmDIN = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.fb = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel4 = New System.Windows.Forms.LinkLabel()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGBarangKirim, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -384,9 +389,9 @@ Partial Class FrmUtamaATM
         Me.Label8.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label8.Location = New System.Drawing.Point(0, 652)
+        Me.Label8.Location = New System.Drawing.Point(0, 657)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(1333, 22)
+        Me.Label8.Size = New System.Drawing.Size(1333, 17)
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "By I Gede Adi Putra"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -566,6 +571,52 @@ Partial Class FrmUtamaATM
         Me.Label11.TabIndex = 29
         Me.Label11.Visible = False
         '
+        'fb
+        '
+        Me.fb.BackColor = System.Drawing.SystemColors.Control
+        Me.fb.Image = CType(resources.GetObject("fb.Image"), System.Drawing.Image)
+        Me.fb.Location = New System.Drawing.Point(1109, 634)
+        Me.fb.Name = "fb"
+        Me.fb.Size = New System.Drawing.Size(40, 40)
+        Me.fb.TabIndex = 30
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.BackColor = System.Drawing.SystemColors.Control
+        Me.LinkLabel1.Image = CType(resources.GetObject("LinkLabel1.Image"), System.Drawing.Image)
+        Me.LinkLabel1.Location = New System.Drawing.Point(1155, 634)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(40, 40)
+        Me.LinkLabel1.TabIndex = 31
+        '
+        'LinkLabel2
+        '
+        Me.LinkLabel2.BackColor = System.Drawing.SystemColors.Control
+        Me.LinkLabel2.Image = CType(resources.GetObject("LinkLabel2.Image"), System.Drawing.Image)
+        Me.LinkLabel2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LinkLabel2.Location = New System.Drawing.Point(1201, 634)
+        Me.LinkLabel2.Name = "LinkLabel2"
+        Me.LinkLabel2.Size = New System.Drawing.Size(40, 40)
+        Me.LinkLabel2.TabIndex = 32
+        '
+        'LinkLabel3
+        '
+        Me.LinkLabel3.BackColor = System.Drawing.SystemColors.Control
+        Me.LinkLabel3.Image = CType(resources.GetObject("LinkLabel3.Image"), System.Drawing.Image)
+        Me.LinkLabel3.Location = New System.Drawing.Point(1247, 634)
+        Me.LinkLabel3.Name = "LinkLabel3"
+        Me.LinkLabel3.Size = New System.Drawing.Size(40, 40)
+        Me.LinkLabel3.TabIndex = 33
+        '
+        'LinkLabel4
+        '
+        Me.LinkLabel4.BackColor = System.Drawing.SystemColors.Control
+        Me.LinkLabel4.Image = CType(resources.GetObject("LinkLabel4.Image"), System.Drawing.Image)
+        Me.LinkLabel4.Location = New System.Drawing.Point(1293, 634)
+        Me.LinkLabel4.Name = "LinkLabel4"
+        Me.LinkLabel4.Size = New System.Drawing.Size(40, 40)
+        Me.LinkLabel4.TabIndex = 34
+        '
         'FrmUtamaATM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -573,6 +624,11 @@ Partial Class FrmUtamaATM
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(1333, 674)
         Me.ControlBox = False
+        Me.Controls.Add(Me.LinkLabel4)
+        Me.Controls.Add(Me.LinkLabel3)
+        Me.Controls.Add(Me.LinkLabel2)
+        Me.Controls.Add(Me.LinkLabel1)
+        Me.Controls.Add(Me.fb)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.btnTambahUser)
         Me.Controls.Add(Me.btnMasterSurat)
@@ -650,4 +706,9 @@ Partial Class FrmUtamaATM
     Friend WithEvents btnMasterSurat As System.Windows.Forms.Button
     Friend WithEvents btnFrmDIN As System.Windows.Forms.Button
     Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents fb As System.Windows.Forms.LinkLabel
+    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
+    Friend WithEvents LinkLabel2 As System.Windows.Forms.LinkLabel
+    Friend WithEvents LinkLabel3 As System.Windows.Forms.LinkLabel
+    Friend WithEvents LinkLabel4 As System.Windows.Forms.LinkLabel
 End Class

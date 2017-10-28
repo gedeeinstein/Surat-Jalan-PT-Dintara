@@ -668,4 +668,20 @@ Public Class FrmUtamaATM
     Private Sub Label_TotalBarang_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label_TotalBarang.Click
 
     End Sub
+
+
+    Private Sub LinkLabel2_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
+
+    End Sub
+    Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+
+    End Sub
+
+    Private Sub LinkLabel3_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel3.LinkClicked
+
+    End Sub
+
+    Private Sub fb_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles fb.LinkClicked
+
+    End Sub
 End Class
