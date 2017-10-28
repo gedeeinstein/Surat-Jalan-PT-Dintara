@@ -665,23 +665,32 @@ Public Class FrmUtamaATM
 
     End Sub
 
-    Private Sub Label_TotalBarang_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label_TotalBarang.Click
+
+
+
+    'Sosial Media Links
+
+    Private Sub LinkLabel2_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles twitt.LinkClicked
+        System.Diagnostics.Process.Start("https://twitter.com/DintaraKitchen")
+    End Sub
+    Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles fb.LinkClicked
+        System.Diagnostics.Process.Start("https://www.facebook.com/DintaraKitchen/")
+    End Sub
+
+    Private Sub LinkLabel3_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles gplus.LinkClicked
+        System.Diagnostics.Process.Start("https://plus.google.com/u/1/117611519390152054578")
+    End Sub
+
+    Private Sub ig_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles ig.LinkClicked
+        System.Diagnostics.Process.Start("https://instagram.com/dintara.kitchenn")
+    End Sub
+
+    Private Sub gmail_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles gmail.LinkClicked
+        System.Diagnostics.Process.Start("mailto:marketing@dintarakitchen.co.id?subject=Tanya%20Produk&amp;body=")
+    End Sub
+
+    Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label1.Click
 
     End Sub
 
-
-    Private Sub LinkLabel2_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
-
-    End Sub
-    Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-
-    End Sub
-
-    Private Sub LinkLabel3_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel3.LinkClicked
-
-    End Sub
-
-    Private Sub fb_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles fb.LinkClicked
-
-    End Sub
 End Class

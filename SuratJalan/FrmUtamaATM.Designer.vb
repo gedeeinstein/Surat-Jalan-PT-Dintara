@@ -64,11 +64,11 @@ Partial Class FrmUtamaATM
         Me.btnMasterSurat = New System.Windows.Forms.Button()
         Me.btnFrmDIN = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.ig = New System.Windows.Forms.LinkLabel()
         Me.fb = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel4 = New System.Windows.Forms.LinkLabel()
+        Me.twitt = New System.Windows.Forms.LinkLabel()
+        Me.gplus = New System.Windows.Forms.LinkLabel()
+        Me.gmail = New System.Windows.Forms.LinkLabel()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGBarangKirim, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -386,12 +386,11 @@ Partial Class FrmUtamaATM
         'Label8
         '
         Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label8.Location = New System.Drawing.Point(0, 657)
+        Me.Label8.Location = New System.Drawing.Point(0, 687)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(1333, 17)
+        Me.Label8.Size = New System.Drawing.Size(121, 17)
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "By I Gede Adi Putra"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -571,64 +570,89 @@ Partial Class FrmUtamaATM
         Me.Label11.TabIndex = 29
         Me.Label11.Visible = False
         '
+        'ig
+        '
+        Me.ig.BackColor = System.Drawing.SystemColors.Control
+        Me.ig.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.ig.Image = CType(resources.GetObject("ig.Image"), System.Drawing.Image)
+        Me.ig.LinkArea = New System.Windows.Forms.LinkArea(0, 0)
+        Me.ig.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.ig.LinkVisited = True
+        Me.ig.Location = New System.Drawing.Point(1109, 664)
+        Me.ig.Name = "ig"
+        Me.ig.Size = New System.Drawing.Size(40, 40)
+        Me.ig.TabIndex = 30
+        Me.ig.Text = "            "
+        Me.ig.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'fb
         '
         Me.fb.BackColor = System.Drawing.SystemColors.Control
+        Me.fb.ForeColor = System.Drawing.Color.Coral
         Me.fb.Image = CType(resources.GetObject("fb.Image"), System.Drawing.Image)
-        Me.fb.Location = New System.Drawing.Point(1109, 634)
+        Me.fb.LinkArea = New System.Windows.Forms.LinkArea(0, 0)
+        Me.fb.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.fb.LinkVisited = True
+        Me.fb.Location = New System.Drawing.Point(1155, 664)
         Me.fb.Name = "fb"
         Me.fb.Size = New System.Drawing.Size(40, 40)
-        Me.fb.TabIndex = 30
+        Me.fb.TabIndex = 31
+        Me.fb.Text = "            "
+        Me.fb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'LinkLabel1
+        'twitt
         '
-        Me.LinkLabel1.BackColor = System.Drawing.SystemColors.Control
-        Me.LinkLabel1.Image = CType(resources.GetObject("LinkLabel1.Image"), System.Drawing.Image)
-        Me.LinkLabel1.Location = New System.Drawing.Point(1155, 634)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(40, 40)
-        Me.LinkLabel1.TabIndex = 31
+        Me.twitt.BackColor = System.Drawing.SystemColors.Control
+        Me.twitt.Image = CType(resources.GetObject("twitt.Image"), System.Drawing.Image)
+        Me.twitt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.twitt.LinkArea = New System.Windows.Forms.LinkArea(0, 0)
+        Me.twitt.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.twitt.LinkVisited = True
+        Me.twitt.Location = New System.Drawing.Point(1201, 664)
+        Me.twitt.Name = "twitt"
+        Me.twitt.Size = New System.Drawing.Size(40, 40)
+        Me.twitt.TabIndex = 32
+        Me.twitt.Text = "        "
+        Me.twitt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'LinkLabel2
+        'gplus
         '
-        Me.LinkLabel2.BackColor = System.Drawing.SystemColors.Control
-        Me.LinkLabel2.Image = CType(resources.GetObject("LinkLabel2.Image"), System.Drawing.Image)
-        Me.LinkLabel2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LinkLabel2.Location = New System.Drawing.Point(1201, 634)
-        Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(40, 40)
-        Me.LinkLabel2.TabIndex = 32
+        Me.gplus.BackColor = System.Drawing.SystemColors.Control
+        Me.gplus.Image = CType(resources.GetObject("gplus.Image"), System.Drawing.Image)
+        Me.gplus.LinkArea = New System.Windows.Forms.LinkArea(0, 0)
+        Me.gplus.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.gplus.LinkVisited = True
+        Me.gplus.Location = New System.Drawing.Point(1247, 664)
+        Me.gplus.Name = "gplus"
+        Me.gplus.Size = New System.Drawing.Size(40, 40)
+        Me.gplus.TabIndex = 33
+        Me.gplus.Text = "            "
         '
-        'LinkLabel3
+        'gmail
         '
-        Me.LinkLabel3.BackColor = System.Drawing.SystemColors.Control
-        Me.LinkLabel3.Image = CType(resources.GetObject("LinkLabel3.Image"), System.Drawing.Image)
-        Me.LinkLabel3.Location = New System.Drawing.Point(1247, 634)
-        Me.LinkLabel3.Name = "LinkLabel3"
-        Me.LinkLabel3.Size = New System.Drawing.Size(40, 40)
-        Me.LinkLabel3.TabIndex = 33
-        '
-        'LinkLabel4
-        '
-        Me.LinkLabel4.BackColor = System.Drawing.SystemColors.Control
-        Me.LinkLabel4.Image = CType(resources.GetObject("LinkLabel4.Image"), System.Drawing.Image)
-        Me.LinkLabel4.Location = New System.Drawing.Point(1293, 634)
-        Me.LinkLabel4.Name = "LinkLabel4"
-        Me.LinkLabel4.Size = New System.Drawing.Size(40, 40)
-        Me.LinkLabel4.TabIndex = 34
+        Me.gmail.BackColor = System.Drawing.SystemColors.Control
+        Me.gmail.Image = CType(resources.GetObject("gmail.Image"), System.Drawing.Image)
+        Me.gmail.LinkArea = New System.Windows.Forms.LinkArea(0, 0)
+        Me.gmail.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.gmail.LinkVisited = True
+        Me.gmail.Location = New System.Drawing.Point(1293, 664)
+        Me.gmail.Name = "gmail"
+        Me.gmail.Size = New System.Drawing.Size(40, 40)
+        Me.gmail.TabIndex = 34
+        Me.gmail.Text = "                  "
         '
         'FrmUtamaATM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(1333, 674)
+        Me.ClientSize = New System.Drawing.Size(1333, 704)
         Me.ControlBox = False
-        Me.Controls.Add(Me.LinkLabel4)
-        Me.Controls.Add(Me.LinkLabel3)
-        Me.Controls.Add(Me.LinkLabel2)
-        Me.Controls.Add(Me.LinkLabel1)
+        Me.Controls.Add(Me.gmail)
+        Me.Controls.Add(Me.gplus)
+        Me.Controls.Add(Me.twitt)
         Me.Controls.Add(Me.fb)
+        Me.Controls.Add(Me.ig)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.btnTambahUser)
         Me.Controls.Add(Me.btnMasterSurat)
@@ -706,9 +730,9 @@ Partial Class FrmUtamaATM
     Friend WithEvents btnMasterSurat As System.Windows.Forms.Button
     Friend WithEvents btnFrmDIN As System.Windows.Forms.Button
     Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents ig As System.Windows.Forms.LinkLabel
     Friend WithEvents fb As System.Windows.Forms.LinkLabel
-    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
-    Friend WithEvents LinkLabel2 As System.Windows.Forms.LinkLabel
-    Friend WithEvents LinkLabel3 As System.Windows.Forms.LinkLabel
-    Friend WithEvents LinkLabel4 As System.Windows.Forms.LinkLabel
+    Friend WithEvents twitt As System.Windows.Forms.LinkLabel
+    Friend WithEvents gplus As System.Windows.Forms.LinkLabel
+    Friend WithEvents gmail As System.Windows.Forms.LinkLabel
 End Class
