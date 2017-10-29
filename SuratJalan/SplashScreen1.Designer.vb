@@ -28,13 +28,14 @@ Partial Class SplashScreen1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.author = New System.Windows.Forms.LinkLabel()
         Me.SuspendLayout()
         '
         'ProgressBar1
         '
         Me.ProgressBar1.Location = New System.Drawing.Point(12, 301)
         Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(694, 34)
+        Me.ProgressBar1.Size = New System.Drawing.Size(694, 14)
         Me.ProgressBar1.TabIndex = 0
         '
         'Label1
@@ -66,13 +67,29 @@ Partial Class SplashScreen1
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 30
         '
+        'author
+        '
+        Me.author.ActiveLinkColor = System.Drawing.Color.Cyan
+        Me.author.AutoSize = True
+        Me.author.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.author.DisabledLinkColor = System.Drawing.Color.Cyan
+        Me.author.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.author.LinkColor = System.Drawing.Color.White
+        Me.author.Location = New System.Drawing.Point(607, 327)
+        Me.author.Name = "author"
+        Me.author.Size = New System.Drawing.Size(99, 13)
+        Me.author.TabIndex = 3
+        Me.author.TabStop = True
+        Me.author.Text = "by I Gede Adi Putra"
+        '
         'SplashScreen1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Purple
-        Me.ClientSize = New System.Drawing.Size(719, 347)
+        Me.ClientSize = New System.Drawing.Size(719, 349)
         Me.ControlBox = False
+        Me.Controls.Add(Me.author)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ProgressBar1)
@@ -91,5 +108,6 @@ Partial Class SplashScreen1
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents author As System.Windows.Forms.LinkLabel
 
 End Class

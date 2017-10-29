@@ -280,11 +280,12 @@ Partial Class FrmUtamaATM
         Me.btnSimpan.BackColor = System.Drawing.Color.CornflowerBlue
         Me.btnSimpan.FlatAppearance.BorderSize = 0
         Me.btnSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSimpan.Location = New System.Drawing.Point(8, 548)
+        Me.btnSimpan.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnSimpan.Location = New System.Drawing.Point(8, 549)
         Me.btnSimpan.Name = "btnSimpan"
-        Me.btnSimpan.Size = New System.Drawing.Size(113, 49)
+        Me.btnSimpan.Size = New System.Drawing.Size(114, 49)
         Me.btnSimpan.TabIndex = 12
-        Me.btnSimpan.Text = "&Simpan"
+        Me.btnSimpan.Text = "&Save"
         Me.btnSimpan.UseVisualStyleBackColor = False
         '
         'txtBarang
@@ -388,68 +389,78 @@ Partial Class FrmUtamaATM
         '
         'btnLogOut
         '
+        Me.btnLogOut.BackColor = System.Drawing.SystemColors.ControlText
         Me.btnLogOut.FlatAppearance.BorderSize = 0
         Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogOut.Location = New System.Drawing.Point(439, 549)
+        Me.btnLogOut.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnLogOut.Location = New System.Drawing.Point(367, 549)
         Me.btnLogOut.Name = "btnLogOut"
-        Me.btnLogOut.Size = New System.Drawing.Size(75, 35)
+        Me.btnLogOut.Size = New System.Drawing.Size(114, 49)
         Me.btnLogOut.TabIndex = 15
         Me.btnLogOut.Text = "&Logout"
-        Me.btnLogOut.UseVisualStyleBackColor = True
+        Me.btnLogOut.UseVisualStyleBackColor = False
         '
         'btnKeluar
         '
+        Me.btnKeluar.BackColor = System.Drawing.Color.DarkRed
         Me.btnKeluar.FlatAppearance.BorderSize = 0
         Me.btnKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnKeluar.Location = New System.Drawing.Point(520, 548)
+        Me.btnKeluar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnKeluar.Location = New System.Drawing.Point(487, 549)
         Me.btnKeluar.Name = "btnKeluar"
-        Me.btnKeluar.Size = New System.Drawing.Size(75, 35)
+        Me.btnKeluar.Size = New System.Drawing.Size(114, 49)
         Me.btnKeluar.TabIndex = 16
-        Me.btnKeluar.Text = "&Keluar"
-        Me.btnKeluar.UseVisualStyleBackColor = True
+        Me.btnKeluar.Text = "&Exit App"
+        Me.btnKeluar.UseVisualStyleBackColor = False
         '
         'Label9
         '
-        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label9.Location = New System.Drawing.Point(722, 549)
+        Me.Label9.Location = New System.Drawing.Point(656, 549)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(74, 13)
+        Me.Label9.Size = New System.Drawing.Size(140, 49)
         Me.Label9.TabIndex = 17
         Me.Label9.Text = "Total Barang :"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label_TotalBarang
         '
-        Me.Label_TotalBarang.AutoSize = True
+        Me.Label_TotalBarang.BackColor = System.Drawing.Color.Transparent
+        Me.Label_TotalBarang.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label_TotalBarang.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label_TotalBarang.Location = New System.Drawing.Point(827, 549)
+        Me.Label_TotalBarang.Location = New System.Drawing.Point(803, 549)
         Me.Label_TotalBarang.Name = "Label_TotalBarang"
-        Me.Label_TotalBarang.Size = New System.Drawing.Size(13, 13)
+        Me.Label_TotalBarang.Size = New System.Drawing.Size(37, 49)
         Me.Label_TotalBarang.TabIndex = 18
         Me.Label_TotalBarang.Text = "0"
+        Me.Label_TotalBarang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnReset
         '
+        Me.btnReset.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.btnReset.FlatAppearance.BorderSize = 0
         Me.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnReset.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnReset.Location = New System.Drawing.Point(247, 549)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(114, 49)
         Me.btnReset.TabIndex = 19
         Me.btnReset.Text = "&Reset"
-        Me.btnReset.UseVisualStyleBackColor = True
+        Me.btnReset.UseVisualStyleBackColor = False
         '
         'btnBatal
         '
         Me.btnBatal.BackColor = System.Drawing.Color.SandyBrown
         Me.btnBatal.FlatAppearance.BorderSize = 0
         Me.btnBatal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBatal.Location = New System.Drawing.Point(127, 548)
+        Me.btnBatal.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnBatal.Location = New System.Drawing.Point(127, 549)
         Me.btnBatal.Name = "btnBatal"
         Me.btnBatal.Size = New System.Drawing.Size(114, 49)
         Me.btnBatal.TabIndex = 20
-        Me.btnBatal.Text = "&Batal"
+        Me.btnBatal.Text = "&Cancel"
         Me.btnBatal.UseVisualStyleBackColor = False
         '
         'PictureBox1

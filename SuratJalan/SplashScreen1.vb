@@ -50,4 +50,19 @@
             MessageBox.Show("Maaf terjadi kesalahan pemrosesan data, harap ulangi lagi prosesnya. Jika hal yang sama masih terjadi catat kode error dibawah ini" + vbNewLine + ex.Message, "Hubungi IT", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
         End Try
     End Sub
+
+    Private Sub author_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles author.LinkClicked
+
+        Try
+            VisitLink()
+        Catch ex As Exception
+            MessageBox.Show("Gagal membuka tautan" + ex.Message, " Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
+    End Sub
+
+    Public Sub VisitLink()
+        author.LinkVisited = True
+        System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
+    End Sub
+
 End Class

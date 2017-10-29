@@ -22,6 +22,8 @@ Partial Class FrmUtama
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmUtama))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -53,7 +55,6 @@ Partial Class FrmUtama
         Me.Label8 = New System.Windows.Forms.Label()
         Me.btnLogOut = New System.Windows.Forms.Button()
         Me.btnKeluar = New System.Windows.Forms.Button()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label_TotalBarang = New System.Windows.Forms.Label()
         Me.btnReset = New System.Windows.Forms.Button()
         Me.btnBatal = New System.Windows.Forms.Button()
@@ -64,10 +65,23 @@ Partial Class FrmUtama
         Me.btnMasterSurat = New System.Windows.Forms.Button()
         Me.btnFrmATM = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.linkedin = New System.Windows.Forms.PictureBox()
+        Me.instagram = New System.Windows.Forms.PictureBox()
+        Me.twitter = New System.Windows.Forms.PictureBox()
+        Me.fb = New System.Windows.Forms.PictureBox()
+        Me.gplus = New System.Windows.Forms.PictureBox()
+        Me.whatsapp = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGBarangKirim, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.linkedin, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.instagram, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.twitter, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.fb, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gplus, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.whatsapp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -79,7 +93,7 @@ Partial Class FrmUtama
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(1333, 93)
+        Me.Label1.Size = New System.Drawing.Size(1366, 93)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Surat Jalan PT"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -265,7 +279,23 @@ Partial Class FrmUtama
         Me.DGBarangKirim.AllowUserToAddRows = False
         Me.DGBarangKirim.AllowUserToDeleteRows = False
         Me.DGBarangKirim.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGBarangKirim.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DGBarangKirim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGBarangKirim.DefaultCellStyle = DataGridViewCellStyle4
         Me.DGBarangKirim.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.DGBarangKirim.GridColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.DGBarangKirim.Location = New System.Drawing.Point(8, 339)
@@ -277,12 +307,17 @@ Partial Class FrmUtama
         '
         'btnSimpan
         '
-        Me.btnSimpan.Location = New System.Drawing.Point(8, 548)
+        Me.btnSimpan.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.btnSimpan.FlatAppearance.BorderSize = 0
+        Me.btnSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSimpan.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSimpan.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnSimpan.Location = New System.Drawing.Point(8, 549)
         Me.btnSimpan.Name = "btnSimpan"
-        Me.btnSimpan.Size = New System.Drawing.Size(75, 35)
+        Me.btnSimpan.Size = New System.Drawing.Size(114, 49)
         Me.btnSimpan.TabIndex = 12
-        Me.btnSimpan.Text = "&Simpan"
-        Me.btnSimpan.UseVisualStyleBackColor = True
+        Me.btnSimpan.Text = "&Save"
+        Me.btnSimpan.UseVisualStyleBackColor = False
         '
         'txtBarang
         '
@@ -323,6 +358,7 @@ Partial Class FrmUtama
         '
         'btnTambah
         '
+        Me.btnTambah.ForeColor = System.Drawing.SystemColors.ControlText
         Me.btnTambah.Location = New System.Drawing.Point(653, 15)
         Me.btnTambah.Name = "btnTambah"
         Me.btnTambah.Size = New System.Drawing.Size(54, 23)
@@ -343,6 +379,7 @@ Partial Class FrmUtama
         '
         'btnPilih
         '
+        Me.btnPilih.ForeColor = System.Drawing.SystemColors.ControlText
         Me.btnPilih.Location = New System.Drawing.Point(402, 15)
         Me.btnPilih.Name = "btnPilih"
         Me.btnPilih.Size = New System.Drawing.Size(49, 23)
@@ -375,9 +412,9 @@ Partial Class FrmUtama
         Me.Label8.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label8.Location = New System.Drawing.Point(0, 652)
+        Me.Label8.Location = New System.Drawing.Point(0, 746)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(1333, 22)
+        Me.Label8.Size = New System.Drawing.Size(1366, 22)
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "By I Gede Adi Putra"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -385,61 +422,70 @@ Partial Class FrmUtama
         '
         'btnLogOut
         '
-        Me.btnLogOut.Location = New System.Drawing.Point(251, 548)
+        Me.btnLogOut.BackColor = System.Drawing.SystemColors.ControlText
+        Me.btnLogOut.FlatAppearance.BorderSize = 0
+        Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLogOut.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogOut.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnLogOut.Location = New System.Drawing.Point(368, 549)
         Me.btnLogOut.Name = "btnLogOut"
-        Me.btnLogOut.Size = New System.Drawing.Size(75, 35)
+        Me.btnLogOut.Size = New System.Drawing.Size(114, 49)
         Me.btnLogOut.TabIndex = 15
         Me.btnLogOut.Text = "&Logout"
-        Me.btnLogOut.UseVisualStyleBackColor = True
+        Me.btnLogOut.UseVisualStyleBackColor = False
         '
         'btnKeluar
         '
-        Me.btnKeluar.Location = New System.Drawing.Point(332, 548)
+        Me.btnKeluar.BackColor = System.Drawing.Color.DarkRed
+        Me.btnKeluar.FlatAppearance.BorderSize = 0
+        Me.btnKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnKeluar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnKeluar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnKeluar.Location = New System.Drawing.Point(488, 549)
         Me.btnKeluar.Name = "btnKeluar"
-        Me.btnKeluar.Size = New System.Drawing.Size(75, 35)
+        Me.btnKeluar.Size = New System.Drawing.Size(114, 49)
         Me.btnKeluar.TabIndex = 16
-        Me.btnKeluar.Text = "&Keluar"
-        Me.btnKeluar.UseVisualStyleBackColor = True
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label9.Location = New System.Drawing.Point(722, 548)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(74, 13)
-        Me.Label9.TabIndex = 17
-        Me.Label9.Text = "Total Barang :"
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnKeluar.Text = "&Exit App"
+        Me.btnKeluar.UseVisualStyleBackColor = False
         '
         'Label_TotalBarang
         '
-        Me.Label_TotalBarang.AutoSize = True
+        Me.Label_TotalBarang.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label_TotalBarang.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label_TotalBarang.Location = New System.Drawing.Point(827, 548)
+        Me.Label_TotalBarang.Location = New System.Drawing.Point(803, 549)
         Me.Label_TotalBarang.Name = "Label_TotalBarang"
-        Me.Label_TotalBarang.Size = New System.Drawing.Size(13, 13)
+        Me.Label_TotalBarang.Size = New System.Drawing.Size(37, 49)
         Me.Label_TotalBarang.TabIndex = 18
         Me.Label_TotalBarang.Text = "0"
         Me.Label_TotalBarang.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'btnReset
         '
-        Me.btnReset.Location = New System.Drawing.Point(170, 548)
+        Me.btnReset.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btnReset.FlatAppearance.BorderSize = 0
+        Me.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnReset.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReset.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnReset.Location = New System.Drawing.Point(248, 549)
         Me.btnReset.Name = "btnReset"
-        Me.btnReset.Size = New System.Drawing.Size(75, 35)
+        Me.btnReset.Size = New System.Drawing.Size(114, 49)
         Me.btnReset.TabIndex = 19
         Me.btnReset.Text = "&Reset"
-        Me.btnReset.UseVisualStyleBackColor = True
+        Me.btnReset.UseVisualStyleBackColor = False
         '
         'btnBatal
         '
-        Me.btnBatal.Location = New System.Drawing.Point(89, 548)
+        Me.btnBatal.BackColor = System.Drawing.Color.SandyBrown
+        Me.btnBatal.FlatAppearance.BorderSize = 0
+        Me.btnBatal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBatal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBatal.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnBatal.Location = New System.Drawing.Point(128, 549)
         Me.btnBatal.Name = "btnBatal"
-        Me.btnBatal.Size = New System.Drawing.Size(75, 35)
+        Me.btnBatal.Size = New System.Drawing.Size(114, 49)
         Me.btnBatal.TabIndex = 20
-        Me.btnBatal.Text = "&Batal"
-        Me.btnBatal.UseVisualStyleBackColor = True
+        Me.btnBatal.Text = "&Cancel"
+        Me.btnBatal.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
@@ -518,13 +564,94 @@ Partial Class FrmUtama
         Me.Label11.TabIndex = 32
         Me.Label11.Visible = False
         '
+        'Label12
+        '
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label12.Location = New System.Drawing.Point(657, 549)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(140, 49)
+        Me.Label12.TabIndex = 33
+        Me.Label12.Text = "Total Barang :"
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'linkedin
+        '
+        Me.linkedin.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.linkedin.Image = Global.SuratJalan.My.Resources.Resources.linkedin
+        Me.linkedin.Location = New System.Drawing.Point(1208, 716)
+        Me.linkedin.Name = "linkedin"
+        Me.linkedin.Size = New System.Drawing.Size(32, 32)
+        Me.linkedin.TabIndex = 34
+        Me.linkedin.TabStop = False
+        '
+        'instagram
+        '
+        Me.instagram.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.instagram.Image = Global.SuratJalan.My.Resources.Resources.instagram
+        Me.instagram.Location = New System.Drawing.Point(1246, 716)
+        Me.instagram.Name = "instagram"
+        Me.instagram.Size = New System.Drawing.Size(32, 32)
+        Me.instagram.TabIndex = 35
+        Me.instagram.TabStop = False
+        '
+        'twitter
+        '
+        Me.twitter.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.twitter.Image = CType(resources.GetObject("twitter.Image"), System.Drawing.Image)
+        Me.twitter.Location = New System.Drawing.Point(1170, 716)
+        Me.twitter.Name = "twitter"
+        Me.twitter.Size = New System.Drawing.Size(32, 32)
+        Me.twitter.TabIndex = 37
+        Me.twitter.TabStop = False
+        '
+        'fb
+        '
+        Me.fb.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.fb.ErrorImage = CType(resources.GetObject("fb.ErrorImage"), System.Drawing.Image)
+        Me.fb.Image = Global.SuratJalan.My.Resources.Resources.facebook
+        Me.fb.InitialImage = CType(resources.GetObject("fb.InitialImage"), System.Drawing.Image)
+        Me.fb.Location = New System.Drawing.Point(1132, 716)
+        Me.fb.Name = "fb"
+        Me.fb.Size = New System.Drawing.Size(32, 32)
+        Me.fb.TabIndex = 36
+        Me.fb.TabStop = False
+        '
+        'gplus
+        '
+        Me.gplus.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.gplus.Image = Global.SuratJalan.My.Resources.Resources.google_plus
+        Me.gplus.Location = New System.Drawing.Point(1284, 716)
+        Me.gplus.Name = "gplus"
+        Me.gplus.Size = New System.Drawing.Size(32, 32)
+        Me.gplus.TabIndex = 38
+        Me.gplus.TabStop = False
+        '
+        'whatsapp
+        '
+        Me.whatsapp.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.whatsapp.Image = Global.SuratJalan.My.Resources.Resources.whatsapp
+        Me.whatsapp.Location = New System.Drawing.Point(1322, 716)
+        Me.whatsapp.Name = "whatsapp"
+        Me.whatsapp.Size = New System.Drawing.Size(32, 32)
+        Me.whatsapp.TabIndex = 39
+        Me.whatsapp.TabStop = False
+        '
         'FrmUtama
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(1333, 674)
+        Me.ClientSize = New System.Drawing.Size(1366, 768)
         Me.ControlBox = False
+        Me.Controls.Add(Me.whatsapp)
+        Me.Controls.Add(Me.gplus)
+        Me.Controls.Add(Me.twitter)
+        Me.Controls.Add(Me.fb)
+        Me.Controls.Add(Me.instagram)
+        Me.Controls.Add(Me.linkedin)
+        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.btnTambahUser)
         Me.Controls.Add(Me.btnMasterSurat)
@@ -534,7 +661,6 @@ Partial Class FrmUtama
         Me.Controls.Add(Me.btnBatal)
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.Label_TotalBarang)
-        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.btnKeluar)
         Me.Controls.Add(Me.btnLogOut)
         Me.Controls.Add(Me.Label8)
@@ -544,7 +670,8 @@ Partial Class FrmUtama
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnSimpan)
         Me.Controls.Add(Me.Label1)
-        Me.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmUtama"
@@ -557,6 +684,12 @@ Partial Class FrmUtama
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.linkedin, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.instagram, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.twitter, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.fb, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gplus, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.whatsapp, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -585,7 +718,6 @@ Partial Class FrmUtama
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents btnLogOut As System.Windows.Forms.Button
     Friend WithEvents btnKeluar As System.Windows.Forms.Button
-    Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label_TotalBarang As System.Windows.Forms.Label
     Friend WithEvents btnPilih As System.Windows.Forms.Button
     Friend WithEvents txtKodeBarang As System.Windows.Forms.TextBox
@@ -602,4 +734,11 @@ Partial Class FrmUtama
     Friend WithEvents btnMasterSurat As System.Windows.Forms.Button
     Friend WithEvents btnFrmATM As System.Windows.Forms.Button
     Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents linkedin As System.Windows.Forms.PictureBox
+    Friend WithEvents instagram As System.Windows.Forms.PictureBox
+    Friend WithEvents twitter As System.Windows.Forms.PictureBox
+    Friend WithEvents fb As System.Windows.Forms.PictureBox
+    Friend WithEvents gplus As System.Windows.Forms.PictureBox
+    Friend WithEvents whatsapp As System.Windows.Forms.PictureBox
 End Class

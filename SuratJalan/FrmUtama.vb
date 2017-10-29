@@ -644,6 +644,8 @@ Public Class FrmUtama
     Private Sub btnFrmATM_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnFrmATM.Click
 
         If txtNoOrder.TextLength = 0 Then
+            SplashScreen1.Text = "Loading Form ATM"
+            SplashScreen1.ShowDialog()
             FrmUtamaATM.Show()
             Me.Visible = False
         Else
@@ -659,5 +661,42 @@ Public Class FrmUtama
         'SplashScreen1.Text = "Loading Form ATM"
         'SplashScreen1.ShowDialog()
 
+    End Sub
+
+    Public Sub FBLink()
+        System.Diagnostics.Process.Start("https://facebook.com/igedeadisuryaekapramanaputra")
+    End Sub
+
+    Public Sub TwitterLink()
+        System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
+    End Sub
+
+
+    Public Sub IGLink()
+        System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
+    End Sub
+
+    Public Sub GPlusLink()
+        System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
+    End Sub
+
+    Public Sub WALink()
+        System.Diagnostics.Process.Start("tel:081337353585")
+    End Sub
+
+    Public Sub MapsLink()
+        System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
+    End Sub
+
+    Public Sub LinkedIn_Links()
+        System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
+    End Sub
+
+    Private Sub fb_Click(sender As System.Object, e As System.EventArgs) Handles fb.Click
+        FBLink()
+    End Sub
+
+    Private Sub whatsapp_Click(sender As System.Object, e As System.EventArgs) Handles whatsapp.Click
+        WALink()
     End Sub
 End Class
