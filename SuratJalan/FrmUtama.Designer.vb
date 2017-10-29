@@ -22,8 +22,8 @@ Partial Class FrmUtama
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmUtama))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -279,23 +279,23 @@ Partial Class FrmUtama
         Me.DGBarangKirim.AllowUserToAddRows = False
         Me.DGBarangKirim.AllowUserToDeleteRows = False
         Me.DGBarangKirim.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGBarangKirim.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGBarangKirim.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
         Me.DGBarangKirim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGBarangKirim.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGBarangKirim.DefaultCellStyle = DataGridViewCellStyle12
         Me.DGBarangKirim.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.DGBarangKirim.GridColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.DGBarangKirim.Location = New System.Drawing.Point(8, 339)
@@ -457,7 +457,7 @@ Partial Class FrmUtama
         Me.Label_TotalBarang.Size = New System.Drawing.Size(37, 49)
         Me.Label_TotalBarang.TabIndex = 18
         Me.Label_TotalBarang.Text = "0"
-        Me.Label_TotalBarang.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label_TotalBarang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnReset
         '
@@ -582,7 +582,7 @@ Partial Class FrmUtama
         '
         Me.linkedin.Cursor = System.Windows.Forms.Cursors.Hand
         Me.linkedin.Image = Global.SuratJalan.My.Resources.Resources.linkedin
-        Me.linkedin.Location = New System.Drawing.Point(1132, 736)
+        Me.linkedin.Location = New System.Drawing.Point(1170, 736)
         Me.linkedin.Name = "linkedin"
         Me.linkedin.Size = New System.Drawing.Size(32, 32)
         Me.linkedin.TabIndex = 34
@@ -592,7 +592,7 @@ Partial Class FrmUtama
         '
         Me.instagram.Cursor = System.Windows.Forms.Cursors.Hand
         Me.instagram.Image = Global.SuratJalan.My.Resources.Resources.instagram
-        Me.instagram.Location = New System.Drawing.Point(1170, 736)
+        Me.instagram.Location = New System.Drawing.Point(1018, 736)
         Me.instagram.Name = "instagram"
         Me.instagram.Size = New System.Drawing.Size(32, 32)
         Me.instagram.TabIndex = 35
@@ -624,7 +624,7 @@ Partial Class FrmUtama
         '
         Me.gplus.Cursor = System.Windows.Forms.Cursors.Hand
         Me.gplus.Image = Global.SuratJalan.My.Resources.Resources.google_plus
-        Me.gplus.Location = New System.Drawing.Point(1208, 736)
+        Me.gplus.Location = New System.Drawing.Point(1132, 736)
         Me.gplus.Name = "gplus"
         Me.gplus.Size = New System.Drawing.Size(32, 32)
         Me.gplus.TabIndex = 38
@@ -634,7 +634,7 @@ Partial Class FrmUtama
         '
         Me.whatsapp.Cursor = System.Windows.Forms.Cursors.Hand
         Me.whatsapp.Image = Global.SuratJalan.My.Resources.Resources.whatsapp
-        Me.whatsapp.Location = New System.Drawing.Point(1246, 736)
+        Me.whatsapp.Location = New System.Drawing.Point(1208, 736)
         Me.whatsapp.Name = "whatsapp"
         Me.whatsapp.Size = New System.Drawing.Size(32, 32)
         Me.whatsapp.TabIndex = 39

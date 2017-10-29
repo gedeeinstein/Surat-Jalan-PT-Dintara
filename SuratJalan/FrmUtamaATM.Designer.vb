@@ -79,7 +79,7 @@ Partial Class FrmUtamaATM
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(1333, 93)
+        Me.Label1.Size = New System.Drawing.Size(1366, 93)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Surat Jalan CV"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -379,9 +379,9 @@ Partial Class FrmUtamaATM
         Me.Label8.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label8.Location = New System.Drawing.Point(0, 652)
+        Me.Label8.Location = New System.Drawing.Point(0, 746)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(1333, 22)
+        Me.Label8.Size = New System.Drawing.Size(1366, 22)
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "By I Gede Adi Putra"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -393,7 +393,7 @@ Partial Class FrmUtamaATM
         Me.btnLogOut.FlatAppearance.BorderSize = 0
         Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogOut.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnLogOut.Location = New System.Drawing.Point(367, 549)
+        Me.btnLogOut.Location = New System.Drawing.Point(368, 549)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Size = New System.Drawing.Size(114, 49)
         Me.btnLogOut.TabIndex = 15
@@ -406,7 +406,7 @@ Partial Class FrmUtamaATM
         Me.btnKeluar.FlatAppearance.BorderSize = 0
         Me.btnKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnKeluar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnKeluar.Location = New System.Drawing.Point(487, 549)
+        Me.btnKeluar.Location = New System.Drawing.Point(488, 549)
         Me.btnKeluar.Name = "btnKeluar"
         Me.btnKeluar.Size = New System.Drawing.Size(114, 49)
         Me.btnKeluar.TabIndex = 16
@@ -418,7 +418,7 @@ Partial Class FrmUtamaATM
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label9.Location = New System.Drawing.Point(656, 549)
+        Me.Label9.Location = New System.Drawing.Point(657, 549)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(140, 49)
         Me.Label9.TabIndex = 17
@@ -443,7 +443,7 @@ Partial Class FrmUtamaATM
         Me.btnReset.FlatAppearance.BorderSize = 0
         Me.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReset.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnReset.Location = New System.Drawing.Point(247, 549)
+        Me.btnReset.Location = New System.Drawing.Point(248, 549)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(114, 49)
         Me.btnReset.TabIndex = 19
@@ -456,7 +456,7 @@ Partial Class FrmUtamaATM
         Me.btnBatal.FlatAppearance.BorderSize = 0
         Me.btnBatal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBatal.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnBatal.Location = New System.Drawing.Point(127, 549)
+        Me.btnBatal.Location = New System.Drawing.Point(128, 549)
         Me.btnBatal.Name = "btnBatal"
         Me.btnBatal.Size = New System.Drawing.Size(114, 49)
         Me.btnBatal.TabIndex = 20
@@ -547,7 +547,7 @@ Partial Class FrmUtamaATM
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(1333, 674)
+        Me.ClientSize = New System.Drawing.Size(1366, 768)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.btnTambahUser)
