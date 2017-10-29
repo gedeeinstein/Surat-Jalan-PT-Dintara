@@ -497,7 +497,7 @@ Partial Class FrmUtamaATM
         'loged_in
         '
         Me.loged_in.AutoSize = True
-        Me.loged_in.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.loged_in.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.loged_in.Location = New System.Drawing.Point(94, 105)
         Me.loged_in.Name = "loged_in"
         Me.loged_in.Size = New System.Drawing.Size(27, 13)
