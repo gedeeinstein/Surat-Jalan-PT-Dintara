@@ -22,8 +22,8 @@ Partial Class FrmUtama
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmUtama))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -72,6 +72,9 @@ Partial Class FrmUtama
         Me.fb = New System.Windows.Forms.PictureBox()
         Me.gplus = New System.Windows.Forms.PictureBox()
         Me.whatsapp = New System.Windows.Forms.PictureBox()
+        Me.maps = New System.Windows.Forms.PictureBox()
+        Me.gmail = New System.Windows.Forms.PictureBox()
+        Me.outlook = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGBarangKirim, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -82,6 +85,9 @@ Partial Class FrmUtama
         CType(Me.fb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gplus, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.whatsapp, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.maps, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gmail, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.outlook, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -279,23 +285,23 @@ Partial Class FrmUtama
         Me.DGBarangKirim.AllowUserToAddRows = False
         Me.DGBarangKirim.AllowUserToDeleteRows = False
         Me.DGBarangKirim.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGBarangKirim.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGBarangKirim.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DGBarangKirim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGBarangKirim.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGBarangKirim.DefaultCellStyle = DataGridViewCellStyle4
         Me.DGBarangKirim.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.DGBarangKirim.GridColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.DGBarangKirim.Location = New System.Drawing.Point(8, 339)
@@ -582,7 +588,7 @@ Partial Class FrmUtama
         '
         Me.linkedin.Cursor = System.Windows.Forms.Cursors.Hand
         Me.linkedin.Image = Global.SuratJalan.My.Resources.Resources.linkedin
-        Me.linkedin.Location = New System.Drawing.Point(1170, 736)
+        Me.linkedin.Location = New System.Drawing.Point(1182, 736)
         Me.linkedin.Name = "linkedin"
         Me.linkedin.Size = New System.Drawing.Size(32, 32)
         Me.linkedin.TabIndex = 34
@@ -592,7 +598,7 @@ Partial Class FrmUtama
         '
         Me.instagram.Cursor = System.Windows.Forms.Cursors.Hand
         Me.instagram.Image = Global.SuratJalan.My.Resources.Resources.instagram
-        Me.instagram.Location = New System.Drawing.Point(1018, 736)
+        Me.instagram.Location = New System.Drawing.Point(1030, 736)
         Me.instagram.Name = "instagram"
         Me.instagram.Size = New System.Drawing.Size(32, 32)
         Me.instagram.TabIndex = 35
@@ -602,7 +608,7 @@ Partial Class FrmUtama
         '
         Me.twitter.Cursor = System.Windows.Forms.Cursors.Hand
         Me.twitter.Image = CType(resources.GetObject("twitter.Image"), System.Drawing.Image)
-        Me.twitter.Location = New System.Drawing.Point(1094, 736)
+        Me.twitter.Location = New System.Drawing.Point(1106, 736)
         Me.twitter.Name = "twitter"
         Me.twitter.Size = New System.Drawing.Size(32, 32)
         Me.twitter.TabIndex = 37
@@ -614,7 +620,7 @@ Partial Class FrmUtama
         Me.fb.ErrorImage = CType(resources.GetObject("fb.ErrorImage"), System.Drawing.Image)
         Me.fb.Image = Global.SuratJalan.My.Resources.Resources.facebook
         Me.fb.InitialImage = CType(resources.GetObject("fb.InitialImage"), System.Drawing.Image)
-        Me.fb.Location = New System.Drawing.Point(1056, 736)
+        Me.fb.Location = New System.Drawing.Point(1068, 736)
         Me.fb.Name = "fb"
         Me.fb.Size = New System.Drawing.Size(32, 32)
         Me.fb.TabIndex = 36
@@ -624,7 +630,7 @@ Partial Class FrmUtama
         '
         Me.gplus.Cursor = System.Windows.Forms.Cursors.Hand
         Me.gplus.Image = Global.SuratJalan.My.Resources.Resources.google_plus
-        Me.gplus.Location = New System.Drawing.Point(1132, 736)
+        Me.gplus.Location = New System.Drawing.Point(1144, 736)
         Me.gplus.Name = "gplus"
         Me.gplus.Size = New System.Drawing.Size(32, 32)
         Me.gplus.TabIndex = 38
@@ -634,11 +640,41 @@ Partial Class FrmUtama
         '
         Me.whatsapp.Cursor = System.Windows.Forms.Cursors.Hand
         Me.whatsapp.Image = Global.SuratJalan.My.Resources.Resources.whatsapp
-        Me.whatsapp.Location = New System.Drawing.Point(1208, 736)
+        Me.whatsapp.Location = New System.Drawing.Point(1220, 736)
         Me.whatsapp.Name = "whatsapp"
         Me.whatsapp.Size = New System.Drawing.Size(32, 32)
         Me.whatsapp.TabIndex = 39
         Me.whatsapp.TabStop = False
+        '
+        'maps
+        '
+        Me.maps.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.maps.Image = Global.SuratJalan.My.Resources.Resources.placeholder__1_
+        Me.maps.Location = New System.Drawing.Point(1258, 736)
+        Me.maps.Name = "maps"
+        Me.maps.Size = New System.Drawing.Size(32, 32)
+        Me.maps.TabIndex = 40
+        Me.maps.TabStop = False
+        '
+        'gmail
+        '
+        Me.gmail.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.gmail.Image = Global.SuratJalan.My.Resources.Resources.gmail
+        Me.gmail.Location = New System.Drawing.Point(1296, 736)
+        Me.gmail.Name = "gmail"
+        Me.gmail.Size = New System.Drawing.Size(32, 32)
+        Me.gmail.TabIndex = 41
+        Me.gmail.TabStop = False
+        '
+        'outlook
+        '
+        Me.outlook.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.outlook.Image = Global.SuratJalan.My.Resources.Resources.outlook
+        Me.outlook.Location = New System.Drawing.Point(1334, 736)
+        Me.outlook.Name = "outlook"
+        Me.outlook.Size = New System.Drawing.Size(32, 32)
+        Me.outlook.TabIndex = 42
+        Me.outlook.TabStop = False
         '
         'FrmUtama
         '
@@ -647,6 +683,9 @@ Partial Class FrmUtama
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(1366, 768)
         Me.ControlBox = False
+        Me.Controls.Add(Me.outlook)
+        Me.Controls.Add(Me.gmail)
+        Me.Controls.Add(Me.maps)
         Me.Controls.Add(Me.whatsapp)
         Me.Controls.Add(Me.gplus)
         Me.Controls.Add(Me.twitter)
@@ -692,6 +731,9 @@ Partial Class FrmUtama
         CType(Me.fb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.gplus, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.whatsapp, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.maps, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gmail, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.outlook, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -743,4 +785,7 @@ Partial Class FrmUtama
     Friend WithEvents fb As System.Windows.Forms.PictureBox
     Friend WithEvents gplus As System.Windows.Forms.PictureBox
     Friend WithEvents whatsapp As System.Windows.Forms.PictureBox
+    Friend WithEvents maps As System.Windows.Forms.PictureBox
+    Friend WithEvents gmail As System.Windows.Forms.PictureBox
+    Friend WithEvents outlook As System.Windows.Forms.PictureBox
 End Class
