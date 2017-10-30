@@ -3,13 +3,13 @@
   <Profiles />
   <Settings>
     <Setting Name="dbServer" Type="System.String" Scope="User">
-      <Value Profile="(Default)">localhost</Value>
+      <Value Profile="(Default)">192.168.1.251</Value>
     </Setting>
     <Setting Name="dbUser" Type="System.String" Scope="User">
-      <Value Profile="(Default)">root</Value>
+      <Value Profile="(Default)">gedeadi</Value>
     </Setting>
     <Setting Name="dbPassowrd" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">gedeadi</Value>
     </Setting>
     <Setting Name="dbName" Type="System.String" Scope="User">
       <Value Profile="(Default)">dbatm</Value>

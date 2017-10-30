@@ -29,6 +29,7 @@ Partial Class SplashScreen1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> parent of bc499d9... r
@@ -42,13 +43,16 @@ Partial Class SplashScreen1
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 >>>>>>> parent of bc499d9... r
+=======
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+>>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
         Me.SuspendLayout()
         '
         'ProgressBar1
         '
         Me.ProgressBar1.Location = New System.Drawing.Point(12, 301)
         Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(694, 14)
+        Me.ProgressBar1.Size = New System.Drawing.Size(694, 34)
         Me.ProgressBar1.TabIndex = 0
         '
         'Label1
@@ -81,6 +85,7 @@ Partial Class SplashScreen1
         Me.Timer1.Interval = 30
         '
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -88,6 +93,8 @@ Partial Class SplashScreen1
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 >>>>>>> parent of bc499d9... r
+=======
+>>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
@@ -101,6 +108,7 @@ Partial Class SplashScreen1
         Me.LinkLabel1.Text = "By I Gede Adi Putra"
         Me.LinkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.LinkLabel1.VisitedLinkColor = System.Drawing.Color.White
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -126,11 +134,14 @@ Partial Class SplashScreen1
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 >>>>>>> parent of bc499d9... r
+=======
+>>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
         '
         'SplashScreen1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -139,10 +150,13 @@ Partial Class SplashScreen1
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 >>>>>>> parent of bc499d9... r
+=======
+>>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
         Me.BackColor = System.Drawing.Color.DarkMagenta
         Me.ClientSize = New System.Drawing.Size(719, 365)
         Me.ControlBox = False
         Me.Controls.Add(Me.LinkLabel1)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -156,6 +170,8 @@ Partial Class SplashScreen1
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 >>>>>>> parent of bc499d9... r
+=======
+>>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ProgressBar1)
@@ -175,6 +191,7 @@ Partial Class SplashScreen1
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> parent of bc499d9... r
@@ -189,5 +206,8 @@ Partial Class SplashScreen1
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 >>>>>>> parent of bc499d9... r
+=======
+    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
+>>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 
 End Class

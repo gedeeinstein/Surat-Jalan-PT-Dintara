@@ -56,7 +56,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("localhost")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("192.168.1.251")>  _
         Public Property dbServer() As String
             Get
                 Return CType(Me("dbServer"),String)
@@ -68,7 +68,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("root")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("gedeadi")>  _
         Public Property dbUser() As String
             Get
                 Return CType(Me("dbUser"),String)
@@ -80,7 +80,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("gedeadi")>  _
         Public Property dbPassowrd() As String
             Get
                 Return CType(Me("dbPassowrd"),String)

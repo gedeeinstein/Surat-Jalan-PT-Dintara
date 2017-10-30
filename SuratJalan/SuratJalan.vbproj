@@ -333,6 +333,7 @@
   <ItemGroup>
     <Content Include="favicon.ico" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> parent of bc499d9... r
@@ -346,6 +347,8 @@
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 >>>>>>> parent of bc499d9... r
+=======
+>>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
     <None Include="Resources\CV_LOGO.jpg" />
     <None Include="Resources\favicon.ico" />
     <None Include="Resources\PT.jpg" />
