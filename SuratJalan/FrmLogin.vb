@@ -117,11 +117,11 @@ Public Class FrmLogin
                 isAdmin = mydata("level")
 
                 If isAdmin = 2 Then
-                    MsgBox("Kamu Login sebagai user biasa, jadi beberapa fitur akan dibatasi !", MsgBoxStyle.Information, "Hai " + userlogin)
+                    MsgBox("Kamu Login sebagai user biasa, jadi beberapa fitur akan dibatasi !", MsgBoxStyle.Information, "Hai 😍 " + userlogin)
                 End If
 
                 If isAdmin = 1 Then
-                    MsgBox("Kamu login sebagai Administrator Aplikasi. Silahkan gunakan aplikasi dengan baik !", MsgBoxStyle.Information, "Hai " + userlogin)
+                    MsgBox("Kamu login sebagai Administrator Aplikasi. Silahkan gunakan aplikasi dengan baik !", MsgBoxStyle.Information, "Hai 😍 " + userlogin)
                 End If
 
                 If isAdmin = 1 Then
