@@ -2,6 +2,9 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
   <Profiles />
   <Settings>
+    <Setting Name="dbName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">dbatm</Value>
+    </Setting>
     <Setting Name="dbServer" Type="System.String" Scope="User">
       <Value Profile="(Default)">192.168.1.251</Value>
     </Setting>
@@ -10,9 +13,6 @@
     </Setting>
     <Setting Name="dbPassowrd" Type="System.String" Scope="User">
       <Value Profile="(Default)">gedeadi</Value>
-    </Setting>
-    <Setting Name="dbName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">dbatm</Value>
     </Setting>
   </Settings>
 </SettingsFile>

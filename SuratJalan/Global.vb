@@ -54,7 +54,36 @@ Module Globals
     End Function
 
 
+    Public Sub Instagram()
+        System.Diagnostics.Process.Start("https://www.instagram.com/dintara.kitchenn/")
+    End Sub
+    Public Sub Faceboook()
+        System.Diagnostics.Process.Start("https://www.facebook.com/DintaraKitchen")
+    End Sub
+    Public Sub Twitter()
+        System.Diagnostics.Process.Start("https://twitter.com/DintaraKitchen")
+    End Sub
+    Public Sub Linkedin()
+        System.Diagnostics.Process.Start("https://www.linkedin.com/in/dintara-kitchen-equipment/")
+    End Sub
+    Public Sub Gplus()
+        System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
+    End Sub
+    Public Sub Whatsapp()
 
+        System.Diagnostics.Process.Start("https://goo.gl/3RwT7g")
+    End Sub
+
+    Public Sub Gmaps()
+        System.Diagnostics.Process.Start("https://goo.gl/maps/q2TSq1sHooD2")
+    End Sub
+    Public Sub Gmail()
+        System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
+    End Sub
+
+    Public Sub Outlook()
+        System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
+    End Sub
 
 End Module
 

@@ -56,6 +56,18 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("dbatm")>  _
+        Public Property dbName() As String
+            Get
+                Return CType(Me("dbName"),String)
+            End Get
+            Set
+                Me("dbName") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("192.168.1.251")>  _
         Public Property dbServer() As String
             Get
@@ -87,18 +99,6 @@ Namespace My
             End Get
             Set
                 Me("dbPassowrd") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("dbatm")>  _
-        Public Property dbName() As String
-            Get
-                Return CType(Me("dbName"),String)
-            End Get
-            Set
-                Me("dbName") = value
             End Set
         End Property
     End Class

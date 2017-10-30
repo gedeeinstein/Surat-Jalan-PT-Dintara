@@ -415,7 +415,7 @@ Public Class FrmUtama
 
         Try
 
-            Select Case e.KeyChar
+            Select e.KeyChar
                 Case Chr(47) To Chr(57)
                     'cmbPerushaan.Focus()
                 Case Chr(8)
@@ -637,14 +637,13 @@ Public Class FrmUtama
         MessageBox.Show("Hai " + loged_in.Text + ", Selamat beraktifitas.", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Hand)
     End Sub
 
-    Private Sub btnMasterSurat_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMasterSurat.Click
-        FrmMasterSurat.Show()
+    Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMasterSurat.Click
+
     End Sub
 
     Private Sub btnFrmATM_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnFrmATM.Click
 
         If txtNoOrder.TextLength = 0 Then
-
             SplashScreen1.Text = "Loading Form ATM"
             SplashScreen1.ShowDialog()
             FrmUtamaATM.Show()
@@ -663,11 +662,6 @@ Public Class FrmUtama
         'SplashScreen1.ShowDialog()
 
     End Sub
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> parent of bc499d9... r
 
     Public Sub FBLink()
         System.Diagnostics.Process.Start("https://facebook.com/igedeadisuryaekapramanaputra")
@@ -698,18 +692,11 @@ Public Class FrmUtama
         System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
     End Sub
 
-    Private Sub fb_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles fb.Click
+    Private Sub fb_Click(sender As System.Object, e As System.EventArgs) Handles fb.Click
         FBLink()
     End Sub
 
-    Private Sub whatsapp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles whatsapp.Click
+    Private Sub whatsapp_Click(sender As System.Object, e As System.EventArgs) Handles whatsapp.Click
         WALink()
     End Sub
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
->>>>>>> parent of bc499d9... r
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 End Class

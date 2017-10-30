@@ -665,32 +665,39 @@ Public Class FrmUtamaATM
 
     End Sub
 
-
-
-
-    'Sosial Media Links
-
-    Private Sub LinkLabel2_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles twitt.LinkClicked
-        System.Diagnostics.Process.Start("https://twitter.com/DintaraKitchen")
-    End Sub
-    Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles fb.LinkClicked
-        System.Diagnostics.Process.Start("https://www.facebook.com/DintaraKitchen/")
-    End Sub
-
-    Private Sub LinkLabel3_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles gplus.LinkClicked
-        System.Diagnostics.Process.Start("https://plus.google.com/u/1/117611519390152054578")
-    End Sub
-
-    Private Sub ig_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles ig.LinkClicked
-        System.Diagnostics.Process.Start("https://instagram.com/dintara.kitchenn")
-    End Sub
-
-    Private Sub gmail_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles gmail.LinkClicked
-        System.Diagnostics.Process.Start("mailto:marketing@dintarakitchen.co.id?subject=Tanya%20Produk&amp;body=")
-    End Sub
-
-    Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label1.Click
+    Private Sub instagram_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles instagram.Click
 
     End Sub
 
+    Private Sub fb_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles fb.Click
+
+    End Sub
+
+    Private Sub twitter_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles twitter.Click
+
+    End Sub
+
+    Private Sub gplus_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gplus.Click
+
+    End Sub
+
+    Private Sub linkedin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles linkedin.Click
+
+    End Sub
+
+    Private Sub whatsapp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles whatsapp.Click
+
+    End Sub
+
+    Private Sub maps_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles maps.Click
+
+    End Sub
+
+    Private Sub gmail_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gmail.Click
+
+    End Sub
+
+    Private Sub outlook_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles outlook.Click
+
+    End Sub
 End Class

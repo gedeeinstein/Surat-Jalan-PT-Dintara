@@ -64,36 +64,28 @@ Partial Class FrmUtamaATM
         Me.btnMasterSurat = New System.Windows.Forms.Button()
         Me.btnFrmDIN = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.ig = New System.Windows.Forms.LinkLabel()
-        Me.fb = New System.Windows.Forms.LinkLabel()
-        Me.twitt = New System.Windows.Forms.LinkLabel()
-        Me.gplus = New System.Windows.Forms.LinkLabel()
-        Me.gmail = New System.Windows.Forms.LinkLabel()
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> parent of bc499d9... r
         Me.outlook = New System.Windows.Forms.PictureBox()
-        Me.gmail2 = New System.Windows.Forms.PictureBox()
+        Me.gmail = New System.Windows.Forms.PictureBox()
         Me.maps = New System.Windows.Forms.PictureBox()
         Me.whatsapp = New System.Windows.Forms.PictureBox()
-        Me.gplus2 = New System.Windows.Forms.PictureBox()
+        Me.gplus = New System.Windows.Forms.PictureBox()
         Me.twitter = New System.Windows.Forms.PictureBox()
-        Me.fb2 = New System.Windows.Forms.PictureBox()
+        Me.fb = New System.Windows.Forms.PictureBox()
         Me.instagram = New System.Windows.Forms.PictureBox()
         Me.linkedin = New System.Windows.Forms.PictureBox()
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
->>>>>>> parent of bc499d9... r
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGBarangKirim, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.outlook, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gmail, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.maps, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.whatsapp, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gplus, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.twitter, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.fb, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.instagram, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.linkedin, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -105,7 +97,7 @@ Partial Class FrmUtamaATM
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(1333, 93)
+        Me.Label1.Size = New System.Drawing.Size(1366, 93)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Surat Jalan CV"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -306,46 +298,12 @@ Partial Class FrmUtamaATM
         Me.btnSimpan.BackColor = System.Drawing.Color.CornflowerBlue
         Me.btnSimpan.FlatAppearance.BorderSize = 0
         Me.btnSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
->>>>>>> parent of bc499d9... r
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
-        Me.btnSimpan.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSimpan.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnSimpan.Image = CType(resources.GetObject("btnSimpan.Image"), System.Drawing.Image)
-        Me.btnSimpan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSimpan.Location = New System.Drawing.Point(8, 548)
-        Me.btnSimpan.Name = "btnSimpan"
-        Me.btnSimpan.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
-        Me.btnSimpan.Size = New System.Drawing.Size(113, 49)
-        Me.btnSimpan.TabIndex = 12
-        Me.btnSimpan.Text = "&Simpan"
-        Me.btnSimpan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> parent of bc499d9... r
         Me.btnSimpan.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnSimpan.Location = New System.Drawing.Point(8, 549)
         Me.btnSimpan.Name = "btnSimpan"
         Me.btnSimpan.Size = New System.Drawing.Size(114, 49)
         Me.btnSimpan.TabIndex = 12
         Me.btnSimpan.Text = "&Save"
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
->>>>>>> parent of bc499d9... r
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
         Me.btnSimpan.UseVisualStyleBackColor = False
         '
         'txtBarang
@@ -436,35 +394,12 @@ Partial Class FrmUtamaATM
         'Label8
         '
         Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ControlText
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> parent of bc499d9... r
-
-        Me.Label8.Location = New System.Drawing.Point(0, 687)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(121, 17)
-
         Me.Label8.Location = New System.Drawing.Point(0, 746)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(1366, 22)
-
-<<<<<<< HEAD
-=======
-=======
-        Me.Label8.Location = New System.Drawing.Point(0, 687)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(121, 17)
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
->>>>>>> parent of bc499d9... r
-=======
-        Me.Label8.Location = New System.Drawing.Point(0, 687)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(121, 17)
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "By I Gede Adi Putra"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -472,37 +407,6 @@ Partial Class FrmUtamaATM
         '
         'btnLogOut
         '
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
->>>>>>> parent of bc499d9... r
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
-        Me.btnLogOut.BackColor = System.Drawing.Color.DarkCyan
-        Me.btnLogOut.FlatAppearance.BorderSize = 0
-        Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogOut.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogOut.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnLogOut.Image = CType(resources.GetObject("btnLogOut.Image"), System.Drawing.Image)
-        Me.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnLogOut.Location = New System.Drawing.Point(367, 548)
-        Me.btnLogOut.Name = "btnLogOut"
-        Me.btnLogOut.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
-        Me.btnLogOut.Size = New System.Drawing.Size(114, 49)
-        Me.btnLogOut.TabIndex = 15
-        Me.btnLogOut.Text = "&Logout"
-        Me.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> parent of bc499d9... r
-
         Me.btnLogOut.BackColor = System.Drawing.SystemColors.ControlText
         Me.btnLogOut.FlatAppearance.BorderSize = 0
         Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -512,38 +416,10 @@ Partial Class FrmUtamaATM
         Me.btnLogOut.Size = New System.Drawing.Size(114, 49)
         Me.btnLogOut.TabIndex = 15
         Me.btnLogOut.Text = "&Logout"
-        '>>>>>>> 0c8872419d27b663d61ea23e1dee09e2a17994f8
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
->>>>>>> parent of bc499d9... r
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
         Me.btnLogOut.UseVisualStyleBackColor = False
         '
         'btnKeluar
         '
-        Me.btnKeluar.BackColor = System.Drawing.Color.Maroon
-        Me.btnKeluar.FlatAppearance.BorderSize = 0
-        Me.btnKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnKeluar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnKeluar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnKeluar.Image = CType(resources.GetObject("btnKeluar.Image"), System.Drawing.Image)
-        Me.btnKeluar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnKeluar.Location = New System.Drawing.Point(487, 548)
-        Me.btnKeluar.Name = "btnKeluar"
-        Me.btnKeluar.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
-        Me.btnKeluar.Size = New System.Drawing.Size(114, 49)
-        Me.btnKeluar.TabIndex = 16
-        Me.btnKeluar.Text = "&Keluar"
-        Me.btnKeluar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> parent of bc499d9... r
-
         Me.btnKeluar.BackColor = System.Drawing.Color.DarkRed
         Me.btnKeluar.FlatAppearance.BorderSize = 0
         Me.btnKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -553,145 +429,43 @@ Partial Class FrmUtamaATM
         Me.btnKeluar.Size = New System.Drawing.Size(114, 49)
         Me.btnKeluar.TabIndex = 16
         Me.btnKeluar.Text = "&Exit App"
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
->>>>>>> parent of bc499d9... r
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
         Me.btnKeluar.UseVisualStyleBackColor = False
         '
         'Label9
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label9.Location = New System.Drawing.Point(656, 558)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(135, 25)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> parent of bc499d9... r
-
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label9.Location = New System.Drawing.Point(657, 549)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(140, 49)
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
->>>>>>> parent of bc499d9... r
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
         Me.Label9.TabIndex = 17
         Me.Label9.Text = "Total Barang :"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label_TotalBarang
         '
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
->>>>>>> parent of bc499d9... r
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
-        Me.Label_TotalBarang.AutoSize = True
-        Me.Label_TotalBarang.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label_TotalBarang.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label_TotalBarang.Location = New System.Drawing.Point(811, 552)
-        Me.Label_TotalBarang.Name = "Label_TotalBarang"
-        Me.Label_TotalBarang.Size = New System.Drawing.Size(29, 31)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> parent of bc499d9... r
-
         Me.Label_TotalBarang.BackColor = System.Drawing.Color.Transparent
         Me.Label_TotalBarang.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label_TotalBarang.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label_TotalBarang.Location = New System.Drawing.Point(803, 549)
         Me.Label_TotalBarang.Name = "Label_TotalBarang"
         Me.Label_TotalBarang.Size = New System.Drawing.Size(37, 49)
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
->>>>>>> parent of bc499d9... r
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
         Me.Label_TotalBarang.TabIndex = 18
         Me.Label_TotalBarang.Text = "0"
+        Me.Label_TotalBarang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnReset
         '
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
->>>>>>> parent of bc499d9... r
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
-        Me.btnReset.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.btnReset.FlatAppearance.BorderSize = 0
-        Me.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnReset.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnReset.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnReset.Image = CType(resources.GetObject("btnReset.Image"), System.Drawing.Image)
-        Me.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnReset.Location = New System.Drawing.Point(247, 549)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> parent of bc499d9... r
-
         Me.btnReset.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.btnReset.FlatAppearance.BorderSize = 0
         Me.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReset.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnReset.Location = New System.Drawing.Point(248, 549)
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
->>>>>>> parent of bc499d9... r
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
         Me.btnReset.Name = "btnReset"
-        Me.btnReset.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
         Me.btnReset.Size = New System.Drawing.Size(114, 49)
         Me.btnReset.TabIndex = 19
         Me.btnReset.Text = "&Reset"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
->>>>>>> parent of bc499d9... r
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
-        Me.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnReset.UseVisualStyleBackColor = False
         '
         'btnBatal
@@ -699,62 +473,12 @@ Partial Class FrmUtamaATM
         Me.btnBatal.BackColor = System.Drawing.Color.SandyBrown
         Me.btnBatal.FlatAppearance.BorderSize = 0
         Me.btnBatal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
->>>>>>> parent of bc499d9... r
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
-        Me.btnBatal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBatal.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnBatal.Image = CType(resources.GetObject("btnBatal.Image"), System.Drawing.Image)
-        Me.btnBatal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBatal.Location = New System.Drawing.Point(127, 548)
-<<<<<<< HEAD
-<<<<<<< HEAD
         Me.btnBatal.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnBatal.Location = New System.Drawing.Point(128, 549)
-
-=======
-<<<<<<< HEAD
-        Me.btnBatal.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnBatal.Location = New System.Drawing.Point(128, 549)
-
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
->>>>>>> parent of bc499d9... r
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
         Me.btnBatal.Name = "btnBatal"
-        Me.btnBatal.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
         Me.btnBatal.Size = New System.Drawing.Size(114, 49)
         Me.btnBatal.TabIndex = 20
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> parent of bc499d9... r
-
-        Me.btnBatal.Text = "&Batal"
-        Me.btnBatal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-
         Me.btnBatal.Text = "&Cancel"
-<<<<<<< HEAD
-=======
-=======
-        Me.btnBatal.Text = "&Batal"
-        Me.btnBatal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
->>>>>>> parent of bc499d9... r
-=======
-        Me.btnBatal.Text = "&Batal"
-        Me.btnBatal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
         Me.btnBatal.UseVisualStyleBackColor = False
         '
         'PictureBox1
@@ -773,7 +497,7 @@ Partial Class FrmUtamaATM
         'loged_in
         '
         Me.loged_in.AutoSize = True
-        Me.loged_in.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.loged_in.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.loged_in.Location = New System.Drawing.Point(94, 105)
         Me.loged_in.Name = "loged_in"
         Me.loged_in.Size = New System.Drawing.Size(27, 13)
@@ -836,81 +560,6 @@ Partial Class FrmUtamaATM
         Me.Label11.TabIndex = 29
         Me.Label11.Visible = False
         '
-        'ig
-        '
-        Me.ig.BackColor = System.Drawing.SystemColors.Control
-        Me.ig.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.ig.Image = CType(resources.GetObject("ig.Image"), System.Drawing.Image)
-        Me.ig.LinkArea = New System.Windows.Forms.LinkArea(0, 0)
-        Me.ig.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
-        Me.ig.LinkVisited = True
-        Me.ig.Location = New System.Drawing.Point(1109, 664)
-        Me.ig.Name = "ig"
-        Me.ig.Size = New System.Drawing.Size(40, 40)
-        Me.ig.TabIndex = 30
-        Me.ig.Text = "            "
-        Me.ig.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'fb
-        '
-        Me.fb.BackColor = System.Drawing.SystemColors.Control
-        Me.fb.ForeColor = System.Drawing.Color.Coral
-        Me.fb.Image = CType(resources.GetObject("fb.Image"), System.Drawing.Image)
-        Me.fb.LinkArea = New System.Windows.Forms.LinkArea(0, 0)
-        Me.fb.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
-        Me.fb.LinkVisited = True
-        Me.fb.Location = New System.Drawing.Point(1155, 664)
-        Me.fb.Name = "fb"
-        Me.fb.Size = New System.Drawing.Size(40, 40)
-        Me.fb.TabIndex = 31
-        Me.fb.Text = "            "
-        Me.fb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'twitt
-        '
-        Me.twitt.BackColor = System.Drawing.SystemColors.Control
-        Me.twitt.Image = CType(resources.GetObject("twitt.Image"), System.Drawing.Image)
-        Me.twitt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.twitt.LinkArea = New System.Windows.Forms.LinkArea(0, 0)
-        Me.twitt.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
-        Me.twitt.LinkVisited = True
-        Me.twitt.Location = New System.Drawing.Point(1201, 664)
-        Me.twitt.Name = "twitt"
-        Me.twitt.Size = New System.Drawing.Size(40, 40)
-        Me.twitt.TabIndex = 32
-        Me.twitt.Text = "        "
-        Me.twitt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'gplus
-        '
-        Me.gplus.BackColor = System.Drawing.SystemColors.Control
-        Me.gplus.Image = CType(resources.GetObject("gplus.Image"), System.Drawing.Image)
-        Me.gplus.LinkArea = New System.Windows.Forms.LinkArea(0, 0)
-        Me.gplus.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
-        Me.gplus.LinkVisited = True
-        Me.gplus.Location = New System.Drawing.Point(1247, 664)
-        Me.gplus.Name = "gplus"
-        Me.gplus.Size = New System.Drawing.Size(40, 40)
-        Me.gplus.TabIndex = 33
-        Me.gplus.Text = "            "
-        '
-        'gmail
-        '
-        Me.gmail.BackColor = System.Drawing.SystemColors.Control
-        Me.gmail.Image = CType(resources.GetObject("gmail.Image"), System.Drawing.Image)
-        Me.gmail.LinkArea = New System.Windows.Forms.LinkArea(0, 0)
-        Me.gmail.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
-        Me.gmail.LinkVisited = True
-        Me.gmail.Location = New System.Drawing.Point(1293, 664)
-        Me.gmail.Name = "gmail"
-        Me.gmail.Size = New System.Drawing.Size(40, 40)
-        Me.gmail.TabIndex = 34
-        Me.gmail.Text = "                  "
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> parent of bc499d9... r
         'outlook
         '
         Me.outlook.Cursor = System.Windows.Forms.Cursors.Hand
@@ -974,9 +623,9 @@ Partial Class FrmUtamaATM
         'fb
         '
         Me.fb.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.fb2.ErrorImage = CType(resources.GetObject("fb.ErrorImage"), System.Drawing.Image)
+        Me.fb.ErrorImage = CType(resources.GetObject("fb.ErrorImage"), System.Drawing.Image)
         Me.fb.Image = Global.SuratJalan.My.Resources.Resources.facebook
-        Me.fb2.InitialImage = CType(resources.GetObject("fb.InitialImage"), System.Drawing.Image)
+        Me.fb.InitialImage = CType(resources.GetObject("fb.InitialImage"), System.Drawing.Image)
         Me.fb.Location = New System.Drawing.Point(1068, 736)
         Me.fb.Name = "fb"
         Me.fb.Size = New System.Drawing.Size(32, 32)
@@ -1002,44 +651,12 @@ Partial Class FrmUtamaATM
         Me.linkedin.Size = New System.Drawing.Size(32, 32)
         Me.linkedin.TabIndex = 43
         Me.linkedin.TabStop = False
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
->>>>>>> parent of bc499d9... r
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
         '
         'FrmUtamaATM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
->>>>>>> parent of bc499d9... r
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
-        Me.ClientSize = New System.Drawing.Size(1333, 704)
-        Me.ControlBox = False
-        Me.Controls.Add(Me.gmail)
-        Me.Controls.Add(Me.gplus)
-        Me.Controls.Add(Me.twitt)
-        Me.Controls.Add(Me.fb)
-        Me.Controls.Add(Me.ig)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> parent of bc499d9... r
-
         Me.ClientSize = New System.Drawing.Size(1366, 768)
         Me.ControlBox = False
         Me.Controls.Add(Me.outlook)
@@ -1051,14 +668,6 @@ Partial Class FrmUtamaATM
         Me.Controls.Add(Me.fb)
         Me.Controls.Add(Me.instagram)
         Me.Controls.Add(Me.linkedin)
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
->>>>>>> parent of bc499d9... r
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.btnTambahUser)
         Me.Controls.Add(Me.btnMasterSurat)
@@ -1091,6 +700,15 @@ Partial Class FrmUtamaATM
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.outlook, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gmail, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.maps, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.whatsapp, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gplus, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.twitter, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.fb, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.instagram, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.linkedin, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1136,31 +754,13 @@ Partial Class FrmUtamaATM
     Friend WithEvents btnMasterSurat As System.Windows.Forms.Button
     Friend WithEvents btnFrmDIN As System.Windows.Forms.Button
     Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents ig As System.Windows.Forms.LinkLabel
-    Friend WithEvents fb As System.Windows.Forms.LinkLabel
-    Friend WithEvents twitt As System.Windows.Forms.LinkLabel
-    Friend WithEvents gplus As System.Windows.Forms.LinkLabel
-    Friend WithEvents gmail As System.Windows.Forms.LinkLabel
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> parent of bc499d9... r
-
     Friend WithEvents outlook As System.Windows.Forms.PictureBox
-    Friend WithEvents gmail2 As System.Windows.Forms.PictureBox
+    Friend WithEvents gmail As System.Windows.Forms.PictureBox
     Friend WithEvents maps As System.Windows.Forms.PictureBox
     Friend WithEvents whatsapp As System.Windows.Forms.PictureBox
-    Friend WithEvents gplus2 As System.Windows.Forms.PictureBox
+    Friend WithEvents gplus As System.Windows.Forms.PictureBox
     Friend WithEvents twitter As System.Windows.Forms.PictureBox
-    Friend WithEvents fb2 As System.Windows.Forms.PictureBox
+    Friend WithEvents fb As System.Windows.Forms.PictureBox
     Friend WithEvents instagram As System.Windows.Forms.PictureBox
     Friend WithEvents linkedin As System.Windows.Forms.PictureBox
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
->>>>>>> parent of bc499d9... r
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 End Class
