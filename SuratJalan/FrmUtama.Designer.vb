@@ -316,13 +316,18 @@ Partial Class FrmUtama
         Me.btnSimpan.BackColor = System.Drawing.Color.CornflowerBlue
         Me.btnSimpan.FlatAppearance.BorderSize = 0
         Me.btnSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSimpan.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSimpan.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSimpan.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnSimpan.Image = Global.SuratJalan.My.Resources.Resources.save_disk
+        Me.btnSimpan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSimpan.Location = New System.Drawing.Point(8, 549)
         Me.btnSimpan.Name = "btnSimpan"
+        Me.btnSimpan.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.btnSimpan.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.btnSimpan.Size = New System.Drawing.Size(114, 49)
         Me.btnSimpan.TabIndex = 12
         Me.btnSimpan.Text = "&Save"
+        Me.btnSimpan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnSimpan.UseVisualStyleBackColor = False
         '
         'txtBarang
@@ -433,11 +438,15 @@ Partial Class FrmUtama
         Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogOut.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogOut.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnLogOut.Image = Global.SuratJalan.My.Resources.Resources.logout
+        Me.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnLogOut.Location = New System.Drawing.Point(368, 549)
         Me.btnLogOut.Name = "btnLogOut"
+        Me.btnLogOut.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.btnLogOut.Size = New System.Drawing.Size(114, 49)
         Me.btnLogOut.TabIndex = 15
         Me.btnLogOut.Text = "&Logout"
+        Me.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnLogOut.UseVisualStyleBackColor = False
         '
         'btnKeluar
@@ -447,11 +456,16 @@ Partial Class FrmUtama
         Me.btnKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnKeluar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnKeluar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnKeluar.Image = Global.SuratJalan.My.Resources.Resources.emergency_exit
+        Me.btnKeluar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnKeluar.Location = New System.Drawing.Point(488, 549)
         Me.btnKeluar.Name = "btnKeluar"
+        Me.btnKeluar.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.btnKeluar.Size = New System.Drawing.Size(114, 49)
         Me.btnKeluar.TabIndex = 16
         Me.btnKeluar.Text = "&Exit App"
+        Me.btnKeluar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnKeluar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnKeluar.UseVisualStyleBackColor = False
         '
         'Label_TotalBarang
@@ -472,11 +486,15 @@ Partial Class FrmUtama
         Me.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReset.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReset.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnReset.Image = Global.SuratJalan.My.Resources.Resources.reset
+        Me.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnReset.Location = New System.Drawing.Point(248, 549)
         Me.btnReset.Name = "btnReset"
+        Me.btnReset.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.btnReset.Size = New System.Drawing.Size(114, 49)
         Me.btnReset.TabIndex = 19
         Me.btnReset.Text = "&Reset"
+        Me.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnReset.UseVisualStyleBackColor = False
         '
         'btnBatal
@@ -484,13 +502,17 @@ Partial Class FrmUtama
         Me.btnBatal.BackColor = System.Drawing.Color.SandyBrown
         Me.btnBatal.FlatAppearance.BorderSize = 0
         Me.btnBatal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBatal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBatal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBatal.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnBatal.Image = Global.SuratJalan.My.Resources.Resources.folder
+        Me.btnBatal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnBatal.Location = New System.Drawing.Point(128, 549)
         Me.btnBatal.Name = "btnBatal"
+        Me.btnBatal.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.btnBatal.Size = New System.Drawing.Size(114, 49)
         Me.btnBatal.TabIndex = 20
         Me.btnBatal.Text = "&Cancel"
+        Me.btnBatal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnBatal.UseVisualStyleBackColor = False
         '
         'PictureBox1
@@ -508,7 +530,7 @@ Partial Class FrmUtama
         '
         Me.welcome_lbl.AutoSize = True
         Me.welcome_lbl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.welcome_lbl.Location = New System.Drawing.Point(5, 105)
+        Me.welcome_lbl.Location = New System.Drawing.Point(-15, 105)
         Me.welcome_lbl.Name = "welcome_lbl"
         Me.welcome_lbl.Size = New System.Drawing.Size(83, 13)
         Me.welcome_lbl.TabIndex = 21
@@ -519,7 +541,7 @@ Partial Class FrmUtama
         Me.loged_in.AutoSize = True
         Me.loged_in.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.loged_in.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.loged_in.Location = New System.Drawing.Point(94, 105)
+        Me.loged_in.Location = New System.Drawing.Point(74, 105)
         Me.loged_in.Name = "loged_in"
         Me.loged_in.Size = New System.Drawing.Size(27, 13)
         Me.loged_in.TabIndex = 22

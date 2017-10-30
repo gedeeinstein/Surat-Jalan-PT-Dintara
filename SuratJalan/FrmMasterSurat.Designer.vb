@@ -24,30 +24,65 @@ Partial Class FrmMasterSurat
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMasterSurat))
         Me.DGMasterSurat = New System.Windows.Forms.DataGridView()
+        Me.title = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.DGMasterSurat, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DGMasterSurat
         '
         Me.DGMasterSurat.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
+        Me.DGMasterSurat.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGMasterSurat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGMasterSurat.Location = New System.Drawing.Point(2, 13)
+        Me.DGMasterSurat.Location = New System.Drawing.Point(12, 71)
         Me.DGMasterSurat.Name = "DGMasterSurat"
-        Me.DGMasterSurat.Size = New System.Drawing.Size(789, 318)
+        Me.DGMasterSurat.Size = New System.Drawing.Size(883, 318)
         Me.DGMasterSurat.TabIndex = 0
+        '
+        'title
+        '
+        Me.title.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(19, Byte), Integer))
+        Me.title.Dock = System.Windows.Forms.DockStyle.Top
+        Me.title.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.title.ForeColor = System.Drawing.Color.FromArgb(CType(CType(228, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.title.Location = New System.Drawing.Point(0, 0)
+        Me.title.Name = "title"
+        Me.title.Size = New System.Drawing.Size(907, 68)
+        Me.title.TabIndex = 1
+        Me.title.Text = "Riwayat Surat Jalan"
+        Me.title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.title.UseCompatibleTextRendering = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(12, 409)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(125, 53)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'FrmMasterSurat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(803, 517)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(217, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(24, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(907, 517)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.title)
         Me.Controls.Add(Me.DGMasterSurat)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.HelpButton = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MinimizeBox = False
         Me.Name = "FrmMasterSurat"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Master Surat"
         CType(Me.DGMasterSurat, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents DGMasterSurat As System.Windows.Forms.DataGridView
+    Friend WithEvents title As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

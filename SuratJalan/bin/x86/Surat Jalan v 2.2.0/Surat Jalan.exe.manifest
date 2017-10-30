@@ -153,14 +153,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Surat Jalan.exe" size="15217664">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Surat Jalan.exe" size="15219200">
       <assemblyIdentity name="Surat Jalan" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>BkNV9PB4X+1karQl2uaf/c8O8bk=</dsig:DigestValue>
+        <dsig:DigestValue>HFh0Jazo6WvAhlOMOViky9ZWz8I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

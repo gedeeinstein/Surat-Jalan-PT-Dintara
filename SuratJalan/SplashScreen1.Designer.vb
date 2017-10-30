@@ -51,7 +51,7 @@ Partial Class SplashScreen1
         '
         'Label2
         '
-        Me.Label2.BackColor = System.Drawing.Color.Purple
+        Me.Label2.BackColor = System.Drawing.Color.DarkMagenta
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.Control

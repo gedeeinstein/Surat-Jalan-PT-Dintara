@@ -298,12 +298,17 @@ Partial Class FrmUtamaATM
         Me.btnSimpan.BackColor = System.Drawing.Color.CornflowerBlue
         Me.btnSimpan.FlatAppearance.BorderSize = 0
         Me.btnSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSimpan.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSimpan.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnSimpan.Image = Global.SuratJalan.My.Resources.Resources.save_disk
+        Me.btnSimpan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSimpan.Location = New System.Drawing.Point(8, 549)
         Me.btnSimpan.Name = "btnSimpan"
+        Me.btnSimpan.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.btnSimpan.Size = New System.Drawing.Size(114, 49)
         Me.btnSimpan.TabIndex = 12
         Me.btnSimpan.Text = "&Save"
+        Me.btnSimpan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnSimpan.UseVisualStyleBackColor = False
         '
         'txtBarang
@@ -411,11 +416,15 @@ Partial Class FrmUtamaATM
         Me.btnLogOut.FlatAppearance.BorderSize = 0
         Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogOut.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnLogOut.Image = Global.SuratJalan.My.Resources.Resources.logout
+        Me.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnLogOut.Location = New System.Drawing.Point(368, 549)
         Me.btnLogOut.Name = "btnLogOut"
+        Me.btnLogOut.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.btnLogOut.Size = New System.Drawing.Size(114, 49)
         Me.btnLogOut.TabIndex = 15
         Me.btnLogOut.Text = "&Logout"
+        Me.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnLogOut.UseVisualStyleBackColor = False
         '
         'btnKeluar
@@ -424,11 +433,15 @@ Partial Class FrmUtamaATM
         Me.btnKeluar.FlatAppearance.BorderSize = 0
         Me.btnKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnKeluar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnKeluar.Image = Global.SuratJalan.My.Resources.Resources.emergency_exit
+        Me.btnKeluar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnKeluar.Location = New System.Drawing.Point(488, 549)
         Me.btnKeluar.Name = "btnKeluar"
+        Me.btnKeluar.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.btnKeluar.Size = New System.Drawing.Size(114, 49)
         Me.btnKeluar.TabIndex = 16
         Me.btnKeluar.Text = "&Exit App"
+        Me.btnKeluar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnKeluar.UseVisualStyleBackColor = False
         '
         'Label9
@@ -461,11 +474,15 @@ Partial Class FrmUtamaATM
         Me.btnReset.FlatAppearance.BorderSize = 0
         Me.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReset.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnReset.Image = Global.SuratJalan.My.Resources.Resources.reset
+        Me.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnReset.Location = New System.Drawing.Point(248, 549)
         Me.btnReset.Name = "btnReset"
+        Me.btnReset.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.btnReset.Size = New System.Drawing.Size(114, 49)
         Me.btnReset.TabIndex = 19
         Me.btnReset.Text = "&Reset"
+        Me.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnReset.UseVisualStyleBackColor = False
         '
         'btnBatal
@@ -473,12 +490,17 @@ Partial Class FrmUtamaATM
         Me.btnBatal.BackColor = System.Drawing.Color.SandyBrown
         Me.btnBatal.FlatAppearance.BorderSize = 0
         Me.btnBatal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBatal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBatal.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnBatal.Image = Global.SuratJalan.My.Resources.Resources.folder
+        Me.btnBatal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnBatal.Location = New System.Drawing.Point(128, 549)
         Me.btnBatal.Name = "btnBatal"
+        Me.btnBatal.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.btnBatal.Size = New System.Drawing.Size(114, 49)
         Me.btnBatal.TabIndex = 20
         Me.btnBatal.Text = "&Cancel"
+        Me.btnBatal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnBatal.UseVisualStyleBackColor = False
         '
         'PictureBox1

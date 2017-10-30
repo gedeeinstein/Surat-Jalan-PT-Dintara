@@ -331,6 +331,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\emergency-exit.png" />
+    <None Include="Resources\save-disk.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\closexxx.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\save %282%29.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\reset.png" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\logout %281%29.png" />
     <None Include="Resources\outlook.png" />
     <None Include="Resources\gmail.png" />
     <None Include="Resources\placeholder %281%291.png" />
