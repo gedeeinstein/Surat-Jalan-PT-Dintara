@@ -331,6 +331,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\forms-RED.png" />
+    <None Include="Resources\forms.png" />
+    <None Include="Resources\database.png" />
+    <None Include="Resources\businessman.png" />
     <None Include="Resources\emergency-exit.png" />
     <None Include="Resources\save-disk.png" />
     <None Include="Resources\folder.png" />

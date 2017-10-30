@@ -101,7 +101,7 @@ Partial Class FrmUtama
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(1366, 93)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Surat Jalan PT"
+        Me.Label1.Text = "Surat Jalan PT. Dapur Inspirasi Nusantara"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label2
@@ -553,11 +553,15 @@ Partial Class FrmUtama
         Me.btnTambahUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnTambahUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTambahUser.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnTambahUser.Image = Global.SuratJalan.My.Resources.Resources.businessman
         Me.btnTambahUser.Location = New System.Drawing.Point(974, 356)
         Me.btnTambahUser.Name = "btnTambahUser"
+        Me.btnTambahUser.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.btnTambahUser.Size = New System.Drawing.Size(224, 97)
         Me.btnTambahUser.TabIndex = 31
         Me.btnTambahUser.Text = "TAMBAH USER"
+        Me.btnTambahUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnTambahUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnTambahUser.UseVisualStyleBackColor = False
         '
         'btnMasterSurat
@@ -566,11 +570,15 @@ Partial Class FrmUtama
         Me.btnMasterSurat.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMasterSurat.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnMasterSurat.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnMasterSurat.Image = Global.SuratJalan.My.Resources.Resources.database
         Me.btnMasterSurat.Location = New System.Drawing.Point(974, 152)
         Me.btnMasterSurat.Name = "btnMasterSurat"
+        Me.btnMasterSurat.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.btnMasterSurat.Size = New System.Drawing.Size(224, 97)
         Me.btnMasterSurat.TabIndex = 30
         Me.btnMasterSurat.Text = "MASTER SURAT"
+        Me.btnMasterSurat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnMasterSurat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnMasterSurat.UseVisualStyleBackColor = False
         '
         'btnFrmATM
@@ -579,11 +587,15 @@ Partial Class FrmUtama
         Me.btnFrmATM.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFrmATM.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFrmATM.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnFrmATM.Image = Global.SuratJalan.My.Resources.Resources.forms
         Me.btnFrmATM.Location = New System.Drawing.Point(974, 253)
         Me.btnFrmATM.Name = "btnFrmATM"
+        Me.btnFrmATM.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.btnFrmATM.Size = New System.Drawing.Size(224, 97)
         Me.btnFrmATM.TabIndex = 29
         Me.btnFrmATM.Text = "SURAT JALAN ATM"
+        Me.btnFrmATM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnFrmATM.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnFrmATM.UseVisualStyleBackColor = False
         '
         'Label11

@@ -786,4 +786,8 @@ Public Class FrmUtama
             MessageBox.Show("Gagal Mengirim Email" + ex.Message, " Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End Try
     End Sub
+
+    Private Sub btnTambahUser_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTambahUser.Click
+
+    End Sub
 End Class
