@@ -28,10 +28,20 @@ Partial Class SplashScreen1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> parent of bc499d9... r
 
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.author = New System.Windows.Forms.LinkLabel()
 
+<<<<<<< HEAD
+=======
+=======
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+>>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
+>>>>>>> parent of bc499d9... r
         Me.SuspendLayout()
         '
         'ProgressBar1
@@ -70,7 +80,14 @@ Partial Class SplashScreen1
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 30
         '
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
+>>>>>>> parent of bc499d9... r
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
@@ -84,6 +101,10 @@ Partial Class SplashScreen1
         Me.LinkLabel1.Text = "By I Gede Adi Putra"
         Me.LinkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.LinkLabel1.VisitedLinkColor = System.Drawing.Color.White
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> parent of bc499d9... r
 
         'author
         '
@@ -100,20 +121,41 @@ Partial Class SplashScreen1
         Me.author.TabStop = True
         Me.author.Text = "by I Gede Adi Putra"
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
+>>>>>>> parent of bc499d9... r
         '
         'SplashScreen1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
+>>>>>>> parent of bc499d9... r
         Me.BackColor = System.Drawing.Color.DarkMagenta
         Me.ClientSize = New System.Drawing.Size(719, 365)
         Me.ControlBox = False
         Me.Controls.Add(Me.LinkLabel1)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> parent of bc499d9... r
         Me.BackColor = System.Drawing.Color.Purple
         Me.ClientSize = New System.Drawing.Size(719, 349)
         Me.ControlBox = False
         Me.Controls.Add(Me.author)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
+>>>>>>> parent of bc499d9... r
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ProgressBar1)
@@ -132,10 +174,20 @@ Partial Class SplashScreen1
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> parent of bc499d9... r
 
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
 
     Friend WithEvents author As System.Windows.Forms.LinkLabel
 
+<<<<<<< HEAD
+=======
+=======
+    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
+>>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
+>>>>>>> parent of bc499d9... r
 
 End Class

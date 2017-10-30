@@ -54,6 +54,10 @@
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
     End Sub
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> parent of bc499d9... r
 
     Private Sub author_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles author.LinkClicked
 
@@ -69,4 +73,9 @@
         System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
     End Sub
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
+>>>>>>> parent of bc499d9... r
 End Class
