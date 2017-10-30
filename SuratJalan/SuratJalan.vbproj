@@ -331,6 +331,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\outlook.png" />
+    <None Include="Resources\gmail.png" />
+    <None Include="Resources\placeholder %281%291.png" />
+    <None Include="Resources\whatsapp.png" />
+    <None Include="Resources\google-plus.png" />
+    <None Include="Resources\instagram.png" />
+    <None Include="Resources\facebook.png" />
+    <None Include="Resources\linkedin.png" />
     <None Include="Resources\CV_LOGO.jpg" />
     <None Include="Resources\favicon.ico" />
     <None Include="Resources\PT.jpg" />
