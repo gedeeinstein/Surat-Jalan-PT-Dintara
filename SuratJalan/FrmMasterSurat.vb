@@ -21,14 +21,14 @@ Public Class FrmMasterSurat
 
     End Sub
 
+    Private Sub PrintPreviewDialog1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PrintPreviewDialog1.Load
+    End Sub
 
-
-
-    Private Sub FrmMasterSurat_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub title_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles title.Click
 
     End Sub
 
-    Private Sub DGMasterSurat_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGMasterSurat.CellContentClick
+    Private Sub FrmMasterSurat_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
     End Sub
 End Class
