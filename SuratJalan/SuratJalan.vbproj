@@ -243,6 +243,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUtamaATM.resx">
       <DependentUpon>FrmUtamaATM.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="RptSuratJalanATM.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

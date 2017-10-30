@@ -415,7 +415,7 @@ Public Class FrmUtama
 
         Try
 
-            Select e.KeyChar
+            Select Case e.KeyChar
                 Case Chr(47) To Chr(57)
                     'cmbPerushaan.Focus()
                 Case Chr(8)
@@ -644,10 +644,7 @@ Public Class FrmUtama
     Private Sub btnFrmATM_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnFrmATM.Click
 
         If txtNoOrder.TextLength = 0 Then
-<<<<<<< HEAD
 
-=======
->>>>>>> 0c8872419d27b663d61ea23e1dee09e2a17994f8
             SplashScreen1.Text = "Loading Form ATM"
             SplashScreen1.ShowDialog()
             FrmUtamaATM.Show()
@@ -696,11 +693,11 @@ Public Class FrmUtama
         System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
     End Sub
 
-    Private Sub fb_Click(sender As System.Object, e As System.EventArgs) Handles fb.Click
+    Private Sub fb_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles fb.Click
         FBLink()
     End Sub
 
-    Private Sub whatsapp_Click(sender As System.Object, e As System.EventArgs) Handles whatsapp.Click
+    Private Sub whatsapp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles whatsapp.Click
         WALink()
     End Sub
 End Class
