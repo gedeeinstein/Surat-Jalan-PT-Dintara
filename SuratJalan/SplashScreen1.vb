@@ -54,15 +54,16 @@
     Private Sub author_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles author.LinkClicked
 
         Try
-            VisitLink()
+            author.LinkVisited = True
+            AuthorIG()
         Catch ex As Exception
             MessageBox.Show("Gagal membuka tautan" + ex.Message, " Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End Try
     End Sub
 
-    Public Sub VisitLink()
-        author.LinkVisited = True
-        System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
-    End Sub
+    'Public Sub VisitLink()
+    '    author.LinkVisited = True
+    '    System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
+    'End Sub
 
 End Class

@@ -54,35 +54,40 @@ Module Globals
     End Function
 
 
-    Public Sub Instagram()
+    Public Sub AuthorIG()
+        System.Diagnostics.Process.Start("https://www.instagram.com/gedeeinstein/")
+    End Sub
+
+
+    Public Sub InstagramOpen()
         System.Diagnostics.Process.Start("https://www.instagram.com/dintara.kitchenn/")
     End Sub
-    Public Sub Faceboook()
+    Public Sub FaceboookOpen()
         System.Diagnostics.Process.Start("https://www.facebook.com/DintaraKitchen")
     End Sub
-    Public Sub Twitter()
+    Public Sub TwitterOpen()
         System.Diagnostics.Process.Start("https://twitter.com/DintaraKitchen")
     End Sub
-    Public Sub Linkedin()
+    Public Sub LinkedinOpen()
         System.Diagnostics.Process.Start("https://www.linkedin.com/in/dintara-kitchen-equipment/")
     End Sub
-    Public Sub Gplus()
+    Public Sub GplusOpen()
         System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
     End Sub
-    Public Sub Whatsapp()
+    Public Sub WhatsappSend()
 
-        System.Diagnostics.Process.Start("https://goo.gl/3RwT7g")
+        System.Diagnostics.Process.Start("https://goo.gl/p4STJm")
     End Sub
 
-    Public Sub Gmaps()
+    Public Sub GmapsOpen()
         System.Diagnostics.Process.Start("https://goo.gl/maps/q2TSq1sHooD2")
     End Sub
-    Public Sub Gmail()
-        System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
+    Public Sub GmailSend()
+        System.Diagnostics.Process.Start("mailto:dintara.kitchen@gmail.com?Subject=Tanya%20Tentang%20Aplikasi%20Surat%20Jalan")
     End Sub
 
-    Public Sub Outlook()
-        System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
+    Public Sub OutlookSend()
+        System.Diagnostics.Process.Start("mailto:it@dintarakitchen.co.id?Subject=Tanya%20Tentang%20Aplikasi%20Surat%20Jalan&body=Tolong%20Datang%20dan%20perbaiki%20aplikasinya")
     End Sub
 
 End Module

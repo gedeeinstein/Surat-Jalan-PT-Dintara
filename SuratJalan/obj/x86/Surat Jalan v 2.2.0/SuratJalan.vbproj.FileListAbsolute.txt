@@ -31,3 +31,24 @@ D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\bin\x86\Sur
 D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Surat Jalan v 2.2.0\Surat Jalan.exe
 D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Surat Jalan v 2.2.0\Surat Jalan.xml
 D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Surat Jalan v 2.2.0\Surat Jalan.pdb
+D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\bin\x86\Surat Jalan v 2.2.0\Surat Jalan.exe.manifest
+D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\bin\x86\Surat Jalan v 2.2.0\Surat Jalan.application
+D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\bin\x86\Surat Jalan v 2.2.0\Surat Jalan.exe
+D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\bin\x86\Surat Jalan v 2.2.0\Surat Jalan.pdb
+D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\bin\x86\Surat Jalan v 2.2.0\Surat Jalan.xml
+D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Surat Jalan v 2.2.0\SuratJalan.vbprojResolveAssemblyReference.cache
+D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Surat Jalan v 2.2.0\SuratJalan.FrmMasterSurat.resources
+D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Surat Jalan v 2.2.0\SuratJalan.FrmRptSPK_ATM.resources
+D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Surat Jalan v 2.2.0\SuratJalan.FrmUtamaATM.resources
+D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Surat Jalan v 2.2.0\SuratJalan.FrmCariBarang.resources
+D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Surat Jalan v 2.2.0\SuratJalan.FrmCariPerusahaan.resources
+D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Surat Jalan v 2.2.0\SuratJalan.FrmConfig.resources
+D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Surat Jalan v 2.2.0\SuratJalan.FrmLogin.resources
+D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Surat Jalan v 2.2.0\SuratJalan.FrmRptSPK.resources
+D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Surat Jalan v 2.2.0\SuratJalan.FrmUtama.resources
+D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Surat Jalan v 2.2.0\SuratJalan.Resources.resources
+D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Surat Jalan v 2.2.0\SuratJalan.SplashScreen1.resources
+D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Surat Jalan v 2.2.0\SuratJalan.vbproj.GenerateResource.Cache
+D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Surat Jalan v 2.2.0\Surat Jalan.TrustInfo.xml
+D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Surat Jalan v 2.2.0\Surat Jalan.exe.manifest
+D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Surat Jalan v 2.2.0\Surat Jalan.application

@@ -637,10 +637,6 @@ Public Class FrmUtama
         MessageBox.Show("Hai " + loged_in.Text + ", Selamat beraktifitas.", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Hand)
     End Sub
 
-    Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMasterSurat.Click
-
-    End Sub
-
     Private Sub btnFrmATM_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnFrmATM.Click
 
         If txtNoOrder.TextLength = 0 Then
@@ -649,7 +645,7 @@ Public Class FrmUtama
             FrmUtamaATM.Show()
             Me.Visible = False
         Else
-            MessageBox.Show("Selesaikan transaksi dulu atau klik tombol reset ya " + userlogin, "403 Forbidden", MessageBoxButtons.OK, MessageBoxIcon.Error) : Exit Sub
+            MessageBox.Show("Selesaikan transaksi dulu atau klik tombol reset ya 😤 " + userlogin, "403 Forbidden ", MessageBoxButtons.OK, MessageBoxIcon.Error) : Exit Sub
 
         End If
 
@@ -663,40 +659,131 @@ Public Class FrmUtama
 
     End Sub
 
-    Public Sub FBLink()
-        System.Diagnostics.Process.Start("https://facebook.com/igedeadisuryaekapramanaputra")
+    'Public Sub FBLink()
+    '    System.Diagnostics.Process.Start("https://facebook.com/igedeadisuryaekapramanaputra")
+    'End Sub
+
+    'Public Sub TwitterLink()
+    '    System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
+    'End Sub
+
+
+    'Public Sub IGLink()
+    '    System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
+    'End Sub
+
+    'Public Sub GPlusLink()
+    '    System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
+    'End Sub
+
+    'Public Sub WALink()
+    '    System.Diagnostics.Process.Start("tel:081337353585")
+    'End Sub
+
+    'Public Sub MapsLink()
+    '    System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
+    'End Sub
+
+    'Public Sub LinkedIn_Links()
+    '    System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
+    'End Sub
+
+    'Private Sub fb_Click(sender As System.Object, e As System.EventArgs) Handles fb.Click
+    '    FBLink()
+    'End Sub
+
+    'Private Sub whatsapp_Click(sender As System.Object, e As System.EventArgs) Handles whatsapp.Click
+    '    WALink()
+    'End Sub
+
+
+    Private Sub btnMasterSurat_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMasterSurat.Click
+        FrmMasterSurat.ShowDialog()
     End Sub
 
-    Public Sub TwitterLink()
-        System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
+    Private Sub instagram_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles instagram.Click
+        Try
+            InstagramOpen()
+        Catch ex As Exception
+            MessageBox.Show("Gagal membuka tautan" + ex.Message, " Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
     End Sub
 
-
-    Public Sub IGLink()
-        System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
+    Private Sub fb_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles fb.Click
+        Try
+            FaceboookOpen()
+        Catch ex As Exception
+            MessageBox.Show("Gagal membuka tautan" + ex.Message, " Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
     End Sub
 
-    Public Sub GPlusLink()
-        System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
+    Private Sub twitter_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles twitter.Click
+        Try
+            TwitterOpen()
+        Catch ex As Exception
+            MessageBox.Show("Gagal membuka tautan" + ex.Message, " Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
     End Sub
 
-    Public Sub WALink()
-        System.Diagnostics.Process.Start("tel:081337353585")
+    Private Sub gplus_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gplus.Click
+        Try
+            GplusOpen()
+        Catch ex As Exception
+            MessageBox.Show("Gagal membuka tautan" + ex.Message, " Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
     End Sub
 
-    Public Sub MapsLink()
-        System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
+    Private Sub linkedin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles linkedin.Click
+        Try
+            LinkedinOpen()
+        Catch ex As Exception
+            MessageBox.Show("Gagal membuka tautan" + ex.Message, " Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
     End Sub
 
-    Public Sub LinkedIn_Links()
-        System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
+    Private Sub whatsapp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles whatsapp.Click
+        Try
+            If MsgBox("Apakah anda yakin akan menghubungi Author via WhatsApp ? Anda akan dialihkan ke halaman web.whatsapp.com", vbYesNo, "Buka Browser") = vbYes Then
+                WhatsappSend()
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Gagal membuka tautan" + ex.Message, " Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
     End Sub
 
-    Private Sub fb_Click(sender As System.Object, e As System.EventArgs) Handles fb.Click
-        FBLink()
+    Private Sub maps_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles maps.Click
+        Try
+            If MsgBox("Anda akan dialihkan ke halaman maps dari lokasi CV Angkasa Teknik Mandiri " + vbNewLine + "Lanjutkan ?", vbYesNo, "Buka Lokasi Perusahaan") = vbYes Then
+                GmapsOpen()
+                AuthorIG()
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show("Gagal membuka tautan" + ex.Message, " Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
     End Sub
 
-    Private Sub whatsapp_Click(sender As System.Object, e As System.EventArgs) Handles whatsapp.Click
-        WALink()
+    Private Sub gmail_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gmail.Click
+        Try
+            If MsgBox("Apakah anda yakin akan Mengirim email ke dintara.kitchen@gmail.com ? Default email akan dibuka sekarang ?", vbYesNo, "Kirim Email") = vbYes Then
+
+                GmailSend()
+                AuthorIG()
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Gagal Mengirim Email" + ex.Message, " Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
+    End Sub
+
+    Private Sub outlook_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles outlook.Click
+        Try
+            If MsgBox("Apakah anda yakin akan Mengirim email ke it@dintarakitchen.co.id ? Default email akan dibuka sekarang ?", vbYesNo, "Kirim Email") = vbYes Then
+
+                OutlookSend()
+                '("OUTLOOK")
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Gagal Mengirim Email" + ex.Message, " Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
     End Sub
 End Class

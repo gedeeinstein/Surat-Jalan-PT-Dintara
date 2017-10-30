@@ -633,7 +633,7 @@ Public Class FrmUtamaATM
     End Sub
 
     Private Sub loged_in_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles loged_in.Click
-        MessageBox.Show("Hai " + loged_in.Text + ", Selamat beraktifitas.", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Hand)
+        MessageBox.Show("Hai 😍 " + loged_in.Text + ", Selamat beraktifitas.", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Hand)
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTambahUser.Click
@@ -662,42 +662,92 @@ Public Class FrmUtamaATM
     End Sub
 
     Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMasterSurat.Click
-
+        FrmMasterSurat.ShowDialog()
     End Sub
 
     Private Sub instagram_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles instagram.Click
-
+        Try
+            InstagramOpen()
+        Catch ex As Exception
+            MessageBox.Show("Gagal membuka tautan" + ex.Message, " Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
     End Sub
 
     Private Sub fb_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles fb.Click
-
+        Try
+            FaceboookOpen()
+        Catch ex As Exception
+            MessageBox.Show("Gagal membuka tautan" + ex.Message, " Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
     End Sub
 
     Private Sub twitter_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles twitter.Click
-
+        Try
+            TwitterOpen()
+        Catch ex As Exception
+            MessageBox.Show("Gagal membuka tautan" + ex.Message, " Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
     End Sub
 
     Private Sub gplus_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gplus.Click
-
+        Try
+            GplusOpen()
+        Catch ex As Exception
+            MessageBox.Show("Gagal membuka tautan" + ex.Message, " Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
     End Sub
 
     Private Sub linkedin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles linkedin.Click
-
+        Try
+            LinkedinOpen()
+        Catch ex As Exception
+            MessageBox.Show("Gagal membuka tautan" + ex.Message, " Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
     End Sub
 
     Private Sub whatsapp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles whatsapp.Click
-
+        Try
+            If MsgBox("Apakah anda yakin akan menghubungi Author via WhatsApp ? Anda akan dialihkan ke halaman web.whatsapp.com", vbYesNo, "Buka Browser") = vbYes Then
+                WhatsappSend()
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Gagal membuka tautan" + ex.Message, " Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
     End Sub
 
     Private Sub maps_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles maps.Click
+        Try
+            If MsgBox("Anda akan dialihkan ke halaman maps dari lokasi CV Angkasa Teknik Mandiri " + vbNewLine + "Lanjutkan ?", vbYesNo, "Buka Lokasi Perusahaan") = vbYes Then
+                GmapsOpen()
+                AuthorIG()
+            End If
 
+        Catch ex As Exception
+            MessageBox.Show("Gagal membuka tautan" + ex.Message, " Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
     End Sub
 
     Private Sub gmail_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gmail.Click
+        Try
+            If MsgBox("Apakah anda yakin akan Mengirim email ke dintara.kitchen@gmail.com ? Default email akan dibuka sekarang ?", vbYesNo, "Kirim Email") = vbYes Then
 
+                GmailSend()
+                AuthorIG()
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Gagal Mengirim Email" + ex.Message, " Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
     End Sub
 
     Private Sub outlook_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles outlook.Click
+        Try
+            If MsgBox("Apakah anda yakin akan Mengirim email ke it@dintarakitchen.co.id ? Default email akan dibuka sekarang ?", vbYesNo, "Kirim Email") = vbYes Then
 
+                OutlookSend()
+                '("OUTLOOK")
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Gagal Mengirim Email" + ex.Message, " Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
     End Sub
 End Class
