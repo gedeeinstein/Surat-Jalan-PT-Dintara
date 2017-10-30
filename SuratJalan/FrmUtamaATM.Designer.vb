@@ -71,7 +71,6 @@ Partial Class FrmUtamaATM
         Me.gmail = New System.Windows.Forms.LinkLabel()
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
         Me.outlook = New System.Windows.Forms.PictureBox()
         Me.gmail2 = New System.Windows.Forms.PictureBox()
         Me.maps = New System.Windows.Forms.PictureBox()
@@ -81,8 +80,6 @@ Partial Class FrmUtamaATM
         Me.fb2 = New System.Windows.Forms.PictureBox()
         Me.instagram = New System.Windows.Forms.PictureBox()
         Me.linkedin = New System.Windows.Forms.PictureBox()
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
@@ -305,10 +302,7 @@ Partial Class FrmUtamaATM
         Me.btnSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
@@ -326,15 +320,12 @@ Partial Class FrmUtamaATM
         Me.btnSimpan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
         Me.btnSimpan.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnSimpan.Location = New System.Drawing.Point(8, 549)
         Me.btnSimpan.Name = "btnSimpan"
         Me.btnSimpan.Size = New System.Drawing.Size(114, 49)
         Me.btnSimpan.TabIndex = 12
         Me.btnSimpan.Text = "&Save"
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
@@ -433,7 +424,6 @@ Partial Class FrmUtamaATM
         Me.Label8.ForeColor = System.Drawing.SystemColors.ControlText
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
         Me.Label8.Location = New System.Drawing.Point(0, 687)
         Me.Label8.Name = "Label8"
@@ -453,11 +443,6 @@ Partial Class FrmUtamaATM
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(121, 17)
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
-=======
-        Me.Label8.Location = New System.Drawing.Point(0, 687)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(121, 17)
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "By I Gede Adi Putra"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -467,10 +452,7 @@ Partial Class FrmUtamaATM
         '
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
@@ -491,7 +473,6 @@ Partial Class FrmUtamaATM
         Me.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
         Me.btnLogOut.BackColor = System.Drawing.SystemColors.ControlText
         Me.btnLogOut.FlatAppearance.BorderSize = 0
@@ -503,8 +484,6 @@ Partial Class FrmUtamaATM
         Me.btnLogOut.TabIndex = 15
         Me.btnLogOut.Text = "&Logout"
         '>>>>>>> 0c8872419d27b663d61ea23e1dee09e2a17994f8
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
@@ -529,7 +508,6 @@ Partial Class FrmUtamaATM
         Me.btnKeluar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
         Me.btnKeluar.BackColor = System.Drawing.Color.DarkRed
         Me.btnKeluar.FlatAppearance.BorderSize = 0
@@ -540,8 +518,6 @@ Partial Class FrmUtamaATM
         Me.btnKeluar.Size = New System.Drawing.Size(114, 49)
         Me.btnKeluar.TabIndex = 16
         Me.btnKeluar.Text = "&Exit App"
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
@@ -558,7 +534,6 @@ Partial Class FrmUtamaATM
         Me.Label9.Size = New System.Drawing.Size(135, 25)
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(0, Byte))
@@ -566,8 +541,6 @@ Partial Class FrmUtamaATM
         Me.Label9.Location = New System.Drawing.Point(657, 549)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(140, 49)
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
@@ -580,10 +553,7 @@ Partial Class FrmUtamaATM
         '
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
@@ -594,7 +564,6 @@ Partial Class FrmUtamaATM
         Me.Label_TotalBarang.Location = New System.Drawing.Point(811, 552)
         Me.Label_TotalBarang.Name = "Label_TotalBarang"
         Me.Label_TotalBarang.Size = New System.Drawing.Size(29, 31)
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -609,8 +578,6 @@ Partial Class FrmUtamaATM
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
         Me.Label_TotalBarang.TabIndex = 18
         Me.Label_TotalBarang.Text = "0"
         '
@@ -618,10 +585,7 @@ Partial Class FrmUtamaATM
         '
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
@@ -636,7 +600,6 @@ Partial Class FrmUtamaATM
         Me.btnReset.Location = New System.Drawing.Point(247, 549)
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
         Me.btnReset.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.btnReset.FlatAppearance.BorderSize = 0
@@ -648,8 +611,6 @@ Partial Class FrmUtamaATM
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
         Me.btnReset.Size = New System.Drawing.Size(114, 49)
@@ -657,10 +618,7 @@ Partial Class FrmUtamaATM
         Me.btnReset.Text = "&Reset"
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
@@ -675,10 +633,7 @@ Partial Class FrmUtamaATM
         Me.btnBatal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
@@ -690,12 +645,9 @@ Partial Class FrmUtamaATM
         Me.btnBatal.Location = New System.Drawing.Point(127, 548)
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
         Me.btnBatal.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnBatal.Location = New System.Drawing.Point(128, 549)
 
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
@@ -706,16 +658,11 @@ Partial Class FrmUtamaATM
         Me.btnBatal.TabIndex = 20
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
         Me.btnBatal.Text = "&Batal"
         Me.btnBatal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
 
         Me.btnBatal.Text = "&Cancel"
-=======
-        Me.btnBatal.Text = "&Batal"
-        Me.btnBatal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
         Me.btnBatal.Text = "&Batal"
         Me.btnBatal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -877,7 +824,6 @@ Partial Class FrmUtamaATM
         Me.gmail.Text = "                  "
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
         'outlook
         '
         Me.outlook.Cursor = System.Windows.Forms.Cursors.Hand
@@ -974,8 +920,6 @@ Partial Class FrmUtamaATM
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
         '
         'FrmUtamaATM
         '
@@ -984,10 +928,7 @@ Partial Class FrmUtamaATM
         Me.BackColor = System.Drawing.SystemColors.Control
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
@@ -999,7 +940,6 @@ Partial Class FrmUtamaATM
         Me.Controls.Add(Me.twitt)
         Me.Controls.Add(Me.fb)
         Me.Controls.Add(Me.ig)
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1015,8 +955,6 @@ Partial Class FrmUtamaATM
         Me.Controls.Add(Me.instagram)
         Me.Controls.Add(Me.linkedin)
 
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
@@ -1105,7 +1043,6 @@ Partial Class FrmUtamaATM
     Friend WithEvents gmail As System.Windows.Forms.LinkLabel
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
     Friend WithEvents outlook As System.Windows.Forms.PictureBox
     Friend WithEvents gmail2 As System.Windows.Forms.PictureBox
@@ -1116,8 +1053,6 @@ Partial Class FrmUtamaATM
     Friend WithEvents fb2 As System.Windows.Forms.PictureBox
     Friend WithEvents instagram As System.Windows.Forms.PictureBox
     Friend WithEvents linkedin As System.Windows.Forms.PictureBox
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======

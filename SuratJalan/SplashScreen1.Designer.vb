@@ -30,14 +30,10 @@ Partial Class SplashScreen1
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.author = New System.Windows.Forms.LinkLabel()
 
-=======
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
@@ -84,10 +80,7 @@ Partial Class SplashScreen1
         '
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
@@ -105,7 +98,6 @@ Partial Class SplashScreen1
         Me.LinkLabel1.Text = "By I Gede Adi Putra"
         Me.LinkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.LinkLabel1.VisitedLinkColor = System.Drawing.Color.White
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -128,8 +120,6 @@ Partial Class SplashScreen1
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
         '
         'SplashScreen1
         '
@@ -137,10 +127,7 @@ Partial Class SplashScreen1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
@@ -151,13 +138,10 @@ Partial Class SplashScreen1
         Me.Controls.Add(Me.LinkLabel1)
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
         Me.BackColor = System.Drawing.Color.Purple
         Me.ClientSize = New System.Drawing.Size(719, 349)
         Me.ControlBox = False
         Me.Controls.Add(Me.author)
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
@@ -182,15 +166,11 @@ Partial Class SplashScreen1
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
 
     Friend WithEvents author As System.Windows.Forms.LinkLabel
 
-=======
-    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
