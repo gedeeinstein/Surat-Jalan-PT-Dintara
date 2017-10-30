@@ -663,7 +663,6 @@ Public Class FrmUtama
         'SplashScreen1.ShowDialog()
 
     End Sub
-<<<<<<< HEAD
 
     Public Sub FBLink()
         System.Diagnostics.Process.Start("https://facebook.com/igedeadisuryaekapramanaputra")
@@ -701,6 +700,4 @@ Public Class FrmUtama
     Private Sub whatsapp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles whatsapp.Click
         WALink()
     End Sub
-=======
->>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 End Class
