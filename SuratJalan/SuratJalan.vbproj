@@ -333,11 +333,14 @@
   <ItemGroup>
     <Content Include="favicon.ico" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <None Include="Resources\whatsapp.png" />
     <None Include="Resources\google-plus.png" />
     <None Include="Resources\instagram.png" />
     <None Include="Resources\facebook.png" />
     <None Include="Resources\linkedin.png" />
+=======
+>>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
 =======
 >>>>>>> parent of 9f1b10c... Merge branch 'master' of https://github.com/gedeeinstein/Surat-Jalan-PT-Dintara
     <None Include="Resources\CV_LOGO.jpg" />
