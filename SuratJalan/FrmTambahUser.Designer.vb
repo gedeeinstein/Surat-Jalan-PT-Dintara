@@ -71,16 +71,15 @@ Partial Class FrmTambahUser
         '
         'Exit_Label
         '
-        Me.Exit_Label.AutoSize = True
         Me.Exit_Label.BackColor = System.Drawing.Color.Red
         Me.Exit_Label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Exit_Label.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Exit_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Exit_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Exit_Label.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Exit_Label.Location = New System.Drawing.Point(1188, 0)
+        Me.Exit_Label.Location = New System.Drawing.Point(1183, 0)
         Me.Exit_Label.Name = "Exit_Label"
         Me.Exit_Label.Padding = New System.Windows.Forms.Padding(7, 5, 7, 5)
-        Me.Exit_Label.Size = New System.Drawing.Size(32, 27)
+        Me.Exit_Label.Size = New System.Drawing.Size(37, 37)
         Me.Exit_Label.TabIndex = 26
         Me.Exit_Label.Text = "X"
         Me.Exit_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -192,7 +191,7 @@ Partial Class FrmTambahUser
         Me.GBDataKaryawan.Size = New System.Drawing.Size(432, 224)
         Me.GBDataKaryawan.TabIndex = 27
         Me.GBDataKaryawan.TabStop = False
-        Me.GBDataKaryawan.Text = "Data Karyawan"
+        Me.GBDataKaryawan.Text = "Data User"
         '
         'TextBox1
         '
@@ -371,7 +370,7 @@ Partial Class FrmTambahUser
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.ClientSize = New System.Drawing.Size(1220, 435)
+        Me.ClientSize = New System.Drawing.Size(1220, 412)
         Me.Controls.Add(Me.GBPencarian)
         Me.Controls.Add(Me.DG_User)
         Me.Controls.Add(Me.GBTombol)
@@ -390,7 +389,6 @@ Partial Class FrmTambahUser
         Me.GBPencarian.ResumeLayout(False)
         Me.GBPencarian.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label7 As System.Windows.Forms.Label

@@ -127,7 +127,7 @@ Public Class FrmUtama
 
         dtSurat = Proses.ExecuteQuery("SELECT * FROM suratjalan order by nosurat desc")
         If dtSurat.Rows.Count = 0 Then
-            txtNoSurat.Text = "001" + "/SJ/" + Format(Now, "MM") + "/PT/" + Format(Now, "yyyy")
+            txtNoSurat.Text = "001" + "/SJ/" + bln + "/PT/" + Format(Now, "yyyy")
         Else
             With dtSurat.Rows(0)
                 txtNoSurat.Text = .Item("nosurat")
@@ -414,7 +414,7 @@ Public Class FrmUtama
     Private Sub txtQty_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtQty.KeyPress
 
         Try
-
+            Proses.OpenConn()
             Select Case e.KeyChar
                 Case Chr(47) To Chr(57)
                     'cmbPerushaan.Focus()
@@ -458,7 +458,7 @@ Public Class FrmUtama
                 Case Else
                     e.KeyChar = Chr(0)
             End Select
-
+            Proses.CloseConn()
         Catch ex As Exception
             MessageBox.Show("Gagal. Tidak diperbolehkan menginput barang yang sama. Masukanlah jumlah quantity. Jika Pertama kali input sudah salah harap ulangi proses dengan tekan tombol batal " + vbNewLine + ex.Message, "Hubungi IT", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
         End Try
@@ -519,21 +519,34 @@ Public Class FrmUtama
     End Sub
 
     Private Sub btnLogOut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLogOut.Click
-        If MsgBox("Apakah yakin akan Log Off / Log Out ?", vbYesNo, "Konfirmasi") = vbYes Then
-            Me.Close()
-            FrmLogin.txtNama.Text = ""
-            FrmLogin.Show()
+
+
+        If txtNoOrder.TextLength = 0 Then
+            If MsgBox("Apakah yakin akan Log Off / Log Out ?", vbYesNo, "Konfirmasi") = vbYes Then
+                Me.Close()
+                FrmLogin.txtNama.Text = ""
+                FrmLogin.Show()
+            End If
+        Else
+            MessageBox.Show("Selesaikan transaksi dulu atau klik tombol reset ya 😤 " + userlogin, "403 Forbidden ", MessageBoxButtons.OK, MessageBoxIcon.Error) : Exit Sub
         End If
+        
 
     End Sub
 
     Private Sub btnKeluar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnKeluar.Click
-        If MsgBox("Apakah ingin menutup aplikasi ini ?", MsgBoxStyle.OkCancel, "Konfirmasi") = MsgBoxResult.Ok Then
-            Me.Close()
+        If txtNoOrder.TextLength = 0 Then
 
-            FrmLogin.Close()
-            Application.Exit()
+            If MsgBox("Apakah ingin menutup aplikasi ini ?", MsgBoxStyle.OkCancel, "Konfirmasi") = MsgBoxResult.Ok Then
+                Me.Close()
+
+                FrmLogin.Close()
+                Application.Exit()
+            End If
+        Else
+            MessageBox.Show("Selesaikan transaksi dulu atau klik tombol reset ya 😤 " + userlogin, "403 Forbidden ", MessageBoxButtons.OK, MessageBoxIcon.Error) : Exit Sub
         End If
+
     End Sub
 
 
@@ -566,7 +579,7 @@ Public Class FrmUtama
     End Sub
 
     Private Sub btnCariPerusahaan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCariPerusahaan.Click
-
+        Proses.OpenConn()
         FrmCariPerusahaan.Text = "Pilih Perusahaan PT"
         FrmCariPerusahaan.ShowDialog()
     End Sub
@@ -790,4 +803,5 @@ Public Class FrmUtama
     Private Sub btnTambahUser_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTambahUser.Click
         FrmTambahUser.ShowDialog()
     End Sub
+
 End Class

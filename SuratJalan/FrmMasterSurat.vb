@@ -42,4 +42,12 @@ Public Class FrmMasterSurat
             'Application.Exit()
         End If
     End Sub
+
+    Private Sub GBPencarian_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GBPencarian.Enter
+
+    End Sub
+
+    Private Sub GBDataKaryawan_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GBDataKaryawan.Enter
+
+    End Sub
 End Class

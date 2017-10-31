@@ -27,7 +27,7 @@ Public Class FrmCariPerusahaan
 
 
     Sub Data_Perusahaan()
-
+        Proses.CloseConn()
 
         Try
             Proses.OpenConn()
