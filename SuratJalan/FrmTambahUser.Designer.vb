@@ -371,7 +371,7 @@ Partial Class FrmTambahUser
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.ClientSize = New System.Drawing.Size(1220, 457)
+        Me.ClientSize = New System.Drawing.Size(1220, 435)
         Me.Controls.Add(Me.GBPencarian)
         Me.Controls.Add(Me.DG_User)
         Me.Controls.Add(Me.GBTombol)
