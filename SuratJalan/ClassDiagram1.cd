@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SuratJalan.ClsKoneksi" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAJBAAAAAAAAAAAEAAAAAEBAIAQAAAAAAAAAA=</HashCode>
+      <FileName>ClsKoneksi.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuratJalan.DataSet1" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAAAJABAAAQAAAAAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuratJalan.DataSet2" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAAAJABAAAQAAAAAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuratJalan.FrmCariBarang" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAABAIAAEKABgAEAAUCAAAACAAAAQFggQAAIQQAJAEA=</HashCode>
+      <FileName>FrmCariBarang.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuratJalan.FrmCariPerusahaan" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQABABAAECQBgAEABUGAIBgSAIAAIFAiQAAIQAAIAEQ=</HashCode>
+      <FileName>FrmCariPerusahaan.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuratJalan.FrmConfig" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAFCAQAAKAAACAAAACAAAACAAAEAAAAAgAAAA=</HashCode>
+      <FileName>FrmConfig.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuratJalan.FrmLogin" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAggACEEGiAgAAAAQACARIBCAIAAQAgBFQgBAkAYRQA=</HashCode>
+      <FileName>FrmLogin.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuratJalan.FrmMasterSurat" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAIAAAQCABgAACASCAAAACAgAAQBQgQIAAAAAAAAA=</HashCode>
+      <FileName>FrmMasterSurat.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuratJalan.FrmRptSPK" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACBAAACAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>FrmRptSPK.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuratJalan.FrmRptSPK_ATM" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACBAAACAgAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>FrmRptSPK_ATM.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuratJalan.FrmTambahUser" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAiQgACQECABAgECAACBiNASAogRgACiFBAIAACAAAA=</HashCode>
+      <FileName>FrmTambahUser.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuratJalan.FrmUtama" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>PsABwFAQkTBNFAkDRUiKUgEDKEByZbj0TEAoEEAZAgg=</HashCode>
+      <FileName>FrmUtama.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuratJalan.FrmUtamaATM" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>PsABwFAQkTBNFAkDRUiKQgEDKEAyZ7j0TEAoEEAZAgg=</HashCode>
+      <FileName>FrmUtamaATM.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuratJalan.Koneksi" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAgAAAAABAAAAQAAAAAAEAAAAAEAAAAQAQCAAAAAAA=</HashCode>
+      <FileName>Koneksi.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuratJalan.RptSuratJalanATM" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAABJAAAQAAAAAAAoAAAAAAAAAAAADAABAAAABAA=</HashCode>
+      <FileName>RptSuratJalanATM.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuratJalan.CachedRptSuratJalanATM" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAFAEAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RptSuratJalanATM.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SuratJalan.RptSuratJalanNew" Collapsed="true">
+    <Position X="12" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAABJAAAQAAAAAAAoAAAAAAAAAAAADAABAAAABAA=</HashCode>
+      <FileName>RptSuratJalanNew.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuratJalan.CachedRptSuratJalanNew" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAFAEAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RptSuratJalanNew.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SuratJalan.SplashScreen1" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAEGAAMAAAAACAAIACAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>SplashScreen1.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuratJalan.My.MyApplication" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuratJalan.My.MySettings" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAABAAAAAQAABAAJAAABAABAAAAACAAEAAAAAA=</HashCode>
+      <FileName>Settings.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Module Name="SuratJalan.Globals" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAgBIAChVAAAggAgAAAAQIAQAkQCgAYAAAiAQAAACg=</HashCode>
+      <FileName>Global.vb</FileName>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="SuratJalan.My.MySettingsProperty" Collapsed="true">
+    <Position X="2.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="SuratJalan.My.Resources.Resources" Collapsed="true">
+    <Position X="4" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EkAkgQAEAAGAAABBQQgFMCCAAUACIgICIAEAAQAAYIA=</HashCode>
+    </TypeIdentifier>
+  </Module>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

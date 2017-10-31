@@ -79,7 +79,6 @@ Public Class FrmTambahUser
 
         Atur_Awal()
 
-
     End Sub
 
     'Sub Atur
