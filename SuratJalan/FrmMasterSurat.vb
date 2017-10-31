@@ -21,7 +21,7 @@ Public Class FrmMasterSurat
 
     End Sub
 
-    Private Sub PrintPreviewDialog1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PrintPreviewDialog1.Load
+    Private Sub PrintPreviewDialog1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs)
     End Sub
 
     Private Sub title_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles title.Click
@@ -30,5 +30,16 @@ Public Class FrmMasterSurat
 
     Private Sub FrmMasterSurat_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub DGMasterSurat_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGMasterSurat.CellContentClick
+
+    End Sub
+
+    Private Sub btnClose_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClose.Click
+        If MsgBox("Apakah anda yakin mau keluar dari form master surat ", vbYesNo, "Konfirmasi") = vbYes Then
+            Me.Close()
+            'Application.Exit()
+        End If
     End Sub
 End Class

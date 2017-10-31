@@ -70,12 +70,11 @@ Public Class FrmLogin
                 myadapter.SelectCommand = mycommand
                 Dim mydata As MySqlDataReader
                 mydata = mycommand.ExecuteReader()
+
+
                 If txtusername.Text.Count = 0 Then
                     MsgBox("Masukkan Username !", MsgBoxStyle.Information, "Info")
-                    txtusername.Focus()
-                    'ElseIf txtNama.Text.Count = 0 Then
-                    '    MsgBox("Maaf User Tersebut Belum Terdaftar", MsgBoxStyle.Critical, "Error")
-                    '    Call reset()
+                    txtusername.Focus() : Exit Sub
                 ElseIf txtpassword.Text.Count = 0 Then
                     MsgBox("Masukkan Password !", MsgBoxStyle.Information, "Info")
                     txtpassword.Focus()
@@ -84,7 +83,7 @@ Public Class FrmLogin
                         MsgBox("Username atau password ada yang salah! ", MsgBoxStyle.Exclamation,
                     "Error Login")
                         Call reset()
-
+                        : Exit Sub
                     Else
                         mydata.Read()
                         'kry_id = mydata("KARYAWANID")
@@ -105,7 +104,6 @@ Public Class FrmLogin
                             FrmUtama.Show()
                         Else
                             MsgBox("Silahkan Pilih Login Tipe Terlebih Dahulu", MsgBoxStyle.Exclamation, "Pilih Salah Satu")
-
                         End If
 
                         Me.Hide()
@@ -114,7 +112,7 @@ Public Class FrmLogin
                 End If
 
                 mydata.Read()
-                isAdmin = mydata("level")
+                isAdmin = mydata("level_id")
 
                 If isAdmin = 2 Then
                     MsgBox("Kamu Login sebagai user biasa, beberapa fitur akan dibatasi !", MsgBoxStyle.Information, "Hai 😍 " + userlogin)
@@ -138,20 +136,21 @@ Public Class FrmLogin
 
                 proses.CloseConn()
             Else
-                MsgBox("Tidak dapat terhubung ke server, silahkan reset terlebih dahulu", MsgBoxStyle.Critical, "Connection Error")
+                'MsgBox("Tidak dapat terhubung ke server, silahkan reset terlebih dahulu", MsgBoxStyle.Critical, "Connection Error")
                 Connect()
             End If
 
         Catch ex As Exception
             Connect()
-            MsgBox("Tidak dapat terhubung ke server, silahkan reset terlebih dahulu", MsgBoxStyle.Critical, "Connection Error")
+            MsgBox("Tidak dapat terhubung ke server, silahkan reset terlebih dahulu" + vbNewLine + ex.Message, MsgBoxStyle.Critical, "Connection Error")
             Connect()
         End Try
     End Sub
 
     Private Sub Login_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Connect()
-        rbATM.Checked = True
+        rbATM.Checked = False
+        rbDIN.Checked = True
     End Sub
 
     Private Sub BtnReset_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnReset.Click

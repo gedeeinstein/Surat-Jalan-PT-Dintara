@@ -25,7 +25,7 @@ Partial Class FrmMasterSurat
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMasterSurat))
         Me.DGMasterSurat = New System.Windows.Forms.DataGridView()
         Me.title = New System.Windows.Forms.Label()
-        Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
+        Me.btnClose = New System.Windows.Forms.Button()
         CType(Me.DGMasterSurat, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -53,15 +53,21 @@ Partial Class FrmMasterSurat
         Me.title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.title.UseCompatibleTextRendering = True
         '
-        'PrintPreviewDialog1
+        'btnClose
         '
-        Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
-        Me.PrintPreviewDialog1.AutoScrollMinSize = New System.Drawing.Size(0, 0)
-        Me.PrintPreviewDialog1.ClientSize = New System.Drawing.Size(400, 300)
-        Me.PrintPreviewDialog1.Enabled = True
-        Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
-        Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
-        Me.PrintPreviewDialog1.Visible = False
+        Me.btnClose.AutoSize = True
+        Me.btnClose.BackColor = System.Drawing.Color.Gray
+        Me.btnClose.FlatAppearance.BorderSize = 0
+        Me.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue
+        Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClose.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnClose.Location = New System.Drawing.Point(870, 0)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(37, 37)
+        Me.btnClose.TabIndex = 2
+        Me.btnClose.Text = "X"
+        Me.btnClose.UseVisualStyleBackColor = False
         '
         'FrmMasterSurat
         '
@@ -69,6 +75,7 @@ Partial Class FrmMasterSurat
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(217, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(24, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(907, 517)
+        Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.title)
         Me.Controls.Add(Me.DGMasterSurat)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -80,9 +87,10 @@ Partial Class FrmMasterSurat
         Me.Text = "Master Surat"
         CType(Me.DGMasterSurat, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents DGMasterSurat As System.Windows.Forms.DataGridView
     Friend WithEvents title As System.Windows.Forms.Label
-    Friend WithEvents PrintPreviewDialog1 As System.Windows.Forms.PrintPreviewDialog
+    Friend WithEvents btnClose As System.Windows.Forms.Button
 End Class

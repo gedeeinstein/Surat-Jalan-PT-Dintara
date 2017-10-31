@@ -415,7 +415,7 @@ Public Class FrmUtama
 
         Try
 
-            Select e.KeyChar
+            Select Case e.KeyChar
                 Case Chr(47) To Chr(57)
                     'cmbPerushaan.Focus()
                 Case Chr(8)
@@ -788,6 +788,6 @@ Public Class FrmUtama
     End Sub
 
     Private Sub btnTambahUser_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTambahUser.Click
-
+        FrmTambahUser.ShowDialog()
     End Sub
 End Class

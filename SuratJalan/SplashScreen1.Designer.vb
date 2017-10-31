@@ -51,7 +51,7 @@ Partial Class SplashScreen1
         '
         'Label2
         '
-        Me.Label2.BackColor = System.Drawing.Color.DarkMagenta
+        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(185, Byte), Integer))
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.Control
@@ -65,7 +65,7 @@ Partial Class SplashScreen1
         'Timer1
         '
         Me.Timer1.Enabled = True
-        Me.Timer1.Interval = 30
+        Me.Timer1.Interval = 20
         '
         'author
         '
@@ -86,7 +86,7 @@ Partial Class SplashScreen1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Purple
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(219, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(719, 349)
         Me.ControlBox = False
         Me.Controls.Add(Me.author)

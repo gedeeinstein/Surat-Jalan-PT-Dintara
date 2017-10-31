@@ -153,14 +153,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Surat Jalan.exe" size="15219200">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Surat Jalan.exe" size="15413760">
       <assemblyIdentity name="Surat Jalan" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>HFh0Jazo6WvAhlOMOViky9ZWz8I=</dsig:DigestValue>
+        <dsig:DigestValue>Qw04e5y+wChi3YW/Gq+V1MO5iFw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -173,13 +173,13 @@
       <dsig:DigestValue>mrId4AtGTmKOr9rOooXEt1PcNn8=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Surat Jalan.exe.config" size="1252">
+  <file name="Surat Jalan.exe.config" size="1479">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>AiZgmu3mHoAhdFctWubrcbtpm5s=</dsig:DigestValue>
+      <dsig:DigestValue>9hQiBUk1kOavsgF36UfpDcWRxDA=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

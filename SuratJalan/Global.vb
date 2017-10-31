@@ -90,6 +90,8 @@ Module Globals
         System.Diagnostics.Process.Start("mailto:it@dintarakitchen.co.id?Subject=Tanya%20Tentang%20Aplikasi%20Surat%20Jalan&body=Tolong%20Datang%20dan%20perbaiki%20aplikasinya")
     End Sub
 
+
+
 End Module
 
 

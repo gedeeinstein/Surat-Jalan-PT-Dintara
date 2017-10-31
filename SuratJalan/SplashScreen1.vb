@@ -12,7 +12,7 @@
         's.Close()
 
 
-        
+
     End Sub
 
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
@@ -65,5 +65,6 @@
     '    author.LinkVisited = True
     '    System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
     'End Sub
+
 
 End Class
