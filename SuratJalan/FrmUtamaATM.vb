@@ -772,4 +772,8 @@ Public Class FrmUtamaATM
             MessageBox.Show("Gagal Mengirim Email" + ex.Message, " Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End Try
     End Sub
+
+    Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label1.Click
+
+    End Sub
 End Class

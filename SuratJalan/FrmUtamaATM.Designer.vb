@@ -73,6 +73,7 @@ Partial Class FrmUtamaATM
         Me.fb = New System.Windows.Forms.PictureBox()
         Me.instagram = New System.Windows.Forms.PictureBox()
         Me.linkedin = New System.Windows.Forms.PictureBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGBarangKirim, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -99,7 +100,7 @@ Partial Class FrmUtamaATM
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(1366, 93)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Surat Jalan CV. Amgkasa Teknik Mandiri"
+        Me.Label1.Text = "Surat Jalan CV. Aggkasa Teknik Mandiri"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label2
@@ -335,7 +336,7 @@ Partial Class FrmUtamaATM
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.Control
         Me.GroupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.GroupBox2.Controls.Add(Me.btnTambah)
+        Me.GroupBox2.Controls.Add(Me.TextBox1)
         Me.GroupBox2.Controls.Add(Me.txtKodeBarang)
         Me.GroupBox2.Controls.Add(Me.btnPilih)
         Me.GroupBox2.Controls.Add(Me.txtQty)
@@ -350,7 +351,7 @@ Partial Class FrmUtamaATM
         '
         'btnTambah
         '
-        Me.btnTambah.Location = New System.Drawing.Point(653, 15)
+        Me.btnTambah.Location = New System.Drawing.Point(857, 296)
         Me.btnTambah.Name = "btnTambah"
         Me.btnTambah.Size = New System.Drawing.Size(54, 23)
         Me.btnTambah.TabIndex = 21
@@ -686,6 +687,14 @@ Partial Class FrmUtamaATM
         Me.linkedin.TabIndex = 43
         Me.linkedin.TabStop = False
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(718, 17)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(54, 20)
+        Me.TextBox1.TabIndex = 22
+        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'FrmUtamaATM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -694,6 +703,7 @@ Partial Class FrmUtamaATM
         Me.ClientSize = New System.Drawing.Size(1366, 768)
         Me.ControlBox = False
         Me.Controls.Add(Me.outlook)
+        Me.Controls.Add(Me.btnTambah)
         Me.Controls.Add(Me.gmail)
         Me.Controls.Add(Me.maps)
         Me.Controls.Add(Me.whatsapp)
@@ -797,4 +807,5 @@ Partial Class FrmUtamaATM
     Friend WithEvents fb As System.Windows.Forms.PictureBox
     Friend WithEvents instagram As System.Windows.Forms.PictureBox
     Friend WithEvents linkedin As System.Windows.Forms.PictureBox
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
 End Class
