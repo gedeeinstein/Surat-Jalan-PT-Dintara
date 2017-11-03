@@ -647,7 +647,7 @@ Public Class FrmUtama
     End Sub
 
     Private Sub loged_in_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles loged_in.Click
-        MessageBox.Show("Hai " + loged_in.Text + ", Selamat beraktifitas.", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Hand)
+        MessageBox.Show("Hai " + loged_in.Text + ", Selamat beraktifitas.", "Selamat Datang", MessageBoxButtons.OK, MessageBoxIcon.Hand)
     End Sub
 
     Private Sub btnFrmATM_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnFrmATM.Click
