@@ -14,17 +14,32 @@ Public Class FrmUtamaATM
     Dim dtOrder As DataTable
     Dim dtSurat As DataTable
 
+
+
     Sub Data_Record_Pengiriman()
-        dtSurat = Proses.ExecuteQuery("SELECT nosurat AS 'NO SURAT', kode AS 'KODE BARANG', nama_barang AS 'NAMA BARANG', qty AS 'QTY' FROM suratjalan_detail WHERE nosurat = '" & txtNoSurat.Text & "'")
+        dtSurat = Proses.ExecuteQuery("SELECT nosurat AS 'NO SURAT', kode AS 'KODE BARANG', kode_lokasi as 'KODE LOKASI', nama_barang AS 'NAMA BARANG', qty AS 'QTY' FROM suratjalan_detail WHERE nosurat = '" & txtNoSurat.Text & "'")
 
         DGBarangKirim.DataSource = dtSurat
         DGBarangKirim.Columns(0).Visible = False
-        DGBarangKirim.Columns(1).Width = 130
-        DGBarangKirim.Columns(2).Width = 600
-        DGBarangKirim.Columns(3).Width = 65
+
+        DGBarangKirim.Columns(1).Width = 100
+        DGBarangKirim.Columns(2).Width = 100
+        DGBarangKirim.Columns(3).Width = 600
+        DGBarangKirim.Columns(4).Width = 80
+
+        'INSERT INTO `dbatm`.`suratjalan_detail` (`nosurat`, `kode`, `kode_lokasi`, `nama_barang`, `qty`, `no_order`)
 
         DGBarangKirim.Columns(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DGBarangKirim.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DGBarangKirim.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+        'DGBarangKirim.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+
+        'DGBarangKirim.GridColor = Color.White
+        'DGBarangKirim.DefaultCellStyle.ForeColor = Color.MediumPurple
+        'DGBarangKirim.AlternatingRowsDefaultCellStyle.BackColor = Color.DarkBlue
+        'DGBarangKirim.RowHeadersDefaultCellStyle.BackColor = Color.Black
+
+        DGBarangKirim.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+
     End Sub
 
     Sub Data_Pelanggan()
@@ -159,6 +174,7 @@ Public Class FrmUtamaATM
         btnCariPerusahaan.Enabled = True
         txtAlamat.Text = ""
         Label_TotalBarang.Text = "0"
+        txtKodeLokasi.Text = ""
     End Sub
 
 
@@ -317,7 +333,7 @@ Public Class FrmUtamaATM
     Private Sub total_item()
         Dim hitung As Integer
         For baris As Integer = 0 To DGBarangKirim.RowCount - 1
-            hitung = hitung + DGBarangKirim.Rows(baris).Cells(3).Value
+            hitung = hitung + DGBarangKirim.Rows(baris).Cells(4).Value
         Next
 
         'Label_TotalBarang.Text = 'DGBarangKirim.RowCount - 1
@@ -336,9 +352,11 @@ Public Class FrmUtamaATM
         Try
             Proses.OpenConn()
             SQL = "insert into suratjalan_detail " _
-                & "(nosurat, kode, nama_barang, qty, no_order) VALUES " _
-                & "('" & txtNoSurat.Text & "','" & Trim(txtKodeBarang.Text) & "' " _
+                & "(nosurat, kode, kode_lokasi, nama_barang, qty, no_order) VALUES " _
+                & "('" & txtNoSurat.Text & "','" & Trim(txtKodeBarang.Text) & "','" & Trim(txtKodeLokasi.Text) & "' " _
                 & ",'" & Rep(txtBarang.Text) & "','" & txtQty.Text & "','" & Trim(txtNoOrder.Text) & "')"
+            'INSERT INTO `dbatm`.`suratjalan_detail` (`nosurat`, `kode`, `kode_lokasi`, `nama_barang`, `qty`, `no_order`)
+
             Proses.ExecuteNonQuery(SQL)
             ' MsgBox("Barang ditambahakan", MsgBoxStyle.OkOnly, "Sukses")
             'MessageBox.Show("Barang yang akan dikirimkan sudah ditambahkan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -408,9 +426,7 @@ Public Class FrmUtamaATM
 
     'End Sub
 
-    Private Sub btnTambah_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTambah.Click
 
-    End Sub
 
     Private Sub txtQty_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtQty.KeyPress
 
@@ -451,6 +467,7 @@ Public Class FrmUtamaATM
                     Call total_item()
                     btnReset.Enabled = False
                     txtKodeBarang.Text = Nothing
+                    txtKodeLokasi.Text = ""
                     txtBarang.Text = Nothing
                     txtQty.Text = Nothing
                     btnBatal.Enabled = True
@@ -461,7 +478,7 @@ Public Class FrmUtamaATM
             End Select
 
         Catch ex As Exception
-            MessageBox.Show("Gagal. Tidak diperbolehkan menginput barang yang sama. Masukanlah jumlah quantity. Jika Pertama kali input sudah salah harap ulangi proses dengan tekan tombol batal " + vbNewLine + ex.Message, "Hubungi IT", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
+            MessageBox.Show("Ada kesalahan" + vbNewLine + ex.Message, "Hubungi IT", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
         End Try
 
         If (Not Char.IsControl(e.KeyChar) _
@@ -773,7 +790,22 @@ Public Class FrmUtamaATM
         End Try
     End Sub
 
-    Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label1.Click
+
+    Private Sub txtKodeLokasi_MouseDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles txtKodeLokasi.MouseDoubleClick
+        Try
+            If MsgBox("Apakah anda ingin mengubah kode lokasi dari data yang sudah diinput oleh marketing ?", vbYesNo, "Ganti Data") = vbYes Then
+                txtKodeLokasi.ReadOnly = False
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+
+    Private Sub Label_TotalBarang_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label_TotalBarang.Click
+
+    End Sub
+    Private Sub Label9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label9.Click
 
     End Sub
 End Class

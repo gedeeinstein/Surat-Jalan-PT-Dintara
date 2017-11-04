@@ -47,7 +47,6 @@ Partial Class FrmUtama
         Me.txtBarang = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.btnTambah = New System.Windows.Forms.Button()
         Me.txtKodeBarang = New System.Windows.Forms.TextBox()
         Me.btnPilih = New System.Windows.Forms.Button()
         Me.txtQty = New System.Windows.Forms.TextBox()
@@ -75,6 +74,8 @@ Partial Class FrmUtama
         Me.maps = New System.Windows.Forms.PictureBox()
         Me.gmail = New System.Windows.Forms.PictureBox()
         Me.outlook = New System.Windows.Forms.PictureBox()
+        Me.txtKodeLokasi = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGBarangKirim, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -208,7 +209,7 @@ Partial Class FrmUtama
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.GroupBox1.Location = New System.Drawing.Point(8, 131)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(840, 144)
+        Me.GroupBox1.Size = New System.Drawing.Size(885, 144)
         Me.GroupBox1.TabIndex = 10
         Me.GroupBox1.TabStop = False
         '
@@ -308,9 +309,10 @@ Partial Class FrmUtama
         Me.DGBarangKirim.Location = New System.Drawing.Point(8, 339)
         Me.DGBarangKirim.Name = "DGBarangKirim"
         Me.DGBarangKirim.ReadOnly = True
+        Me.DGBarangKirim.RowHeadersWidth = 5
         Me.DGBarangKirim.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
         Me.DGBarangKirim.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGBarangKirim.Size = New System.Drawing.Size(840, 192)
+        Me.DGBarangKirim.Size = New System.Drawing.Size(885, 275)
         Me.DGBarangKirim.TabIndex = 11
         '
         'btnSimpan
@@ -322,7 +324,7 @@ Partial Class FrmUtama
         Me.btnSimpan.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnSimpan.Image = Global.SuratJalan.My.Resources.Resources.save_disk
         Me.btnSimpan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSimpan.Location = New System.Drawing.Point(8, 549)
+        Me.btnSimpan.Location = New System.Drawing.Point(8, 639)
         Me.btnSimpan.Name = "btnSimpan"
         Me.btnSimpan.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.btnSimpan.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -356,7 +358,8 @@ Partial Class FrmUtama
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.Control
         Me.GroupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.GroupBox2.Controls.Add(Me.btnTambah)
+        Me.GroupBox2.Controls.Add(Me.Label9)
+        Me.GroupBox2.Controls.Add(Me.txtKodeLokasi)
         Me.GroupBox2.Controls.Add(Me.txtKodeBarang)
         Me.GroupBox2.Controls.Add(Me.btnPilih)
         Me.GroupBox2.Controls.Add(Me.txtQty)
@@ -365,20 +368,9 @@ Partial Class FrmUtama
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Location = New System.Drawing.Point(8, 281)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(840, 52)
+        Me.GroupBox2.Size = New System.Drawing.Size(885, 52)
         Me.GroupBox2.TabIndex = 13
         Me.GroupBox2.TabStop = False
-        '
-        'btnTambah
-        '
-        Me.btnTambah.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnTambah.Location = New System.Drawing.Point(653, 15)
-        Me.btnTambah.Name = "btnTambah"
-        Me.btnTambah.Size = New System.Drawing.Size(54, 23)
-        Me.btnTambah.TabIndex = 21
-        Me.btnTambah.Text = "Tambah"
-        Me.btnTambah.UseVisualStyleBackColor = True
-        Me.btnTambah.Visible = False
         '
         'txtKodeBarang
         '
@@ -402,7 +394,7 @@ Partial Class FrmUtama
         '
         'txtQty
         '
-        Me.txtQty.Location = New System.Drawing.Point(593, 17)
+        Me.txtQty.Location = New System.Drawing.Point(778, 17)
         Me.txtQty.Name = "txtQty"
         Me.txtQty.Size = New System.Drawing.Size(54, 20)
         Me.txtQty.TabIndex = 14
@@ -413,11 +405,11 @@ Partial Class FrmUtama
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label6.Location = New System.Drawing.Point(533, 20)
+        Me.Label6.Location = New System.Drawing.Point(746, 20)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(54, 13)
+        Me.Label6.Size = New System.Drawing.Size(26, 13)
         Me.Label6.TabIndex = 13
-        Me.Label6.Text = "Quantity"
+        Me.Label6.Text = "Qty"
         '
         'Label8
         '
@@ -442,7 +434,7 @@ Partial Class FrmUtama
         Me.btnLogOut.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnLogOut.Image = Global.SuratJalan.My.Resources.Resources.logout
         Me.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnLogOut.Location = New System.Drawing.Point(368, 549)
+        Me.btnLogOut.Location = New System.Drawing.Point(368, 639)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.btnLogOut.Size = New System.Drawing.Size(114, 49)
@@ -460,7 +452,7 @@ Partial Class FrmUtama
         Me.btnKeluar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnKeluar.Image = Global.SuratJalan.My.Resources.Resources.emergency_exit
         Me.btnKeluar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnKeluar.Location = New System.Drawing.Point(488, 549)
+        Me.btnKeluar.Location = New System.Drawing.Point(488, 639)
         Me.btnKeluar.Name = "btnKeluar"
         Me.btnKeluar.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.btnKeluar.Size = New System.Drawing.Size(114, 49)
@@ -474,7 +466,7 @@ Partial Class FrmUtama
         '
         Me.Label_TotalBarang.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label_TotalBarang.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label_TotalBarang.Location = New System.Drawing.Point(803, 549)
+        Me.Label_TotalBarang.Location = New System.Drawing.Point(856, 639)
         Me.Label_TotalBarang.Name = "Label_TotalBarang"
         Me.Label_TotalBarang.Size = New System.Drawing.Size(37, 49)
         Me.Label_TotalBarang.TabIndex = 18
@@ -490,7 +482,7 @@ Partial Class FrmUtama
         Me.btnReset.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnReset.Image = Global.SuratJalan.My.Resources.Resources.reset
         Me.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnReset.Location = New System.Drawing.Point(248, 549)
+        Me.btnReset.Location = New System.Drawing.Point(248, 639)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.btnReset.Size = New System.Drawing.Size(114, 49)
@@ -508,7 +500,7 @@ Partial Class FrmUtama
         Me.btnBatal.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnBatal.Image = Global.SuratJalan.My.Resources.Resources.folder
         Me.btnBatal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBatal.Location = New System.Drawing.Point(128, 549)
+        Me.btnBatal.Location = New System.Drawing.Point(128, 639)
         Me.btnBatal.Name = "btnBatal"
         Me.btnBatal.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.btnBatal.Size = New System.Drawing.Size(114, 49)
@@ -532,7 +524,7 @@ Partial Class FrmUtama
         '
         Me.welcome_lbl.AutoSize = True
         Me.welcome_lbl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.welcome_lbl.Location = New System.Drawing.Point(-15, 105)
+        Me.welcome_lbl.Location = New System.Drawing.Point(5, 104)
         Me.welcome_lbl.Name = "welcome_lbl"
         Me.welcome_lbl.Size = New System.Drawing.Size(83, 13)
         Me.welcome_lbl.TabIndex = 21
@@ -543,7 +535,7 @@ Partial Class FrmUtama
         Me.loged_in.AutoSize = True
         Me.loged_in.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.loged_in.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.loged_in.Location = New System.Drawing.Point(74, 105)
+        Me.loged_in.Location = New System.Drawing.Point(94, 104)
         Me.loged_in.Name = "loged_in"
         Me.loged_in.Size = New System.Drawing.Size(27, 13)
         Me.loged_in.TabIndex = 22
@@ -556,7 +548,7 @@ Partial Class FrmUtama
         Me.btnTambahUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTambahUser.ForeColor = System.Drawing.SystemColors.Control
         Me.btnTambahUser.Image = Global.SuratJalan.My.Resources.Resources.businessman
-        Me.btnTambahUser.Location = New System.Drawing.Point(974, 356)
+        Me.btnTambahUser.Location = New System.Drawing.Point(1028, 337)
         Me.btnTambahUser.Name = "btnTambahUser"
         Me.btnTambahUser.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.btnTambahUser.Size = New System.Drawing.Size(224, 97)
@@ -573,7 +565,7 @@ Partial Class FrmUtama
         Me.btnMasterSurat.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnMasterSurat.ForeColor = System.Drawing.SystemColors.Control
         Me.btnMasterSurat.Image = Global.SuratJalan.My.Resources.Resources.database
-        Me.btnMasterSurat.Location = New System.Drawing.Point(974, 152)
+        Me.btnMasterSurat.Location = New System.Drawing.Point(1028, 131)
         Me.btnMasterSurat.Name = "btnMasterSurat"
         Me.btnMasterSurat.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.btnMasterSurat.Size = New System.Drawing.Size(224, 97)
@@ -590,7 +582,7 @@ Partial Class FrmUtama
         Me.btnFrmATM.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFrmATM.ForeColor = System.Drawing.SystemColors.Control
         Me.btnFrmATM.Image = Global.SuratJalan.My.Resources.Resources.forms
-        Me.btnFrmATM.Location = New System.Drawing.Point(974, 253)
+        Me.btnFrmATM.Location = New System.Drawing.Point(1028, 234)
         Me.btnFrmATM.Name = "btnFrmATM"
         Me.btnFrmATM.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.btnFrmATM.Size = New System.Drawing.Size(224, 97)
@@ -602,9 +594,9 @@ Partial Class FrmUtama
         '
         'Label11
         '
-        Me.Label11.Location = New System.Drawing.Point(854, 131)
+        Me.Label11.Location = New System.Drawing.Point(899, 131)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(114, 47)
+        Me.Label11.Size = New System.Drawing.Size(123, 144)
         Me.Label11.TabIndex = 32
         Me.Label11.Visible = False
         '
@@ -613,7 +605,7 @@ Partial Class FrmUtama
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label12.Location = New System.Drawing.Point(657, 549)
+        Me.Label12.Location = New System.Drawing.Point(710, 639)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(140, 49)
         Me.Label12.TabIndex = 33
@@ -712,6 +704,24 @@ Partial Class FrmUtama
         Me.outlook.TabIndex = 42
         Me.outlook.TabStop = False
         '
+        'txtKodeLokasi
+        '
+        Me.txtKodeLokasi.Location = New System.Drawing.Point(593, 17)
+        Me.txtKodeLokasi.Name = "txtKodeLokasi"
+        Me.txtKodeLokasi.Size = New System.Drawing.Size(147, 20)
+        Me.txtKodeLokasi.TabIndex = 21
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label9.Location = New System.Drawing.Point(510, 20)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(77, 13)
+        Me.Label9.TabIndex = 24
+        Me.Label9.Text = "Kode Lokasi"
+        '
         'FrmUtama
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -805,7 +815,6 @@ Partial Class FrmUtama
     Friend WithEvents btnReset As System.Windows.Forms.Button
     Friend WithEvents btnCariPerusahaan As System.Windows.Forms.Button
     Friend WithEvents btnBatal As System.Windows.Forms.Button
-    Friend WithEvents btnTambah As System.Windows.Forms.Button
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents txtAlamat As System.Windows.Forms.TextBox
     Friend WithEvents welcome_lbl As System.Windows.Forms.Label
@@ -824,4 +833,6 @@ Partial Class FrmUtama
     Friend WithEvents maps As System.Windows.Forms.PictureBox
     Friend WithEvents gmail As System.Windows.Forms.PictureBox
     Friend WithEvents outlook As System.Windows.Forms.PictureBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents txtKodeLokasi As System.Windows.Forms.TextBox
 End Class

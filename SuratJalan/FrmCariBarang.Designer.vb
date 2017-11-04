@@ -23,6 +23,7 @@ Partial Class FrmCariBarang
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCariBarang))
         Me.DGBarang = New System.Windows.Forms.DataGridView()
         Me.txtNoOrder = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -55,23 +56,23 @@ Partial Class FrmCariBarang
         Me.DGBarang.RowHeadersWidth = 10
         Me.DGBarang.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.DGBarang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGBarang.Size = New System.Drawing.Size(707, 239)
+        Me.DGBarang.Size = New System.Drawing.Size(922, 239)
         Me.DGBarang.TabIndex = 12
         '
         'txtNoOrder
         '
         Me.txtNoOrder.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.txtNoOrder.Location = New System.Drawing.Point(498, 25)
+        Me.txtNoOrder.Location = New System.Drawing.Point(736, 27)
         Me.txtNoOrder.Name = "txtNoOrder"
         Me.txtNoOrder.ReadOnly = True
-        Me.txtNoOrder.Size = New System.Drawing.Size(221, 20)
+        Me.txtNoOrder.Size = New System.Drawing.Size(198, 20)
         Me.txtNoOrder.TabIndex = 13
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(425, 28)
+        Me.Label1.Location = New System.Drawing.Point(680, 30)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(50, 13)
         Me.Label1.TabIndex = 14
@@ -99,7 +100,7 @@ Partial Class FrmCariBarang
         '
         'btnPilih
         '
-        Me.btnPilih.Location = New System.Drawing.Point(526, 316)
+        Me.btnPilih.Location = New System.Drawing.Point(741, 318)
         Me.btnPilih.Name = "btnPilih"
         Me.btnPilih.Size = New System.Drawing.Size(85, 40)
         Me.btnPilih.TabIndex = 17
@@ -108,7 +109,7 @@ Partial Class FrmCariBarang
         '
         'btnBatal
         '
-        Me.btnBatal.Location = New System.Drawing.Point(634, 316)
+        Me.btnBatal.Location = New System.Drawing.Point(849, 318)
         Me.btnBatal.Name = "btnBatal"
         Me.btnBatal.Size = New System.Drawing.Size(85, 40)
         Me.btnBatal.TabIndex = 18
@@ -131,7 +132,7 @@ Partial Class FrmCariBarang
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Purple
-        Me.ClientSize = New System.Drawing.Size(731, 370)
+        Me.ClientSize = New System.Drawing.Size(946, 370)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnBatal)
         Me.Controls.Add(Me.btnPilih)
@@ -140,6 +141,7 @@ Partial Class FrmCariBarang
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtNoOrder)
         Me.Controls.Add(Me.DGBarang)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmCariBarang"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cari Data Barang "

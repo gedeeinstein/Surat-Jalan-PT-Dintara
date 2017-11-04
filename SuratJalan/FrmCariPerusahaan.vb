@@ -31,7 +31,7 @@ Public Class FrmCariPerusahaan
 
         Try
             Proses.OpenConn()
-            SQL = "SELECT tawar01.kode_pelanggan AS 'KODE', " _
+            SQL = "SELECT tawar01.kode_pelanggan AS 'KODE PERUSAHAAN', " _
                 & "pelanggan.nama AS 'NAMA PERUSAHAAN', tawar01.att AS 'PENERIMA', tawar01.kode AS 'PENAWARAN', tawar01.alamat as 'ALAMAT', tawar01.tgl AS 'TGL' " _
                 & "FROM tawar01 INNER JOIN pelanggan " _
                 & "ON tawar01.kode_pelanggan = pelanggan.kode " _
@@ -39,12 +39,15 @@ Public Class FrmCariPerusahaan
             perusahaan = Proses.ExecuteQuery(SQL)
 
             Me.DGPerusahaan.DataSource = perusahaan
-            Me.DGPerusahaan.Columns(0).Visible = False
+            'Me.DGPerusahaan.Columns(0).Visible = False
+            Me.DGPerusahaan.Columns(0).Width = 100
             Me.DGPerusahaan.Columns(1).Width = 380
             Me.DGPerusahaan.Columns(2).Width = 180
-            Me.DGPerusahaan.Columns(3).Width = 120
+            Me.DGPerusahaan.Columns(3).Width = 190
             Me.DGPerusahaan.Columns(4).Visible = False
             Me.DGPerusahaan.Columns(5).Visible = False ' Untuk Memasukan Alamat ke Form utama
+
+            '850
 
             DGPerusahaan.GridColor = Color.White
             DGPerusahaan.DefaultCellStyle.ForeColor = Color.White
@@ -52,6 +55,9 @@ Public Class FrmCariPerusahaan
             DGPerusahaan.RowsDefaultCellStyle.BackColor = Color.DarkGreen
             Proses.CloseConn()
 
+
+            DGPerusahaan.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            DGPerusahaan.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
             Proses.OpenConn()
 

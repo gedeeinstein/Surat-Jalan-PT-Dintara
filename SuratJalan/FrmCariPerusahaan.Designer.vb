@@ -22,7 +22,7 @@ Partial Class FrmCariPerusahaan
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnBatal = New System.Windows.Forms.Button()
         Me.btnPilih = New System.Windows.Forms.Button()
         Me.lbl_totalperusahaan = New System.Windows.Forms.Label()
@@ -42,7 +42,7 @@ Partial Class FrmCariPerusahaan
         'btnBatal
         '
         Me.btnBatal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBatal.Location = New System.Drawing.Point(643, 385)
+        Me.btnBatal.Location = New System.Drawing.Point(783, 385)
         Me.btnBatal.Name = "btnBatal"
         Me.btnBatal.Size = New System.Drawing.Size(75, 39)
         Me.btnBatal.TabIndex = 25
@@ -52,7 +52,7 @@ Partial Class FrmCariPerusahaan
         'btnPilih
         '
         Me.btnPilih.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPilih.Location = New System.Drawing.Point(562, 385)
+        Me.btnPilih.Location = New System.Drawing.Point(702, 385)
         Me.btnPilih.Name = "btnPilih"
         Me.btnPilih.Size = New System.Drawing.Size(75, 39)
         Me.btnPilih.TabIndex = 24
@@ -66,9 +66,9 @@ Partial Class FrmCariPerusahaan
         Me.lbl_totalperusahaan.ForeColor = System.Drawing.SystemColors.ControlText
         Me.lbl_totalperusahaan.Location = New System.Drawing.Point(192, 398)
         Me.lbl_totalperusahaan.Name = "lbl_totalperusahaan"
-        Me.lbl_totalperusahaan.Size = New System.Drawing.Size(27, 13)
+        Me.lbl_totalperusahaan.Size = New System.Drawing.Size(14, 13)
         Me.lbl_totalperusahaan.TabIndex = 23
-        Me.lbl_totalperusahaan.Text = "null"
+        Me.lbl_totalperusahaan.Text = "0"
         '
         'Label2
         '
@@ -89,14 +89,14 @@ Partial Class FrmCariPerusahaan
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(736, 59)
+        Me.Label1.Size = New System.Drawing.Size(870, 59)
         Me.Label1.TabIndex = 21
         Me.Label1.Text = "Cari Data Tujuan"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtCariPerusahaan
         '
-        Me.txtCariPerusahaan.Location = New System.Drawing.Point(320, 30)
+        Me.txtCariPerusahaan.Location = New System.Drawing.Point(454, 30)
         Me.txtCariPerusahaan.Name = "txtCariPerusahaan"
         Me.txtCariPerusahaan.Size = New System.Drawing.Size(290, 20)
         Me.txtCariPerusahaan.TabIndex = 20
@@ -110,18 +110,18 @@ Partial Class FrmCariPerusahaan
         Me.DGPerusahaan.ImeMode = System.Windows.Forms.ImeMode.[On]
         Me.DGPerusahaan.Location = New System.Drawing.Point(8, 136)
         Me.DGPerusahaan.Name = "DGPerusahaan"
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGPerusahaan.RowHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGPerusahaan.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DGPerusahaan.RowHeadersWidth = 10
         Me.DGPerusahaan.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.DGPerusahaan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGPerusahaan.Size = New System.Drawing.Size(716, 231)
+        Me.DGPerusahaan.Size = New System.Drawing.Size(850, 231)
         Me.DGPerusahaan.TabIndex = 19
         '
         'RbPenerima
@@ -174,14 +174,14 @@ Partial Class FrmCariPerusahaan
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(8, 62)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(716, 68)
+        Me.GroupBox1.Size = New System.Drawing.Size(850, 68)
         Me.GroupBox1.TabIndex = 29
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Cari Berdasarkan"
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(616, 28)
+        Me.Button1.Location = New System.Drawing.Point(750, 28)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(94, 23)
         Me.Button1.TabIndex = 30
@@ -193,7 +193,7 @@ Partial Class FrmCariPerusahaan
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(736, 436)
+        Me.ClientSize = New System.Drawing.Size(870, 436)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnBatal)
         Me.Controls.Add(Me.btnPilih)

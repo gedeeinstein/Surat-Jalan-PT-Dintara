@@ -15,16 +15,22 @@ Public Class FrmUtama
     Dim dtSurat As DataTable
 
     Sub Data_Record_Pengiriman()
-        dtSurat = Proses.ExecuteQuery("SELECT nosurat AS 'NO SURAT', kode AS 'KODE BARANG', nama_barang AS 'NAMA BARANG', qty AS 'QTY' FROM suratjalan_detail WHERE nosurat = '" & txtNoSurat.Text & "'")
+        dtSurat = Proses.ExecuteQuery("SELECT nosurat AS 'NO SURAT', kode AS 'KODE BARANG', kode_lokasi as 'KODE LOKASI', nama_barang AS 'NAMA BARANG', qty AS 'QTY' FROM suratjalan_detail WHERE nosurat = '" & txtNoSurat.Text & "'")
 
         DGBarangKirim.DataSource = dtSurat
         DGBarangKirim.Columns(0).Visible = False
-        DGBarangKirim.Columns(1).Width = 130
-        DGBarangKirim.Columns(2).Width = 600
-        DGBarangKirim.Columns(3).Width = 65
+
+        DGBarangKirim.Columns(1).Width = 100
+        DGBarangKirim.Columns(2).Width = 100
+        DGBarangKirim.Columns(3).Width = 600
+        DGBarangKirim.Columns(4).Width = 80
 
         DGBarangKirim.Columns(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DGBarangKirim.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DGBarangKirim.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DGBarangKirim.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+
+        DGBarangKirim.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+
     End Sub
 
     Sub Data_Pelanggan()
@@ -159,6 +165,7 @@ Public Class FrmUtama
         btnCariPerusahaan.Enabled = True
         txtAlamat.Text = ""
         Label_TotalBarang.Text = "0"
+        txtKodeLokasi.Text = ""
     End Sub
 
 
@@ -316,7 +323,7 @@ Public Class FrmUtama
     Private Sub total_item()
         Dim hitung As Integer
         For baris As Integer = 0 To DGBarangKirim.RowCount - 1
-            hitung = hitung + DGBarangKirim.Rows(baris).Cells(3).Value
+            hitung = hitung + DGBarangKirim.Rows(baris).Cells(4).Value
         Next
 
         'Label_TotalBarang.Text = 'DGBarangKirim.RowCount - 1
@@ -335,8 +342,8 @@ Public Class FrmUtama
         Try
             Proses.OpenConn()
             SQL = "insert into suratjalan_detail " _
-                & "(nosurat, kode, nama_barang, qty, no_order) VALUES " _
-                & "('" & txtNoSurat.Text & "','" & Trim(txtKodeBarang.Text) & "' " _
+                & "(nosurat, kode, kode_lokasi, nama_barang, qty, no_order) VALUES " _
+                & "('" & txtNoSurat.Text & "','" & Trim(txtKodeBarang.Text) & "','" & Trim(txtKodeLokasi.Text) & "' " _
                 & ",'" & Rep(txtBarang.Text) & "','" & txtQty.Text & "','" & Trim(txtNoOrder.Text) & "')"
             Proses.ExecuteNonQuery(SQL)
             ' MsgBox("Barang ditambahakan", MsgBoxStyle.OkOnly, "Sukses")
@@ -407,7 +414,7 @@ Public Class FrmUtama
 
     'End Sub
 
-    Private Sub btnTambah_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTambah.Click
+    Private Sub btnTambah_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 
@@ -454,6 +461,7 @@ Public Class FrmUtama
                     txtQty.Text = Nothing
                     btnBatal.Enabled = True
                     btnSimpan.Enabled = True
+                    txtKodeLokasi.Text = ""
 
                 Case Else
                     e.KeyChar = Chr(0)

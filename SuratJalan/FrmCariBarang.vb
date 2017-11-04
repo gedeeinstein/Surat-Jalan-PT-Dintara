@@ -36,9 +36,21 @@ Public Class FrmCariBarang
 
 
     Sub Data_Barang()
-        barangku = Proses.ExecuteQuery("SELECT barang.kode as 'KODE BARANG', barang.nama as 'NAMA BARANG' FROM barang " _
+        'barangku = Proses.ExecuteQuery("SELECT barang.kode as 'KODE BARANG', barang.nama as 'NAMA BARANG' FROM barang " _
+        '                             & "INNER JOIN tawar02 ON barang.kode = tawar02.kode_barang " _
+        '                             & "WHERE tawar02.kode ='" & txtNoOrder.Text & "'")
+
+        'OLD QUERY ABOVE
+
+        'New Query
+        'SELECT tawar02.kode_lokasi AS 'KL', barang.kode AS 'KODE BARANG', barang.nama AS 'NAMA BARANG', tawar02.qty as 'QTY PESANAN' FROM barang
+        'INNER JOIN tawar02 ON barang.kode = tawar02.kode_barang 
+
+
+        barangku = Proses.ExecuteQuery("SELECT barang.kode AS 'KODE BARANG', barang.nama AS 'NAMA BARANG', tawar02.kode_lokasi AS 'KL', tawar02.qty as 'QTY PESANAN' FROM barang " _
                                      & "INNER JOIN tawar02 ON barang.kode = tawar02.kode_barang " _
                                      & "WHERE tawar02.kode ='" & txtNoOrder.Text & "'")
+
         Me.DGBarang.DataSource = barangku
         Me.DGBarang.Columns(0).Width = 150
         Me.DGBarang.Columns(1).Width = 540
@@ -53,7 +65,11 @@ Public Class FrmCariBarang
 
         Proses.OpenConn()
         Dim myadapter As New MySqlDataAdapter
-        Dim sqlquery = "SELECT barang.kode as 'KODE BARANG', barang.nama as 'NAMA BARANG' FROM barang " _
+        'Dim sqlquery = "SELECT barang.kode as 'KODE BARANG', barang.nama as 'NAMA BARANG' FROM barang " _
+        '                             & "INNER JOIN tawar02 ON barang.kode = tawar02.kode_barang " _
+        '                             & "WHERE tawar02.kode ='" & txtNoOrder.Text & "'"
+
+        Dim sqlquery = "SELECT barang.kode AS 'KODE BARANG', barang.nama AS 'NAMA BARANG', tawar02.kode_lokasi AS 'KL', tawar02.qty as 'QTY PESANAN' FROM barang " _
                                      & "INNER JOIN tawar02 ON barang.kode = tawar02.kode_barang " _
                                      & "WHERE tawar02.kode ='" & txtNoOrder.Text & "'"
         Dim mycommand As New MySqlCommand
@@ -93,18 +109,24 @@ Public Class FrmCariBarang
             Select Case Me.Text
 
                 Case "Cari Barang"
+                    FrmUtamaATM.txtKodeLokasi.Text = DGBarang.SelectedCells(2).Value
                     FrmUtamaATM.txtKodeBarang.Text = DGBarang.SelectedCells(0).Value
                     FrmUtamaATM.txtBarang.Text = DGBarang.SelectedCells(1).Value
-                    RTrim(FrmUtamaATM.txtBarang.Text)
 
+                    Trim(FrmUtamaATM.txtBarang.Text)
+                    Trim(FrmUtamaATM.txtKodeLokasi.Text)
+                    FrmUtamaATM.txtQty.Focus()
                     Me.Close()
                     FrmUtamaATM.txtQty.Focus()
                     FrmUtamaATM.btnCariPerusahaan.Enabled = False
 
                 Case "Pilih Barang"
+                    FrmUtama.txtKodeLokasi.Text = DGBarang.SelectedCells(2).Value
                     FrmUtama.txtKodeBarang.Text = DGBarang.SelectedCells(0).Value
                     FrmUtama.txtBarang.Text = DGBarang.SelectedCells(1).Value
-                    RTrim(FrmUtama.txtBarang.Text)
+                    Trim(FrmUtama.txtBarang.Text)
+                    Trim(FrmUtama.txtKodeLokasi.Text)
+                    FrmUtama.txtQty.Focus()
 
                     Me.Close()
                     FrmUtama.txtQty.Focus()
