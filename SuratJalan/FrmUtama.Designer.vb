@@ -22,8 +22,8 @@ Partial Class FrmUtama
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmUtama))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -76,6 +76,7 @@ Partial Class FrmUtama
         Me.maps = New System.Windows.Forms.PictureBox()
         Me.gmail = New System.Windows.Forms.PictureBox()
         Me.outlook = New System.Windows.Forms.PictureBox()
+        Me.btnTambah = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGBarangKirim, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -235,13 +236,17 @@ Partial Class FrmUtama
         '
         'btnCariPerusahaan
         '
-        Me.btnCariPerusahaan.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnCariPerusahaan.BackColor = System.Drawing.Color.DarkMagenta
+        Me.btnCariPerusahaan.FlatAppearance.BorderSize = 0
+        Me.btnCariPerusahaan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCariPerusahaan.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCariPerusahaan.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.btnCariPerusahaan.Location = New System.Drawing.Point(402, 48)
         Me.btnCariPerusahaan.Name = "btnCariPerusahaan"
         Me.btnCariPerusahaan.Size = New System.Drawing.Size(45, 21)
         Me.btnCariPerusahaan.TabIndex = 21
         Me.btnCariPerusahaan.Text = "Cari"
-        Me.btnCariPerusahaan.UseVisualStyleBackColor = True
+        Me.btnCariPerusahaan.UseVisualStyleBackColor = False
         '
         'txtKodePerusahaan
         '
@@ -287,23 +292,23 @@ Partial Class FrmUtama
         Me.DGBarangKirim.AllowUserToDeleteRows = False
         Me.DGBarangKirim.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DGBarangKirim.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGBarangKirim.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGBarangKirim.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DGBarangKirim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGBarangKirim.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGBarangKirim.DefaultCellStyle = DataGridViewCellStyle4
         Me.DGBarangKirim.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.DGBarangKirim.GridColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.DGBarangKirim.Location = New System.Drawing.Point(8, 339)
@@ -358,6 +363,7 @@ Partial Class FrmUtama
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.Control
         Me.GroupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.GroupBox2.Controls.Add(Me.btnTambah)
         Me.GroupBox2.Controls.Add(Me.Label9)
         Me.GroupBox2.Controls.Add(Me.txtKodeLokasi)
         Me.GroupBox2.Controls.Add(Me.txtKodeBarang)
@@ -387,7 +393,7 @@ Partial Class FrmUtama
         '
         Me.txtKodeLokasi.Location = New System.Drawing.Point(593, 17)
         Me.txtKodeLokasi.Name = "txtKodeLokasi"
-        Me.txtKodeLokasi.Size = New System.Drawing.Size(147, 20)
+        Me.txtKodeLokasi.Size = New System.Drawing.Size(114, 20)
         Me.txtKodeLokasi.TabIndex = 21
         '
         'txtKodeBarang
@@ -402,19 +408,25 @@ Partial Class FrmUtama
         '
         'btnPilih
         '
-        Me.btnPilih.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnPilih.BackColor = System.Drawing.Color.DarkMagenta
+        Me.btnPilih.FlatAppearance.BorderSize = 0
+        Me.btnPilih.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPilih.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPilih.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.btnPilih.Location = New System.Drawing.Point(402, 15)
         Me.btnPilih.Name = "btnPilih"
         Me.btnPilih.Size = New System.Drawing.Size(49, 23)
         Me.btnPilih.TabIndex = 19
         Me.btnPilih.TabStop = False
         Me.btnPilih.Text = "Pilih"
-        Me.btnPilih.UseVisualStyleBackColor = True
+        Me.btnPilih.UseVisualStyleBackColor = False
         '
         'txtQty
         '
-        Me.txtQty.Location = New System.Drawing.Point(778, 17)
+        Me.txtQty.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.txtQty.Location = New System.Drawing.Point(745, 17)
         Me.txtQty.Name = "txtQty"
+        Me.txtQty.ReadOnly = True
         Me.txtQty.Size = New System.Drawing.Size(54, 20)
         Me.txtQty.TabIndex = 14
         Me.txtQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -424,7 +436,7 @@ Partial Class FrmUtama
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label6.Location = New System.Drawing.Point(746, 20)
+        Me.Label6.Location = New System.Drawing.Point(713, 20)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(26, 13)
         Me.Label6.TabIndex = 13
@@ -723,6 +735,20 @@ Partial Class FrmUtama
         Me.outlook.TabIndex = 42
         Me.outlook.TabStop = False
         '
+        'btnTambah
+        '
+        Me.btnTambah.BackColor = System.Drawing.Color.DarkMagenta
+        Me.btnTambah.FlatAppearance.BorderSize = 0
+        Me.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnTambah.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTambah.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.btnTambah.Location = New System.Drawing.Point(805, 16)
+        Me.btnTambah.Name = "btnTambah"
+        Me.btnTambah.Size = New System.Drawing.Size(74, 21)
+        Me.btnTambah.TabIndex = 24
+        Me.btnTambah.Text = "Tambah"
+        Me.btnTambah.UseVisualStyleBackColor = False
+        '
         'FrmUtama
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -836,4 +862,5 @@ Partial Class FrmUtama
     Friend WithEvents outlook As System.Windows.Forms.PictureBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents txtKodeLokasi As System.Windows.Forms.TextBox
+    Friend WithEvents btnTambah As System.Windows.Forms.Button
 End Class

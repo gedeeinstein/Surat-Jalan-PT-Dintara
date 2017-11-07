@@ -113,37 +113,28 @@ Public Class FrmCariBarang
 
 
     Sub Input_Qty()
-        Dim BoxQty As New Form
-        Dim Qty_Input As TextBox
-        Dim BtnOkay As Button
+        Dim Jumlah As Double = 0
 
-        BoxQty.Show()
+        Try
+            Select Case Me.Text
+                Case "Cari Barang"
+                    Jumlah = InputBox("Masukan Jumlah / Qty Barang yang akan dikirimkan", "Input QTY", , , )
+                    FrmUtamaATM.txtQty.Text = Jumlah
+                    FrmUtamaATM.txtQty.Focus()
+                Case "Pilih Barang"
+                    Jumlah = InputBox("Masukan Jumlah / Qty Barang yang akan dikirimkan", "Input QTY", , , )
+                    FrmUtama.txtQty.Text = Jumlah
+                    FrmUtama.txtQty.Focus()
+            End Select
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
 
-        'Dim message, title, defaultValue As String
-        'Dim myValue As Object
-        '' Set prompt.
-        'message = "QTY Barang"
-        '' Set title.
-        'title = "Masukan Jumlah Barang"
-        'defaultValue = "1"   ' Set default value.
-
-        '' Display message, title, and default value.
-        'myValue = InputBox(message, title, defaultValue)
-        '' If user has clicked Cancel, set myValue to defaultValue 
-        'If myValue Is "" Then myValue = defaultValue
-
-        '' Display dialog box at position 100, 100.
-        'myValue = InputBox(message, title, defaultValue, 100, 100)
-        '' If user has clicked Cancel, set myValue to defaultValue 
-        'If myValue Is "" Then myValue = defaultValue
 
 
     End Sub
 
     Private Sub DGBarang_DoubleClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DGBarang.DoubleClick
-       
-
-
 
         Try
             Select Case Me.Text

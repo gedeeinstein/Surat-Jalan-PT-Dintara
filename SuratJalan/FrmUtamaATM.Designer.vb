@@ -46,6 +46,7 @@ Partial Class FrmUtamaATM
         Me.txtBarang = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btnTambah = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.txtKodeLokasi = New System.Windows.Forms.TextBox()
         Me.txtKodeBarang = New System.Windows.Forms.TextBox()
@@ -234,13 +235,16 @@ Partial Class FrmUtamaATM
         '
         'btnCariPerusahaan
         '
-        Me.btnCariPerusahaan.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnCariPerusahaan.Location = New System.Drawing.Point(402, 48)
+        Me.btnCariPerusahaan.BackColor = System.Drawing.Color.DarkGreen
+        Me.btnCariPerusahaan.FlatAppearance.BorderSize = 0
+        Me.btnCariPerusahaan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCariPerusahaan.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnCariPerusahaan.Location = New System.Drawing.Point(402, 49)
         Me.btnCariPerusahaan.Name = "btnCariPerusahaan"
         Me.btnCariPerusahaan.Size = New System.Drawing.Size(45, 21)
         Me.btnCariPerusahaan.TabIndex = 21
         Me.btnCariPerusahaan.Text = "Cari"
-        Me.btnCariPerusahaan.UseVisualStyleBackColor = True
+        Me.btnCariPerusahaan.UseVisualStyleBackColor = False
         '
         'txtKodePerusahaan
         '
@@ -348,6 +352,7 @@ Partial Class FrmUtamaATM
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.Control
         Me.GroupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.GroupBox2.Controls.Add(Me.btnTambah)
         Me.GroupBox2.Controls.Add(Me.Label12)
         Me.GroupBox2.Controls.Add(Me.txtKodeLokasi)
         Me.GroupBox2.Controls.Add(Me.txtKodeBarang)
@@ -361,6 +366,19 @@ Partial Class FrmUtamaATM
         Me.GroupBox2.Size = New System.Drawing.Size(885, 52)
         Me.GroupBox2.TabIndex = 13
         Me.GroupBox2.TabStop = False
+        '
+        'btnTambah
+        '
+        Me.btnTambah.BackColor = System.Drawing.Color.DarkGreen
+        Me.btnTambah.FlatAppearance.BorderSize = 0
+        Me.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnTambah.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnTambah.Location = New System.Drawing.Point(815, 16)
+        Me.btnTambah.Name = "btnTambah"
+        Me.btnTambah.Size = New System.Drawing.Size(64, 21)
+        Me.btnTambah.TabIndex = 24
+        Me.btnTambah.Text = "Tambah"
+        Me.btnTambah.UseVisualStyleBackColor = False
         '
         'Label12
         '
@@ -379,7 +397,7 @@ Partial Class FrmUtamaATM
         Me.txtKodeLokasi.Location = New System.Drawing.Point(593, 17)
         Me.txtKodeLokasi.Name = "txtKodeLokasi"
         Me.txtKodeLokasi.ReadOnly = True
-        Me.txtKodeLokasi.Size = New System.Drawing.Size(113, 20)
+        Me.txtKodeLokasi.Size = New System.Drawing.Size(110, 20)
         Me.txtKodeLokasi.TabIndex = 22
         Me.txtKodeLokasi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -395,19 +413,25 @@ Partial Class FrmUtamaATM
         '
         'btnPilih
         '
-        Me.btnPilih.Location = New System.Drawing.Point(402, 15)
+        Me.btnPilih.BackColor = System.Drawing.Color.DarkGreen
+        Me.btnPilih.FlatAppearance.BorderSize = 0
+        Me.btnPilih.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPilih.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnPilih.Location = New System.Drawing.Point(402, 17)
         Me.btnPilih.Name = "btnPilih"
-        Me.btnPilih.Size = New System.Drawing.Size(49, 23)
+        Me.btnPilih.Size = New System.Drawing.Size(45, 20)
         Me.btnPilih.TabIndex = 19
         Me.btnPilih.TabStop = False
         Me.btnPilih.Text = "Pilih"
-        Me.btnPilih.UseVisualStyleBackColor = True
+        Me.btnPilih.UseVisualStyleBackColor = False
         '
         'txtQty
         '
+        Me.txtQty.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.txtQty.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtQty.Location = New System.Drawing.Point(760, 17)
+        Me.txtQty.Location = New System.Drawing.Point(737, 17)
         Me.txtQty.Name = "txtQty"
+        Me.txtQty.ReadOnly = True
         Me.txtQty.Size = New System.Drawing.Size(72, 20)
         Me.txtQty.TabIndex = 14
         Me.txtQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -417,7 +441,7 @@ Partial Class FrmUtamaATM
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label6.Location = New System.Drawing.Point(728, 20)
+        Me.Label6.Location = New System.Drawing.Point(709, 20)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(26, 13)
         Me.Label6.TabIndex = 13
@@ -476,7 +500,7 @@ Partial Class FrmUtamaATM
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label9.Location = New System.Drawing.Point(710, 639)
+        Me.Label9.Location = New System.Drawing.Point(677, 639)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(140, 49)
         Me.Label9.TabIndex = 17
@@ -488,9 +512,9 @@ Partial Class FrmUtamaATM
         Me.Label_TotalBarang.BackColor = System.Drawing.Color.Transparent
         Me.Label_TotalBarang.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label_TotalBarang.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label_TotalBarang.Location = New System.Drawing.Point(856, 639)
+        Me.Label_TotalBarang.Location = New System.Drawing.Point(823, 639)
         Me.Label_TotalBarang.Name = "Label_TotalBarang"
-        Me.Label_TotalBarang.Size = New System.Drawing.Size(37, 49)
+        Me.Label_TotalBarang.Size = New System.Drawing.Size(70, 49)
         Me.Label_TotalBarang.TabIndex = 18
         Me.Label_TotalBarang.Text = "0"
         Me.Label_TotalBarang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -825,4 +849,5 @@ Partial Class FrmUtamaATM
     Friend WithEvents linkedin As System.Windows.Forms.PictureBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Public WithEvents txtKodeLokasi As System.Windows.Forms.TextBox
+    Friend WithEvents btnTambah As System.Windows.Forms.Button
 End Class

@@ -812,4 +812,45 @@ Public Class FrmUtama
         FrmTambahUser.ShowDialog()
     End Sub
 
+    Private Sub btnTambah_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTambah.Click
+        Try
+            If txtNoOrder.Text = "" Then
+                MsgBox("Tanyakan ke Admin apakah sudah melakukan input penawaran/order ke system ", MsgBoxStyle.Critical,
+                       "Gagal !") : Exit Sub
+                cmbPerusahaan.Focus()
+            ElseIf txtPerusahaan.Text = "" Then
+                MsgBox("Tanyakan ke admin Marketing untuk melengkapi data Perusahaan dari penawaran yang dibuat", MsgBoxStyle.Exclamation,
+                       "Data Belum Lengkap") : Exit Sub
+                cmbPerusahaan.Focus()
+            ElseIf txtPelanggan.Text = "" Then
+                MsgBox("Tanyakan ke admin Marketing untuk melengkapi data Penerima dari Penawaran yang dibuat", MsgBoxStyle.Exclamation,
+                       "Data Belum Lengkap") : Exit Sub
+                cmbPerusahaan.Focus()
+            ElseIf txtBarang.Text = "" Then
+                MsgBox("Pilih Barang yang akan dikirim. Harap tanyakan data ke bagian marketing/purchasing ", MsgBoxStyle.Exclamation,
+                       "Barang Belum Dipilih") : Exit Sub
+                txtBarang.Focus()
+            ElseIf txtQty.Text = "" Then
+                MsgBox("QTY Salah", MsgBoxStyle.Exclamation,
+                        "Qty Salah") : Exit Sub
+            ElseIf txtAlamat.Text = "" Or txtAlamat.TextLength < 3 Then
+                MessageBox.Show("Harap isi alamat tujuan pengiriman jika di database tidak ada, isi manual saja ", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                txtAlamat.Focus() : Exit Sub
+            Else
+
+                Call Simpan_Details_Surat()
+                Call total_item()
+                btnReset.Enabled = False
+                txtKodeBarang.Text = Nothing
+                txtKodeLokasi.Text = ""
+                txtBarang.Text = Nothing
+                txtQty.Text = Nothing
+                btnBatal.Enabled = True
+                btnSimpan.Enabled = True
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message + vbCr + "Gagal Menyimpan", "Program Error")
+        End Try
+    End Sub
 End Class
