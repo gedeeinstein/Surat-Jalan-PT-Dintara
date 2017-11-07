@@ -72,51 +72,93 @@ Public Class FrmCariBarang
         Dim sqlquery = "SELECT barang.kode AS 'KODE BARANG', barang.nama AS 'NAMA BARANG', tawar02.kode_lokasi AS 'KL', tawar02.qty as 'QTY PESANAN' FROM barang " _
                                      & "INNER JOIN tawar02 ON barang.kode = tawar02.kode_barang " _
                                      & "WHERE tawar02.kode ='" & txtNoOrder.Text & "'"
-        Dim mycommand As New MySqlCommand
-        mycommand.Connection = Proses.Cn
-        mycommand.CommandText = sqlquery
-        myadapter.SelectCommand = mycommand
-        Dim totalbarang As Integer
-        Dim mydata As MySqlDataReader
-        mydata = mycommand.ExecuteReader()
 
-        totalbarang = 0
-        If (mydata.HasRows) Then
-            While (mydata.Read)
-                totalbarang = totalbarang + 1
-            End While
-        End If
-        lbl_totalbarang.Text = Val(totalbarang)
+        'Dim mycommand As New MySqlCommand
+        'mycommand.Connection = Proses.Cn
+        'mycommand.CommandText = sqlquery
+        'myadapter.SelectCommand = mycommand
+        'Dim totalbarang As Integer
+        'Dim mydata As MySqlDataReader
+        'mydata = mycommand.ExecuteReader()
+
+        'totalbarang = 0
+        'If (mydata.HasRows) Then
+        '    While (mydata.Read)
+        '        totalbarang = totalbarang + 1
+        '    End While
+        'End If
+        'lbl_totalbarang.Text = Val(totalbarang)
+        total_item()
         Proses.CloseConn()
     End Sub
+
+    Private Sub total_item()
+        Dim hitung As Integer
+        For baris As Integer = 0 To DGBarang.RowCount - 1
+            hitung = hitung + DGBarang.Rows(baris).Cells(3).Value
+        Next
+
+        lbl_totalbarang.Text = hitung
+
+    End Sub
+
+
+
+
 
     Private Sub FrmCariBarang_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         No_Order()
         Data_Barang()
     End Sub
 
+
+    Sub Input_Qty()
+        Dim BoxQty As New Form
+        Dim Qty_Input As TextBox
+        Dim BtnOkay As Button
+
+        BoxQty.Show()
+
+        'Dim message, title, defaultValue As String
+        'Dim myValue As Object
+        '' Set prompt.
+        'message = "QTY Barang"
+        '' Set title.
+        'title = "Masukan Jumlah Barang"
+        'defaultValue = "1"   ' Set default value.
+
+        '' Display message, title, and default value.
+        'myValue = InputBox(message, title, defaultValue)
+        '' If user has clicked Cancel, set myValue to defaultValue 
+        'If myValue Is "" Then myValue = defaultValue
+
+        '' Display dialog box at position 100, 100.
+        'myValue = InputBox(message, title, defaultValue, 100, 100)
+        '' If user has clicked Cancel, set myValue to defaultValue 
+        'If myValue Is "" Then myValue = defaultValue
+
+
+    End Sub
+
     Private Sub DGBarang_DoubleClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DGBarang.DoubleClick
+       
 
-        'FrmUtama.txtKodeBarang.Text = DGBarang.SelectedCells(0).Value
-        'FrmUtama.txtBarang.Text = DGBarang.SelectedCells(1).Value
-        'RTrim(FrmUtama.txtBarang.Text)
 
-        'Me.Close()
-        'FrmUtama.txtQty.Focus()
-        'FrmUtama.btnCariPerusahaan.Enabled = False]
 
         Try
             Select Case Me.Text
+
 
                 Case "Cari Barang"
                     FrmUtamaATM.txtKodeLokasi.Text = DGBarang.SelectedCells(2).Value
                     FrmUtamaATM.txtKodeBarang.Text = DGBarang.SelectedCells(0).Value
                     FrmUtamaATM.txtBarang.Text = DGBarang.SelectedCells(1).Value
 
+                    Input_Qty()
+
+                    Me.Close()
                     Trim(FrmUtamaATM.txtBarang.Text)
                     Trim(FrmUtamaATM.txtKodeLokasi.Text)
-                    FrmUtamaATM.txtQty.Focus()
-                    Me.Close()
                     FrmUtamaATM.txtQty.Focus()
                     FrmUtamaATM.btnCariPerusahaan.Enabled = False
 
@@ -124,11 +166,13 @@ Public Class FrmCariBarang
                     FrmUtama.txtKodeLokasi.Text = DGBarang.SelectedCells(2).Value
                     FrmUtama.txtKodeBarang.Text = DGBarang.SelectedCells(0).Value
                     FrmUtama.txtBarang.Text = DGBarang.SelectedCells(1).Value
-                    Trim(FrmUtama.txtBarang.Text)
-                    Trim(FrmUtama.txtKodeLokasi.Text)
-                    FrmUtama.txtQty.Focus()
+
+                    Input_Qty()
 
                     Me.Close()
+
+                    Trim(FrmUtama.txtBarang.Text)
+                    Trim(FrmUtama.txtKodeLokasi.Text)
                     FrmUtama.txtQty.Focus()
                     FrmUtama.btnCariPerusahaan.Enabled = False
 

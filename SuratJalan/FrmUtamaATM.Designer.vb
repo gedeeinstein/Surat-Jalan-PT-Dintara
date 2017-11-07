@@ -22,7 +22,7 @@ Partial Class FrmUtamaATM
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmUtamaATM))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -292,14 +292,14 @@ Partial Class FrmUtamaATM
         Me.DGBarangKirim.Location = New System.Drawing.Point(8, 339)
         Me.DGBarangKirim.Name = "DGBarangKirim"
         Me.DGBarangKirim.ReadOnly = True
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGBarangKirim.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGBarangKirim.RowHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGBarangKirim.RowHeadersWidth = 5
         Me.DGBarangKirim.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DGBarangKirim.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -379,7 +379,7 @@ Partial Class FrmUtamaATM
         Me.txtKodeLokasi.Location = New System.Drawing.Point(593, 17)
         Me.txtKodeLokasi.Name = "txtKodeLokasi"
         Me.txtKodeLokasi.ReadOnly = True
-        Me.txtKodeLokasi.Size = New System.Drawing.Size(147, 20)
+        Me.txtKodeLokasi.Size = New System.Drawing.Size(113, 20)
         Me.txtKodeLokasi.TabIndex = 22
         Me.txtKodeLokasi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -399,15 +399,16 @@ Partial Class FrmUtamaATM
         Me.btnPilih.Name = "btnPilih"
         Me.btnPilih.Size = New System.Drawing.Size(49, 23)
         Me.btnPilih.TabIndex = 19
+        Me.btnPilih.TabStop = False
         Me.btnPilih.Text = "Pilih"
         Me.btnPilih.UseVisualStyleBackColor = True
         '
         'txtQty
         '
         Me.txtQty.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtQty.Location = New System.Drawing.Point(778, 17)
+        Me.txtQty.Location = New System.Drawing.Point(760, 17)
         Me.txtQty.Name = "txtQty"
-        Me.txtQty.Size = New System.Drawing.Size(54, 20)
+        Me.txtQty.Size = New System.Drawing.Size(72, 20)
         Me.txtQty.TabIndex = 14
         Me.txtQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -416,7 +417,7 @@ Partial Class FrmUtamaATM
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label6.Location = New System.Drawing.Point(746, 20)
+        Me.Label6.Location = New System.Drawing.Point(728, 20)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(26, 13)
         Me.Label6.TabIndex = 13

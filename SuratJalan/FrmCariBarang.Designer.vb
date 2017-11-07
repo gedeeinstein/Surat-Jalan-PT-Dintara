@@ -42,7 +42,7 @@ Partial Class FrmCariBarang
         Me.DGBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGBarang.GridColor = System.Drawing.SystemColors.ActiveBorder
         Me.DGBarang.ImeMode = System.Windows.Forms.ImeMode.[On]
-        Me.DGBarang.Location = New System.Drawing.Point(12, 61)
+        Me.DGBarang.Location = New System.Drawing.Point(12, 116)
         Me.DGBarang.Name = "DGBarang"
         Me.DGBarang.ReadOnly = True
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
@@ -62,7 +62,7 @@ Partial Class FrmCariBarang
         'txtNoOrder
         '
         Me.txtNoOrder.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.txtNoOrder.Location = New System.Drawing.Point(736, 27)
+        Me.txtNoOrder.Location = New System.Drawing.Point(736, 86)
         Me.txtNoOrder.Name = "txtNoOrder"
         Me.txtNoOrder.ReadOnly = True
         Me.txtNoOrder.Size = New System.Drawing.Size(198, 20)
@@ -72,7 +72,7 @@ Partial Class FrmCariBarang
         '
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(680, 30)
+        Me.Label1.Location = New System.Drawing.Point(667, 89)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(50, 13)
         Me.Label1.TabIndex = 14
@@ -82,7 +82,7 @@ Partial Class FrmCariBarang
         '
         Me.Label2.AutoSize = True
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label2.Location = New System.Drawing.Point(12, 330)
+        Me.Label2.Location = New System.Drawing.Point(9, 386)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(122, 13)
         Me.Label2.TabIndex = 15
@@ -92,7 +92,7 @@ Partial Class FrmCariBarang
         '
         Me.lbl_totalbarang.AutoSize = True
         Me.lbl_totalbarang.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.lbl_totalbarang.Location = New System.Drawing.Point(152, 330)
+        Me.lbl_totalbarang.Location = New System.Drawing.Point(149, 386)
         Me.lbl_totalbarang.Name = "lbl_totalbarang"
         Me.lbl_totalbarang.Size = New System.Drawing.Size(23, 13)
         Me.lbl_totalbarang.TabIndex = 16
@@ -100,29 +100,38 @@ Partial Class FrmCariBarang
         '
         'btnPilih
         '
-        Me.btnPilih.Location = New System.Drawing.Point(741, 318)
+        Me.btnPilih.BackColor = System.Drawing.Color.Snow
+        Me.btnPilih.FlatAppearance.BorderSize = 0
+        Me.btnPilih.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPilih.Location = New System.Drawing.Point(749, 372)
         Me.btnPilih.Name = "btnPilih"
         Me.btnPilih.Size = New System.Drawing.Size(85, 40)
         Me.btnPilih.TabIndex = 17
         Me.btnPilih.Text = "Pilih"
-        Me.btnPilih.UseVisualStyleBackColor = True
+        Me.btnPilih.UseVisualStyleBackColor = False
         '
         'btnBatal
         '
-        Me.btnBatal.Location = New System.Drawing.Point(849, 318)
+        Me.btnBatal.BackColor = System.Drawing.Color.Snow
+        Me.btnBatal.FlatAppearance.BorderSize = 0
+        Me.btnBatal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBatal.Location = New System.Drawing.Point(849, 372)
         Me.btnBatal.Name = "btnBatal"
         Me.btnBatal.Size = New System.Drawing.Size(85, 40)
         Me.btnBatal.TabIndex = 18
         Me.btnBatal.Text = "Batal"
-        Me.btnBatal.UseVisualStyleBackColor = True
+        Me.btnBatal.UseVisualStyleBackColor = False
         '
         'Label3
         '
+        Me.Label3.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.Label3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.0!)
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label3.Location = New System.Drawing.Point(12, 9)
+        Me.Label3.Location = New System.Drawing.Point(0, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(234, 49)
+        Me.Label3.Size = New System.Drawing.Size(946, 78)
         Me.Label3.TabIndex = 19
         Me.Label3.Text = "Pilih Barang"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -131,8 +140,8 @@ Partial Class FrmCariBarang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Purple
-        Me.ClientSize = New System.Drawing.Size(946, 370)
+        Me.BackColor = System.Drawing.Color.SeaGreen
+        Me.ClientSize = New System.Drawing.Size(946, 424)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnBatal)
         Me.Controls.Add(Me.btnPilih)
@@ -141,6 +150,7 @@ Partial Class FrmCariBarang
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtNoOrder)
         Me.Controls.Add(Me.DGBarang)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmCariBarang"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

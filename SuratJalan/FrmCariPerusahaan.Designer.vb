@@ -22,7 +22,8 @@ Partial Class FrmCariPerusahaan
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCariPerusahaan))
         Me.btnBatal = New System.Windows.Forms.Button()
         Me.btnPilih = New System.Windows.Forms.Button()
         Me.lbl_totalperusahaan = New System.Windows.Forms.Label()
@@ -42,7 +43,7 @@ Partial Class FrmCariPerusahaan
         'btnBatal
         '
         Me.btnBatal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBatal.Location = New System.Drawing.Point(783, 385)
+        Me.btnBatal.Location = New System.Drawing.Point(783, 417)
         Me.btnBatal.Name = "btnBatal"
         Me.btnBatal.Size = New System.Drawing.Size(75, 39)
         Me.btnBatal.TabIndex = 25
@@ -52,7 +53,7 @@ Partial Class FrmCariPerusahaan
         'btnPilih
         '
         Me.btnPilih.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPilih.Location = New System.Drawing.Point(702, 385)
+        Me.btnPilih.Location = New System.Drawing.Point(702, 417)
         Me.btnPilih.Name = "btnPilih"
         Me.btnPilih.Size = New System.Drawing.Size(75, 39)
         Me.btnPilih.TabIndex = 24
@@ -63,8 +64,8 @@ Partial Class FrmCariPerusahaan
         '
         Me.lbl_totalperusahaan.AutoSize = True
         Me.lbl_totalperusahaan.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_totalperusahaan.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lbl_totalperusahaan.Location = New System.Drawing.Point(192, 398)
+        Me.lbl_totalperusahaan.ForeColor = System.Drawing.Color.Cornsilk
+        Me.lbl_totalperusahaan.Location = New System.Drawing.Point(212, 430)
         Me.lbl_totalperusahaan.Name = "lbl_totalperusahaan"
         Me.lbl_totalperusahaan.Size = New System.Drawing.Size(14, 13)
         Me.lbl_totalperusahaan.TabIndex = 23
@@ -74,8 +75,8 @@ Partial Class FrmCariPerusahaan
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label2.Location = New System.Drawing.Point(5, 398)
+        Me.Label2.ForeColor = System.Drawing.Color.Cornsilk
+        Me.Label2.Location = New System.Drawing.Point(5, 430)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(181, 13)
         Me.Label2.TabIndex = 22
@@ -89,7 +90,7 @@ Partial Class FrmCariPerusahaan
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(870, 59)
+        Me.Label1.Size = New System.Drawing.Size(870, 77)
         Me.Label1.TabIndex = 21
         Me.Label1.Text = "Cari Data Tujuan"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -108,16 +109,16 @@ Partial Class FrmCariPerusahaan
         Me.DGPerusahaan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGPerusahaan.GridColor = System.Drawing.SystemColors.ActiveBorder
         Me.DGPerusahaan.ImeMode = System.Windows.Forms.ImeMode.[On]
-        Me.DGPerusahaan.Location = New System.Drawing.Point(8, 136)
+        Me.DGPerusahaan.Location = New System.Drawing.Point(8, 168)
         Me.DGPerusahaan.Name = "DGPerusahaan"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGPerusahaan.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGPerusahaan.RowHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGPerusahaan.RowHeadersWidth = 10
         Me.DGPerusahaan.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.DGPerusahaan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -128,7 +129,7 @@ Partial Class FrmCariPerusahaan
         '
         Me.RbPenerima.AutoSize = True
         Me.RbPenerima.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RbPenerima.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.RbPenerima.ForeColor = System.Drawing.Color.Cornsilk
         Me.RbPenerima.Location = New System.Drawing.Point(141, 31)
         Me.RbPenerima.Name = "RbPenerima"
         Me.RbPenerima.Size = New System.Drawing.Size(77, 17)
@@ -141,7 +142,7 @@ Partial Class FrmCariPerusahaan
         '
         Me.RbNoOrder.AutoSize = True
         Me.RbNoOrder.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RbNoOrder.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.RbNoOrder.ForeColor = System.Drawing.Color.Cornsilk
         Me.RbNoOrder.Location = New System.Drawing.Point(224, 31)
         Me.RbNoOrder.Name = "RbNoOrder"
         Me.RbNoOrder.Size = New System.Drawing.Size(76, 17)
@@ -155,7 +156,7 @@ Partial Class FrmCariPerusahaan
         Me.RbNama.AutoSize = True
         Me.RbNama.Checked = True
         Me.RbNama.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RbNama.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.RbNama.ForeColor = System.Drawing.Color.Cornsilk
         Me.RbNama.Location = New System.Drawing.Point(7, 31)
         Me.RbNama.Name = "RbNama"
         Me.RbNama.Size = New System.Drawing.Size(128, 17)
@@ -172,7 +173,8 @@ Partial Class FrmCariPerusahaan
         Me.GroupBox1.Controls.Add(Me.RbNama)
         Me.GroupBox1.Controls.Add(Me.txtCariPerusahaan)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(8, 62)
+        Me.GroupBox1.ForeColor = System.Drawing.Color.Cornsilk
+        Me.GroupBox1.Location = New System.Drawing.Point(8, 94)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(850, 68)
         Me.GroupBox1.TabIndex = 29
@@ -181,19 +183,21 @@ Partial Class FrmCariPerusahaan
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.ForeColor = System.Drawing.Color.Black
         Me.Button1.Location = New System.Drawing.Point(750, 28)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(94, 23)
         Me.Button1.TabIndex = 30
         Me.Button1.Text = "Refresh"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'FrmCariPerusahaan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(870, 436)
+        Me.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.ClientSize = New System.Drawing.Size(870, 465)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnBatal)
         Me.Controls.Add(Me.btnPilih)
@@ -201,6 +205,9 @@ Partial Class FrmCariPerusahaan
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DGPerusahaan)
+        Me.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmCariPerusahaan"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cari Data Customer"

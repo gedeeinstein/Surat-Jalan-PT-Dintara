@@ -47,6 +47,8 @@ Partial Class FrmUtama
         Me.txtBarang = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txtKodeLokasi = New System.Windows.Forms.TextBox()
         Me.txtKodeBarang = New System.Windows.Forms.TextBox()
         Me.btnPilih = New System.Windows.Forms.Button()
         Me.txtQty = New System.Windows.Forms.TextBox()
@@ -74,8 +76,6 @@ Partial Class FrmUtama
         Me.maps = New System.Windows.Forms.PictureBox()
         Me.gmail = New System.Windows.Forms.PictureBox()
         Me.outlook = New System.Windows.Forms.PictureBox()
-        Me.txtKodeLokasi = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGBarangKirim, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -372,6 +372,24 @@ Partial Class FrmUtama
         Me.GroupBox2.TabIndex = 13
         Me.GroupBox2.TabStop = False
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label9.Location = New System.Drawing.Point(510, 20)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(77, 13)
+        Me.Label9.TabIndex = 24
+        Me.Label9.Text = "Kode Lokasi"
+        '
+        'txtKodeLokasi
+        '
+        Me.txtKodeLokasi.Location = New System.Drawing.Point(593, 17)
+        Me.txtKodeLokasi.Name = "txtKodeLokasi"
+        Me.txtKodeLokasi.Size = New System.Drawing.Size(147, 20)
+        Me.txtKodeLokasi.TabIndex = 21
+        '
         'txtKodeBarang
         '
         Me.txtKodeBarang.BackColor = System.Drawing.SystemColors.ButtonHighlight
@@ -389,6 +407,7 @@ Partial Class FrmUtama
         Me.btnPilih.Name = "btnPilih"
         Me.btnPilih.Size = New System.Drawing.Size(49, 23)
         Me.btnPilih.TabIndex = 19
+        Me.btnPilih.TabStop = False
         Me.btnPilih.Text = "Pilih"
         Me.btnPilih.UseVisualStyleBackColor = True
         '
@@ -703,24 +722,6 @@ Partial Class FrmUtama
         Me.outlook.Size = New System.Drawing.Size(32, 32)
         Me.outlook.TabIndex = 42
         Me.outlook.TabStop = False
-        '
-        'txtKodeLokasi
-        '
-        Me.txtKodeLokasi.Location = New System.Drawing.Point(593, 17)
-        Me.txtKodeLokasi.Name = "txtKodeLokasi"
-        Me.txtKodeLokasi.Size = New System.Drawing.Size(147, 20)
-        Me.txtKodeLokasi.TabIndex = 21
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label9.Location = New System.Drawing.Point(510, 20)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(77, 13)
-        Me.Label9.TabIndex = 24
-        Me.Label9.Text = "Kode Lokasi"
         '
         'FrmUtama
         '

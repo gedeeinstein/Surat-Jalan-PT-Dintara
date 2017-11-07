@@ -57,7 +57,7 @@ Public Class FrmCariPerusahaan
 
 
             DGPerusahaan.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-            DGPerusahaan.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            'DGPerusahaan.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
             Proses.OpenConn()
 
@@ -203,5 +203,9 @@ Public Class FrmCariPerusahaan
             txtCariPerusahaan.Focus()
         End If
 
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        txtCariPerusahaan_TextChanged(sender, e)
     End Sub
 End Class
