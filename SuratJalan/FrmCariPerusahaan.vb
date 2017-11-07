@@ -37,15 +37,19 @@ Public Class FrmCariPerusahaan
                 & "ON tawar01.kode_pelanggan = pelanggan.kode " _
                 & "WHERE pelanggan.nama LIKE '%" & Rep(txtCariPerusahaan.Text) & "%' ORDER BY tawar01.tgl DESC"
             perusahaan = Proses.ExecuteQuery(SQL)
-
-            Me.DGPerusahaan.DataSource = perusahaan
-            'Me.DGPerusahaan.Columns(0).Visible = False
-            Me.DGPerusahaan.Columns(0).Width = 100
-            Me.DGPerusahaan.Columns(1).Width = 380
-            Me.DGPerusahaan.Columns(2).Width = 180
-            Me.DGPerusahaan.Columns(3).Width = 190
-            Me.DGPerusahaan.Columns(4).Visible = False
-            Me.DGPerusahaan.Columns(5).Visible = False ' Untuk Memasukan Alamat ke Form utama
+            Try
+                Me.DGPerusahaan.DataSource = perusahaan
+                'Me.DGPerusahaan.Columns(0).Visible = False
+                Me.DGPerusahaan.Columns(0).Width = 100
+                Me.DGPerusahaan.Columns(1).Width = 380
+                Me.DGPerusahaan.Columns(2).Width = 180
+                Me.DGPerusahaan.Columns(3).Width = 190
+                Me.DGPerusahaan.Columns(4).Visible = False
+                Me.DGPerusahaan.Columns(5).Visible = False ' Untuk Memasukan Alamat ke Form utama
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+            
 
             '850
 
@@ -208,4 +212,5 @@ Public Class FrmCariPerusahaan
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         txtCariPerusahaan_TextChanged(sender, e)
     End Sub
+
 End Class
