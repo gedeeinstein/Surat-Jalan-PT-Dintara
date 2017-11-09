@@ -56,7 +56,7 @@ Partial Class FrmCariBarang
         Me.DGBarang.RowHeadersWidth = 10
         Me.DGBarang.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.DGBarang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGBarang.Size = New System.Drawing.Size(922, 239)
+        Me.DGBarang.Size = New System.Drawing.Size(1159, 239)
         Me.DGBarang.TabIndex = 12
         '
         'txtNoOrder
@@ -131,7 +131,7 @@ Partial Class FrmCariBarang
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label3.Location = New System.Drawing.Point(0, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(946, 78)
+        Me.Label3.Size = New System.Drawing.Size(1183, 78)
         Me.Label3.TabIndex = 19
         Me.Label3.Text = "Pilih Barang"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -141,7 +141,7 @@ Partial Class FrmCariBarang
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SeaGreen
-        Me.ClientSize = New System.Drawing.Size(946, 424)
+        Me.ClientSize = New System.Drawing.Size(1183, 424)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnBatal)
         Me.Controls.Add(Me.btnPilih)

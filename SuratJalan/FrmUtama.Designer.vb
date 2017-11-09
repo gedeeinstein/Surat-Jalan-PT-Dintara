@@ -47,6 +47,7 @@ Partial Class FrmUtama
         Me.txtBarang = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btnTambah = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtKodeLokasi = New System.Windows.Forms.TextBox()
         Me.txtKodeBarang = New System.Windows.Forms.TextBox()
@@ -76,7 +77,6 @@ Partial Class FrmUtama
         Me.maps = New System.Windows.Forms.PictureBox()
         Me.gmail = New System.Windows.Forms.PictureBox()
         Me.outlook = New System.Windows.Forms.PictureBox()
-        Me.btnTambah = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGBarangKirim, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -377,6 +377,20 @@ Partial Class FrmUtama
         Me.GroupBox2.Size = New System.Drawing.Size(885, 52)
         Me.GroupBox2.TabIndex = 13
         Me.GroupBox2.TabStop = False
+        '
+        'btnTambah
+        '
+        Me.btnTambah.BackColor = System.Drawing.Color.DarkMagenta
+        Me.btnTambah.FlatAppearance.BorderSize = 0
+        Me.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnTambah.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTambah.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.btnTambah.Location = New System.Drawing.Point(805, 16)
+        Me.btnTambah.Name = "btnTambah"
+        Me.btnTambah.Size = New System.Drawing.Size(74, 21)
+        Me.btnTambah.TabIndex = 24
+        Me.btnTambah.Text = "Tambah"
+        Me.btnTambah.UseVisualStyleBackColor = False
         '
         'Label9
         '
@@ -734,20 +748,6 @@ Partial Class FrmUtama
         Me.outlook.Size = New System.Drawing.Size(32, 32)
         Me.outlook.TabIndex = 42
         Me.outlook.TabStop = False
-        '
-        'btnTambah
-        '
-        Me.btnTambah.BackColor = System.Drawing.Color.DarkMagenta
-        Me.btnTambah.FlatAppearance.BorderSize = 0
-        Me.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnTambah.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTambah.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.btnTambah.Location = New System.Drawing.Point(805, 16)
-        Me.btnTambah.Name = "btnTambah"
-        Me.btnTambah.Size = New System.Drawing.Size(74, 21)
-        Me.btnTambah.TabIndex = 24
-        Me.btnTambah.Text = "Tambah"
-        Me.btnTambah.UseVisualStyleBackColor = False
         '
         'FrmUtama
         '

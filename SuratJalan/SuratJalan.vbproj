@@ -152,6 +152,12 @@
     <Compile Include="FrmMasterSurat.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmQty.Designer.vb">
+      <DependentUpon>FrmQty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQty.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmTambahUser.Designer.vb">
       <DependentUpon>FrmTambahUser.vb</DependentUpon>
     </Compile>
@@ -253,6 +259,9 @@
   <ItemGroup>
     <EmbeddedResource Include="FrmMasterSurat.resx">
       <DependentUpon>FrmMasterSurat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQty.resx">
+      <DependentUpon>FrmQty.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRptSPK_ATM.resx">
       <DependentUpon>FrmRptSPK_ATM.vb</DependentUpon>

@@ -133,18 +133,18 @@ Public Class FrmUtama
 
         dtSurat = Proses.ExecuteQuery("SELECT * FROM suratjalan order by nosurat desc")
         If dtSurat.Rows.Count = 0 Then
-            txtNoSurat.Text = "001" + "/SJ/" + bln + "/PT/" + Format(Now, "yyyy")
+            txtNoSurat.Text = "001" + "/SJ/" + bln + "/DIN/" + Format(Now, "yyyy")
         Else
             With dtSurat.Rows(0)
                 txtNoSurat.Text = .Item("nosurat")
             End With
             txtNoSurat.Text = Val(Microsoft.VisualBasic.Mid(txtNoSurat.Text, 1, 3)) + 1
             If Len(txtNoSurat.Text) = 1 Then
-                txtNoSurat.Text = "00" & txtNoSurat.Text + "/SJ/" + bln + "/PT/" + Format(Now, "yyyy")
+                txtNoSurat.Text = "00" & txtNoSurat.Text + "/SJ/" + bln + "/DIN/" + Format(Now, "yyyy")
             ElseIf Len(txtNoSurat.Text) = 2 Then
-                txtNoSurat.Text = "0" & txtNoSurat.Text + "/SJ/" + bln + "/PT/" + Format(Now, "yyyy")
+                txtNoSurat.Text = "0" & txtNoSurat.Text + "/SJ/" + bln + "/DIN/" + Format(Now, "yyyy")
             ElseIf Len(txtNoSurat.Text) = 3 Then
-                txtNoSurat.Text = "" & txtNoSurat.Text + "/SJ/" + bln + "/PT/" + Format(Now, "yyyy") '& txtNoSurat.Text & ""
+                txtNoSurat.Text = "" & txtNoSurat.Text + "/SJ/" + bln + "/DIN/" + Format(Now, "yyyy") '& txtNoSurat.Text & ""
             End If
         End If
     End Sub
@@ -660,11 +660,12 @@ Public Class FrmUtama
 
     Private Sub btnFrmATM_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnFrmATM.Click
 
+        Proses.CloseConn()
         If txtNoOrder.TextLength = 0 Then
             SplashScreen1.Text = "Loading Form ATM"
             SplashScreen1.ShowDialog()
             FrmUtamaATM.Show()
-            Me.Visible = False
+            Me.Close()
         Else
             MessageBox.Show("Selesaikan transaksi dulu atau klik tombol reset ya 😤 " + userlogin, "403 Forbidden ", MessageBoxButtons.OK, MessageBoxIcon.Error) : Exit Sub
 
@@ -852,5 +853,23 @@ Public Class FrmUtama
         Catch ex As Exception
             MessageBox.Show(ex.Message + vbCr + "Gagal Menyimpan", "Program Error")
         End Try
+    End Sub
+
+
+
+    Private Sub txtPelanggan_MouseDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles txtPelanggan.MouseDoubleClick
+        Dim Edit = MsgBox("Äpakah anda ingin mengubah data ini ?", vbYesNo, "Edit Data")
+        Try
+            If Edit = vbYes Then
+                txtPelanggan.ReadOnly = False
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message.ToUpper)
+        End Try
+    End Sub
+
+    Private Sub txtQty_MouseDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles txtQty.MouseDoubleClick
+        txtQty.ReadOnly = False
     End Sub
 End Class

@@ -47,6 +47,7 @@ Partial Class FrmLogin
         Me.BtnConfig.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.BtnConfig.FlatAppearance.BorderSize = 0
         Me.BtnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnConfig.ForeColor = System.Drawing.SystemColors.Control
         Me.BtnConfig.Location = New System.Drawing.Point(222, 258)
         Me.BtnConfig.Name = "BtnConfig"
         Me.BtnConfig.Size = New System.Drawing.Size(95, 23)
@@ -99,6 +100,7 @@ Partial Class FrmLogin
         Me.BtnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(19, Byte), Integer))
         Me.BtnCancel.FlatAppearance.BorderSize = 0
         Me.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCancel.ForeColor = System.Drawing.SystemColors.Control
         Me.BtnCancel.Location = New System.Drawing.Point(113, 258)
         Me.BtnCancel.Name = "BtnCancel"
         Me.BtnCancel.Size = New System.Drawing.Size(103, 23)
@@ -111,6 +113,7 @@ Partial Class FrmLogin
         Me.BtnReset.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(155, Byte), Integer))
         Me.BtnReset.FlatAppearance.BorderSize = 0
         Me.BtnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnReset.ForeColor = System.Drawing.SystemColors.Control
         Me.BtnReset.Location = New System.Drawing.Point(12, 258)
         Me.BtnReset.Name = "BtnReset"
         Me.BtnReset.Size = New System.Drawing.Size(95, 23)
@@ -123,6 +126,7 @@ Partial Class FrmLogin
         Me.BtnLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.BtnLogin.FlatAppearance.BorderSize = 0
         Me.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnLogin.ForeColor = System.Drawing.SystemColors.Control
         Me.BtnLogin.Location = New System.Drawing.Point(12, 229)
         Me.BtnLogin.Name = "BtnLogin"
         Me.BtnLogin.Size = New System.Drawing.Size(305, 23)
@@ -167,22 +171,22 @@ Partial Class FrmLogin
         'rbATM
         '
         Me.rbATM.AutoSize = True
+        Me.rbATM.Checked = True
         Me.rbATM.Location = New System.Drawing.Point(126, 162)
         Me.rbATM.Name = "rbATM"
         Me.rbATM.Size = New System.Drawing.Size(48, 17)
         Me.rbATM.TabIndex = 16
+        Me.rbATM.TabStop = True
         Me.rbATM.Text = "ATM"
         Me.rbATM.UseVisualStyleBackColor = True
         '
         'rbDIN
         '
         Me.rbDIN.AutoSize = True
-        Me.rbDIN.Checked = True
         Me.rbDIN.Location = New System.Drawing.Point(207, 162)
         Me.rbDIN.Name = "rbDIN"
         Me.rbDIN.Size = New System.Drawing.Size(44, 17)
         Me.rbDIN.TabIndex = 17
-        Me.rbDIN.TabStop = True
         Me.rbDIN.Text = "DIN"
         Me.rbDIN.UseVisualStyleBackColor = True
         '

@@ -266,7 +266,7 @@ Public Class FrmLogin
             FrmUtama.btnTambahUser.Enabled = True
             FrmUtamaATM.btnTambahUser.Enabled = True
         End If
-
+        proses.CloseConn()
     End Sub
 
 End Class

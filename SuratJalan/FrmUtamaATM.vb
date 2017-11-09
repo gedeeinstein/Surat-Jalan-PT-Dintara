@@ -17,20 +17,22 @@ Public Class FrmUtamaATM
 
 
     Sub Data_Record_Pengiriman()
-        dtSurat = Proses.ExecuteQuery("SELECT nosurat AS 'NO SURAT', kode AS 'KODE BARANG', kode_lokasi as 'KODE LOKASI', nama_barang AS 'NAMA BARANG', qty AS 'QTY' FROM suratjalan_detail WHERE nosurat = '" & txtNoSurat.Text & "'")
+        dtSurat = Proses.ExecuteQuery("SELECT nosurat AS 'NO SURAT', kode AS 'KODE BARANG', kode_lokasi as 'KODE AREA', nama_barang AS 'NAMA BARANG', merk as 'MERK', qty AS 'QTY' FROM suratjalan_detail WHERE nosurat = '" & txtNoSurat.Text & "'")
 
         DGBarangKirim.DataSource = dtSurat
         DGBarangKirim.Columns(0).Visible = False
 
         DGBarangKirim.Columns(1).Width = 100
-        DGBarangKirim.Columns(2).Width = 100
-        DGBarangKirim.Columns(3).Width = 600
-        DGBarangKirim.Columns(4).Width = 80
+        DGBarangKirim.Columns(2).Width = 70
+        DGBarangKirim.Columns(3).Width = 520
+        DGBarangKirim.Columns(4).Width = 80 ' MERK
+        DGBarangKirim.Columns(5).Width = 80 ' QTY
 
         'INSERT INTO `dbatm`.`suratjalan_detail` (`nosurat`, `kode`, `kode_lokasi`, `nama_barang`, `qty`, `no_order`)
 
         DGBarangKirim.Columns(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
         DGBarangKirim.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DGBarangKirim.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
         'DGBarangKirim.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
         'DGBarangKirim.GridColor = Color.White
@@ -142,18 +144,18 @@ Public Class FrmUtamaATM
 
         dtSurat = Proses.ExecuteQuery("SELECT * FROM suratjalan order by nosurat desc")
         If dtSurat.Rows.Count = 0 Then
-            txtNoSurat.Text = "001" + "/SJ/" + bln + "/CV/" + Format(Now, "yyyy")
+            txtNoSurat.Text = "001" + "/SJ/" + bln + "/ATM/" + Format(Now, "yyyy")
         Else
             With dtSurat.Rows(0)
                 txtNoSurat.Text = .Item("nosurat")
             End With
             txtNoSurat.Text = Val(Microsoft.VisualBasic.Mid(txtNoSurat.Text, 1, 3)) + 1
             If Len(txtNoSurat.Text) = 1 Then
-                txtNoSurat.Text = "00" & txtNoSurat.Text + "/SJ/" + bln + "/CV/" + Format(Now, "yyyy")
+                txtNoSurat.Text = "00" & txtNoSurat.Text + "/SJ/" + bln + "/ATM/" + Format(Now, "yyyy")
             ElseIf Len(txtNoSurat.Text) = 2 Then
-                txtNoSurat.Text = "0" & txtNoSurat.Text + "/SJ/" + bln + "/CV/" + Format(Now, "yyyy")
+                txtNoSurat.Text = "0" & txtNoSurat.Text + "/SJ/" + bln + "/ATM/" + Format(Now, "yyyy")
             ElseIf Len(txtNoSurat.Text) = 3 Then
-                txtNoSurat.Text = "" & txtNoSurat.Text + "/SJ/" + bln + "/CV/" + Format(Now, "yyyy") '& txtNoSurat.Text & ""
+                txtNoSurat.Text = "" & txtNoSurat.Text + "/SJ/" + bln + "/ATM/" + Format(Now, "yyyy") '& txtNoSurat.Text & ""
             End If
         End If
     End Sub
@@ -175,6 +177,10 @@ Public Class FrmUtamaATM
         txtAlamat.Text = ""
         Label_TotalBarang.Text = "0"
         txtKodeLokasi.Text = ""
+        txtQtyBeliCust.Text = ""
+        txtMerkBarang.Text = ""
+        txtQtyBeliCust.Text = ""
+        txtStokGudang.Text = ""
     End Sub
 
 
@@ -325,15 +331,13 @@ Public Class FrmUtamaATM
             End While
         End If
         Label_TotalBarang.Text = Val(totalbarang)
-
-
         Proses.CloseConn()
     End Sub
 
     Private Sub total_item()
         Dim hitung As Integer
         For baris As Integer = 0 To DGBarangKirim.RowCount - 1
-            hitung = hitung + DGBarangKirim.Rows(baris).Cells(4).Value
+            hitung = hitung + DGBarangKirim.Rows(baris).Cells(5).Value
         Next
 
         'Label_TotalBarang.Text = 'DGBarangKirim.RowCount - 1
@@ -352,9 +356,9 @@ Public Class FrmUtamaATM
         Try
             Proses.OpenConn()
             SQL = "insert into suratjalan_detail " _
-                & "(nosurat, kode, kode_lokasi, nama_barang, qty, no_order) VALUES " _
+                & "(nosurat, kode, kode_lokasi, nama_barang, qty, no_order, merk) VALUES " _
                 & "('" & txtNoSurat.Text & "','" & Trim(txtKodeBarang.Text) & "','" & Trim(txtKodeLokasi.Text) & "' " _
-                & ",'" & Rep(txtBarang.Text) & "','" & txtQty.Text & "','" & Trim(txtNoOrder.Text) & "')"
+                & ",'" & Rep(txtBarang.Text) & "','" & txtQty.Text & "','" & Trim(txtNoOrder.Text) & "','" & Rep(Trim(txtMerkBarang.Text)) & "')"
             'INSERT INTO `dbatm`.`suratjalan_detail` (`nosurat`, `kode`, `kode_lokasi`, `nama_barang`, `qty`, `no_order`)
 
             Proses.ExecuteNonQuery(SQL)
@@ -369,66 +373,55 @@ Public Class FrmUtamaATM
 
     End Sub
 
+    ' SAMPLE
 
-    'Private Sub txtQty_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtQty.KeyDown
-    '    If e.KeyCode = Keys.Enter Then
-    '        txtQty.Focus()
+    'Sub Data_Sepatu()
+    '    transaksi_jual = Proses.ExecuteQuery("SELECT * FROM barang")
+    '    If transaksi_jual.Rows.Count = 0 Then
+    '    Else
+    '        cmbSepatu.Items.Clear()
+    '        With transaksi_jual.Columns(1)
+    '            For a = 0 To transaksi_jual.Rows.Count - 1
+    '                cmbSepatu.Items.Add("" & .Table.Rows(a).Item(0) & "/" & .Table.Rows(a).Item(1) & "")
+    '            Next a
+    '        End With
     '    End If
-
-    '    Try
-    '        Select Case e.KeyCode
-    '            Case Keys.A To Keys.Z
-
-    '            Case Keys.Enter
-
-    '                If txtNoOrder.Text = "" Then
-    '                    MsgBox("Tanyakan ke Admin apakah sudah melakukan input penawaran/order ke system ", MsgBoxStyle.Critical,
-    '                           "Gagal !") : Exit Sub
-    '                    cmbPerusahaan.Focus()
-    '                ElseIf txtPerusahaan.Text = "" Then
-    '                    MsgBox("Tanyakan ke admin Marketing untuk melengkapi data Perusahaan dari penawaran yang dibuat", MsgBoxStyle.Exclamation,
-    '                           "Data Belum Lengkap") : Exit Sub
-    '                    cmbPerusahaan.Focus()
-    '                ElseIf txtPelanggan.Text = "" Then
-    '                    MsgBox("Tanyakan ke admin Marketing untuk melengkapi data Penerima dari Penawaran yang dibuat", MsgBoxStyle.Exclamation,
-    '                           "Data Belum Lengkap") : Exit Sub
-    '                    cmbPerusahaan.Focus()
-    '                ElseIf txtBarang.Text = "" Then
-    '                    MsgBox("Pilih Barang yang akan dikirim. Harap tanyakan data ke bagian marketing/purchasing ", MsgBoxStyle.Exclamation,
-    '                           "Barang Belum Dipilih") : Exit Sub
-    '                    txtBarang.Focus()
-    '                ElseIf txtQty.Text = "" Then
-    '                    MsgBox("QTY Salah", MsgBoxStyle.Exclamation,
-    '                            "Qty Salah") : Exit Sub
-    '                ElseIf txtAlamat.Text = "" Or txtAlamat.TextLength < 3 Then
-    '                    MessageBox.Show("Harap isi alamat tujuan pengiriman jika di database tidak ada, isi manual saja ", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-    '                    txtAlamat.Focus() : Exit Sub
-    '                End If
-
-    '                Call Simpan_Details_Surat()
-    '                ' Call Jumlah_QTY()
-    '                Call total_item()
-    '                btnReset.Enabled = False
-    '                txtKodeBarang.Text = Nothing
-    '                txtBarang.Text = Nothing
-    '                txtQty.Text = Nothing
-    '                btnBatal.Enabled = True
-    '                btnSimpan.Enabled = True
-
-    '            Case Else
-
-    '        End Select
-
-    '    Catch ex As Exception
-    '        MessageBox.Show("Gagal. Tidak diperbolehkan menginput barang yang sama. Masukanlah jumlah quantity. Jika Pertama kali input sudah salah harap ulangi proses dengan tekan tombol batal " + vbNewLine + ex.Message, "Hubungi IT", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
-
-    '    End Try
-
     'End Sub
+
+
+
+    Sub Cek_Stok()
+
+        'Dim hitung_qty_order As Double
+        'Dim hitung_qty_stok As Double
+
+        'For baris2 As Double = 0 To FrmCariBarang.DGBarang.RowCount - 1
+        '    hitung_qty_order = FrmCariBarang.DGBarang.Rows(baris2).Cells(4).Value
+        '    hitung_qty_stok = FrmCariBarang.DGBarang.Rows(baris2).Cells(5).Value
+        'Next
+
+        'Dim Stok As Double = hitung_qty_stok
+        'Dim QtyOrder As Double = hitung_qty_order
+
+        Try
+            If txtStokGudang.Text < txtQty.Text Then
+                MessageBox.Show("Stok kurang, ", "Tidak ada stok barang", MessageBoxButtons.OKCancel) : Exit Sub
+            ElseIf txtQty.Text > txtQtyBeliCust.Text Then
+                MessageBox.Show("Input Stok Melebihi Order, ", "Salah Input", MessageBoxButtons.OKCancel) : Exit Sub
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message) : Exit Sub
+        End Try
+
+
+    End Sub
+
 
 
     Private Sub Button1_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTambah.Click
         Try
+
+
             If txtNoOrder.Text = "" Then
                 MsgBox("Tanyakan ke Admin apakah sudah melakukan input penawaran/order ke system ", MsgBoxStyle.Critical,
                        "Gagal !") : Exit Sub
@@ -452,16 +445,39 @@ Public Class FrmUtamaATM
                 MessageBox.Show("Harap isi alamat tujuan pengiriman jika di database tidak ada, isi manual saja ", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 txtAlamat.Focus() : Exit Sub
             Else
-
-                Call Simpan_Details_Surat()
-                Call total_item()
-                btnReset.Enabled = False
-                txtKodeBarang.Text = Nothing
-                txtKodeLokasi.Text = ""
-                txtBarang.Text = Nothing
-                txtQty.Text = Nothing
-                btnBatal.Enabled = True
-                btnSimpan.Enabled = True
+                Try
+                    If Val(txtStokGudang.Text) < (txtQty.Text) Then
+                        MessageBox.Show("Pastikan ada stok barang, tanyakan purchasing apabila barang belum di update stoknya", "Stok Kurang", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop) : Exit Sub
+                    ElseIf Val(txtQty.Text) > Val(txtQtyBeliCust.Text) Then
+                        MessageBox.Show("Input qty kirim barang melebihi order dari penawaran, ", "Salah Input Qty", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop) : Exit Sub
+                    Else
+                        Call Simpan_Details_Surat()
+                        Call total_item()
+                        Call Kurangi_Stock()
+                        btnReset.Enabled = False
+                        txtKodeBarang.Text = Nothing
+                        txtKodeLokasi.Text = ""
+                        txtBarang.Text = Nothing
+                        txtQty.Text = Nothing
+                        btnBatal.Enabled = True
+                        btnSimpan.Enabled = True
+                        txtQtyBeliCust.Text = ""
+                        txtMerkBarang.Text = ""
+                        txtQtyBeliCust.Text = ""
+                        txtStokGudang.Text = ""
+                    End If
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message) : Exit Sub
+                End Try
+                'Call Simpan_Details_Surat()
+                'Call total_item()
+                'btnReset.Enabled = False
+                'txtKodeBarang.Text = Nothing
+                'txtKodeLokasi.Text = ""
+                'txtBarang.Text = Nothing
+                'txtQty.Text = Nothing
+                'btnBatal.Enabled = True
+                'btnSimpan.Enabled = True
             End If
 
         Catch ex As Exception
@@ -469,6 +485,18 @@ Public Class FrmUtamaATM
         End Try
     End Sub
 
+    Sub Kurangi_Stock()
+        Dim stok_dikurangi = Val(txtStokGudang.Text) - Val(txtQty.Text)
+        Try
+            Proses.OpenConn()
+            SQL = "UPDATE barang set qty = '" & stok_dikurangi & "' where kode = '" & txtKodeBarang.Text & "'"
+            Proses.ExecuteNonQuery(SQL)
+
+            Proses.CloseConn()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
 
 
     Private Sub txtQty_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtQty.KeyPress
@@ -503,18 +531,42 @@ Public Class FrmUtamaATM
                     ElseIf txtAlamat.Text = "" Or txtAlamat.TextLength < 3 Then
                         MessageBox.Show("Harap isi alamat tujuan pengiriman jika di database tidak ada, isi manual saja ", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                         txtAlamat.Focus() : Exit Sub
+                    Else
+                        Try
+                            If Val(txtStokGudang.Text) < (txtQty.Text) Then
+                                MessageBox.Show("Pastikan ada stok barang, tanyakan purchasing apabila barang belum di update stoknya", "Stok Kurang", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop) : Exit Sub
+                            ElseIf Val(txtQty.Text) > Val(txtQtyBeliCust.Text) Then
+                                MessageBox.Show("Input qty kirim barang melebihi order dari penawaran, ", "Salah Input Qty", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop) : Exit Sub
+                            Else
+                                Call Simpan_Details_Surat()
+                                Call total_item()
+                                btnReset.Enabled = False
+                                txtKodeBarang.Text = Nothing
+                                txtKodeLokasi.Text = ""
+                                txtBarang.Text = Nothing
+                                txtQty.Text = Nothing
+                                btnBatal.Enabled = True
+                                btnSimpan.Enabled = True
+                                txtQtyBeliCust.Text = ""
+                                txtMerkBarang.Text = ""
+                                txtQtyBeliCust.Text = ""
+                                txtStokGudang.Text = ""
+                            End If
+                        Catch ex As Exception
+                            MessageBox.Show(ex.Message) : Exit Sub
+                        End Try
                     End If
 
-                    Call Simpan_Details_Surat()
-                    ' Call Jumlah_QTY()
-                    Call total_item()
-                    btnReset.Enabled = False
-                    txtKodeBarang.Text = Nothing
-                    txtKodeLokasi.Text = ""
-                    txtBarang.Text = Nothing
-                    txtQty.Text = Nothing
-                    btnBatal.Enabled = True
-                    btnSimpan.Enabled = True
+                    'Call Simpan_Details_Surat()
+                    '' Call Jumlah_QTY()
+                    'Call total_item()
+                    'btnReset.Enabled = False
+                    'txtKodeBarang.Text = Nothing
+                    'txtKodeLokasi.Text = ""
+                    'txtBarang.Text = Nothing
+                    'txtQty.Text = Nothing
+                    'btnBatal.Enabled = True
+                    'btnSimpan.Enabled = True
 
                 Case Else
                     e.KeyChar = Chr(0)
@@ -655,6 +707,23 @@ Public Class FrmUtamaATM
 
     Private Sub btnBatal_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBatal.Click
 
+        'Dim i As Integer
+
+        'i = DGJualBarang.CurrentRow.Index
+
+        'For i = 0 To DGJualBarang.Rows.Count - 1
+        '    transaksi_jual = Proses.ExecuteQuery("SELECT * FROM barang where kode_barang = '" & DGJualBarang.Item(1, i).Value & "'")
+        '    If transaksi_jual.Rows.Count = 0 Then
+        '    Else
+        '        Dim Jumlah = Val(transaksi_jual.Rows(0).Item("stok")) + Val(DGJualBarang.Item(4, i).Value)
+        '        SQL = "UPDATE barang set stok = '" & CInt(Jumlah) & "' where kode_barang = '" & DGJualBarang.Item(1, i).Value & "'"
+        '        Proses.ExecuteNonQuery(SQL)
+        '    End If
+        'Next
+        'SQL = "DELETE FROM detail_trans_jual where kode_trans_jual ='" & txtNoTransaksi.Text & "'"
+        'Proses.ExecuteNonQuery(SQL)
+
+
         If MsgBox("Membatalkan akan menyebabkan data yang sudah di input akan dihapus dan perlu melakukan penginputan lagi?", vbYesNo, "Apakah anda yakin ?") = vbYes Then
 
             Try
@@ -729,13 +798,13 @@ Public Class FrmUtamaATM
 
         'FrmUtama.Show()
         'Me.Visible = False
-
+        Proses.CloseConn()
 
         If txtNoOrder.TextLength = 0 Then
             SplashScreen1.Text = "Loading Form Dintara"
             SplashScreen1.ShowDialog()
             FrmUtama.Show()
-            Me.Visible = False
+            Me.Close()
         Else
             MessageBox.Show("Selesaikan transaksi dulu atau klik tombol reset ya " + userlogin, "403 Forbidden", MessageBoxButtons.OK, MessageBoxIcon.Error) : Exit Sub
 
@@ -845,4 +914,7 @@ Public Class FrmUtamaATM
     End Sub
 
 
+    Private Sub txtQty_MouseDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles txtQty.MouseDoubleClick
+        txtQty.ReadOnly = False
+    End Sub
 End Class
