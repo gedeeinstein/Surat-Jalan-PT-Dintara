@@ -481,7 +481,7 @@ Public Class FrmUtamaATM
             End If
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message + vbCr + "Gagal Menyimpan", "Program Error")
+            MessageBox.Show(ex.Message + vbCr + "Gagal Menyimpan", "Program Error") : Exit Sub
         End Try
     End Sub
 

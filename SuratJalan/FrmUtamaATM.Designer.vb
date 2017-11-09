@@ -22,7 +22,7 @@ Partial Class FrmUtamaATM
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmUtamaATM))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -46,7 +46,11 @@ Partial Class FrmUtamaATM
         Me.txtBarang = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txtQtyBeliCust = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.txtStokGudang = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.lblStok = New System.Windows.Forms.Label()
         Me.txtMerkBarang = New System.Windows.Forms.TextBox()
         Me.btnTambah = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -78,10 +82,6 @@ Partial Class FrmUtamaATM
         Me.fb = New System.Windows.Forms.PictureBox()
         Me.instagram = New System.Windows.Forms.PictureBox()
         Me.linkedin = New System.Windows.Forms.PictureBox()
-        Me.lblStok = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.txtStokGudang = New System.Windows.Forms.TextBox()
-        Me.txtQtyBeliCust = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGBarangKirim, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -302,14 +302,14 @@ Partial Class FrmUtamaATM
         Me.DGBarangKirim.Location = New System.Drawing.Point(8, 387)
         Me.DGBarangKirim.Name = "DGBarangKirim"
         Me.DGBarangKirim.ReadOnly = True
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGBarangKirim.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGBarangKirim.RowHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGBarangKirim.RowHeadersWidth = 5
         Me.DGBarangKirim.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DGBarangKirim.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -379,6 +379,38 @@ Partial Class FrmUtamaATM
         Me.GroupBox2.TabIndex = 13
         Me.GroupBox2.TabStop = False
         '
+        'txtQtyBeliCust
+        '
+        Me.txtQtyBeliCust.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.txtQtyBeliCust.Location = New System.Drawing.Point(593, 47)
+        Me.txtQtyBeliCust.Name = "txtQtyBeliCust"
+        Me.txtQtyBeliCust.ReadOnly = True
+        Me.txtQtyBeliCust.Size = New System.Drawing.Size(77, 20)
+        Me.txtQtyBeliCust.TabIndex = 53
+        Me.txtQtyBeliCust.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label14.Location = New System.Drawing.Point(526, 50)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(61, 13)
+        Me.Label14.TabIndex = 52
+        Me.Label14.Text = "Order Qty"
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'txtStokGudang
+        '
+        Me.txtStokGudang.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.txtStokGudang.Location = New System.Drawing.Point(70, 47)
+        Me.txtStokGudang.Name = "txtStokGudang"
+        Me.txtStokGudang.ReadOnly = True
+        Me.txtStokGudang.Size = New System.Drawing.Size(76, 20)
+        Me.txtStokGudang.TabIndex = 27
+        Me.txtStokGudang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'Label13
         '
         Me.Label13.AutoSize = True
@@ -389,6 +421,18 @@ Partial Class FrmUtamaATM
         Me.Label13.Size = New System.Drawing.Size(35, 13)
         Me.Label13.TabIndex = 26
         Me.Label13.Text = "Merk"
+        '
+        'lblStok
+        '
+        Me.lblStok.AutoSize = True
+        Me.lblStok.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStok.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.lblStok.Location = New System.Drawing.Point(8, 50)
+        Me.lblStok.Name = "lblStok"
+        Me.lblStok.Size = New System.Drawing.Size(56, 13)
+        Me.lblStok.TabIndex = 25
+        Me.lblStok.Text = "Stok Brg"
+        Me.lblStok.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtMerkBarang
         '
@@ -768,50 +812,6 @@ Partial Class FrmUtamaATM
         Me.linkedin.Size = New System.Drawing.Size(32, 32)
         Me.linkedin.TabIndex = 43
         Me.linkedin.TabStop = False
-        '
-        'lblStok
-        '
-        Me.lblStok.AutoSize = True
-        Me.lblStok.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStok.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblStok.Location = New System.Drawing.Point(8, 50)
-        Me.lblStok.Name = "lblStok"
-        Me.lblStok.Size = New System.Drawing.Size(56, 13)
-        Me.lblStok.TabIndex = 25
-        Me.lblStok.Text = "Stok Brg"
-        Me.lblStok.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label14.Location = New System.Drawing.Point(508, 50)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(79, 13)
-        Me.Label14.TabIndex = 52
-        Me.Label14.Text = "Quantity Beli"
-        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'txtStokGudang
-        '
-        Me.txtStokGudang.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.txtStokGudang.Location = New System.Drawing.Point(70, 47)
-        Me.txtStokGudang.Name = "txtStokGudang"
-        Me.txtStokGudang.ReadOnly = True
-        Me.txtStokGudang.Size = New System.Drawing.Size(76, 20)
-        Me.txtStokGudang.TabIndex = 27
-        Me.txtStokGudang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtQtyBeliCust
-        '
-        Me.txtQtyBeliCust.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.txtQtyBeliCust.Location = New System.Drawing.Point(593, 47)
-        Me.txtQtyBeliCust.Name = "txtQtyBeliCust"
-        Me.txtQtyBeliCust.ReadOnly = True
-        Me.txtQtyBeliCust.Size = New System.Drawing.Size(77, 20)
-        Me.txtQtyBeliCust.TabIndex = 53
-        Me.txtQtyBeliCust.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'FrmUtamaATM
         '

@@ -62,7 +62,7 @@ Partial Class FrmCariBarang
         'txtNoOrder
         '
         Me.txtNoOrder.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.txtNoOrder.Location = New System.Drawing.Point(736, 86)
+        Me.txtNoOrder.Location = New System.Drawing.Point(973, 86)
         Me.txtNoOrder.Name = "txtNoOrder"
         Me.txtNoOrder.ReadOnly = True
         Me.txtNoOrder.Size = New System.Drawing.Size(198, 20)
@@ -72,7 +72,7 @@ Partial Class FrmCariBarang
         '
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(667, 89)
+        Me.Label1.Location = New System.Drawing.Point(904, 89)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(50, 13)
         Me.Label1.TabIndex = 14
@@ -103,7 +103,7 @@ Partial Class FrmCariBarang
         Me.btnPilih.BackColor = System.Drawing.Color.Snow
         Me.btnPilih.FlatAppearance.BorderSize = 0
         Me.btnPilih.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPilih.Location = New System.Drawing.Point(749, 372)
+        Me.btnPilih.Location = New System.Drawing.Point(986, 372)
         Me.btnPilih.Name = "btnPilih"
         Me.btnPilih.Size = New System.Drawing.Size(85, 40)
         Me.btnPilih.TabIndex = 17
@@ -115,7 +115,7 @@ Partial Class FrmCariBarang
         Me.btnBatal.BackColor = System.Drawing.Color.Snow
         Me.btnBatal.FlatAppearance.BorderSize = 0
         Me.btnBatal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBatal.Location = New System.Drawing.Point(849, 372)
+        Me.btnBatal.Location = New System.Drawing.Point(1086, 372)
         Me.btnBatal.Name = "btnBatal"
         Me.btnBatal.Size = New System.Drawing.Size(85, 40)
         Me.btnBatal.TabIndex = 18
