@@ -37,7 +37,9 @@ Public Class FrmCariPerusahaan
                 & "ON tawar01.kode_pelanggan = pelanggan.kode " _
                 & "WHERE pelanggan.nama LIKE '%" & Rep(txtCariPerusahaan.Text) & "%' ORDER BY tawar01.tgl DESC"
             perusahaan = Proses.ExecuteQuery(SQL)
+            Proses.CloseConn()
             Try
+                Proses.OpenConn()
                 Me.DGPerusahaan.DataSource = perusahaan
                 'Me.DGPerusahaan.Columns(0).Visible = False
                 Me.DGPerusahaan.Columns(0).Width = 100
@@ -46,6 +48,7 @@ Public Class FrmCariPerusahaan
                 Me.DGPerusahaan.Columns(3).Width = 190
                 Me.DGPerusahaan.Columns(4).Visible = False
                 Me.DGPerusahaan.Columns(5).Visible = False ' Untuk Memasukan Alamat ke Form utama
+                Proses.CloseConn()
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             End Try

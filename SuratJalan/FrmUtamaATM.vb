@@ -25,8 +25,10 @@ Public Class FrmUtamaATM
         DGBarangKirim.Columns(1).Width = 100
         DGBarangKirim.Columns(2).Width = 70
         DGBarangKirim.Columns(3).Width = 520
-        DGBarangKirim.Columns(4).Width = 80 ' MERK
+        DGBarangKirim.Columns(4).Width = 115 ' MERK
         DGBarangKirim.Columns(5).Width = 80 ' QTY
+
+        '885
 
         'INSERT INTO `dbatm`.`suratjalan_detail` (`nosurat`, `kode`, `kode_lokasi`, `nama_barang`, `qty`, `no_order`)
 
@@ -452,8 +454,8 @@ Public Class FrmUtamaATM
                         MessageBox.Show("Input qty kirim barang melebihi order dari penawaran, ", "Salah Input Qty", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop) : Exit Sub
                     Else
                         Call Simpan_Details_Surat()
-                        Call total_item()
-                        Call Kurangi_Stock()
+                        Call total_item() 'Menjumlahkan Total Barang yang di kirim
+                        Call Kurangi_Stock() 'Untuk Mengurangi Stok di Gudang
                         btnReset.Enabled = False
                         txtKodeBarang.Text = Nothing
                         txtKodeLokasi.Text = ""
@@ -732,6 +734,11 @@ Public Class FrmUtamaATM
                 SQL = "DELETE FROM suratjalan_detail WHERE nosurat = '" & txtNoSurat.Text & "'"
                 Proses.ExecuteNonQuery(SQL)
 
+
+
+                'Proses pengembalian STOK Barang di database ada disini seharusnya
+
+
                 MessageBox.Show("Transaksi sudah dibatalkan...!!", "Pembatalan Sukses",
                 MessageBoxButtons.OK, MessageBoxIcon.Information)
 
@@ -788,7 +795,7 @@ Public Class FrmUtamaATM
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTambahUser.Click
-
+        FrmTambahUser.ShowDialog()
     End Sub
 
     Private Sub btnFrmATM_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnFrmDIN.Click

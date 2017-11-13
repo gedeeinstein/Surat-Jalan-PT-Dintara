@@ -171,10 +171,30 @@ Public Class FrmLogin
         End If
     End Sub
 
-    Private Sub BtnConfig_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnConfig.Click
+
+    Public Sub Konfigurasi_Aplikasi()
+        Dim pass As String
+
         If MsgBox("Apakah anda sudah tau cara mengkonfigurasi aplikasi ini ?" + vbNewLine + "Jika Belum hubungi IT", MsgBoxStyle.OkCancel, "Lanjutkan ?") = MsgBoxResult.Ok Then
-            FrmConfig.ShowDialog()
+            pass = InputBox("Pastikan anda adalah administrator, silahkan masukan password untuk melanjutkan konfigurasi aplikasi", "Verifikasi Password", , , )
+            Try
+                If pass = "gedeadi@dintarakitchen.co.id" Then
+                    FrmConfig.ShowDialog()
+                ElseIf pass = "" Then : Exit Sub
+                Else
+                    MessageBox.Show("Harap hubungi IT untuk konfigurasi aplikasi", "You are not Administrator", MessageBoxButtons.OK, MessageBoxIcon.Stop) : Exit Sub
+                End If
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+
         End If
+    End Sub
+
+    Private Sub BtnConfig_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnConfig.Click
+        'If MsgBox("Apakah anda sudah tau cara mengkonfigurasi aplikasi ini ?" + vbNewLine + "Jika Belum hubungi IT", MsgBoxStyle.OkCancel, "Lanjutkan ?") = MsgBoxResult.Ok Then
+        '    FrmConfig.ShowDialog()
+        'End If
 
     End Sub
 
@@ -246,7 +266,7 @@ Public Class FrmLogin
         Dim mydata As MySqlDataReader
         mydata = mycommand.ExecuteReader()
 
-        myData.Read()
+        mydata.Read()
         isAdmin = mydata("level")
 
         If isAdmin = 2 Then

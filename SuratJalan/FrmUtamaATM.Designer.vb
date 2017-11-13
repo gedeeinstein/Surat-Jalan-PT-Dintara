@@ -22,7 +22,7 @@ Partial Class FrmUtamaATM
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmUtamaATM))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -82,6 +82,7 @@ Partial Class FrmUtamaATM
         Me.fb = New System.Windows.Forms.PictureBox()
         Me.instagram = New System.Windows.Forms.PictureBox()
         Me.linkedin = New System.Windows.Forms.PictureBox()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGBarangKirim, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -117,7 +118,7 @@ Partial Class FrmUtamaATM
         Me.Label2.BackColor = System.Drawing.SystemColors.Control
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(14, 52)
+        Me.Label2.Location = New System.Drawing.Point(14, 53)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(50, 13)
         Me.Label2.TabIndex = 2
@@ -160,7 +161,7 @@ Partial Class FrmUtamaATM
         Me.NoSurat.BackColor = System.Drawing.SystemColors.Control
         Me.NoSurat.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NoSurat.ForeColor = System.Drawing.Color.Black
-        Me.NoSurat.Location = New System.Drawing.Point(6, 24)
+        Me.NoSurat.Location = New System.Drawing.Point(3, 24)
         Me.NoSurat.Name = "NoSurat"
         Me.NoSurat.Size = New System.Drawing.Size(61, 13)
         Me.NoSurat.TabIndex = 6
@@ -267,11 +268,11 @@ Partial Class FrmUtamaATM
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label7.Location = New System.Drawing.Point(498, 24)
+        Me.Label7.Location = New System.Drawing.Point(564, 24)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(89, 13)
+        Me.Label7.Size = New System.Drawing.Size(23, 13)
         Me.Label7.TabIndex = 13
-        Me.Label7.Text = "Att / Penerima"
+        Me.Label7.Text = "Att"
         '
         'txtPerusahaan
         '
@@ -302,14 +303,14 @@ Partial Class FrmUtamaATM
         Me.DGBarangKirim.Location = New System.Drawing.Point(8, 387)
         Me.DGBarangKirim.Name = "DGBarangKirim"
         Me.DGBarangKirim.ReadOnly = True
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGBarangKirim.RowHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGBarangKirim.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.DGBarangKirim.RowHeadersWidth = 5
         Me.DGBarangKirim.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DGBarangKirim.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -398,7 +399,7 @@ Partial Class FrmUtamaATM
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(61, 13)
         Me.Label14.TabIndex = 52
-        Me.Label14.Text = "Order Qty"
+        Me.Label14.Text = "Qty Order"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtStokGudang
@@ -517,7 +518,7 @@ Partial Class FrmUtamaATM
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label6.Location = New System.Drawing.Point(676, 24)
+        Me.Label6.Location = New System.Drawing.Point(674, 25)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(57, 13)
         Me.Label6.TabIndex = 13
@@ -639,7 +640,7 @@ Partial Class FrmUtamaATM
         Me.PictureBox1.Location = New System.Drawing.Point(4, 5)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(117, 83)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
@@ -813,6 +814,16 @@ Partial Class FrmUtamaATM
         Me.linkedin.TabIndex = 43
         Me.linkedin.TabStop = False
         '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(976, 568)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(237, 13)
+        Me.Label15.TabIndex = 52
+        Me.Label15.Text = "APLIKASI YANG SUDAH MENGURANGI STOK"
+        Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'FrmUtamaATM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -820,6 +831,7 @@ Partial Class FrmUtamaATM
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(1366, 768)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.outlook)
         Me.Controls.Add(Me.gmail)
@@ -932,4 +944,5 @@ Partial Class FrmUtamaATM
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Public WithEvents txtStokGudang As System.Windows.Forms.TextBox
     Public WithEvents txtQtyBeliCust As System.Windows.Forms.TextBox
+    Friend WithEvents Label15 As System.Windows.Forms.Label
 End Class

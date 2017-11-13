@@ -171,8 +171,10 @@ Public Class FrmCariBarang
                 Trim(FrmUtamaATM.txtQtyBeliCust.Text)
 
             Case "Pilih Barang"
-                'FrmUtama.txtQtyBeliCust.Text = QtyOrder
-                'FrmUtama.txtStokGudang.Text = Stok
+                FrmUtama.txtQtyBeliCust.Text = QtyOrder
+                FrmUtama.txtStokGudang.Text = Stok
+                Trim(FrmUtama.txtStokGudang.Text)
+                Trim(FrmUtama.txtQtyBeliCust.Text)
         End Select
     End Sub
 
@@ -195,28 +197,24 @@ Public Class FrmCariBarang
                     Trim(FrmUtamaATM.txtMerkBarang.Text)
 
                     Me.Close()
-                    'Trim(FrmUtamaATM.txtBarang.Text)
-                    'Trim(FrmUtamaATM.txtKodeLokasi.Text)
+
                     FrmUtamaATM.txtQty.Focus()
                     FrmUtamaATM.btnCariPerusahaan.Enabled = False
 
                 Case "Pilih Barang"
                     FrmUtama.txtKodeBarang.Text = DGBarang.SelectedCells(0).Value
                     FrmUtama.txtBarang.Text = DGBarang.SelectedCells(1).Value
-                    'FrmUtama.txtMerkBarang.Text = DGBarang.SelectedCells(2).Value
+                    FrmUtama.txtMerkBarang.Text = DGBarang.SelectedCells(2).Value
                     FrmUtama.txtKodeLokasi.Text = DGBarang.SelectedCells(3).Value
 
                     Input_Qty()
 
                     Trim(FrmUtama.txtBarang.Text)
                     Trim(FrmUtama.txtKodeLokasi.Text)
-                    'Trim(FrmUtama.txtMerkBarang.Text)
+                    Trim(FrmUtama.txtMerkBarang.Text)
 
                     Me.Close()
 
-                    'Trim(FrmUtama.txtBarang.Text)
-                    'Trim(FrmUtama.txtKodeLokasi.Text)
-                    ''Trim(FrmUtama.txtMerkBarang.Text)
                     FrmUtama.txtQty.Focus()
                     FrmUtama.btnCariPerusahaan.Enabled = False
 
