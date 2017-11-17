@@ -1,5 +1,9 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.Data.Odbc
+Imports System.Data
+Imports System.Data.OleDb
+Imports System.Data.Sql
+Imports System
 
 Public Class ClsKoneksi
     Public SQL As String

@@ -22,8 +22,8 @@ Partial Class FrmUtama
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmUtama))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -47,6 +47,12 @@ Partial Class FrmUtama
         Me.txtBarang = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txtQtyBeliCust = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.txtStokGudang = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.lblStok = New System.Windows.Forms.Label()
+        Me.txtMerkBarang = New System.Windows.Forms.TextBox()
         Me.btnTambah = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtKodeLokasi = New System.Windows.Forms.TextBox()
@@ -77,12 +83,7 @@ Partial Class FrmUtama
         Me.maps = New System.Windows.Forms.PictureBox()
         Me.gmail = New System.Windows.Forms.PictureBox()
         Me.outlook = New System.Windows.Forms.PictureBox()
-        Me.txtQtyBeliCust = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.txtStokGudang = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.lblStok = New System.Windows.Forms.Label()
-        Me.txtMerkBarang = New System.Windows.Forms.TextBox()
+        Me.btn_delete = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGBarangKirim, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -298,23 +299,23 @@ Partial Class FrmUtama
         Me.DGBarangKirim.AllowUserToDeleteRows = False
         Me.DGBarangKirim.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DGBarangKirim.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGBarangKirim.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGBarangKirim.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DGBarangKirim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGBarangKirim.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGBarangKirim.DefaultCellStyle = DataGridViewCellStyle4
         Me.DGBarangKirim.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.DGBarangKirim.GridColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.DGBarangKirim.Location = New System.Drawing.Point(8, 387)
@@ -389,6 +390,71 @@ Partial Class FrmUtama
         Me.GroupBox2.Size = New System.Drawing.Size(885, 78)
         Me.GroupBox2.TabIndex = 13
         Me.GroupBox2.TabStop = False
+        '
+        'txtQtyBeliCust
+        '
+        Me.txtQtyBeliCust.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.txtQtyBeliCust.Location = New System.Drawing.Point(593, 47)
+        Me.txtQtyBeliCust.Name = "txtQtyBeliCust"
+        Me.txtQtyBeliCust.ReadOnly = True
+        Me.txtQtyBeliCust.Size = New System.Drawing.Size(77, 20)
+        Me.txtQtyBeliCust.TabIndex = 65
+        Me.txtQtyBeliCust.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label14.Location = New System.Drawing.Point(526, 50)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(61, 13)
+        Me.Label14.TabIndex = 64
+        Me.Label14.Text = "Qty Order"
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'txtStokGudang
+        '
+        Me.txtStokGudang.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.txtStokGudang.Location = New System.Drawing.Point(70, 47)
+        Me.txtStokGudang.Name = "txtStokGudang"
+        Me.txtStokGudang.ReadOnly = True
+        Me.txtStokGudang.Size = New System.Drawing.Size(76, 20)
+        Me.txtStokGudang.TabIndex = 63
+        Me.txtStokGudang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label13.Location = New System.Drawing.Point(174, 50)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(35, 13)
+        Me.Label13.TabIndex = 62
+        Me.Label13.Text = "Merk"
+        '
+        'lblStok
+        '
+        Me.lblStok.AutoSize = True
+        Me.lblStok.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStok.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.lblStok.Location = New System.Drawing.Point(8, 50)
+        Me.lblStok.Name = "lblStok"
+        Me.lblStok.Size = New System.Drawing.Size(56, 13)
+        Me.lblStok.TabIndex = 60
+        Me.lblStok.Text = "Stok Brg"
+        Me.lblStok.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'txtMerkBarang
+        '
+        Me.txtMerkBarang.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.txtMerkBarang.Location = New System.Drawing.Point(215, 47)
+        Me.txtMerkBarang.Name = "txtMerkBarang"
+        Me.txtMerkBarang.ReadOnly = True
+        Me.txtMerkBarang.Size = New System.Drawing.Size(181, 20)
+        Me.txtMerkBarang.TabIndex = 61
+        Me.txtMerkBarang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnTambah
         '
@@ -760,70 +826,18 @@ Partial Class FrmUtama
         Me.outlook.TabIndex = 42
         Me.outlook.TabStop = False
         '
-        'txtQtyBeliCust
+        'btn_delete
         '
-        Me.txtQtyBeliCust.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.txtQtyBeliCust.Location = New System.Drawing.Point(593, 47)
-        Me.txtQtyBeliCust.Name = "txtQtyBeliCust"
-        Me.txtQtyBeliCust.ReadOnly = True
-        Me.txtQtyBeliCust.Size = New System.Drawing.Size(77, 20)
-        Me.txtQtyBeliCust.TabIndex = 65
-        Me.txtQtyBeliCust.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label14.Location = New System.Drawing.Point(526, 50)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(61, 13)
-        Me.Label14.TabIndex = 64
-        Me.Label14.Text = "Qty Order"
-        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'txtStokGudang
-        '
-        Me.txtStokGudang.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.txtStokGudang.Location = New System.Drawing.Point(70, 47)
-        Me.txtStokGudang.Name = "txtStokGudang"
-        Me.txtStokGudang.ReadOnly = True
-        Me.txtStokGudang.Size = New System.Drawing.Size(76, 20)
-        Me.txtStokGudang.TabIndex = 63
-        Me.txtStokGudang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label13.Location = New System.Drawing.Point(174, 50)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(35, 13)
-        Me.Label13.TabIndex = 62
-        Me.Label13.Text = "Merk"
-        '
-        'lblStok
-        '
-        Me.lblStok.AutoSize = True
-        Me.lblStok.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStok.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblStok.Location = New System.Drawing.Point(8, 50)
-        Me.lblStok.Name = "lblStok"
-        Me.lblStok.Size = New System.Drawing.Size(56, 13)
-        Me.lblStok.TabIndex = 60
-        Me.lblStok.Text = "Stok Brg"
-        Me.lblStok.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'txtMerkBarang
-        '
-        Me.txtMerkBarang.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.txtMerkBarang.Location = New System.Drawing.Point(215, 47)
-        Me.txtMerkBarang.Name = "txtMerkBarang"
-        Me.txtMerkBarang.ReadOnly = True
-        Me.txtMerkBarang.Size = New System.Drawing.Size(181, 20)
-        Me.txtMerkBarang.TabIndex = 61
-        Me.txtMerkBarang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.btn_delete.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.btn_delete.FlatAppearance.BorderSize = 0
+        Me.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_delete.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btn_delete.Image = Global.SuratJalan.My.Resources.Resources.delete_icon_icon
+        Me.btn_delete.Location = New System.Drawing.Point(608, 689)
+        Me.btn_delete.Name = "btn_delete"
+        Me.btn_delete.Size = New System.Drawing.Size(44, 49)
+        Me.btn_delete.TabIndex = 54
+        Me.btn_delete.UseVisualStyleBackColor = False
         '
         'FrmUtama
         '
@@ -832,6 +846,7 @@ Partial Class FrmUtama
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(1366, 768)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btn_delete)
         Me.Controls.Add(Me.outlook)
         Me.Controls.Add(Me.gmail)
         Me.Controls.Add(Me.maps)
@@ -945,4 +960,5 @@ Partial Class FrmUtama
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents lblStok As System.Windows.Forms.Label
     Public WithEvents txtMerkBarang As System.Windows.Forms.TextBox
+    Friend WithEvents btn_delete As System.Windows.Forms.Button
 End Class

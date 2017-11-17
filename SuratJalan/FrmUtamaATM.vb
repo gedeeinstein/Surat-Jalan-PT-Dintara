@@ -533,6 +533,7 @@ Public Class FrmUtamaATM
                         txtMerkBarang.Text = ""
                         txtQtyBeliCust.Text = ""
                         txtStokGudang.Text = ""
+                        MySqlConnection.ClearAllPools()
                     End If
                 Catch ex As Exception
                     MessageBox.Show(ex.Message) : Exit Sub
@@ -737,7 +738,7 @@ Public Class FrmUtamaATM
                 FrmLogin.Show()
             End If
         Else
-            MessageBox.Show("Selesaikan transaksi dulu atau klik tombol reset ya 😤 " + userlogin, "403 Forbidden ", MessageBoxButtons.OK, MessageBoxIcon.Error) : Exit Sub
+            MessageBox.Show("Selesaikan transaksi dulu atau klik tombol reset ya :( " + userlogin, "403 Forbidden ", MessageBoxButtons.OK, MessageBoxIcon.Error) : Exit Sub
         End If
 
     End Sub
@@ -757,7 +758,7 @@ Public Class FrmUtamaATM
                 Application.Exit()
             End If
         Else
-            MessageBox.Show("Selesaikan transaksi dulu atau klik tombol reset ya 😤 " + userlogin, "403 Forbidden ", MessageBoxButtons.OK, MessageBoxIcon.Error) : Exit Sub
+            MessageBox.Show("Selesaikan transaksi dulu atau klik tombol reset ya :( " + userlogin, "403 Forbidden ", MessageBoxButtons.OK, MessageBoxIcon.Error) : Exit Sub
         End If
     End Sub
 
@@ -789,12 +790,13 @@ Public Class FrmUtamaATM
                         Proses.CloseConn()
                     End If
                 Catch ex As Exception
-                    MessageBox.Show(ex.Message, "Terjadi Kesalahan", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Information)
+                    MessageBox.Show(ex.Message, "Terjadi Kesalahan", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Information) : Exit Sub
+
                 End Try
 
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Ada kesalahan", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Information)
+            MessageBox.Show(ex.Message, "Ada kesalahan", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Information) : Exit Sub
         End Try
     End Sub
 
@@ -810,7 +812,7 @@ Public Class FrmUtamaATM
 
     Private Sub btnReset_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnReset.Click
         Call Reset()
-        Proses.CloseConn()
+        MySqlConnection.ClearAllPools()
     End Sub
 
     Private Sub btnCariPerusahaan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCariPerusahaan.Click
@@ -835,103 +837,50 @@ Public Class FrmUtamaATM
     End Sub
 
 
+    Public Sub Kembalikan_Stok()
+        Dim i As Integer
+
+        i = DGBarangKirim.CurrentRow.Index
+
+        For i = 0 To DGBarangKirim.Rows.Count - 1
+            barang = Proses.ExecuteQuery("SELECT * FROM barang where kode = '" & DGBarangKirim.Item(1, i).Value & "'")
+            If barang.Rows.Count = 0 Then
+                'do nothing here ?
+            Else
+                Dim jumlah = CInt(barang.Rows(0).Item("qty")) + CInt(DGBarangKirim.Item(5, i).Value)
+                Dim SQL = "UPDATE barang set qty = '" & CInt(jumlah) & "' where kode = '" & DGBarangKirim.Item(1, i).Value & "'"
+                Proses.ExecuteNonQuery(SQL)
+                MessageBox.Show("Transaksi sudah dibatalkan & semua details input telah dihapus", "Pembatalan Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+        Next
+    End Sub
+
+
     Private Sub btnBatal_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBatal.Click
-
-        'Dim i As Integer
-
-        'i = DGJualBarang.CurrentRow.Index
-
-        'For i = 0 To DGJualBarang.Rows.Count - 1
-        '    transaksi_jual = Proses.ExecuteQuery("SELECT * FROM barang where kode_barang = '" & DGJualBarang.Item(1, i).Value & "'")
-        '    If transaksi_jual.Rows.Count = 0 Then
-        '    Else
-        '        Dim Jumlah = Val(transaksi_jual.Rows(0).Item("stok")) + Val(DGJualBarang.Item(4, i).Value)
-        '        SQL = "UPDATE barang set stok = '" & CInt(Jumlah) & "' where kode_barang = '" & DGJualBarang.Item(1, i).Value & "'"
-        '        Proses.ExecuteNonQuery(SQL)
-        '    End If
-        'Next
-        'SQL = "DELETE FROM detail_trans_jual where kode_trans_jual ='" & txtNoTransaksi.Text & "'"
-        'Proses.ExecuteNonQuery(SQL)
-
-
         If MsgBox("Membatalkan akan menyebabkan data yang sudah di input akan dihapus dan perlu melakukan penginputan lagi?", vbYesNo, "Apakah anda yakin ?") = vbYes Then
 
-            Try
-                Dim i As Integer
+            'Kembalikan_Stok() ' MENGEMBALIKAN STOK YANG SUDAH DI KURANGI KARENA BARANG DIPILIH AKAN DI KELUARKAN DARI STOK DATABASE
 
-                i = DGBarangKirim.CurrentRow.Index
 
-                For i = 0 To DGBarangKirim.Rows.Count - 1
-                    barang = Proses.ExecuteQuery("SELECT * FROM barang where kode = '" + DGBarangKirim.Item(1, i).Value.ToString + "'")
-                    If barang.Rows.Count = 0 Then
-                        'do nothing here ?
-                    Else
-
-                        Dim jumlah = CInt(barang.Rows(0).Item("qty")) + CInt(DGBarangKirim.Item(5, i).Value.ToString)
-
-                        SQL = "UPDATE barang set qty = '" & CInt(jumlah) & "' where kode = '" & DGBarangKirim.Item(1, i).Value.ToString & "'"
-                        SQL = "DELETE FROM suratjalan_detail_atm WHERE nosurat = '" & txtNoSurat.Text & "'"
-                        Proses.ExecuteNonQuery(SQL)
-
-                        MessageBox.Show("Transaksi sudah dibatalkan & semua details input telah dihapus", "Pembatalan Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-                        Call Reset()
-                        Call Data_Awal()
-                        Call Data_Record_Pengiriman()
-                        btnReset.Enabled = True
-                        btnBatal.Enabled = False
-                        btnSimpan.Enabled = False
-
-                        Label_TotalBarang.Text = 0
-
-                    End If
-                Next
-
-                'If str_status > 0 Then
-
-                '    Proses.OpenConn()
-                '    SQL = "DELETE FROM suratjalan_detail_atm WHERE nosurat = '" & txtNoSurat.Text & "'"
-                '    Proses.ExecuteNonQuery(SQL)
-
-                '    MessageBox.Show("Transaksi sudah dibatalkan & semua details input telah dihapus", "Pembatalan Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-                '    Call Reset()
-                '    Call Data_Awal()
-                '    Call Data_Record_Pengiriman()
-                '    btnReset.Enabled = True
-                '    btnBatal.Enabled = False
-                '    btnSimpan.Enabled = False
-
-                '    Label_TotalBarang.Text = 0
-
-                '    Proses.CloseConn()
-                'Else
-                '    MessageBox.Show("Ada kesalahan koneksi", "Hubungi IT", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
-                'End If
-
-                'Proses pengembalian STOK Barang di database ada disini seharusnya
-                
-            Catch ex As Exception
-                MessageBox.Show(ex.Message, "Hubungi IT", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
-            End Try
-
+            SQL = "DELETE FROM suratjalan_detail_atm WHERE nosurat = '" & txtNoSurat.Text & "'"
+            Proses.ExecuteNonQuery(SQL)
+            MessageBox.Show("Transaksi sudah dibatalkan & semua details input telah dihapus", "Pembatalan Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Call Reset()
+            Call Data_Awal()
+            Call Data_Record_Pengiriman()
+            btnReset.Enabled = True
+            btnBatal.Enabled = False
+            btnSimpan.Enabled = False
+            Label_TotalBarang.Text = 0
+            Proses.CloseConn()
+            MySqlConnection.ClearAllPools()
         End If
 
     End Sub
 
-    'Private Sub btnTambah_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTambah.Click
-    '    Try
-    '        txtQty_KeyPress(e, sender)
-    '    Catch ex As Exception
-    '        MessageBox.Show("Ada Kesalahan Detailsnya" & vbNewLine _
-    '                        & ex.Message, "Error", MessageBoxButtons.OK)
-    '    End Try
-
-    'End Sub
 
     Private Sub btnSimpan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSimpan.Click
         Call Simpan_Surat()
-        'Proses.CloseConn()
     End Sub
 
     Private Sub txtAlamat_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtAlamat.KeyDown
@@ -1083,4 +1032,39 @@ Public Class FrmUtamaATM
     Private Sub txtQty_MouseDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles txtQty.MouseDoubleClick
         txtQty.ReadOnly = False
     End Sub
+
+    Private Sub btn_delete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_delete.Click
+        Kurangi_Details()
+
+    End Sub
+
+
+
+    Public Sub Kurangi_Details()
+        Dim i As Integer
+        Try
+            i = DGBarangKirim.SelectedRows(0).Index
+            If MsgBox("Hapus Detail Barang ", vbYesNo, "Apakah anda yakin ?") = vbYes Then
+
+                SQL = "DELETE FROM suratjalan_detail_atm WHERE nosurat = '" & DGBarangKirim.Item(0, i).Value & "' AND kode = '" & DGBarangKirim.Item(1, i).Value & "' and kode_lokasi = '" & DGBarangKirim.Item(2, i).Value & "' "
+                Proses.ExecuteNonQuery(SQL)
+                MessageBox.Show("Barang Sudah dihapus dari detail pengiriman", "Sukses dihapus", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Call Data_Record_Pengiriman()
+                Call Data_Awal()
+                Jumlah_QTY()
+                txtBarang.Text = ""
+                MySqlConnection.ClearAllPools()
+            Else
+                MsgBox("Batal Menghapus")
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Tidak ada data yang dihapus" + vbNewLine + ex.Message) : Exit Sub
+        Finally
+            MySqlConnection.ClearAllPools()
+        End Try
+
+    End Sub
+
+
+
 End Class

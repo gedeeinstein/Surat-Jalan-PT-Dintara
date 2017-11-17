@@ -46,9 +46,12 @@ Public Class FrmCariPerusahaan
                 Me.DGPerusahaan.Columns(3).Width = 190
                 Me.DGPerusahaan.Columns(4).Visible = False
                 Me.DGPerusahaan.Columns(5).Visible = False ' Untuk Memasukan Alamat ke Form utama
-
+                Proses.CloseConn()
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
+            Finally
+
+                MySqlConnection.ClearAllPools()
             End Try
 
 
@@ -88,10 +91,12 @@ Public Class FrmCariPerusahaan
                 End While
             End If
             lbl_totalperusahaan.Text = Val(totalbarang)
-            Proses.CloseConn()
+
 
         Catch ex As Exception
-            MessageBox.Show("Error. Hubungi IT atau periksa ulang data yang di input" + ex.Message, "Hubungi IT", MessageBoxButtons.OK)
+            MessageBox.Show("Error. Hubungi IT atau periksa ulang data yang di input" + ex.Message, "Hubungi IT", MessageBoxButtons.OK) : Exit Sub
+        Finally
+            Proses.CloseConn()
         End Try
     End Sub
 
@@ -141,6 +146,7 @@ Public Class FrmCariPerusahaan
                     Trim(FrmUtama.txtNoOrder.Text)
                     Trim(FrmUtama.txtAlamat.Text)
                     FrmUtama.txtBarang.Focus()
+                    MySqlConnection.ClearAllPools()
                     ' FrmCariBarang.txtNoOrder = DGPerusahaan.SelectedCells(3).Value
 
                 Case "Pilih Perusahaan CV"
@@ -157,6 +163,7 @@ Public Class FrmCariPerusahaan
                     Trim(FrmUtamaATM.txtNoOrder.Text)
                     Trim(FrmUtamaATM.txtAlamat.Text)
                     FrmUtamaATM.txtBarang.Focus()
+                    MySqlConnection.ClearAllPools()
                     ' FrmCariBarang.txtNoOrder = DGPerusahaan.SelectedCells(3).Value
             End Select
         Catch ex As Exception

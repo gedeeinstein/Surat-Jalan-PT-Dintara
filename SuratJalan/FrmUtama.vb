@@ -9,7 +9,6 @@ Public Class FrmUtama
     Dim Data As DataSet
     Dim a As Integer
     Dim haha As Integer
-
     Dim dtPelanggan As DataTable
     Dim dtOrder As DataTable
     Dim dtSurat As DataTable
@@ -555,6 +554,7 @@ Public Class FrmUtama
                         txtMerkBarang.Text = ""
                         txtQtyBeliCust.Text = ""
                         txtStokGudang.Text = ""
+                        MySqlConnection.ClearAllPools()
                     End If
                 Catch ex As Exception
                     MessageBox.Show(ex.Message) : Exit Sub
@@ -846,55 +846,44 @@ Public Class FrmUtama
     End Sub
 
 
+    Public Sub Kembalikan_Stok()
+        Dim i As Integer
+
+        i = DGBarangKirim.CurrentRow.Index
+
+        For i = 0 To DGBarangKirim.Rows.Count - 1
+            barang = Proses.ExecuteQuery("SELECT * FROM barang where kode = '" & DGBarangKirim.Item(1, i).Value & "'")
+            If barang.Rows.Count = 0 Then
+                'do nothing here ?
+            Else
+                Dim jumlah = CInt(barang.Rows(0).Item("qty")) + CInt(DGBarangKirim.Item(5, i).Value)
+                Dim SQL = "UPDATE barang set qty = '" & CInt(jumlah) & "' where kode = '" & DGBarangKirim.Item(1, i).Value & "'"
+                Proses.ExecuteNonQuery(SQL)
+                MessageBox.Show("Transaksi sudah dibatalkan & semua details input telah dihapus", "Pembatalan Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+        Next
+    End Sub
+
     Private Sub btnBatal_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBatal.Click
 
         If MsgBox("Membatalkan akan menyebabkan data yang sudah di input akan dihapus dan perlu melakukan penginputan lagi?", vbYesNo, "Apakah anda yakin ?") = vbYes Then
+            'Kembalikan_Stok() ' MENGEMBALIKAN STOK YANG SUDAH DI KURANGI KARENA BARANG DIPILIH AKAN DI KELUARKAN DARI STOK DATABASE
 
-            Try
+            SQL = "DELETE FROM suratjalan_detail_atm WHERE nosurat = '" & txtNoSurat.Text & "'"
+            Proses.ExecuteNonQuery(SQL)
 
-                Dim i As Integer
+            MessageBox.Show("Transaksi sudah dibatalkan & semua details input telah dihapus", "Pembatalan Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                i = DGBarangKirim.CurrentRow.Index
-
-                For i = 0 To DGBarangKirim.Rows.Count - 1
-                    barang = Proses.ExecuteQuery("SELECT * FROM barang where kode = '" + DGBarangKirim.Item(1, i).Value.ToString + "'")
-                    If barang.Rows.Count = 0 Then
-                        'do nothing here ?
-                    Else
-
-                        Dim jumlah = Val(barang.Rows(0).Item("qty")) + Val(DGBarangKirim.Item(5, i).Value.ToString)
-                        If str_status > 0 Then
-                            Proses.OpenConn()
-                            SQL = "UPDATE barang set qty = '" & Val(jumlah) & "' where kode = '" & DGBarangKirim.Item(1, i).Value.ToString & "'"
-                            Proses.CloseConn()
-
-                        End If
-                    End If
-                Next
-                If str_status > 0 Then
-                    SQL = "DELETE FROM suratjalan_detail WHERE nosurat = '" & txtNoSurat.Text & "'"
-                    Proses.ExecuteNonQuery(SQL)
-                    'Proses pengembalian STOK Barang di database ada disini seharusnya
-
-                    MessageBox.Show("Transaksi sudah dibatalkan & semua details input telah dihapus", "Pembatalan Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-                    Call Reset()
-                    Call Data_Awal()
-                    Call Data_Record_Pengiriman()
-                    btnReset.Enabled = True
-                    btnBatal.Enabled = False
-                    btnSimpan.Enabled = False
-                    Label_TotalBarang.Text = 0
-                Else
-                    Koneksi_Error() : Exit Sub
-                End If
-
-            Catch ex As Exception
-                MessageBox.Show(ex.Message + "Kesalahan Teknis", "Hubungi IT", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
-            End Try
-
+            Call Reset()
+            Call Data_Awal()
+            Call Data_Record_Pengiriman()
+            btnReset.Enabled = True
+            btnBatal.Enabled = False
+            btnSimpan.Enabled = False
+            Label_TotalBarang.Text = 0
+            Proses.CloseConn()
+            MySqlConnection.ClearAllPools()
         End If
-
     End Sub
 
 
@@ -932,16 +921,7 @@ Public Class FrmUtama
             Me.Close()
         Else
             MessageBox.Show("Selesaikan transaksi dulu atau klik tombol reset ya :( " + userlogin, "403 Forbidden ", MessageBoxButtons.OK, MessageBoxIcon.Error) : Exit Sub
-
         End If
-
-
-
-        'FrmUtamaATM.Show()
-        'Me.Visible = False
-
-        'SplashScreen1.Text = "Loading Form ATM"
-        'SplashScreen1.ShowDialog()
 
     End Sub
 
@@ -1092,4 +1072,38 @@ Public Class FrmUtama
     Private Sub txtQty_MouseDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles txtQty.MouseDoubleClick
         txtQty.ReadOnly = False
     End Sub
+
+    Private Sub btn_delete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_delete.Click
+        Kurangi_Details()
+
+    End Sub
+
+
+
+    Public Sub Kurangi_Details()
+        Dim i As Integer
+        Try
+            i = DGBarangKirim.SelectedRows(0).Index
+            If MsgBox("Hapus Detail Barang ", vbYesNo, "Apakah anda yakin ?") = vbYes Then
+
+                SQL = "DELETE FROM suratjalan_detail_atm WHERE nosurat = '" & DGBarangKirim.Item(0, i).Value & "' AND kode = '" & DGBarangKirim.Item(1, i).Value & "' and kode_lokasi = '" & DGBarangKirim.Item(2, i).Value & "' "
+                Proses.ExecuteNonQuery(SQL)
+                MessageBox.Show("Barang Sudah dihapus dari detail pengiriman", "Sukses dihapus", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Call Data_Record_Pengiriman()
+                Call Data_Awal()
+                Jumlah_QTY()
+                txtBarang.Text = ""
+                MySqlConnection.ClearAllPools()
+
+            Else
+                MsgBox("Gagal Menghapus")
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Tidak ada data yang dihapus" + vbNewLine + ex.Message) : Exit Sub
+        Finally
+            MySqlConnection.ClearAllPools()
+        End Try
+
+    End Sub
+
 End Class

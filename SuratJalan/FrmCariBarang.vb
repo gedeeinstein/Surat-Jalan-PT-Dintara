@@ -151,7 +151,6 @@ Public Class FrmCariBarang
         Dim QtyOrder As Double = hitung_qty_order
 
 
-
         'Try
         '    If Stok < QtyOrder Then
         '        MessageBox.Show("Stok kurang, ", "Tidak ada stok barang", MessageBoxButtons.OKCancel)
@@ -169,12 +168,16 @@ Public Class FrmCariBarang
 
                 Trim(FrmUtamaATM.txtStokGudang.Text)
                 Trim(FrmUtamaATM.txtQtyBeliCust.Text)
+               
+
 
             Case "Pilih Barang"
                 FrmUtama.txtQtyBeliCust.Text = QtyOrder
                 FrmUtama.txtStokGudang.Text = Stok
                 Trim(FrmUtama.txtStokGudang.Text)
                 Trim(FrmUtama.txtQtyBeliCust.Text)
+                
+
         End Select
     End Sub
 
@@ -182,47 +185,77 @@ Public Class FrmCariBarang
 
         Try
 
+            Dim Jumlah As String
             If str_status > 0 Then
 
                 Select Case Me.Text
 
 
                     Case "Cari Barang"
-                        FrmUtamaATM.txtKodeBarang.Text = DGBarang.SelectedCells(0).Value
-                        FrmUtamaATM.txtBarang.Text = DGBarang.SelectedCells(1).Value
-                        FrmUtamaATM.txtMerkBarang.Text = DGBarang.SelectedCells(2).Value
-                        FrmUtamaATM.txtKodeLokasi.Text = DGBarang.SelectedCells(3).Value
+                        
+                        Jumlah = InputBox("Masukan Jumlah / Qty Barang yang akan dikirimkan", "Input QTY", , , )
+                        If Jumlah.Length > 0 Then
+                            FrmUtamaATM.txtQty.Text = Val(Jumlah)
+                            FrmUtamaATM.btnTambah.Focus()
 
-                        Input_Qty()
+                            FrmUtamaATM.txtKodeBarang.Text = DGBarang.SelectedCells(0).Value
+                            FrmUtamaATM.txtBarang.Text = DGBarang.SelectedCells(1).Value
+                            FrmUtamaATM.txtMerkBarang.Text = DGBarang.SelectedCells(2).Value
+                            FrmUtamaATM.txtKodeLokasi.Text = DGBarang.SelectedCells(3).Value
 
-                        Trim(FrmUtamaATM.txtBarang.Text)
-                        Trim(FrmUtamaATM.txtKodeLokasi.Text)
-                        Trim(FrmUtamaATM.txtMerkBarang.Text)
+                            Input_Qty()
 
-                        Me.Close()
+                            Trim(FrmUtamaATM.txtBarang.Text)
+                            Trim(FrmUtamaATM.txtKodeLokasi.Text)
+                            Trim(FrmUtamaATM.txtMerkBarang.Text)
 
-                        FrmUtamaATM.txtQty.Focus()
-                        FrmUtamaATM.btnCariPerusahaan.Enabled = False
+                            Me.Close()
+
+                            FrmUtamaATM.txtQty.Focus()
+                            FrmUtamaATM.btnCariPerusahaan.Enabled = False
+
+                        ElseIf Jumlah = "" Then
+                            MessageBox.Show("Barang Batal dipilih", "Masukan Qty Barang")
+                        Else
+                            MessageBox.Show("Inputan Salah")
+                        End If
+
+                        
 
                     Case "Pilih Barang"
-                        FrmUtama.txtKodeBarang.Text = DGBarang.SelectedCells(0).Value
-                        FrmUtama.txtBarang.Text = DGBarang.SelectedCells(1).Value
-                        FrmUtama.txtMerkBarang.Text = DGBarang.SelectedCells(2).Value
-                        FrmUtama.txtKodeLokasi.Text = DGBarang.SelectedCells(3).Value
 
-                        Input_Qty()
+                        Jumlah = InputBox("Masukan Jumlah / Qty Barang yang akan dikirimkan", "Input QTY", , , )
+                        If Jumlah.Length > 0 Then
 
-                        Trim(FrmUtama.txtBarang.Text)
-                        Trim(FrmUtama.txtKodeLokasi.Text)
-                        Trim(FrmUtama.txtMerkBarang.Text)
+                            FrmUtama.txtQty.Text = Val(Jumlah)
+                            FrmUtama.btnTambah.Focus()
 
-                        Me.Close()
 
-                        FrmUtama.txtQty.Focus()
-                        FrmUtama.btnCariPerusahaan.Enabled = False
+                            FrmUtama.txtKodeBarang.Text = DGBarang.SelectedCells(0).Value
+                            FrmUtama.txtBarang.Text = DGBarang.SelectedCells(1).Value
+                            FrmUtama.txtMerkBarang.Text = DGBarang.SelectedCells(2).Value
+                            FrmUtama.txtKodeLokasi.Text = DGBarang.SelectedCells(3).Value
+
+                            Input_Qty()
+
+                            Trim(FrmUtama.txtBarang.Text)
+                            Trim(FrmUtama.txtKodeLokasi.Text)
+                            Trim(FrmUtama.txtMerkBarang.Text)
+
+                            Me.Close()
+
+                            FrmUtama.txtQty.Focus()
+                            FrmUtama.btnCariPerusahaan.Enabled = False
+
+                        ElseIf Jumlah = "" Then
+                            MessageBox.Show("Barang Batal dipilih", "Masukan Qty Barang")
+                        Else
+                            MessageBox.Show("Inputan Salah")
+                        End If
+                        
 
                 End Select
-
+                MySqlConnection.ClearAllPools()
             Else
                 MessageBox.Show("Kesalahan konektivitas", "Hubungi IT", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
@@ -234,47 +267,47 @@ Public Class FrmCariBarang
     End Sub
 
 
-    Public Sub PilihBarang()
+    'Public Sub PilihBarang()
 
-        Try
-            Select Case Me.Text
+    '    Try
+    '        Select Case Me.Text
 
-                Case "ATM"
-                    FrmUtamaATM.txtKodeBarang.Text = DGBarang.SelectedCells(0).Value
-                    FrmUtamaATM.txtBarang.Text = DGBarang.SelectedCells(1).Value
-                    Trim(FrmUtamaATM.txtBarang.Text)
+    '            Case "ATM"
+    '                FrmUtamaATM.txtKodeBarang.Text = DGBarang.SelectedCells(0).Value
+    '                FrmUtamaATM.txtBarang.Text = DGBarang.SelectedCells(1).Value
+    '                Trim(FrmUtamaATM.txtBarang.Text)
 
-                    Me.Close()
-                    FrmUtamaATM.txtQty.Focus()
-                    FrmUtamaATM.btnCariPerusahaan.Enabled = False
+    '                Me.Close()
+    '                FrmUtamaATM.txtQty.Focus()
+    '                FrmUtamaATM.btnCariPerusahaan.Enabled = False
+    '                MySqlConnection.ClearAllPools()
+    '            Case "PT"
+    '                FrmUtama.txtKodeBarang.Text = DGBarang.SelectedCells(0).Value
+    '                FrmUtama.txtBarang.Text = DGBarang.SelectedCells(1).Value
+    '                Trim(FrmUtama.txtBarang.Text)
 
-                Case "PT"
-                    FrmUtama.txtKodeBarang.Text = DGBarang.SelectedCells(0).Value
-                    FrmUtama.txtBarang.Text = DGBarang.SelectedCells(1).Value
-                    Trim(FrmUtama.txtBarang.Text)
+    '                Me.Close()
+    '                FrmUtama.txtQty.Focus()
+    '                FrmUtama.btnCariPerusahaan.Enabled = False
+    '                MySqlConnection.ClearAllPools()
 
-                    Me.Close()
-                    FrmUtama.txtQty.Focus()
-                    FrmUtama.btnCariPerusahaan.Enabled = False
+    '        End Select
 
-
-            End Select
-
-        Catch ex As Exception
-            MessageBox.Show("Maaf terjadi kesalahan pemrosesan data, harap ulangi lagi prosesnya. Jika hal yang sama masih terjadi catat kode error dibawah ini" + vbNewLine + ex.Message, "Hubungi IT", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
-        End Try
+    '    Catch ex As Exception
+    '        MessageBox.Show("Batal" + vbNewLine, "Bara", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
+    '    End Try
 
 
-    End Sub
+    'End Sub
 
     Private Sub btnPilih_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPilih.Click
         DGBarang_DoubleClick(sender, e)
         FrmUtama.txtQty.Focus()
+
     End Sub
 
     Private Sub btnBatal_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBatal.Click
         Me.Close()
-
     End Sub
 
 End Class
