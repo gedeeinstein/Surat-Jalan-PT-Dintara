@@ -70,11 +70,13 @@ Public Class FrmCariPerusahaan
             Proses.OpenConn()
 
             Dim myadapter As New MySqlDataAdapter
-            Dim sqlquery = "SELECT tawar01.kode_pelanggan AS 'KODE', " _
-                & "pelanggan.nama AS 'NAMA PERUSAHAAN', tawar01.att AS 'PENERIMA', tawar01.kode AS 'PENAWARAN', tawar01.alamat as 'ALAMAT', tawar01.tgl AS 'TGL' " _
-                & "FROM tawar01 INNER JOIN pelanggan " _
-                & "ON tawar01.kode_pelanggan = pelanggan.kode " _
-                & "WHERE pelanggan.nama LIKE '%" & Rep(txtCariPerusahaan.Text) & "%' ORDER BY tawar01.tgl DESC"
+            'Dim sqlquery = "SELECT tawar01.kode_pelanggan AS 'KODE', " _
+            '    & "pelanggan.nama AS 'NAMA PERUSAHAAN', tawar01.att AS 'PENERIMA', tawar01.kode AS 'PENAWARAN', pelanggan.alamat as 'ALAMAT', tawar01.tgl AS 'TGL' " _
+            '    & "FROM tawar01 INNER JOIN pelanggan " _
+            '    & "ON tawar01.kode_pelanggan = pelanggan.kode " _
+            '    & "WHERE pelanggan.nama LIKE '%" & Rep(txtCariPerusahaan.Text) & "%' ORDER BY tawar01.tgl DESC"
+
+            Dim sqlquery = "SELECT * FROM tawar01"
 
             Dim mycommand As New MySqlCommand
             mycommand.Connection = Proses.Cn
@@ -108,19 +110,6 @@ Public Class FrmCariPerusahaan
     End Sub
 
     Private Sub DGPerusahaan_DoubleClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DGPerusahaan.DoubleClick
-        'FrmUtama.txtKodePerusahaan.Text = DGPerusahaan.SelectedCells(0).Value
-        'FrmUtama.txtPerusahaan.Text = DGPerusahaan.SelectedCells(1).Value
-        'FrmUtama.txtPelanggan.Text = DGPerusahaan.SelectedCells(2).Value
-        'FrmUtama.txtNoOrder.Text = DGPerusahaan.SelectedCells(3).Value
-        'FrmUtama.txtAlamat.Text = DGPerusahaan.SelectedCells(4).Value
-        'FrmUtama.cmbPerusahaan.Text = "" & DGPerusahaan.SelectedCells(0).Value & "/" & DGPerusahaan.SelectedCells(1).Value & ""
-        'Me.Close()
-        'Trim(FrmUtama.txtKodePerusahaan.Text)
-        'Trim(FrmUtama.txtPerusahaan.Text)
-        'Trim(FrmUtama.txtPelanggan.Text)
-        'RTrim(FrmUtama.txtNoOrder.Text)
-        'Trim(FrmUtama.txtAlamat.Text)
-        'FrmUtama.txtBarang.Focus()
 
         PilihPerusahaan()
 
@@ -128,16 +117,23 @@ Public Class FrmCariPerusahaan
 
 
     Public Sub PilihPerusahaan()
+        Dim i = DGPerusahaan.CurrentRow.Index
+        Dim row As DataGridViewRow = DGPerusahaan.CurrentRow
 
         Try
             Select Case Me.Text
 
                 Case "Pilih Perusahaan PT"
-                    FrmUtama.txtKodePerusahaan.Text = DGPerusahaan.SelectedCells(0).Value
-                    FrmUtama.txtPerusahaan.Text = DGPerusahaan.SelectedCells(1).Value
-                    FrmUtama.txtPelanggan.Text = DGPerusahaan.SelectedCells(2).Value
-                    FrmUtama.txtNoOrder.Text = DGPerusahaan.SelectedCells(3).Value
-                    FrmUtama.txtAlamat.Text = DGPerusahaan.SelectedCells(4).Value
+                    FrmUtama.txtKodePerusahaan.Text = row.Cells(0).Value
+                    FrmUtama.txtPerusahaan.Text = row.Cells(1).Value
+                    FrmUtama.txtPelanggan.Text = row.Cells(2).Value
+                    FrmUtama.txtNoOrder.Text = row.Cells(3).Value
+                    FrmUtama.txtAlamat.Text = row.Cells(4).Value
+                    'FrmUtama.txtKodePerusahaan.Text = DGPerusahaan.SelectedCells(0).Value
+                    'FrmUtama.txtPerusahaan.Text = DGPerusahaan.SelectedCells(1).Value
+                    'FrmUtama.txtPelanggan.Text = DGPerusahaan.SelectedCells(2).Value
+                    'FrmUtama.txtNoOrder.Text = DGPerusahaan.SelectedCells(3).Value
+                    'FrmUtama.txtAlamat.Text = DGPerusahaan.SelectedCells(4).Value
                     FrmUtama.cmbPerusahaan.Text = "" & DGPerusahaan.SelectedCells(0).Value & "/" & DGPerusahaan.SelectedCells(1).Value & ""
                     Me.Close()
                     Trim(FrmUtama.txtKodePerusahaan.Text)
@@ -147,14 +143,20 @@ Public Class FrmCariPerusahaan
                     Trim(FrmUtama.txtAlamat.Text)
                     FrmUtama.txtBarang.Focus()
                     MySqlConnection.ClearAllPools()
-                    ' FrmCariBarang.txtNoOrder = DGPerusahaan.SelectedCells(3).Value
+
 
                 Case "Pilih Perusahaan CV"
-                    FrmUtamaATM.txtKodePerusahaan.Text = DGPerusahaan.SelectedCells(0).Value
-                    FrmUtamaATM.txtPerusahaan.Text = DGPerusahaan.SelectedCells(1).Value
-                    FrmUtamaATM.txtPelanggan.Text = DGPerusahaan.SelectedCells(2).Value
-                    FrmUtamaATM.txtNoOrder.Text = DGPerusahaan.SelectedCells(3).Value
-                    FrmUtamaATM.txtAlamat.Text = DGPerusahaan.SelectedCells(4).Value
+                    'FrmUtamaATM.txtKodePerusahaan.Text = DGPerusahaan.SelectedCells(0).Value
+                    'FrmUtamaATM.txtPerusahaan.Text = DGPerusahaan.SelectedCells(1).Value
+                    'FrmUtamaATM.txtPelanggan.Text = DGPerusahaan.SelectedCells(2).Value
+                    'FrmUtamaATM.txtNoOrder.Text = DGPerusahaan.SelectedCells(3).Value
+                    'FrmUtamaATM.txtAlamat.Text = DGPerusahaan.SelectedCells(4).Value
+                    FrmUtamaATM.txtKodePerusahaan.Text = row.Cells(0).Value
+                    FrmUtamaATM.txtPerusahaan.Text = row.Cells(1).Value
+                    FrmUtamaATM.txtPelanggan.Text = row.Cells(2).Value
+                    FrmUtamaATM.txtNoOrder.Text = row.Cells(3).Value
+                    FrmUtamaATM.txtAlamat.Text = row.Cells(4).Value
+
                     FrmUtamaATM.cmbPerusahaan.Text = "" & DGPerusahaan.SelectedCells(0).Value & "/" & DGPerusahaan.SelectedCells(1).Value & ""
                     Me.Close()
                     Trim(FrmUtamaATM.txtKodePerusahaan.Text)
@@ -164,7 +166,6 @@ Public Class FrmCariPerusahaan
                     Trim(FrmUtamaATM.txtAlamat.Text)
                     FrmUtamaATM.txtBarang.Focus()
                     MySqlConnection.ClearAllPools()
-                    ' FrmCariBarang.txtNoOrder = DGPerusahaan.SelectedCells(3).Value
             End Select
         Catch ex As Exception
             MessageBox.Show("Maaf terjadi kesalahan pemrosesan data, harap ulangi lagi prosesnya. Jika hal yang sama masih terjadi catat kode error dibawah ini" + vbNewLine + ex.Message, "Hubungi IT", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
@@ -175,7 +176,7 @@ Public Class FrmCariPerusahaan
 
 
     Private Sub btnPilih_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPilih.Click
-        DGPerusahaan_DoubleClick(sender, e)
+        PilihPerusahaan()
     End Sub
 
     Private Sub btnBatal_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBatal.Click

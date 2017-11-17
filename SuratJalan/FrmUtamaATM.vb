@@ -608,13 +608,17 @@ Public Class FrmUtamaATM
                             txtAlamat.Focus() : Exit Sub
                         Else
                             Try
-                                If Val(txtStokGudang.Text) < (txtQty.Text) Then
-                                    MessageBox.Show("Pastikan ada stok barang, tanyakan purchasing apabila barang belum di update stoknya", "Stok Kurang", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop) : Exit Sub
-                                ElseIf Val(txtQty.Text) > Val(txtQtyBeliCust.Text) Then
+                                ''Cek STOK GUDANG APAKAH LEBIH BESAR DARI QTY KIRIM
+                                'If Val(txtStokGudang.Text) < (txtQty.Text) Then
+                                '    MessageBox.Show("Pastikan ada stok barang, tanyakan purchasing apabila barang belum di update stoknya", "Stok Kurang", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop) : Exit Sub
+                                'ElseIf Val(txtQty.Text) > Val(txtQtyBeliCust.Text) Then
+                                If Val(txtQty.Text) > Val(txtQtyBeliCust.Text) Then
                                     MessageBox.Show("Input qty kirim barang melebihi order dari penawaran, ", "Salah Input Qty", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop) : Exit Sub
                                 Else
                                     Call Simpan_Details_Surat()
                                     Call total_item()
+                                    ' Call Kurangi_Stock() 'Untuk Mengurangi Stok di Gudang
+
                                     btnReset.Enabled = False
                                     txtKodeBarang.Text = Nothing
                                     txtKodeLokasi.Text = ""
@@ -1055,10 +1059,10 @@ Public Class FrmUtamaATM
                 txtBarang.Text = ""
                 MySqlConnection.ClearAllPools()
             Else
-                MsgBox("Batal Menghapus")
+                MessageBox.Show("Barang batal di hapus", "Batal Menghapus", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
         Catch ex As Exception
-            MessageBox.Show("Tidak ada data yang dihapus" + vbNewLine + ex.Message) : Exit Sub
+            MessageBox.Show("program tidak memahami maksud kamu" + userlogin + " :( " + vbNewLine + ex.Message, "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
         Finally
             MySqlConnection.ClearAllPools()
         End Try

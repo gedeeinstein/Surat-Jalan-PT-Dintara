@@ -64,14 +64,14 @@ Public Class FrmCariBarang
 
 
         Proses.OpenConn()
-        Dim myadapter As New MySqlDataAdapter
+        'Dim myadapter As New MySqlDataAdapter
         'Dim sqlquery = "SELECT barang.kode as 'KODE BARANG', barang.nama as 'NAMA BARANG' FROM barang " _
         '                             & "INNER JOIN tawar02 ON barang.kode = tawar02.kode_barang " _
         '                             & "WHERE tawar02.kode ='" & txtNoOrder.Text & "'"
 
-        Dim sqlquery = "SELECT barang.kode AS 'KODE BARANG', barang.nama AS 'NAMA BARANG', tawar02.merk as 'MERK', tawar02.kode_lokasi AS 'KL', tawar02.qty as 'QTY PESANAN', barang.qty as 'STOK GUDANG' FROM barang " _
-                                     & "INNER JOIN tawar02 ON barang.kode = tawar02.kode_barang " _
-                                     & "WHERE tawar02.kode ='" & txtNoOrder.Text & "'"
+        'Dim sqlquery = "SELECT barang.kode AS 'KODE BARANG', barang.nama AS 'NAMA BARANG', tawar02.merk as 'MERK', tawar02.kode_lokasi AS 'KL', tawar02.qty as 'QTY PESANAN', barang.qty as 'STOK GUDANG' FROM barang " _
+        ' & "INNER JOIN tawar02 ON barang.kode = tawar02.kode_barang " _
+        ' & "WHERE tawar02.kode ='" & txtNoOrder.Text & "'"
 
         'Dim mycommand As New MySqlCommand
         'mycommand.Connection = Proses.Cn
