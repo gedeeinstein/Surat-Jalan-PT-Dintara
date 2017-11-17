@@ -181,44 +181,51 @@ Public Class FrmCariBarang
     Private Sub DGBarang_DoubleClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DGBarang.DoubleClick
 
         Try
-            Select Case Me.Text
+
+            If str_status > 0 Then
+
+                Select Case Me.Text
 
 
-                Case "Cari Barang"
-                    FrmUtamaATM.txtKodeBarang.Text = DGBarang.SelectedCells(0).Value
-                    FrmUtamaATM.txtBarang.Text = DGBarang.SelectedCells(1).Value
-                    FrmUtamaATM.txtMerkBarang.Text = DGBarang.SelectedCells(2).Value
-                    FrmUtamaATM.txtKodeLokasi.Text = DGBarang.SelectedCells(3).Value
+                    Case "Cari Barang"
+                        FrmUtamaATM.txtKodeBarang.Text = DGBarang.SelectedCells(0).Value
+                        FrmUtamaATM.txtBarang.Text = DGBarang.SelectedCells(1).Value
+                        FrmUtamaATM.txtMerkBarang.Text = DGBarang.SelectedCells(2).Value
+                        FrmUtamaATM.txtKodeLokasi.Text = DGBarang.SelectedCells(3).Value
 
-                    Input_Qty()
+                        Input_Qty()
 
-                    Trim(FrmUtamaATM.txtBarang.Text)
-                    Trim(FrmUtamaATM.txtKodeLokasi.Text)
-                    Trim(FrmUtamaATM.txtMerkBarang.Text)
+                        Trim(FrmUtamaATM.txtBarang.Text)
+                        Trim(FrmUtamaATM.txtKodeLokasi.Text)
+                        Trim(FrmUtamaATM.txtMerkBarang.Text)
 
-                    Me.Close()
+                        Me.Close()
 
-                    FrmUtamaATM.txtQty.Focus()
-                    FrmUtamaATM.btnCariPerusahaan.Enabled = False
+                        FrmUtamaATM.txtQty.Focus()
+                        FrmUtamaATM.btnCariPerusahaan.Enabled = False
 
-                Case "Pilih Barang"
-                    FrmUtama.txtKodeBarang.Text = DGBarang.SelectedCells(0).Value
-                    FrmUtama.txtBarang.Text = DGBarang.SelectedCells(1).Value
-                    FrmUtama.txtMerkBarang.Text = DGBarang.SelectedCells(2).Value
-                    FrmUtama.txtKodeLokasi.Text = DGBarang.SelectedCells(3).Value
+                    Case "Pilih Barang"
+                        FrmUtama.txtKodeBarang.Text = DGBarang.SelectedCells(0).Value
+                        FrmUtama.txtBarang.Text = DGBarang.SelectedCells(1).Value
+                        FrmUtama.txtMerkBarang.Text = DGBarang.SelectedCells(2).Value
+                        FrmUtama.txtKodeLokasi.Text = DGBarang.SelectedCells(3).Value
 
-                    Input_Qty()
+                        Input_Qty()
 
-                    Trim(FrmUtama.txtBarang.Text)
-                    Trim(FrmUtama.txtKodeLokasi.Text)
-                    Trim(FrmUtama.txtMerkBarang.Text)
+                        Trim(FrmUtama.txtBarang.Text)
+                        Trim(FrmUtama.txtKodeLokasi.Text)
+                        Trim(FrmUtama.txtMerkBarang.Text)
 
-                    Me.Close()
+                        Me.Close()
 
-                    FrmUtama.txtQty.Focus()
-                    FrmUtama.btnCariPerusahaan.Enabled = False
+                        FrmUtama.txtQty.Focus()
+                        FrmUtama.btnCariPerusahaan.Enabled = False
 
-            End Select
+                End Select
+
+            Else
+                MessageBox.Show("Kesalahan konektivitas", "Hubungi IT", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
 
         Catch ex As Exception
             MessageBox.Show("Maaf terjadi kesalahan pemrosesan data, harap ulangi lagi prosesnya. Jika hal yang sama masih terjadi catat kode error dibawah ini" + vbNewLine + ex.Message, "Hubungi IT", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
@@ -235,7 +242,7 @@ Public Class FrmCariBarang
                 Case "ATM"
                     FrmUtamaATM.txtKodeBarang.Text = DGBarang.SelectedCells(0).Value
                     FrmUtamaATM.txtBarang.Text = DGBarang.SelectedCells(1).Value
-                    RTrim(FrmUtamaATM.txtBarang.Text)
+                    Trim(FrmUtamaATM.txtBarang.Text)
 
                     Me.Close()
                     FrmUtamaATM.txtQty.Focus()
@@ -244,7 +251,7 @@ Public Class FrmCariBarang
                 Case "PT"
                     FrmUtama.txtKodeBarang.Text = DGBarang.SelectedCells(0).Value
                     FrmUtama.txtBarang.Text = DGBarang.SelectedCells(1).Value
-                    RTrim(FrmUtama.txtBarang.Text)
+                    Trim(FrmUtama.txtBarang.Text)
 
                     Me.Close()
                     FrmUtama.txtQty.Focus()
@@ -266,10 +273,8 @@ Public Class FrmCariBarang
     End Sub
 
     Private Sub btnBatal_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBatal.Click
-        Proses.CloseConn()
         Me.Close()
 
-        FrmUtama.txtQty.Focus()
     End Sub
 
 End Class

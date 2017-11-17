@@ -1,4 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
+
+
+
 Module Globals
 
     Public userlogin As String
@@ -26,6 +29,7 @@ Module Globals
 
     'Server Status
     Public str_status As Integer
+
     Sub Koneksikan()
         Try
             con.OpenConn()
@@ -88,6 +92,12 @@ Module Globals
 
     Public Sub OutlookSend()
         System.Diagnostics.Process.Start("mailto:it@dintarakitchen.co.id?Subject=Tanya%20Tentang%20Aplikasi%20Surat%20Jalan&body=Tolong%20Datang%20dan%20perbaiki%20aplikasinya")
+    End Sub
+
+    Public Sub Koneksi_Error()
+
+        MessageBox.Show("Ada kesalahan koneksi", "Hubungi IT", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
     End Sub
 
 

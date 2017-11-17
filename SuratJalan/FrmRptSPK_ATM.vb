@@ -8,10 +8,12 @@
     'End Sub
 
     Private Sub FrmRptSPK_ATM_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Dim SuratPerintahKirim As New RptSuratJalanATM
+        'Dim SuratPerintahKirim As New RptSuratJalanATM
 
-        SuratPerintahKirim.SetParameterValue("PmNoSurat", FrmUtamaATM.txtNoSurat.Text)
-        CrystalReportViewer1.ReportSource = SuratPerintahKirim
+        Dim SuratPerintahKirimATM As New ATM
+
+        SuratPerintahKirimATM.SetParameterValue("PmNoSurat", FrmUtamaATM.txtNoSurat.Text)
+        CrystalReportViewer1.ReportSource = SuratPerintahKirimATM
     End Sub
 
 End Class

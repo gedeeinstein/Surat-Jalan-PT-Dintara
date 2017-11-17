@@ -8,20 +8,34 @@ Public Class FrmTambahUser
     Private pwd As Char = "*"
 
     Sub Data_User()
-        karyawan = Proses.ExecuteQuery("SELECT kode as 'Kode', username as 'Login', nama_user as 'Nama Lengkap', level_id as 'Level', tgl_update as 'Terdaftar', passwd as 'Password' FROM karyawan ORDER BY kode ASC")
-        DG_User.DataSource = karyawan
-        DG_User.Columns(0).Width = 80
-        DG_User.Columns(1).Width = 90
-        DG_User.Columns(2).Width = 250
-        DG_User.Columns(3).Width = 100
-        DG_User.Columns(4).Width = 100
-        DG_User.Columns(5).Width = 100
+        Try
+            If str_status > 0 Then
 
-        DG_User.Columns(5).DataPropertyName = "password"
+                Proses.OpenConn()
+                karyawan = Proses.ExecuteQuery("SELECT kode as 'Kode', username as 'Login', nama_user as 'Nama Lengkap', level_id as 'Level', tgl_update as 'Terdaftar', passwd as 'Password' FROM karyawan ORDER BY kode ASC")
+                DG_User.DataSource = karyawan
+                DG_User.Columns(0).Width = 80
+                DG_User.Columns(1).Width = 90
+                DG_User.Columns(2).Width = 250
+                DG_User.Columns(3).Width = 100
+                DG_User.Columns(4).Width = 100
+                DG_User.Columns(5).Width = 100
+
+                DG_User.Columns(5).DataPropertyName = "password"
 
 
-        DG_User.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DG_User.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                DG_User.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                DG_User.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                Proses.CloseConn()
+            Else
+                Koneksi_Error() : Exit Sub
+
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        
 
 
     End Sub

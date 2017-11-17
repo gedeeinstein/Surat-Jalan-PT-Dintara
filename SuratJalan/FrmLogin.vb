@@ -149,8 +149,8 @@ Public Class FrmLogin
 
     Private Sub Login_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Connect()
-        rbATM.Checked = False
-        rbDIN.Checked = True
+        rbATM.Checked = True
+        rbDIN.Checked = False
     End Sub
 
     Private Sub BtnReset_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnReset.Click
@@ -192,9 +192,8 @@ Public Class FrmLogin
     End Sub
 
     Private Sub BtnConfig_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnConfig.Click
-        'If MsgBox("Apakah anda sudah tau cara mengkonfigurasi aplikasi ini ?" + vbNewLine + "Jika Belum hubungi IT", MsgBoxStyle.OkCancel, "Lanjutkan ?") = MsgBoxResult.Ok Then
-        '    FrmConfig.ShowDialog()
-        'End If
+
+        Konfigurasi_Aplikasi()
 
     End Sub
 
