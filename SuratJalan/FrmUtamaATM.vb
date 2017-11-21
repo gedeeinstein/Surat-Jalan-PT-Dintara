@@ -484,12 +484,8 @@ Public Class FrmUtamaATM
 
     End Sub
 
-
-
-    Private Sub btnTambah_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTambah.Click
+    Sub Tambah_Detail_Kirim()
         Try
-
-
             If txtNoOrder.Text = "" Then
                 MsgBox("Tanyakan ke Admin apakah sudah melakukan input penawaran/order ke system ", MsgBoxStyle.Critical,
                        "Gagal !") : Exit Sub
@@ -514,9 +510,10 @@ Public Class FrmUtamaATM
                 txtAlamat.Focus() : Exit Sub
             Else
                 Try
-                    If Val(txtStokGudang.Text) < (txtQty.Text) Then
-                        MessageBox.Show("Pastikan ada stok barang, tanyakan purchasing apabila barang belum di update stoknya", "Stok Kurang", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop) : Exit Sub
-                    ElseIf Val(txtQty.Text) > Val(txtQtyBeliCust.Text) Then
+                    'If Val(txtStokGudang.Text) < (txtQty.Text) Then
+                    '    MessageBox.Show("Pastikan ada stok barang, tanyakan purchasing / gudang apabila barang belum di update stoknya", "Stok Kurang", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop) : Exit Sub
+                    'ElseIf Val(txtQty.Text) > Val(txtQtyBeliCust.Text) Then
+                    If Val(txtQty.Text) > Val(txtQtyBeliCust.Text) Then
                         MessageBox.Show("Input qty kirim barang melebihi order dari penawaran, ", "Salah Input Qty", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop) : Exit Sub
                     Else
                         Call Simpan_Details_Surat()
@@ -552,6 +549,10 @@ Public Class FrmUtamaATM
         Catch ex As Exception
             MessageBox.Show(ex.Message + vbCr + "Gagal Menyimpan", "Program Error") : Exit Sub
         End Try
+    End Sub
+
+    Private Sub btnTambah_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTambah.Click
+        Tambah_Detail_Kirim()
     End Sub
 
     Sub Kurangi_Stock()
@@ -607,33 +608,34 @@ Public Class FrmUtamaATM
                             MessageBox.Show("Harap isi alamat tujuan pengiriman jika di database tidak ada, isi manual saja ", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                             txtAlamat.Focus() : Exit Sub
                         Else
-                            Try
-                                ''Cek STOK GUDANG APAKAH LEBIH BESAR DARI QTY KIRIM
-                                'If Val(txtStokGudang.Text) < (txtQty.Text) Then
-                                '    MessageBox.Show("Pastikan ada stok barang, tanyakan purchasing apabila barang belum di update stoknya", "Stok Kurang", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop) : Exit Sub
-                                'ElseIf Val(txtQty.Text) > Val(txtQtyBeliCust.Text) Then
-                                If Val(txtQty.Text) > Val(txtQtyBeliCust.Text) Then
-                                    MessageBox.Show("Input qty kirim barang melebihi order dari penawaran, ", "Salah Input Qty", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop) : Exit Sub
-                                Else
-                                    Call Simpan_Details_Surat()
-                                    Call total_item()
-                                    ' Call Kurangi_Stock() 'Untuk Mengurangi Stok di Gudang
+                            Tambah_Detail_Kirim()
+                            'Try
+                            '    ''Cek STOK GUDANG APAKAH LEBIH BESAR DARI QTY KIRIM
+                            '    'If Val(txtStokGudang.Text) < (txtQty.Text) Then
+                            '    '    MessageBox.Show("Pastikan ada stok barang, tanyakan purchasing / gudang apabila barang belum di update stoknya", "Stok Kurang", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop) : Exit Sub
+                            '    'ElseIf Val(txtQty.Text) > Val(txtQtyBeliCust.Text) Then
+                            '    If Val(txtQty.Text) > Val(txtQtyBeliCust.Text) Then
+                            '        MessageBox.Show("Input qty kirim barang melebihi order dari penawaran, ", "Salah Input Qty", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop) : Exit Sub
+                            '    Else
+                            '        Call Simpan_Details_Surat()
+                            '        Call total_item()
+                            '        ' Call Kurangi_Stock() 'Untuk Mengurangi Stok di Gudang
 
-                                    btnReset.Enabled = False
-                                    txtKodeBarang.Text = Nothing
-                                    txtKodeLokasi.Text = ""
-                                    txtBarang.Text = Nothing
-                                    txtQty.Text = Nothing
-                                    btnBatal.Enabled = True
-                                    btnSimpan.Enabled = True
-                                    txtQtyBeliCust.Text = ""
-                                    txtMerkBarang.Text = ""
-                                    txtQtyBeliCust.Text = ""
-                                    txtStokGudang.Text = ""
-                                End If
-                            Catch ex As Exception
-                                MessageBox.Show(ex.Message) : Exit Sub
-                            End Try
+                            '        btnReset.Enabled = False
+                            '        txtKodeBarang.Text = Nothing
+                            '        txtKodeLokasi.Text = ""
+                            '        txtBarang.Text = Nothing
+                            '        txtQty.Text = Nothing
+                            '        btnBatal.Enabled = True
+                            '        btnSimpan.Enabled = True
+                            '        txtQtyBeliCust.Text = ""
+                            '        txtMerkBarang.Text = ""
+                            '        txtQtyBeliCust.Text = ""
+                            '        txtStokGudang.Text = ""
+                            '    End If
+                            'Catch ex As Exception
+                            '    MessageBox.Show(ex.Message) : Exit Sub
+                            'End Try
                         End If
 
                         'Call Simpan_Details_Surat()
@@ -1042,31 +1044,37 @@ Public Class FrmUtamaATM
 
     End Sub
 
-
-
     Public Sub Kurangi_Details()
         Dim i As Integer
-        Try
-            i = DGBarangKirim.SelectedRows(0).Index
-            If MsgBox("Hapus Detail Barang ", vbYesNo, "Apakah anda yakin ?") = vbYes Then
+        If DGBarangKirim.RowCount = 0 Then
+            MessageBox.Show("Tidak ada data yang bisa dihapus", "Data Kosong", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
+        Else
+            Try
+                i = DGBarangKirim.SelectedRows(0).Index
+                If MsgBox("Hapus Detail Barang ", vbYesNo, "Apakah anda yakin ?") = vbYes Then
 
-                SQL = "DELETE FROM suratjalan_detail_atm WHERE nosurat = '" & DGBarangKirim.Item(0, i).Value & "' AND kode = '" & DGBarangKirim.Item(1, i).Value & "' and kode_lokasi = '" & DGBarangKirim.Item(2, i).Value & "' "
-                Proses.ExecuteNonQuery(SQL)
-                MessageBox.Show("Barang Sudah dihapus dari detail pengiriman", "Sukses dihapus", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Call Data_Record_Pengiriman()
-                Call Data_Awal()
-                Jumlah_QTY()
-                txtBarang.Text = ""
+                    SQL = "DELETE FROM suratjalan_detail_atm WHERE nosurat = '" & DGBarangKirim.Item(0, i).Value & "' AND kode = '" & DGBarangKirim.Item(1, i).Value & "' and kode_lokasi = '" & DGBarangKirim.Item(2, i).Value & "' "
+                    Proses.ExecuteNonQuery(SQL)
+                    MessageBox.Show("Barang Sudah dihapus dari detail pengiriman", "Sukses dihapus", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Call Data_Record_Pengiriman()
+                    Call Data_Awal()
+                    Jumlah_QTY()
+                    txtBarang.Text = ""
+                    MySqlConnection.ClearAllPools()
+                    If DGBarangKirim.RowCount = 0 Then
+                        btnReset.Enabled = True
+                        btnSimpan.Enabled = False
+                        btnBatal.Enabled = False
+                    End If
+                Else
+                    MessageBox.Show("Barang batal di hapus", "Batal Menghapus", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End If
+            Catch ex As Exception
+                MessageBox.Show("Tidak ada barang yang terisa untuk dihapus " + userlogin + " :( " + vbNewLine + "Jangan paksakan aplikasi sederhana ini berbuat seperti itu ya :(", "Maaf Sudah Dihapus Semua", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
+            Finally
                 MySqlConnection.ClearAllPools()
-            Else
-                MessageBox.Show("Barang batal di hapus", "Batal Menghapus", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            End If
-        Catch ex As Exception
-            MessageBox.Show("program tidak memahami maksud kamu" + userlogin + " :( " + vbNewLine + ex.Message, "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
-        Finally
-            MySqlConnection.ClearAllPools()
-        End Try
-
+            End Try
+        End If
     End Sub
 
 

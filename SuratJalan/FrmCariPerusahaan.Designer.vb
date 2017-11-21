@@ -59,6 +59,7 @@ Partial Class FrmCariPerusahaan
         Me.btnPilih.TabIndex = 24
         Me.btnPilih.Text = "Pilih"
         Me.btnPilih.UseVisualStyleBackColor = True
+        Me.btnPilih.Visible = False
         '
         'lbl_totalperusahaan
         '

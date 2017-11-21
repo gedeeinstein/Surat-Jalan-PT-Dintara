@@ -32,7 +32,7 @@ Public Class FrmCariPerusahaan
             SQL = "SELECT tawar01.kode_pelanggan AS 'KODE PERUSAHAAN', " _
                 & "pelanggan.nama AS 'NAMA PERUSAHAAN', tawar01.att AS 'PENERIMA', tawar01.kode AS 'PENAWARAN', pelanggan.alamat as 'ALAMAT', tawar01.tgl AS 'TGL' " _
                 & "FROM tawar01 INNER JOIN pelanggan " _
-                & "ON tawar01.kode_pelanggan = pelanggan.kode " _
+                & "ON pelanggan.kode = tawar01.kode_pelanggan " _
                 & "WHERE pelanggan.nama LIKE '%" & Rep(txtCariPerusahaan.Text) & "%' ORDER BY tawar01.tgl DESC"
             perusahaan = Proses.ExecuteQuery(SQL)
 
@@ -188,7 +188,7 @@ Public Class FrmCariPerusahaan
             SQL = "SELECT tawar01.kode_pelanggan as 'KODE' , " _
                 & "pelanggan.nama as 'NAMA PERUSAHAAN', tawar01.att as 'PENERIMA', tawar01.kode AS 'PENAWARAN', tawar01.alamat as 'ALAMAT', tawar01.tgl AS 'TGL' " _
                 & "FROM tawar01 INNER JOIN pelanggan " _
-                & "ON tawar01.kode_pelanggan = pelanggan.kode " _
+                & "ON pelanggan.kode = tawar01.kode_pelanggan " _
                 & "WHERE pelanggan.nama LIKE '%" & Rep(txtCariPerusahaan.Text) & "%' ORDER BY tawar01.tgl DESC"
 
             perusahaan = Proses.ExecuteQuery(SQL)
@@ -198,7 +198,7 @@ Public Class FrmCariPerusahaan
             SQL = "SELECT tawar01.kode_pelanggan as 'KODE' , " _
                & "pelanggan.nama as 'NAMA PERUSAHAAN', tawar01.att as 'PENERIMA', tawar01.kode AS 'PENAWARAN', tawar01.alamat as 'ALAMAT', tawar01.tgl AS 'TGL' " _
                & "FROM tawar01 INNER JOIN pelanggan " _
-               & "ON tawar01.kode_pelanggan = pelanggan.kode " _
+               & "ON pelanggan.kode = tawar01.kode_pelanggan " _
                & "WHERE tawar01.att LIKE '%" & Rep(txtCariPerusahaan.Text) & "%' ORDER BY tawar01.tgl DESC"
 
             perusahaan = Proses.ExecuteQuery(SQL)
@@ -208,7 +208,7 @@ Public Class FrmCariPerusahaan
             SQL = "SELECT tawar01.kode_pelanggan as 'KODE' , " _
                & "pelanggan.nama as 'NAMA PERUSAHAAN', tawar01.att as 'PENERIMA', tawar01.kode AS 'PENAWARAN', tawar01.alamat as 'ALAMAT', tawar01.tgl AS 'TGL' " _
                & "FROM tawar01 INNER JOIN pelanggan " _
-               & "ON tawar01.kode_pelanggan = pelanggan.kode " _
+               & "ON pelanggan.kode = tawar01.kode_pelanggan " _
                & "WHERE tawar01.kode LIKE '%" & Rep(txtCariPerusahaan.Text) & "%' ORDER BY tawar01.tgl DESC"
 
             perusahaan = Proses.ExecuteQuery(SQL)
@@ -222,4 +222,7 @@ Public Class FrmCariPerusahaan
         txtCariPerusahaan_TextChanged(sender, e)
     End Sub
 
+    Private Sub DGPerusahaan_CellDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGPerusahaan.CellDoubleClick
+        PilihPerusahaan()
+    End Sub
 End Class

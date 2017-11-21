@@ -10,8 +10,8 @@ Global
 		Surat Jalan v 2.2.0|x86 = Surat Jalan v 2.2.0|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6C22103C-6DCC-4BCB-BCA2-344E7C54E1D4}.Debug|x86.ActiveCfg = Surat Jalan v 2.2.0|x86
-		{6C22103C-6DCC-4BCB-BCA2-344E7C54E1D4}.Debug|x86.Build.0 = Surat Jalan v 2.2.0|x86
+		{6C22103C-6DCC-4BCB-BCA2-344E7C54E1D4}.Debug|x86.ActiveCfg = Debug|x86
+		{6C22103C-6DCC-4BCB-BCA2-344E7C54E1D4}.Debug|x86.Build.0 = Debug|x86
 		{6C22103C-6DCC-4BCB-BCA2-344E7C54E1D4}.Release|x86.ActiveCfg = Release|x86
 		{6C22103C-6DCC-4BCB-BCA2-344E7C54E1D4}.Release|x86.Build.0 = Release|x86
 		{6C22103C-6DCC-4BCB-BCA2-344E7C54E1D4}.Surat Jalan v 2.2.0|x86.ActiveCfg = Surat Jalan v 2.2.0|x86
