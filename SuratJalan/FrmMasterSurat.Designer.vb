@@ -31,6 +31,9 @@ Partial Class FrmMasterSurat
         Me.Label8 = New System.Windows.Forms.Label()
         Me.cmbCari = New System.Windows.Forms.ComboBox()
         Me.GBDataKaryawan = New System.Windows.Forms.GroupBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtUser = New System.Windows.Forms.TextBox()
         Me.txtNoOrder = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -42,9 +45,6 @@ Partial Class FrmMasterSurat
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtUser = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.btnBatal = New System.Windows.Forms.Button()
         Me.btnSimpan = New System.Windows.Forms.Button()
@@ -137,7 +137,7 @@ Partial Class FrmMasterSurat
         Me.cmbCari.FormattingEnabled = True
         Me.cmbCari.IntegralHeight = False
         Me.cmbCari.ItemHeight = 13
-        Me.cmbCari.Items.AddRange(New Object() {"Nomor Surat", "No SA", "Username Karyawan", "Perusahaan"})
+        Me.cmbCari.Items.AddRange(New Object() {"Nomor Order", "Nama Perusahaan"})
         Me.cmbCari.Location = New System.Drawing.Point(101, 18)
         Me.cmbCari.Name = "cmbCari"
         Me.cmbCari.Size = New System.Drawing.Size(134, 21)
@@ -169,6 +169,30 @@ Partial Class FrmMasterSurat
         Me.GBDataKaryawan.TabIndex = 31
         Me.GBDataKaryawan.TabStop = False
         Me.GBDataKaryawan.Text = "Data Karyawan"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(31, 188)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(109, 13)
+        Me.Label6.TabIndex = 22
+        Me.Label6.Text = "Alamat Perushaan"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(163, 185)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(230, 55)
+        Me.TextBox1.TabIndex = 21
+        '
+        'txtUser
+        '
+        Me.txtUser.Location = New System.Drawing.Point(163, 159)
+        Me.txtUser.Name = "txtUser"
+        Me.txtUser.Size = New System.Drawing.Size(230, 20)
+        Me.txtUser.TabIndex = 20
         '
         'txtNoOrder
         '
@@ -260,30 +284,6 @@ Partial Class FrmMasterSurat
         Me.Label1.Size = New System.Drawing.Size(57, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "No Surat"
-        '
-        'txtUser
-        '
-        Me.txtUser.Location = New System.Drawing.Point(163, 159)
-        Me.txtUser.Name = "txtUser"
-        Me.txtUser.Size = New System.Drawing.Size(230, 20)
-        Me.txtUser.TabIndex = 20
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(163, 185)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(230, 55)
-        Me.TextBox1.TabIndex = 21
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(31, 188)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(109, 13)
-        Me.Label6.TabIndex = 22
-        Me.Label6.Text = "Alamat Perushaan"
         '
         'DataGridView1
         '
