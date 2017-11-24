@@ -959,7 +959,22 @@ Public Class FrmUtama
 
 
     Private Sub btnMasterSurat_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMasterSurat.Click
-        FrmMasterSurat.ShowDialog()
+        Try
+            If str_status > 0 Then
+                FrmMasterSurat.Text = "Riwayat Surat Jalan DIN"
+                FrmMasterSurat.ShowDialog()
+
+                MySqlConnection.ClearAllPools()
+            Else
+                MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
+                str_status = 0
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message + vbCr + "Ada kesalahan, harap ulangi proses atau restart aplikasi", "Gagak membuka form pencarian perusahaan", MessageBoxButtons.OK)
+            FrmLogin.Connect()
+        End Try
+
     End Sub
 
     Private Sub instagram_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles instagram.Click

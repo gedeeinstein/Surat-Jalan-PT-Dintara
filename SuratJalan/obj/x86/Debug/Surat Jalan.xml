@@ -115,6 +115,10 @@ SuratJalan
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:SuratJalan.My.Resources.Resources.Print_font_awesome_svg">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:SuratJalan.My.Resources.Resources.PT">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

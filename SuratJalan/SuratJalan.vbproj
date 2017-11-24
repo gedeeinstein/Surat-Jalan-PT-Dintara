@@ -162,6 +162,12 @@
     <Compile Include="FrmMasterSurat.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmMSurat.Designer.vb">
+      <DependentUpon>FrmMSurat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMSurat.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmQty.Designer.vb">
       <DependentUpon>FrmQty.vb</DependentUpon>
     </Compile>
@@ -267,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMasterSurat.resx">
       <DependentUpon>FrmMasterSurat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMSurat.resx">
+      <DependentUpon>FrmMSurat.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmQty.resx">
       <DependentUpon>FrmQty.vb</DependentUpon>
@@ -386,6 +395,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\Print_font_awesome.svg.png" />
     <None Include="Resources\save, save as icon icon %282%29.png" />
     <None Include="Resources\edit-button-20.png" />
     <None Include="Resources\close-20.png" />
