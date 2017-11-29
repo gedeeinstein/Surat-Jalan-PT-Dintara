@@ -36,7 +36,7 @@ Partial Class FrmMasterSurat
         Me.Label8 = New System.Windows.Forms.Label()
         Me.DGDetailsMasterSurat = New System.Windows.Forms.DataGridView()
         Me.btnBatal = New System.Windows.Forms.Button()
-        Me.btnSimpan = New System.Windows.Forms.Button()
+        Me.btnPrint = New System.Windows.Forms.Button()
         Me.btnHapus = New System.Windows.Forms.Button()
         Me.btnEdit = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -44,9 +44,14 @@ Partial Class FrmMasterSurat
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtNoOrder = New System.Windows.Forms.TextBox()
+        Me.txtNoSurat = New System.Windows.Forms.TextBox()
+        Me.rb_nosurat = New System.Windows.Forms.RadioButton()
+        Me.rb_nopenawaran = New System.Windows.Forms.RadioButton()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         CType(Me.DGMasterSurat, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBPencarian.SuspendLayout()
         CType(Me.DGDetailsMasterSurat, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DGMasterSurat
@@ -132,13 +137,13 @@ Partial Class FrmMasterSurat
         Me.rb_nama_perusahaan.Name = "rb_nama_perusahaan"
         Me.rb_nama_perusahaan.Size = New System.Drawing.Size(128, 17)
         Me.rb_nama_perusahaan.TabIndex = 18
-        Me.rb_nama_perusahaan.TabStop = True
         Me.rb_nama_perusahaan.Text = "Nama Perusahaan"
         Me.rb_nama_perusahaan.UseVisualStyleBackColor = True
         '
         'rb_no_order
         '
         Me.rb_no_order.AutoSize = True
+        Me.rb_no_order.Checked = True
         Me.rb_no_order.Location = New System.Drawing.Point(106, 19)
         Me.rb_no_order.Name = "rb_no_order"
         Me.rb_no_order.Size = New System.Drawing.Size(76, 17)
@@ -190,7 +195,7 @@ Partial Class FrmMasterSurat
         Me.btnBatal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(228, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnBatal.Image = Global.SuratJalan.My.Resources.Resources.close_20
         Me.btnBatal.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnBatal.Location = New System.Drawing.Point(337, 629)
+        Me.btnBatal.Location = New System.Drawing.Point(125, 629)
         Me.btnBatal.Name = "btnBatal"
         Me.btnBatal.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.btnBatal.Size = New System.Drawing.Size(100, 50)
@@ -199,21 +204,21 @@ Partial Class FrmMasterSurat
         Me.btnBatal.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         Me.btnBatal.UseVisualStyleBackColor = False
         '
-        'btnSimpan
+        'btnPrint
         '
-        Me.btnSimpan.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.btnSimpan.FlatAppearance.BorderSize = 0
-        Me.btnSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSimpan.Image = Global.SuratJalan.My.Resources.Resources.Print_font_awesome_svg
-        Me.btnSimpan.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnSimpan.Location = New System.Drawing.Point(19, 629)
-        Me.btnSimpan.Name = "btnSimpan"
-        Me.btnSimpan.Padding = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.btnSimpan.Size = New System.Drawing.Size(100, 50)
-        Me.btnSimpan.TabIndex = 35
-        Me.btnSimpan.Text = "Print"
-        Me.btnSimpan.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        Me.btnSimpan.UseVisualStyleBackColor = False
+        Me.btnPrint.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.btnPrint.FlatAppearance.BorderSize = 0
+        Me.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPrint.Image = Global.SuratJalan.My.Resources.Resources.Print_font_awesome_svg
+        Me.btnPrint.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnPrint.Location = New System.Drawing.Point(19, 629)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Padding = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.btnPrint.Size = New System.Drawing.Size(100, 50)
+        Me.btnPrint.TabIndex = 35
+        Me.btnPrint.Text = "Print"
+        Me.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
+        Me.btnPrint.UseVisualStyleBackColor = False
         '
         'btnHapus
         '
@@ -223,13 +228,14 @@ Partial Class FrmMasterSurat
         Me.btnHapus.ForeColor = System.Drawing.SystemColors.ControlText
         Me.btnHapus.Image = Global.SuratJalan.My.Resources.Resources.remove_button_20
         Me.btnHapus.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnHapus.Location = New System.Drawing.Point(231, 629)
+        Me.btnHapus.Location = New System.Drawing.Point(665, 629)
         Me.btnHapus.Name = "btnHapus"
         Me.btnHapus.Size = New System.Drawing.Size(100, 50)
         Me.btnHapus.TabIndex = 34
         Me.btnHapus.Text = "Hapus"
         Me.btnHapus.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         Me.btnHapus.UseVisualStyleBackColor = False
+        Me.btnHapus.Visible = False
         '
         'btnEdit
         '
@@ -238,7 +244,7 @@ Partial Class FrmMasterSurat
         Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEdit.Image = Global.SuratJalan.My.Resources.Resources.edit_button_20
         Me.btnEdit.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnEdit.Location = New System.Drawing.Point(125, 629)
+        Me.btnEdit.Location = New System.Drawing.Point(547, 629)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.btnEdit.Size = New System.Drawing.Size(100, 50)
@@ -246,6 +252,7 @@ Partial Class FrmMasterSurat
         Me.btnEdit.Text = "Edit"
         Me.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         Me.btnEdit.UseVisualStyleBackColor = False
+        Me.btnEdit.Visible = False
         '
         'Label1
         '
@@ -266,7 +273,7 @@ Partial Class FrmMasterSurat
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(199, 23)
         Me.Label2.TabIndex = 38
-        Me.Label2.Text = "Details Pengiriman Surat Jalan"
+        Me.Label2.Text = "Barang Sudah Terkirim"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label3
@@ -301,7 +308,49 @@ Partial Class FrmMasterSurat
         Me.txtNoOrder.Name = "txtNoOrder"
         Me.txtNoOrder.Size = New System.Drawing.Size(188, 20)
         Me.txtNoOrder.TabIndex = 41
-        Me.txtNoOrder.Visible = False
+        '
+        'txtNoSurat
+        '
+        Me.txtNoSurat.Location = New System.Drawing.Point(425, 389)
+        Me.txtNoSurat.Name = "txtNoSurat"
+        Me.txtNoSurat.Size = New System.Drawing.Size(188, 20)
+        Me.txtNoSurat.TabIndex = 42
+        '
+        'rb_nosurat
+        '
+        Me.rb_nosurat.AutoSize = True
+        Me.rb_nosurat.Checked = True
+        Me.rb_nosurat.ForeColor = System.Drawing.Color.FloralWhite
+        Me.rb_nosurat.Location = New System.Drawing.Point(30, 17)
+        Me.rb_nosurat.Name = "rb_nosurat"
+        Me.rb_nosurat.Size = New System.Drawing.Size(95, 17)
+        Me.rb_nosurat.TabIndex = 43
+        Me.rb_nosurat.TabStop = True
+        Me.rb_nosurat.Text = "No Surat Jalan"
+        Me.rb_nosurat.UseVisualStyleBackColor = True
+        '
+        'rb_nopenawaran
+        '
+        Me.rb_nopenawaran.AutoSize = True
+        Me.rb_nopenawaran.ForeColor = System.Drawing.Color.FloralWhite
+        Me.rb_nopenawaran.Location = New System.Drawing.Point(165, 17)
+        Me.rb_nopenawaran.Name = "rb_nopenawaran"
+        Me.rb_nopenawaran.Size = New System.Drawing.Size(96, 17)
+        Me.rb_nopenawaran.TabIndex = 44
+        Me.rb_nopenawaran.Text = "No Penawaran"
+        Me.rb_nopenawaran.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.rb_nosurat)
+        Me.GroupBox1.Controls.Add(Me.rb_nopenawaran)
+        Me.GroupBox1.ForeColor = System.Drawing.Color.Cornsilk
+        Me.GroupBox1.Location = New System.Drawing.Point(231, 629)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(299, 50)
+        Me.GroupBox1.TabIndex = 45
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Print Berdasarkan"
         '
         'FrmMasterSurat
         '
@@ -309,12 +358,14 @@ Partial Class FrmMasterSurat
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Teal
         Me.ClientSize = New System.Drawing.Size(1220, 691)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.txtNoSurat)
         Me.Controls.Add(Me.txtNoOrder)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.btnSimpan)
+        Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.btnHapus)
         Me.Controls.Add(Me.btnEdit)
         Me.Controls.Add(Me.btnBatal)
@@ -334,6 +385,8 @@ Partial Class FrmMasterSurat
         Me.GBPencarian.ResumeLayout(False)
         Me.GBPencarian.PerformLayout()
         CType(Me.DGDetailsMasterSurat, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -346,7 +399,7 @@ Partial Class FrmMasterSurat
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents DGDetailsMasterSurat As System.Windows.Forms.DataGridView
     Friend WithEvents btnBatal As System.Windows.Forms.Button
-    Friend WithEvents btnSimpan As System.Windows.Forms.Button
+    Friend WithEvents btnPrint As System.Windows.Forms.Button
     Friend WithEvents btnHapus As System.Windows.Forms.Button
     Friend WithEvents btnEdit As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -356,4 +409,8 @@ Partial Class FrmMasterSurat
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents txtNoOrder As System.Windows.Forms.TextBox
+    Friend WithEvents txtNoSurat As System.Windows.Forms.TextBox
+    Friend WithEvents rb_nosurat As System.Windows.Forms.RadioButton
+    Friend WithEvents rb_nopenawaran As System.Windows.Forms.RadioButton
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
 End Class

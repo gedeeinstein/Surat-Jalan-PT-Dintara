@@ -25,6 +25,7 @@ Public Class FrmMasterSurat
                     If str_status > 0 Then
                         Proses.OpenConn()
                         SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATTN.', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan_atm"
+                        'SQL = "SELECT nama_perusahaan AS 'PERUSAHAAN', att AS 'ATTN.', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan_atm"
                         mysurat = Proses.ExecuteQuery(SQL)
                         'mydata = mycommand.ExecuteReader
                         '1192
@@ -49,6 +50,7 @@ Public Class FrmMasterSurat
                     If str_status > 0 Then
                         Proses.OpenConn()
                         SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATTN.', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan"
+                        'SQL = "SELECT nama_perusahaan AS 'PERUSAHAAN', att AS 'ATTN.', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan"
                         mysurat = Proses.ExecuteQuery(SQL)
                         'mydata = mycommand.ExecuteReader
                         '1192
@@ -76,6 +78,9 @@ Public Class FrmMasterSurat
 
     End Sub
 
+    Private Sub FrmMasterSurat_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Call Data_Riwayat_Surat()
+    End Sub
 
     Sub Details_Surat_Jalan()
         Try
@@ -84,8 +89,8 @@ Public Class FrmMasterSurat
                 Case "Riwayat Surat Jalan ATM"
                     If str_status > 0 Then
                         Proses.OpenConn()
-                        'SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATT', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan"
-                        SQL = "SELECT nosurat AS 'NO SURAT', kode AS 'KODE BARANG', kode_lokasi AS 'KODE AREA', nama_barang AS 'NAMA BARANG', qty AS 'QTY', no_order AS 'NO ORDER', merk AS 'MERK' FROM suratjalan_detail_atm where no_order = '" & txtNoOrder.Text & "' "
+                        ' SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATT', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan"
+                        SQL = "SELECT nosurat AS 'NO SURAT', kode AS 'KODE BARANG', kode_lokasi AS 'KODE AREA', nama_barang AS 'NAMA BARANG', qty AS 'QTY', no_order AS 'NO ORDER', merk AS 'MERK' FROM suratjalan_detail_atm where no_order = '" & txtNoOrder.Text & "' AND nosurat = '" & txtNoSurat.Text & "'"
                         mysurat = Proses.ExecuteQuery(SQL)
 
                         Me.DGDetailsMasterSurat.DataSource = mysurat
@@ -107,26 +112,38 @@ Public Class FrmMasterSurat
                         Me.DGDetailsMasterSurat.Columns(6).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
 
-                        Dim myadapter As New MySqlDataAdapter
-                        Dim sqlquery = "SELECT * FROM suratjalan_detail_atm"
-                        Dim mycommand As New MySqlCommand
-                        mycommand.Connection = Proses.Cn
-                        mycommand.CommandText = SQL
-                        myadapter.SelectCommand = mycommand
-                        Dim totalbarang As Integer
-                        Dim mydata As MySqlDataReader
-                        mydata = mycommand.ExecuteReader()
+                        'Dim myadapter As New MySqlDataAdapter
+                        'Dim sqlquery = "SELECT * FROM suratjalan_detail_atm"
+                        'Dim mycommand As New MySqlCommand
+                        'mycommand.Connection = Proses.Cn
+                        'mycommand.CommandText = SQL
+                        'myadapter.SelectCommand = mycommand
+                        'Dim totalbarang As Integer
+                        'Dim mydata As MySqlDataReader
+                        'mydata = mycommand.ExecuteReader()
 
 
-                        totalbarang = 0
-                        If (mydata.HasRows) Then
-                            While (mydata.Read)
-                                totalbarang = totalbarang + 1
-                            End While
-                        End If
-                        Label4.Text = Val(totalbarang)
+                        'totalbarang = 0
+                        'If (mydata.HasRows) Then
+                        '    While (mydata.Read)
+                        '        totalbarang = totalbarang + 1
+                        '    End While
+                        'End If
+                        'Label4.Text = Val(totalbarang)
 
                         Proses.CloseConn()
+
+
+                        Dim hitung As Integer
+                        For baris As Integer = 0 To DGDetailsMasterSurat.RowCount - 1
+                            hitung = hitung + DGDetailsMasterSurat.Rows(baris).Cells(4).Value
+                        Next
+
+                        'Label_TotalBarang.Text = 'DGBarangKirim.RowCount - 1
+                        Label4.Text = hitung
+
+
+
                         MySqlConnection.ClearAllPools()
                     Else
                         MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Error Saat Koneksi Ke DataBase")
@@ -135,8 +152,8 @@ Public Class FrmMasterSurat
                 Case "Riwayat Surat Jalan DIN"
                     If str_status > 0 Then
                         Proses.OpenConn()
-                        'SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATT', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan"
-                        SQL = "SELECT nosurat AS 'NO SURAT', kode AS 'KODE BARANG', kode_lokasi AS 'KODE AREA', nama_barang AS 'NAMA BARANG', qty AS 'QTY', no_order AS 'NO ORDER', merk AS 'MERK' FROM suratjalan_detail where no_order = '" & txtNoOrder.Text & "'"
+                        'SQL = "SELECT kode AS 'KODE BARANG', kode_lokasi AS 'KODE AREA', nama_barang AS 'NAMA BARANG', qty AS 'QTY', no_order AS 'NO ORDER', merk AS 'MERK' FROM suratjalan_detail where no_order = '" & txtNoOrder.Text & "' AND nosurat = '" & txtNoSurat.Text & "'"
+                        SQL = "SELECT nosurat AS 'NO SURAT', kode AS 'KODE BARANG', kode_lokasi AS 'KODE AREA', nama_barang AS 'NAMA BARANG', qty AS 'QTY', no_order AS 'NO ORDER', merk AS 'MERK' FROM suratjalan_detail where no_order = '" & txtNoOrder.Text & "' AND nosurat = '" & txtNoSurat.Text & "'"
                         mysurat = Proses.ExecuteQuery(SQL)
 
                         Me.DGDetailsMasterSurat.DataSource = mysurat
@@ -158,24 +175,30 @@ Public Class FrmMasterSurat
                         Me.DGDetailsMasterSurat.Columns(6).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
 
-                        Dim myadapter As New MySqlDataAdapter
-                        Dim sqlquery = "SELECT * FROM suratjalan_detail"
-                        Dim mycommand As New MySqlCommand
-                        mycommand.Connection = Proses.Cn
-                        mycommand.CommandText = SQL
-                        myadapter.SelectCommand = mycommand
-                        Dim totalbarang As Integer
-                        Dim mydata As MySqlDataReader
-                        mydata = mycommand.ExecuteReader()
+                        'Dim myadapter As New MySqlDataAdapter
+                        'Dim sqlquery = "SELECT * FROM suratjalan_detail"
+                        'Dim mycommand As New MySqlCommand
+                        'mycommand.Connection = Proses.Cn
+                        'mycommand.CommandText = SQL
+                        'myadapter.SelectCommand = mycommand
+                        'Dim totalbarang As Integer
+                        'Dim mydata As MySqlDataReader
+                        'mydata = mycommand.ExecuteReader()
 
 
-                        totalbarang = 0
-                        If (mydata.HasRows) Then
-                            While (mydata.Read)
-                                totalbarang = totalbarang + 1
-                            End While
-                        End If
-                        Label4.Text = Val(totalbarang)
+                        'totalbarang = 0
+                        'If (mydata.HasRows) Then
+                        '    While (mydata.Read)
+                        '        totalbarang = totalbarang + 1
+                        '    End While
+                        'End If
+                        'Label4.Text = Val(totalbarang)
+                        Dim hitung As Integer
+                        For baris As Integer = 0 To DGDetailsMasterSurat.RowCount - 1
+                            hitung = hitung + DGDetailsMasterSurat.Rows(baris).Cells(4).Value
+                        Next
+
+                        Label4.Text = hitung
 
                         Proses.CloseConn()
                         MySqlConnection.ClearAllPools()
@@ -191,25 +214,29 @@ Public Class FrmMasterSurat
     End Sub
 
 
-    Private Sub FrmMasterSurat_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Call Data_Riwayat_Surat()
-    End Sub
+
 
 
     Private Sub btnClose_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClose.Click
         If MsgBox("Apakah anda yakin mau keluar dari form master surat ", vbYesNo, "Konfirmasi") = vbYes Then
             Me.Close()
-            'Application.Exit()
+            MySqlConnection.ClearAllPools()
         End If
     End Sub
 
     Private Sub DGMasterSurat_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles DGMasterSurat.MouseClick
         Dim i = DGMasterSurat.CurrentRow.Index
         Dim row As DataGridViewRow = DGMasterSurat.CurrentRow
+        txtNoSurat.Text = row.Cells(0).Value
         txtNoOrder.Text = row.Cells(4).Value
+
     End Sub
 
     Private Sub txtNoOrder_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtNoOrder.TextChanged
+        Details_Surat_Jalan()
+    End Sub
+
+    Private Sub txtNoSurat_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtNoSurat.TextChanged
         Details_Surat_Jalan()
     End Sub
 
@@ -222,6 +249,7 @@ Public Class FrmMasterSurat
                         Proses.OpenConn()
                         If rb_no_order.Checked = True Then
                             SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATT', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan_atm where no_order LIKE '%" & txtCari.Text & "%' "
+                            'SQL = "SELECT nama_perusahaan AS 'PERUSAHAAN', att AS 'ATT', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan_atm where no_order LIKE '%" & txtCari.Text & "%' "
                             mysurat = Proses.ExecuteQuery(SQL)
 
                             Me.DGMasterSurat.DataSource = mysurat
@@ -229,6 +257,7 @@ Public Class FrmMasterSurat
 
                         ElseIf rb_nama_perusahaan.Checked = True Then
                             SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATT', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan_atm where nama_perusahaan LIKE '%" & txtCari.Text & "%' "
+                            'SQL = "SELECT nama_perusahaan AS 'PERUSAHAAN', att AS 'ATT', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan_atm where nama_perusahaan LIKE '%" & txtCari.Text & "%' "
                             mysurat = Proses.ExecuteQuery(SQL)
 
                             Me.DGMasterSurat.DataSource = mysurat
@@ -249,6 +278,7 @@ Public Class FrmMasterSurat
                         Proses.OpenConn()
                         If rb_no_order.Checked = True Then
                             SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATT', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan where no_order LIKE '%" & txtCari.Text & "%' "
+                            'SQL = "SELECT nama_perusahaan AS 'PERUSAHAAN', att AS 'ATT', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan where no_order LIKE '%" & txtCari.Text & "%' "
                             mysurat = Proses.ExecuteQuery(SQL)
 
                             Me.DGMasterSurat.DataSource = mysurat
@@ -256,6 +286,7 @@ Public Class FrmMasterSurat
                             
                         ElseIf rb_nama_perusahaan.Checked = True Then
                             SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATT', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan where nama_perusahaan LIKE '%" & txtCari.Text & "%' "
+                            'SQL = "SELECT nama_perusahaan AS 'PERUSAHAAN', att AS 'ATT', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan where nama_perusahaan LIKE '%" & txtCari.Text & "%' "
                             mysurat = Proses.ExecuteQuery(SQL)
 
                             Me.DGMasterSurat.DataSource = mysurat
@@ -275,5 +306,63 @@ Public Class FrmMasterSurat
         Catch ex As Exception
             MessageBox.Show(ex.Message + vbNewLine + "Error Pencarian Surat Jalan")
         End Try
+    End Sub
+
+    Private Sub btnPrint_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPrint.Click
+        Try
+            'Select Case Me.Text
+            '    Case "Riwayat Surat Jalan ATM"
+            If rb_nosurat.Checked = True Then
+                Print_By_NoSurat()
+            ElseIf rb_nopenawaran.Checked = True Then
+                Print_By_No_Order()
+            Else
+                MsgBox("Pilih Salah Satu Paramater Print")
+            End If
+            'End Select
+            MySqlConnection.ClearAllPools()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+
+    Sub Print_By_No_Order()
+        
+    End Sub
+
+
+    Sub Print_By_NoSurat()
+        Try
+
+            Dim print = MsgBox("Print Surat Jalan Berdasarkan No Surat Jalan ?")
+            Select Case Me.Text
+
+                Case "Riwayat Surat Jalan ATM"
+                    If print = vbOK Then
+                        FrmRptSPK_ATM.Text = "Cetak Surat Jalan CV No "
+                        FrmRptSPK_ATM.ShowDialog()
+                        MySqlConnection.ClearAllPools()
+                    Else
+
+                    End If
+
+                Case "Riwayat Surat Jalan DIN"
+                    If print = vbOK Then
+                        FrmRptSPK.Text = "Cetak Surat Jalan DIN No "
+                        FrmRptSPK.ShowDialog()
+                        MySqlConnection.ClearAllPools()
+                    Else
+
+                    End If
+            End Select
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub btnBatal_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBatal.Click
+        btnClose_Click(sender, e)
+        MySqlConnection.ClearAllPools()
     End Sub
 End Class

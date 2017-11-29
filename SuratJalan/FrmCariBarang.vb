@@ -30,25 +30,18 @@ Public Class FrmCariBarang
     End Sub
 
     Sub Compare_Barang()
-        Dim i = DGBarang.CurrentRow.Index
-        Dim i2 = DGBarangTerkirim.CurrentRow.Index
-        Dim row As DataGridViewRow = DGBarang.CurrentRow
-        Dim row2 As DataGridViewRow = DGBarang.CurrentRow
-        Dim kd_barang As String
-        Dim kd_barang2 As String
+        Dim SQL2 As String
 
-        Dim qty_order = row.Cells(4).Value
-        Dim qty_terkirim = row2.Cells(4).Value
+        SQL = "SELECT barang.kode AS 'KODE BARANG', barang.nama AS 'NAMA BARANG',  " _
+                & "tawar02.qty AS 'QTY PESANAN' FROM barang " _
+                & "INNER JOIN tawar02 ON barang.kode = tawar02.kode_barang " _
+                & "WHERE tawar02.kode ='SA-0000001871' ORDER BY barang.nama ASC"
 
-        kd_barang = row.Cells(0).ToString
-        kd_barang2 = row.Cells(1).ToString
+        SQL2 = "SELECT kode AS 'Kode Barang',  " _
+                & " nama_barang AS 'Nama Barang',  " _
+                & "qty AS 'QTY' " _
+                & "FROM suratjalan_detail_atm WHERE no_order = 'SA-0000001871' ORDER BY nama_barang ASC"
 
-        Dim hasil_qty = qty_order - qty_terkirim
-
-        If kd_barang = kd_barang2 Then
-            row.Cells(4).Value = hasil_qty
-
-        End If
 
 
     End Sub
@@ -56,7 +49,7 @@ Public Class FrmCariBarang
     Sub Data_Barang()
         barangku = Proses.ExecuteQuery("SELECT barang.kode AS 'KODE BARANG', barang.nama AS 'NAMA BARANG', tawar02.merk as 'MERK', tawar02.kode_lokasi AS 'KODE AREA', tawar02.qty as 'QTY PESANAN', barang.qty as 'STOK GUDANG' FROM barang " _
                                      & "INNER JOIN tawar02 ON barang.kode = tawar02.kode_barang " _
-                                     & "WHERE tawar02.kode ='" & txtNoOrder.Text & "'")
+                                     & "WHERE tawar02.kode ='" & txtNoOrder.Text & "' ORDER BY barang.nama ASC")
 
         Me.DGBarang.DataSource = barangku
         Me.DGBarang.Columns(0).Width = 130 ' KODE BARANG
@@ -89,7 +82,7 @@ Public Class FrmCariBarang
                     If str_status > 0 Then
                         Proses.OpenConn()
                         'SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATT', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan"
-                        SQL = "SELECT nosurat AS 'No Surat', kode AS 'Kode Barang', kode_lokasi AS 'Kode Area', nama_barang AS 'Nama Barang', qty AS 'QTY', no_order AS 'No Order', merk AS 'Merk' FROM suratjalan_detail_atm where no_order = '" & txtNoOrder.Text & "' "
+                        SQL = "SELECT nosurat AS 'No Surat', kode AS 'Kode Barang', kode_lokasi AS 'Kode Area', nama_barang AS 'Nama Barang', qty AS 'QTY', no_order AS 'No Order', merk AS 'Merk' FROM suratjalan_detail_atm where no_order = '" & txtNoOrder.Text & "' ORDER BY nama_barang ASC"
                         mysurat = Proses.ExecuteQuery(SQL)
 
                         Me.DGBarangTerkirim.DataSource = mysurat
@@ -138,7 +131,7 @@ Public Class FrmCariBarang
                     If str_status > 0 Then
                         Proses.OpenConn()
                         'SQL = "SELECT nosurat AS 'No Surat', nama_perusahaan AS 'Perusahaan', att AS 'Attn.', tanggal AS 'Tanggal Kirim', no_order AS 'No Order', USER AS 'Dibuat Oleh' FROM suratjalan"
-                        SQL = "SELECT nosurat AS 'No Surat', kode AS 'Kode Barang', kode_lokasi AS 'Kode Area', nama_barang AS 'Nama Barang', qty AS 'QTY', no_order AS 'No Order', merk AS 'Merk' FROM suratjalan_detail where no_order = '" & txtNoOrder.Text & "'"
+                        SQL = "SELECT nosurat AS 'No Surat', kode AS 'Kode Barang', kode_lokasi AS 'Kode Area', nama_barang AS 'Nama Barang', qty AS 'QTY', no_order AS 'No Order', merk AS 'Merk' FROM suratjalan_detail where no_order = '" & txtNoOrder.Text & "'ORDER BY nama_barang ASC"
                         mysurat = Proses.ExecuteQuery(SQL)
 
                         Me.DGBarangTerkirim.DataSource = mysurat
@@ -210,7 +203,7 @@ Public Class FrmCariBarang
         No_Order()
         Data_Barang()
         Details_Surat_Jalan()
-        Compare_Barang()
+        'Compare_Barang()
     End Sub
 
 
