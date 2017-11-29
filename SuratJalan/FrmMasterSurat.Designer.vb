@@ -24,6 +24,7 @@ Partial Class FrmMasterSurat
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMasterSurat))
         Me.DGMasterSurat = New System.Windows.Forms.DataGridView()
         Me.title = New System.Windows.Forms.Label()
@@ -56,13 +57,12 @@ Partial Class FrmMasterSurat
         Me.DGMasterSurat.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DGMasterSurat.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DGMasterSurat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGMasterSurat.Location = New System.Drawing.Point(19, 177)
         Me.DGMasterSurat.Name = "DGMasterSurat"
         Me.DGMasterSurat.ReadOnly = True
@@ -168,9 +168,17 @@ Partial Class FrmMasterSurat
         '
         Me.DGDetailsMasterSurat.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.DGDetailsMasterSurat.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DGDetailsMasterSurat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGDetailsMasterSurat.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DGDetailsMasterSurat.Location = New System.Drawing.Point(19, 416)
         Me.DGDetailsMasterSurat.Name = "DGDetailsMasterSurat"
+        Me.DGDetailsMasterSurat.RowHeadersWidth = 4
         Me.DGDetailsMasterSurat.Size = New System.Drawing.Size(1192, 201)
         Me.DGDetailsMasterSurat.TabIndex = 32
         '

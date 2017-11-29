@@ -4,7 +4,9 @@ D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\bin\Debug\S
 D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\bin\Debug\Surat Jalan.exe
 D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\bin\Debug\Surat Jalan.pdb
 D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\bin\Debug\Surat Jalan.xml
+D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Debug\SuratJalan.vbprojResolveAssemblyReference.cache
 D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Debug\SuratJalan.FrmMasterSurat.resources
+D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Debug\SuratJalan.FrmMSurat.resources
 D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Debug\SuratJalan.FrmQty.resources
 D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Debug\SuratJalan.FrmRptSPK_ATM.resources
 D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Debug\SuratJalan.FrmTambahUser.resources
@@ -24,5 +26,3 @@ D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Deb
 D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Debug\Surat Jalan.exe
 D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Debug\Surat Jalan.xml
 D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Debug\Surat Jalan.pdb
-D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Debug\SuratJalan.vbprojResolveAssemblyReference.cache
-D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Debug\SuratJalan.FrmMSurat.resources

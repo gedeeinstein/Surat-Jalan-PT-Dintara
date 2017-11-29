@@ -54,7 +54,6 @@ Public Class FrmCariPerusahaan
                 MySqlConnection.ClearAllPools()
             End Try
 
-
             '850
 
             DGPerusahaan.GridColor = Color.White
@@ -62,22 +61,12 @@ Public Class FrmCariPerusahaan
             DGPerusahaan.AlternatingRowsDefaultCellStyle.BackColor = Color.Purple
             DGPerusahaan.RowsDefaultCellStyle.BackColor = Color.DarkGreen
             Proses.CloseConn()
-
-
             DGPerusahaan.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-            'DGPerusahaan.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
             Proses.OpenConn()
 
             Dim myadapter As New MySqlDataAdapter
-            'Dim sqlquery = "SELECT tawar01.kode_pelanggan AS 'KODE', " _
-            '    & "pelanggan.nama AS 'NAMA PERUSAHAAN', tawar01.att AS 'PENERIMA', tawar01.kode AS 'PENAWARAN', pelanggan.alamat as 'ALAMAT', tawar01.tgl AS 'TGL' " _
-            '    & "FROM tawar01 INNER JOIN pelanggan " _
-            '    & "ON tawar01.kode_pelanggan = pelanggan.kode " _
-            '    & "WHERE pelanggan.nama LIKE '%" & Rep(txtCariPerusahaan.Text) & "%' ORDER BY tawar01.tgl DESC"
-
             Dim sqlquery = "SELECT * FROM tawar01"
-
             Dim mycommand As New MySqlCommand
             mycommand.Connection = Proses.Cn
             mycommand.CommandText = sqlquery
@@ -129,11 +118,6 @@ Public Class FrmCariPerusahaan
                     FrmUtama.txtPelanggan.Text = row.Cells(2).Value
                     FrmUtama.txtNoOrder.Text = row.Cells(3).Value
                     FrmUtama.txtAlamat.Text = row.Cells(4).Value
-                    'FrmUtama.txtKodePerusahaan.Text = DGPerusahaan.SelectedCells(0).Value
-                    'FrmUtama.txtPerusahaan.Text = DGPerusahaan.SelectedCells(1).Value
-                    'FrmUtama.txtPelanggan.Text = DGPerusahaan.SelectedCells(2).Value
-                    'FrmUtama.txtNoOrder.Text = DGPerusahaan.SelectedCells(3).Value
-                    'FrmUtama.txtAlamat.Text = DGPerusahaan.SelectedCells(4).Value
                     FrmUtama.cmbPerusahaan.Text = "" & DGPerusahaan.SelectedCells(0).Value & "/" & DGPerusahaan.SelectedCells(1).Value & ""
                     Me.Close()
                     Trim(FrmUtama.txtKodePerusahaan.Text)

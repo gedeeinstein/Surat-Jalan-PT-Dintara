@@ -4,7 +4,7 @@ Imports MySql.Data.MySqlClient
 
 Public Class FrmCariBarang
     Dim Proses As New ClsKoneksi
-    Dim barangku As DataTable
+    Dim barangku, mysurat As DataTable
     Dim SQL As String
     Dim Data As DataSet
     Dim a As Integer
@@ -27,69 +27,169 @@ Public Class FrmCariBarang
         Catch ex As Exception
             MessageBox.Show("Maaf terjadi kesalahan pemrosesan data, harap ulangi lagi prosesnya. Jika hal yang sama masih terjadi catat kode error dibawah ini" + vbNewLine + ex.Message, "Hubungi IT", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
         End Try
-
-        'txtNoOrder.Text = FrmUtama.txtNoOrder.Text.ToString
-
-        'txtNoOrder.Text = FrmUtama.txtNoOrder.Text.ToString
-            'FrmUtama.txtNoOrder.Text = txtNoOrder.Text
     End Sub
 
+    Sub Compare_Barang()
+        Dim i = DGBarang.CurrentRow.Index
+        Dim i2 = DGBarangTerkirim.CurrentRow.Index
+        Dim row As DataGridViewRow = DGBarang.CurrentRow
+        Dim row2 As DataGridViewRow = DGBarang.CurrentRow
+        Dim kd_barang As String
+        Dim kd_barang2 As String
+
+        Dim qty_order = row.Cells(4).Value
+        Dim qty_terkirim = row2.Cells(4).Value
+
+        kd_barang = row.Cells(0).ToString
+        kd_barang2 = row.Cells(1).ToString
+
+        Dim hasil_qty = qty_order - qty_terkirim
+
+        If kd_barang = kd_barang2 Then
+            row.Cells(4).Value = hasil_qty
+
+        End If
+
+
+    End Sub
 
     Sub Data_Barang()
-        'barangku = Proses.ExecuteQuery("SELECT barang.kode as 'KODE BARANG', barang.nama as 'NAMA BARANG' FROM barang " _
-        '                             & "INNER JOIN tawar02 ON barang.kode = tawar02.kode_barang " _
-        '                             & "WHERE tawar02.kode ='" & txtNoOrder.Text & "'")
-
-        'OLD QUERY ABOVE
-
-        'New Query
-        'SELECT tawar02.kode_lokasi AS 'KL', barang.kode AS 'KODE BARANG', barang.nama AS 'NAMA BARANG', tawar02.qty as 'QTY PESANAN' FROM barang
-        'INNER JOIN tawar02 ON barang.kode = tawar02.kode_barang 
-
-
-        barangku = Proses.ExecuteQuery("SELECT barang.kode AS 'KODE BARANG', barang.nama AS 'NAMA BARANG', tawar02.merk as 'MERK', tawar02.kode_lokasi AS 'KL', tawar02.qty as 'QTY PESANAN', barang.qty as 'STOK GUDANG' FROM barang " _
+        barangku = Proses.ExecuteQuery("SELECT barang.kode AS 'KODE BARANG', barang.nama AS 'NAMA BARANG', tawar02.merk as 'MERK', tawar02.kode_lokasi AS 'KODE AREA', tawar02.qty as 'QTY PESANAN', barang.qty as 'STOK GUDANG' FROM barang " _
                                      & "INNER JOIN tawar02 ON barang.kode = tawar02.kode_barang " _
                                      & "WHERE tawar02.kode ='" & txtNoOrder.Text & "'")
 
         Me.DGBarang.DataSource = barangku
-        Me.DGBarang.Columns(0).Width = 150
-        Me.DGBarang.Columns(1).Width = 540
-        Me.DGBarang.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+        Me.DGBarang.Columns(0).Width = 130 ' KODE BARANG
+        Me.DGBarang.Columns(1).Width = 550 ' NAMA BARANG
+        Me.DGBarang.Columns(2).Width = 140 ' MERK
+        Me.DGBarang.Columns(3).Width = 120 ' KODE AREA
+        Me.DGBarang.Columns(4).Width = 100 ' QTY
+        Me.DGBarang.Columns(5).Width = 100 ' STOCK GUDANG
+
         Me.DGBarang.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+
+        Me.DGBarang.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+        Me.DGBarang.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+        Me.DGBarang.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+        Me.DGBarang.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+        Me.DGBarang.Columns(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
         DGBarang.GridColor = Color.White
         DGBarang.DefaultCellStyle.ForeColor = Color.White
         DGBarang.AlternatingRowsDefaultCellStyle.BackColor = Color.DarkBlue
         DGBarang.RowsDefaultCellStyle.BackColor = Color.Black
-
-
-        Proses.OpenConn()
-        'Dim myadapter As New MySqlDataAdapter
-        'Dim sqlquery = "SELECT barang.kode as 'KODE BARANG', barang.nama as 'NAMA BARANG' FROM barang " _
-        '                             & "INNER JOIN tawar02 ON barang.kode = tawar02.kode_barang " _
-        '                             & "WHERE tawar02.kode ='" & txtNoOrder.Text & "'"
-
-        'Dim sqlquery = "SELECT barang.kode AS 'KODE BARANG', barang.nama AS 'NAMA BARANG', tawar02.merk as 'MERK', tawar02.kode_lokasi AS 'KL', tawar02.qty as 'QTY PESANAN', barang.qty as 'STOK GUDANG' FROM barang " _
-        ' & "INNER JOIN tawar02 ON barang.kode = tawar02.kode_barang " _
-        ' & "WHERE tawar02.kode ='" & txtNoOrder.Text & "'"
-
-        'Dim mycommand As New MySqlCommand
-        'mycommand.Connection = Proses.Cn
-        'mycommand.CommandText = sqlquery
-        'myadapter.SelectCommand = mycommand
-        'Dim totalbarang As Integer
-        'Dim mydata As MySqlDataReader
-        'mydata = mycommand.ExecuteReader()
-
-        'totalbarang = 0
-        'If (mydata.HasRows) Then
-        '    While (mydata.Read)
-        '        totalbarang = totalbarang + 1
-        '    End While
-        'End If
-        'lbl_totalbarang.Text = Val(totalbarang)
         total_item()
-        Proses.CloseConn()
+    End Sub
+
+    Sub Details_Surat_Jalan()
+        Try
+            Select Case Me.Text
+
+                Case "Cari Barang"
+                    If str_status > 0 Then
+                        Proses.OpenConn()
+                        'SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATT', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan"
+                        SQL = "SELECT nosurat AS 'No Surat', kode AS 'Kode Barang', kode_lokasi AS 'Kode Area', nama_barang AS 'Nama Barang', qty AS 'QTY', no_order AS 'No Order', merk AS 'Merk' FROM suratjalan_detail_atm where no_order = '" & txtNoOrder.Text & "' "
+                        mysurat = Proses.ExecuteQuery(SQL)
+
+                        Me.DGBarangTerkirim.DataSource = mysurat
+                        Me.DGBarangTerkirim.Columns(0).Width = 120 ' NO SURAT
+                        Me.DGBarangTerkirim.Columns(1).Width = 130 ' KD BRG
+                        Me.DGBarangTerkirim.Columns(2).Width = 100 ' KD AREA
+                        Me.DGBarangTerkirim.Columns(3).Width = 420 ' NAMA BARANG
+                        Me.DGBarangTerkirim.Columns(4).Width = 70  ' QTY
+                        Me.DGBarangTerkirim.Columns(5).Width = 150 ' NO ORDER
+                        Me.DGBarangTerkirim.Columns(6).Width = 150 ' MERK
+                        'Me.DGDetailsMasterSurat.Columns(7).Width = 200
+                        '1159
+                        Me.DGBarangTerkirim.Columns(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                        Me.DGBarangTerkirim.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                        Me.DGBarangTerkirim.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                        Me.DGBarangTerkirim.Columns(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                        Me.DGBarangTerkirim.Columns(6).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                        Me.DGBarangTerkirim.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+
+                        Dim myadapter As New MySqlDataAdapter
+                        Dim sqlquery = "SELECT * FROM suratjalan_detail_atm"
+                        Dim mycommand As New MySqlCommand
+                        mycommand.Connection = Proses.Cn
+                        mycommand.CommandText = SQL
+                        myadapter.SelectCommand = mycommand
+                        Dim totalbarang As Integer
+                        Dim mydata As MySqlDataReader
+                        mydata = mycommand.ExecuteReader()
+
+
+                        totalbarang = 0
+                        If (mydata.HasRows) Then
+                            While (mydata.Read)
+                                totalbarang = totalbarang + 1
+                            End While
+                        End If
+                        Label4.Text = Val(totalbarang)
+
+                        Proses.CloseConn()
+                        MySqlConnection.ClearAllPools()
+                    Else
+                        MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Error Saat Koneksi Ke DataBase")
+                    End If
+
+                Case "Pilih Barang"
+                    If str_status > 0 Then
+                        Proses.OpenConn()
+                        'SQL = "SELECT nosurat AS 'No Surat', nama_perusahaan AS 'Perusahaan', att AS 'Attn.', tanggal AS 'Tanggal Kirim', no_order AS 'No Order', USER AS 'Dibuat Oleh' FROM suratjalan"
+                        SQL = "SELECT nosurat AS 'No Surat', kode AS 'Kode Barang', kode_lokasi AS 'Kode Area', nama_barang AS 'Nama Barang', qty AS 'QTY', no_order AS 'No Order', merk AS 'Merk' FROM suratjalan_detail where no_order = '" & txtNoOrder.Text & "'"
+                        mysurat = Proses.ExecuteQuery(SQL)
+
+                        Me.DGBarangTerkirim.DataSource = mysurat
+                        Me.DGBarangTerkirim.Columns(0).Width = 120 ' NO SURAT
+                        Me.DGBarangTerkirim.Columns(1).Width = 130 ' KD BRG
+                        Me.DGBarangTerkirim.Columns(2).Width = 100 ' KD AREA
+                        Me.DGBarangTerkirim.Columns(3).Width = 420 ' NAMA BARANG
+                        Me.DGBarangTerkirim.Columns(4).Width = 70  ' QTY
+                        Me.DGBarangTerkirim.Columns(5).Width = 150 ' NO ORDER
+                        Me.DGBarangTerkirim.Columns(6).Width = 150 ' MERK
+                        'Me.DGDetailsMasterSurat.Columns(7).Width = 200
+                        '1192
+
+                        Me.DGBarangTerkirim.Columns(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                        Me.DGBarangTerkirim.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                        Me.DGBarangTerkirim.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                        Me.DGBarangTerkirim.Columns(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                        Me.DGBarangTerkirim.Columns(6).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                        Me.DGBarangTerkirim.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+
+
+                        Dim myadapter As New MySqlDataAdapter
+                        Dim sqlquery = "SELECT * FROM suratjalan_detail_atm"
+                        Dim mycommand As New MySqlCommand
+                        mycommand.Connection = Proses.Cn
+                        mycommand.CommandText = SQL
+                        myadapter.SelectCommand = mycommand
+                        Dim totalbarang As Integer
+                        Dim mydata As MySqlDataReader
+                        mydata = mycommand.ExecuteReader()
+
+
+                        totalbarang = 0
+                        If (mydata.HasRows) Then
+                            While (mydata.Read)
+                                totalbarang = totalbarang + 1
+                            End While
+                        End If
+                        Label4.Text = Val(totalbarang)
+
+                        Proses.CloseConn()
+                        MySqlConnection.ClearAllPools()
+                    Else
+                        MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Error Saat Koneksi Ke DataBase")
+                    End If
+
+            End Select
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
     Private Sub total_item()
@@ -103,12 +203,14 @@ Public Class FrmCariBarang
     End Sub
 
 
-
+    
 
 
     Private Sub FrmCariBarang_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         No_Order()
         Data_Barang()
+        Details_Surat_Jalan()
+        Compare_Barang()
     End Sub
 
 
@@ -180,6 +282,9 @@ Public Class FrmCariBarang
 
         End Select
     End Sub
+
+    
+
 
     Private Sub DGBarang_DoubleClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DGBarang.DoubleClick
 

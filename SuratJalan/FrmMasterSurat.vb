@@ -24,7 +24,7 @@ Public Class FrmMasterSurat
                 Case "Riwayat Surat Jalan ATM"
                     If str_status > 0 Then
                         Proses.OpenConn()
-                        SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATT', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan_atm"
+                        SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATTN.', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan_atm"
                         mysurat = Proses.ExecuteQuery(SQL)
                         'mydata = mycommand.ExecuteReader
                         '1192
@@ -48,7 +48,7 @@ Public Class FrmMasterSurat
                 Case "Riwayat Surat Jalan DIN"
                     If str_status > 0 Then
                         Proses.OpenConn()
-                        SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATT', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan"
+                        SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATTN.', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan"
                         mysurat = Proses.ExecuteQuery(SQL)
                         'mydata = mycommand.ExecuteReader
                         '1192
@@ -85,21 +85,27 @@ Public Class FrmMasterSurat
                     If str_status > 0 Then
                         Proses.OpenConn()
                         'SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATT', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan"
-                        SQL = "SELECT nosurat AS 'NO SURAT', kode AS 'KD BRG', kode_lokasi AS 'KD AREA', nama_barang AS 'NAMA BRG', qty AS 'QTY', no_order AS 'NO ORDER', merk AS 'MERK' FROM suratjalan_detail_atm where no_order = '" & txtNoOrder.Text & "' "
+                        SQL = "SELECT nosurat AS 'NO SURAT', kode AS 'KODE BARANG', kode_lokasi AS 'KODE AREA', nama_barang AS 'NAMA BARANG', qty AS 'QTY', no_order AS 'NO ORDER', merk AS 'MERK' FROM suratjalan_detail_atm where no_order = '" & txtNoOrder.Text & "' "
                         mysurat = Proses.ExecuteQuery(SQL)
 
                         Me.DGDetailsMasterSurat.DataSource = mysurat
                         Me.DGDetailsMasterSurat.Columns(0).Width = 120 ' NO SURAT
                         Me.DGDetailsMasterSurat.Columns(1).Width = 150 ' KD BRG
                         Me.DGDetailsMasterSurat.Columns(2).Width = 80 ' KD AREA
-                        Me.DGDetailsMasterSurat.Columns(3).Width = 350 ' NAMA BARANG
+                        Me.DGDetailsMasterSurat.Columns(3).Width = 450 ' NAMA BARANG
                         Me.DGDetailsMasterSurat.Columns(4).Width = 70  ' QTY
                         Me.DGDetailsMasterSurat.Columns(5).Width = 150 ' NO ORDER
                         Me.DGDetailsMasterSurat.Columns(6).Width = 142 ' MERK
                         'Me.DGDetailsMasterSurat.Columns(7).Width = 200
                         '1192
 
+                        Me.DGDetailsMasterSurat.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                        Me.DGDetailsMasterSurat.Columns(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                        Me.DGDetailsMasterSurat.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
                         Me.DGDetailsMasterSurat.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                        Me.DGDetailsMasterSurat.Columns(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                        Me.DGDetailsMasterSurat.Columns(6).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+
 
                         Dim myadapter As New MySqlDataAdapter
                         Dim sqlquery = "SELECT * FROM suratjalan_detail_atm"
@@ -130,24 +136,30 @@ Public Class FrmMasterSurat
                     If str_status > 0 Then
                         Proses.OpenConn()
                         'SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATT', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan"
-                        SQL = "SELECT nosurat AS 'NO SURAT', kode AS 'KD BRG', kode_lokasi AS 'KD AREA', nama_barang AS 'NAMA BRG', qty AS 'QTY', no_order AS 'NO ORDER', merk AS 'MERK' FROM suratjalan_detail where no_order = '" & txtNoOrder.Text & "'"
+                        SQL = "SELECT nosurat AS 'NO SURAT', kode AS 'KODE BARANG', kode_lokasi AS 'KODE AREA', nama_barang AS 'NAMA BARANG', qty AS 'QTY', no_order AS 'NO ORDER', merk AS 'MERK' FROM suratjalan_detail where no_order = '" & txtNoOrder.Text & "'"
                         mysurat = Proses.ExecuteQuery(SQL)
 
                         Me.DGDetailsMasterSurat.DataSource = mysurat
-                        Me.DGDetailsMasterSurat.Columns(0).Width = 250 ' NO SURAT
+                        Me.DGDetailsMasterSurat.Columns(0).Width = 120 ' NO SURAT
                         Me.DGDetailsMasterSurat.Columns(1).Width = 150 ' KD BRG
                         Me.DGDetailsMasterSurat.Columns(2).Width = 80 ' KD AREA
-                        Me.DGDetailsMasterSurat.Columns(3).Width = 350 ' NAMA BARANG
+                        Me.DGDetailsMasterSurat.Columns(3).Width = 450 ' NAMA BARANG
                         Me.DGDetailsMasterSurat.Columns(4).Width = 70  ' QTY
                         Me.DGDetailsMasterSurat.Columns(5).Width = 150 ' NO ORDER
                         Me.DGDetailsMasterSurat.Columns(6).Width = 142 ' MERK
                         'Me.DGDetailsMasterSurat.Columns(7).Width = 200
                         '1192
 
+                        Me.DGDetailsMasterSurat.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                        Me.DGDetailsMasterSurat.Columns(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                        Me.DGDetailsMasterSurat.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
                         Me.DGDetailsMasterSurat.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                        Me.DGDetailsMasterSurat.Columns(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                        Me.DGDetailsMasterSurat.Columns(6).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+
 
                         Dim myadapter As New MySqlDataAdapter
-                        Dim sqlquery = "SELECT * FROM suratjalan_detail_atm"
+                        Dim sqlquery = "SELECT * FROM suratjalan_detail"
                         Dim mycommand As New MySqlCommand
                         mycommand.Connection = Proses.Cn
                         mycommand.CommandText = SQL

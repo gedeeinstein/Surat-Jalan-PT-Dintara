@@ -9,7 +9,6 @@ Public Class FrmUtamaATM
     Dim Data As DataSet
     Dim a As Integer
     Dim haha As Integer
-
     Dim dtPelanggan As DataTable
     Dim dtOrder As DataTable
     Dim dtSurat As DataTable
@@ -31,20 +30,10 @@ Public Class FrmUtamaATM
             DGBarangKirim.Columns(4).Width = 115 ' MERK
             DGBarangKirim.Columns(5).Width = 60 ' QTY
 
-            '885
-
-            'INSERT INTO `dbatm`.`suratjalan_detail` (`nosurat`, `kode`, `kode_lokasi`, `nama_barang`, `qty`, `no_order`)
 
             DGBarangKirim.Columns(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
             DGBarangKirim.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
             DGBarangKirim.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
-            'DGBarangKirim.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-
-            'DGBarangKirim.GridColor = Color.White
-            'DGBarangKirim.DefaultCellStyle.ForeColor = Color.MediumPurple
-            'DGBarangKirim.AlternatingRowsDefaultCellStyle.BackColor = Color.DarkBlue
-            'DGBarangKirim.RowHeadersDefaultCellStyle.BackColor = Color.Black
-
             DGBarangKirim.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
             Proses.CloseConn()
         Else
@@ -247,8 +236,6 @@ Public Class FrmUtamaATM
         cmbPerusahaan.Text = "Silahkan Pilih Tujuan Pengiriman"
         cmbPerusahaan.Enabled = False
         Call Bulan_Romawi()
-        'Call Data_Barang_Dintara()
-        'DataOrder()
     End Sub
 
 
@@ -258,15 +245,6 @@ Public Class FrmUtamaATM
         btnBatal.Enabled = False
         btnSimpan.Enabled = False
         Call Pengguna()
-
-        'Data_Pelanggan()
-        'No_Surat_Otomatis()
-        'cmbPerushaan.Text = ""
-        ''DataOrder()
-        'Data_Barang()
-        'Data_Barang_Dintara()
-        'Data_Perusahaan()
-        'cmbPerushaan.Focus()
     End Sub
 
     Sub Pengguna()
