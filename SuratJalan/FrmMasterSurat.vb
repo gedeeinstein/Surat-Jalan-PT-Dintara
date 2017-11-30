@@ -24,7 +24,7 @@ Public Class FrmMasterSurat
                 Case "Riwayat Surat Jalan ATM"
                     If str_status > 0 Then
                         Proses.OpenConn()
-                        SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATTN.', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan_atm"
+                        SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATTN.', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan_atm ORDER BY no_order DESC"
                         'SQL = "SELECT nama_perusahaan AS 'PERUSAHAAN', att AS 'ATTN.', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan_atm"
                         mysurat = Proses.ExecuteQuery(SQL)
                         'mydata = mycommand.ExecuteReader
@@ -49,7 +49,7 @@ Public Class FrmMasterSurat
                 Case "Riwayat Surat Jalan DIN"
                     If str_status > 0 Then
                         Proses.OpenConn()
-                        SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATTN.', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan"
+                        SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATTN.', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan ORDER BY no_order DESC"
                         'SQL = "SELECT nama_perusahaan AS 'PERUSAHAAN', att AS 'ATTN.', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan"
                         mysurat = Proses.ExecuteQuery(SQL)
                         'mydata = mycommand.ExecuteReader
@@ -90,7 +90,7 @@ Public Class FrmMasterSurat
                     If str_status > 0 Then
                         Proses.OpenConn()
                         ' SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATT', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan"
-                        SQL = "SELECT nosurat AS 'NO SURAT', kode AS 'KODE BARANG', kode_lokasi AS 'KODE AREA', nama_barang AS 'NAMA BARANG', qty AS 'QTY', no_order AS 'NO ORDER', merk AS 'MERK' FROM suratjalan_detail_atm where no_order = '" & txtNoOrder.Text & "' AND nosurat = '" & txtNoSurat.Text & "'"
+                        SQL = "SELECT nosurat AS 'NO SURAT', kode AS 'KODE BARANG', kode_lokasi AS 'KODE AREA', nama_barang AS 'NAMA BARANG', qty AS 'QTY', no_order AS 'NO ORDER', merk AS 'MERK' FROM suratjalan_detail_atm where no_order = '" & txtNoOrder.Text & "' AND nosurat = '" & txtNoSurat.Text & "' ORDER BY no_order DESC"
                         mysurat = Proses.ExecuteQuery(SQL)
 
                         Me.DGDetailsMasterSurat.DataSource = mysurat
@@ -153,7 +153,7 @@ Public Class FrmMasterSurat
                     If str_status > 0 Then
                         Proses.OpenConn()
                         'SQL = "SELECT kode AS 'KODE BARANG', kode_lokasi AS 'KODE AREA', nama_barang AS 'NAMA BARANG', qty AS 'QTY', no_order AS 'NO ORDER', merk AS 'MERK' FROM suratjalan_detail where no_order = '" & txtNoOrder.Text & "' AND nosurat = '" & txtNoSurat.Text & "'"
-                        SQL = "SELECT nosurat AS 'NO SURAT', kode AS 'KODE BARANG', kode_lokasi AS 'KODE AREA', nama_barang AS 'NAMA BARANG', qty AS 'QTY', no_order AS 'NO ORDER', merk AS 'MERK' FROM suratjalan_detail where no_order = '" & txtNoOrder.Text & "' AND nosurat = '" & txtNoSurat.Text & "'"
+                        SQL = "SELECT nosurat AS 'NO SURAT', kode AS 'KODE BARANG', kode_lokasi AS 'KODE AREA', nama_barang AS 'NAMA BARANG', qty AS 'QTY', no_order AS 'NO ORDER', merk AS 'MERK' FROM suratjalan_detail where no_order = '" & txtNoOrder.Text & "' AND nosurat = '" & txtNoSurat.Text & "' ORDER BY no_order DESC"
                         mysurat = Proses.ExecuteQuery(SQL)
 
                         Me.DGDetailsMasterSurat.DataSource = mysurat
@@ -248,7 +248,7 @@ Public Class FrmMasterSurat
                     If str_status > 0 Then
                         Proses.OpenConn()
                         If rb_no_order.Checked = True Then
-                            SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATT', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan_atm where no_order LIKE '%" & txtCari.Text & "%' "
+                            SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATT', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan_atm where no_order LIKE '%" & txtCari.Text & "%' ORDER BY no_order DESC"
                             'SQL = "SELECT nama_perusahaan AS 'PERUSAHAAN', att AS 'ATT', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan_atm where no_order LIKE '%" & txtCari.Text & "%' "
                             mysurat = Proses.ExecuteQuery(SQL)
 
@@ -256,7 +256,7 @@ Public Class FrmMasterSurat
                             txtCari.Focus()
 
                         ElseIf rb_nama_perusahaan.Checked = True Then
-                            SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATT', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan_atm where nama_perusahaan LIKE '%" & txtCari.Text & "%' "
+                            SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATT', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan_atm where nama_perusahaan LIKE '%" & txtCari.Text & "%' ORDER BY no_order DESC"
                             'SQL = "SELECT nama_perusahaan AS 'PERUSAHAAN', att AS 'ATT', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan_atm where nama_perusahaan LIKE '%" & txtCari.Text & "%' "
                             mysurat = Proses.ExecuteQuery(SQL)
 

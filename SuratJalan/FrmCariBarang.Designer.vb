@@ -145,8 +145,8 @@ Partial Class FrmCariBarang
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.ForeColor = System.Drawing.Color.Cyan
-        Me.Label4.Location = New System.Drawing.Point(360, 536)
+        Me.Label4.ForeColor = System.Drawing.Color.Blue
+        Me.Label4.Location = New System.Drawing.Point(444, 536)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(23, 13)
         Me.Label4.TabIndex = 21
@@ -158,9 +158,10 @@ Partial Class FrmCariBarang
         Me.Label5.ForeColor = System.Drawing.Color.Cyan
         Me.Label5.Location = New System.Drawing.Point(220, 536)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(117, 13)
+        Me.Label5.Size = New System.Drawing.Size(217, 13)
         Me.Label5.TabIndex = 20
-        Me.Label5.Text = "Jumlah Barang Terkirim"
+        Me.Label5.Text = "Jumlah Barang Yang Akan / Telah  Terkirim "
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'DGBarangTerkirim
         '

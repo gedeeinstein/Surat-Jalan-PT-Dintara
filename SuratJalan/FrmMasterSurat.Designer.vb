@@ -262,7 +262,7 @@ Partial Class FrmMasterSurat
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(142, 23)
         Me.Label1.TabIndex = 37
-        Me.Label1.Text = "Surat Jalan"
+        Me.Label1.Text = "History Surat Jalan"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label2
