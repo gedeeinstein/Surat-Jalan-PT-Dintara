@@ -146,6 +146,12 @@
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="RptNoAll_DIN.vb">
+      <DependentUpon>RptNoAll_DIN.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="DataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -282,6 +288,10 @@
     <EmbeddedResource Include="ATM.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ATM.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptNoAll_DIN.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptNoAll_DIN.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMasterSurat.resx">
       <DependentUpon>FrmMasterSurat.vb</DependentUpon>
