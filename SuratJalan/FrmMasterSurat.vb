@@ -24,7 +24,9 @@ Public Class FrmMasterSurat
                 Case "Riwayat Surat Jalan ATM"
                     If str_status > 0 Then
                         Proses.OpenConn()
+                        'SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATTN.', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan_atm ORDER BY no_order DESC"
                         SQL = "SELECT nosurat AS 'NO SURAT', nama_perusahaan AS 'PERUSAHAAN', att AS 'ATTN.', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan_atm ORDER BY no_order DESC"
+
                         'SQL = "SELECT nama_perusahaan AS 'PERUSAHAAN', att AS 'ATTN.', tanggal AS 'TANGGAL', no_order AS 'NO ORDER', USER AS 'DIBUAT OLEH' FROM suratjalan_atm"
                         mysurat = Proses.ExecuteQuery(SQL)
                         'mydata = mycommand.ExecuteReader
@@ -328,7 +330,32 @@ Public Class FrmMasterSurat
 
 
     Sub Print_By_No_Order()
-        
+        Try
+
+            Dim print = MsgBox("Print Surat Jalan Berdasarkan No Order / No. Penawaran ?")
+            Select Case Me.Text
+
+                Case "Riwayat Surat Jalan ATM"
+                    If print = vbOK Then
+                        FrmReportAll_ATM.Text = "Cetak Riwayat Surat Jalan ATM"
+                        FrmReportAll_ATM.ShowDialog()
+                        MySqlConnection.ClearAllPools()
+                    Else
+
+                    End If
+
+                Case "Riwayat Surat Jalan DIN"
+                    If print = vbOK Then
+                        FrmReportAll_ATM.Text = "Cetak Riwayat Surat Jalan DIN"
+                        FrmReportAll_ATM.ShowDialog()
+                        MySqlConnection.ClearAllPools()
+                    Else
+
+                    End If
+            End Select
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
 

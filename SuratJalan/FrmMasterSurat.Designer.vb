@@ -306,6 +306,7 @@ Partial Class FrmMasterSurat
         '
         Me.txtNoOrder.Location = New System.Drawing.Point(231, 390)
         Me.txtNoOrder.Name = "txtNoOrder"
+        Me.txtNoOrder.ReadOnly = True
         Me.txtNoOrder.Size = New System.Drawing.Size(188, 20)
         Me.txtNoOrder.TabIndex = 41
         '
@@ -313,6 +314,7 @@ Partial Class FrmMasterSurat
         '
         Me.txtNoSurat.Location = New System.Drawing.Point(425, 389)
         Me.txtNoSurat.Name = "txtNoSurat"
+        Me.txtNoSurat.ReadOnly = True
         Me.txtNoSurat.Size = New System.Drawing.Size(188, 20)
         Me.txtNoSurat.TabIndex = 42
         '
