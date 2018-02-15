@@ -149,8 +149,8 @@
     <Compile Include="RptNoAll_ATM.vb">
       <DependentUpon>RptNoAll_ATM.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="RptNoAll_DIN.vb">
       <DependentUpon>RptNoAll_DIN.rpt</DependentUpon>
