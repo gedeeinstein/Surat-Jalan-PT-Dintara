@@ -276,8 +276,6 @@ Public Class FrmCariBarang
         End Select
     End Sub
 
-    
-
 
     Private Sub DGBarang_DoubleClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DGBarang.DoubleClick
 

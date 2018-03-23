@@ -215,10 +215,6 @@ Public Class FrmMasterSurat
         End Try
     End Sub
 
-
-
-
-
     Private Sub btnClose_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClose.Click
         If MsgBox("Apakah anda yakin mau keluar dari form master surat ", vbYesNo, "Konfirmasi") = vbYes Then
             Me.Close()
