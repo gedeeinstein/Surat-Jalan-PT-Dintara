@@ -1124,4 +1124,21 @@ Public Class FrmUtama
         End If
     End Sub
 
+    Private Sub btnStok_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStok.Click
+        Try
+            If str_status > 0 Then
+                FrmMasterSurat.Text = "STOK BARANG"
+                FrmMasterSurat.ShowDialog()
+
+                MySqlConnection.ClearAllPools()
+            Else
+                MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
+                str_status = 0
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message + vbCr + "Ada kesalahan, harap ulangi proses atau restart aplikasi", "Gagak membuka form pencarian perusahaan", MessageBoxButtons.OK)
+            FrmLogin.Connect()
+        End Try
+    End Sub
 End Class

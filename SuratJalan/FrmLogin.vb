@@ -86,15 +86,6 @@ Public Class FrmLogin
                         : Exit Sub
                     Else
                         mydata.Read()
-                        'kry_id = mydata("KARYAWANID")
-                        'kry_lvl = mydata("LEVELID")
-                        'kry_name = mydata("KARYAWANNAME")
-                        'kry_username = mydata("KARYAWANUSERNAME")
-                        'kry_password = mydata("KARYAWANPASSWORD")
-                        'kry_alamat = mydata("KARYAWANALAMAT")
-                        'kry_telp = mydata("KARYAWANTELP")
-                        'MsgBox("Login Berhasil", MsgBoxStyle.Information, "Info")
-
                         userlogin = txtNama.Text
                         If rbATM.Checked = True Then
                             MsgBox("Selamat Datang " + userlogin, MsgBoxStyle.Information, "Login Berhasil")
@@ -264,6 +255,7 @@ Public Class FrmLogin
         mycommand.Connection = proses.Cn
         mycommand.CommandText = sqlquery
         myadapter.SelectCommand = mycommand
+
         Dim mydata As MySqlDataReader
         mydata = mycommand.ExecuteReader()
 
