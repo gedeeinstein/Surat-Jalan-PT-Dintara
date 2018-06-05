@@ -22,7 +22,6 @@ Public Class FrmCariPerusahaan
         FrmUtama.txtKodeBarang.Text = Nothing
         FrmUtama.txtBarang.Text = Nothing
         FrmUtama.txtAlamat.Text = Nothing
-
     End Sub
 
 
@@ -50,7 +49,6 @@ Public Class FrmCariPerusahaan
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             Finally
-
                 MySqlConnection.ClearAllPools()
             End Try
 
@@ -99,9 +97,7 @@ Public Class FrmCariPerusahaan
     End Sub
 
     Private Sub DGPerusahaan_DoubleClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DGPerusahaan.DoubleClick
-
         PilihPerusahaan()
-
     End Sub
 
 
@@ -209,4 +205,5 @@ Public Class FrmCariPerusahaan
     Private Sub DGPerusahaan_CellDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGPerusahaan.CellDoubleClick
         PilihPerusahaan()
     End Sub
+
 End Class

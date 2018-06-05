@@ -95,42 +95,6 @@ Module Globals
     End Sub
 
     Public Sub Koneksi_Error()
-
         MessageBox.Show("Ada kesalahan koneksi", "Hubungi IT", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
     End Sub
-
-
-
 End Module
-
-
-
-
-'Public Module Functions
-'    Public Sub singleqoute()
-'        Dim ctrl As Control
-'        Dim txt As TextBox
-
-'        For Each txt In FrmLogin.Controls()
-'            If TypeOf txt Is TextBox Then
-'                txt = CType(txt, TextBox)
-'                txt.Text = txt.Text.Replace("'", "''")
-'            End If
-'        Next
-'        For Each txt In FrmUtama.Controls
-'            If TypeOf txt Is TextBox Then
-'                txt = CType(txt, TextBox)
-'                txt.Text = Replace(txt.Text, "'", "''")
-'            End If
-'        Next
-'        For Each txt In FrmConfig.Controls
-'            If TypeOf txt Is TextBox Then
-'                txt = CType(txt, TextBox)
-'                txt.Text = Replace(txt.Text, "'", "''")
-'            End If
-'        Next
-
-'    End Sub
-
-'End Module

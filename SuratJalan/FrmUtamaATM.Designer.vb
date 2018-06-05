@@ -22,7 +22,7 @@ Partial Class FrmUtamaATM
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmUtamaATM))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -84,6 +84,7 @@ Partial Class FrmUtamaATM
         Me.linkedin = New System.Windows.Forms.PictureBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.btn_delete = New System.Windows.Forms.Button()
+        Me.btnStok = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGBarangKirim, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -303,14 +304,14 @@ Partial Class FrmUtamaATM
         Me.DGBarangKirim.Location = New System.Drawing.Point(8, 387)
         Me.DGBarangKirim.Name = "DGBarangKirim"
         Me.DGBarangKirim.ReadOnly = True
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGBarangKirim.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGBarangKirim.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DGBarangKirim.RowHeadersWidth = 5
         Me.DGBarangKirim.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DGBarangKirim.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -838,6 +839,23 @@ Partial Class FrmUtamaATM
         Me.btn_delete.TabIndex = 53
         Me.btn_delete.UseVisualStyleBackColor = False
         '
+        'btnStok
+        '
+        Me.btnStok.BackColor = System.Drawing.Color.DarkOrange
+        Me.btnStok.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnStok.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnStok.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnStok.Image = Global.SuratJalan.My.Resources.Resources.database
+        Me.btnStok.Location = New System.Drawing.Point(1030, 438)
+        Me.btnStok.Name = "btnStok"
+        Me.btnStok.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.btnStok.Size = New System.Drawing.Size(224, 97)
+        Me.btnStok.TabIndex = 56
+        Me.btnStok.Text = "MASTER BARANG"
+        Me.btnStok.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnStok.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnStok.UseVisualStyleBackColor = False
+        '
         'FrmUtamaATM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -845,6 +863,7 @@ Partial Class FrmUtamaATM
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(1366, 768)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btnStok)
         Me.Controls.Add(Me.btn_delete)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Label11)
@@ -961,4 +980,5 @@ Partial Class FrmUtamaATM
     Public WithEvents txtQtyBeliCust As System.Windows.Forms.TextBox
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents btn_delete As System.Windows.Forms.Button
+    Friend WithEvents btnStok As System.Windows.Forms.Button
 End Class

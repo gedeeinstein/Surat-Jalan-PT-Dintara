@@ -1035,7 +1035,6 @@ Public Class FrmUtamaATM
 
     Private Sub btn_delete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_delete.Click
         Kurangi_Details()
-
     End Sub
 
     Public Sub Kurangi_Details()
@@ -1049,7 +1048,7 @@ Public Class FrmUtamaATM
 
                     SQL = "DELETE FROM suratjalan_detail_atm WHERE nosurat = '" & DGBarangKirim.Item(0, i).Value & "' AND kode = '" & DGBarangKirim.Item(1, i).Value & "' and kode_lokasi = '" & DGBarangKirim.Item(2, i).Value & "' "
                     Proses.ExecuteNonQuery(SQL)
-                    MessageBox.Show("Barang Sudah dihapus dari detail pengiriman", "Sukses dihapus", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show("Barang Sudah dihapus dari detail pengiriman", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Call Data_Record_Pengiriman()
                     Call Data_Awal()
                     Jumlah_QTY()
@@ -1071,6 +1070,22 @@ Public Class FrmUtamaATM
         End If
     End Sub
 
+    Private Sub btnStok_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStok.Click
+        Try
+            If str_status > 0 Then
+                FrmMasterBarang.Text = "MASTER DATA BARANG"
+                FrmMasterBarang.ShowDialog()
 
+                MySqlConnection.ClearAllPools()
+            Else
+                str_status = 0
+                MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message + vbCr + "Error", "Kesalahan Membuka Data Master Barang", MessageBoxButtons.OK)
+            FrmLogin.Connect()
+        End Try
+    End Sub
 
 End Class

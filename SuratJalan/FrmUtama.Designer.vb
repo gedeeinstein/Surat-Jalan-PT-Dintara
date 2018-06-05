@@ -852,7 +852,7 @@ Partial Class FrmUtama
         Me.btnStok.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.btnStok.Size = New System.Drawing.Size(224, 97)
         Me.btnStok.TabIndex = 55
-        Me.btnStok.Text = "STOK BARANG"
+        Me.btnStok.Text = "MASTER BARANG"
         Me.btnStok.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnStok.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnStok.UseVisualStyleBackColor = False

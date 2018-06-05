@@ -277,16 +277,28 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Settings.vb" />
-    <Compile Include="SplashScreen1.Designer.vb">
-      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    <Compile Include="SplashScreen12.Designer.vb">
+      <DependentUpon>FrmLoading.vb</DependentUpon>
     </Compile>
-    <Compile Include="SplashScreen1.vb">
+    <Compile Include="FrmLoading.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stok\FrmMasterBarang.Designer.vb">
+      <DependentUpon>FrmMasterBarang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stok\FrmMasterBarang.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Stok\FrmStok.Designer.vb">
       <DependentUpon>FrmStok.vb</DependentUpon>
     </Compile>
     <Compile Include="Stok\FrmStok.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stok\SplashScreen1.Designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stok\SplashScreen1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="v2.1\FrmBarang.Designer.vb">
@@ -368,11 +380,17 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptSuratJalanNew.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplashScreen1.resx">
-      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    <EmbeddedResource Include="SplashScreen12.resx">
+      <DependentUpon>FrmLoading.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stok\FrmMasterBarang.resx">
+      <DependentUpon>FrmMasterBarang.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stok\FrmStok.resx">
       <DependentUpon>FrmStok.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stok\SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="v2.1\FrmBarang.resx">
       <DependentUpon>FrmBarang.vb</DependentUpon>

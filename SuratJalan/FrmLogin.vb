@@ -142,8 +142,8 @@ Public Class FrmLogin
 
     Private Sub Login_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Connect()
-        rbATM.Checked = True
-        rbDIN.Checked = False
+        rbATM.Checked = False
+        rbDIN.Checked = True
     End Sub
 
     Private Sub BtnReset_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnReset.Click
