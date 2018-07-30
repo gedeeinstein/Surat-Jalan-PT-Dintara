@@ -401,9 +401,6 @@ Public Class FrmUtama
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-
-        
-
     End Sub
 
 
@@ -746,11 +743,10 @@ Public Class FrmUtama
 
     Private Sub btnLogOut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLogOut.Click
 
-
         If txtNoOrder.TextLength = 0 Then
             If MsgBox("Apakah yakin akan Log Off / Log Out ?", vbYesNo, "Konfirmasi") = vbYes Then
                 Me.Close()
-                FrmLogin.txtNama.Text = ""
+                'FrmLogin.txtNama.Text = ""
                 FrmLogin.Show()
             End If
         Else

@@ -90,13 +90,13 @@ Partial Class FrmMasterBarang
         'BarangMasukToolStripMenuItem
         '
         Me.BarangMasukToolStripMenuItem.Name = "BarangMasukToolStripMenuItem"
-        Me.BarangMasukToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BarangMasukToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
         Me.BarangMasukToolStripMenuItem.Text = "Barang &Masuk"
         '
         'BarangKeluarToolStripMenuItem
         '
         Me.BarangKeluarToolStripMenuItem.Name = "BarangKeluarToolStripMenuItem"
-        Me.BarangKeluarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BarangKeluarToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
         Me.BarangKeluarToolStripMenuItem.Text = "Barang &Keluar"
         '
         'FrmMasterBarang

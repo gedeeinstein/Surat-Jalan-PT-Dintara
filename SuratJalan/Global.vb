@@ -1,7 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
 
-
-
 Module Globals
 
     Public userlogin As String
@@ -79,7 +77,6 @@ Module Globals
         System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
     End Sub
     Public Sub WhatsappSend()
-
         System.Diagnostics.Process.Start("https://goo.gl/p4STJm")
     End Sub
 

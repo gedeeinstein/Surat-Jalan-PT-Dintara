@@ -283,10 +283,22 @@
     <Compile Include="FrmLoading.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Stok\FrmKategori.Designer.vb">
+      <DependentUpon>FrmKategori.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stok\FrmKategori.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Stok\FrmMasterBarang.Designer.vb">
       <DependentUpon>FrmMasterBarang.vb</DependentUpon>
     </Compile>
     <Compile Include="Stok\FrmMasterBarang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stok\FrmMerk.Designer.vb">
+      <DependentUpon>FrmMerk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stok\FrmMerk.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Stok\FrmStok.Designer.vb">
@@ -383,8 +395,14 @@
     <EmbeddedResource Include="SplashScreen12.resx">
       <DependentUpon>FrmLoading.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Stok\FrmKategori.resx">
+      <DependentUpon>FrmKategori.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Stok\FrmMasterBarang.resx">
       <DependentUpon>FrmMasterBarang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stok\FrmMerk.resx">
+      <DependentUpon>FrmMerk.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stok\FrmStok.resx">
       <DependentUpon>FrmStok.vb</DependentUpon>

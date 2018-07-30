@@ -196,7 +196,7 @@ Public Class FrmCariBarang
     End Sub
 
 
-    
+
 
 
     Private Sub FrmCariBarang_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -263,7 +263,7 @@ Public Class FrmCariBarang
 
                 Trim(FrmUtamaATM.txtStokGudang.Text)
                 Trim(FrmUtamaATM.txtQtyBeliCust.Text)
-               
+
 
 
             Case "Pilih Barang"
@@ -271,7 +271,7 @@ Public Class FrmCariBarang
                 FrmUtama.txtStokGudang.Text = Stok
                 Trim(FrmUtama.txtStokGudang.Text)
                 Trim(FrmUtama.txtQtyBeliCust.Text)
-                
+
 
         End Select
     End Sub
@@ -288,7 +288,7 @@ Public Class FrmCariBarang
 
 
                     Case "Cari Barang"
-                        
+
                         Jumlah = InputBox("Masukan Jumlah / Qty Barang yang akan dikirimkan", "Input QTY", , , )
                         If Jumlah.Length > 0 Then
                             FrmUtamaATM.txtQty.Text = Val(Jumlah)
@@ -316,7 +316,7 @@ Public Class FrmCariBarang
                             MessageBox.Show("Inputan Salah")
                         End If
 
-                        
+
 
                     Case "Pilih Barang"
 
@@ -348,7 +348,7 @@ Public Class FrmCariBarang
                         Else
                             MessageBox.Show("Inputan Salah")
                         End If
-                        
+
 
                 End Select
                 MySqlConnection.ClearAllPools()
@@ -405,5 +405,4 @@ Public Class FrmCariBarang
     Private Sub btnBatal_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBatal.Click
         Me.Close()
     End Sub
-
 End Class

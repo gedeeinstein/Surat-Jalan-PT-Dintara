@@ -20,13 +20,12 @@ Public Class FrmMasterBarang
                 'FrmLoading.Text = "Load Data Barang"
                 'FrmLoading.ShowDialog()
                 'Panggil Form Data Barang
-                FrmStok.Text = "MASTER DATA BARANG"
+                FrmStok.Text = "DATA BARANG MASUK"
                 FrmStok.MdiParent = Me
                 FrmStok.WindowState = FormWindowState.Maximized
                 FrmStok.Dock = DockStyle.Fill
                 FrmStok.Show()
                 'ToolStripMenuItem1.Enabled = False
-
                 MySqlConnection.ClearAllPools()
             Else
                 MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
@@ -70,5 +69,25 @@ Public Class FrmMasterBarang
 
     Private Sub FrmMasterBarang_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
+    End Sub
+
+    Public Sub KategoriToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles KategoriToolStripMenuItem.Click
+
+        Try
+            If str_status > 0 Then
+                Proses.OpenConn()
+                FrmKategori.Text = "Pilih Perusahaan PT"
+                FrmKategori.ShowDialog()
+                Proses.CloseConn()
+            Else
+                Koneksi_Error()
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message + vbCr + "Ada kesalahan, harap ulangi proses atau restart aplikasi", "Gagak membuka form pencarian perusahaan", MessageBoxButtons.OK)
+            FrmLogin.Connect()
+        End Try
+
+
     End Sub
 End Class

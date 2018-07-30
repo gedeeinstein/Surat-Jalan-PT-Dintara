@@ -171,22 +171,22 @@ Partial Class FrmLogin
         'rbATM
         '
         Me.rbATM.AutoSize = True
-        Me.rbATM.Checked = True
         Me.rbATM.Location = New System.Drawing.Point(126, 162)
         Me.rbATM.Name = "rbATM"
         Me.rbATM.Size = New System.Drawing.Size(48, 17)
         Me.rbATM.TabIndex = 16
-        Me.rbATM.TabStop = True
         Me.rbATM.Text = "ATM"
         Me.rbATM.UseVisualStyleBackColor = True
         '
         'rbDIN
         '
         Me.rbDIN.AutoSize = True
+        Me.rbDIN.Checked = True
         Me.rbDIN.Location = New System.Drawing.Point(207, 162)
         Me.rbDIN.Name = "rbDIN"
         Me.rbDIN.Size = New System.Drawing.Size(44, 17)
         Me.rbDIN.TabIndex = 17
+        Me.rbDIN.TabStop = True
         Me.rbDIN.Text = "DIN"
         Me.rbDIN.UseVisualStyleBackColor = True
         '
