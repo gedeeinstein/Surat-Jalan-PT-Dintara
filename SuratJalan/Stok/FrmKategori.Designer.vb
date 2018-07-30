@@ -24,9 +24,10 @@ Partial Class FrmKategori
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmKategori))
         Me.DGKategori = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnTambah = New System.Windows.Forms.Button()
+        Me.btnEdit = New System.Windows.Forms.Button()
         CType(Me.DGKategori, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -58,35 +59,36 @@ Partial Class FrmKategori
         Me.DGKategori.Name = "DGKategori"
         Me.DGKategori.RowHeadersWidth = 5
         Me.DGKategori.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGKategori.Size = New System.Drawing.Size(354, 350)
+        Me.DGKategori.Size = New System.Drawing.Size(317, 350)
         Me.DGKategori.TabIndex = 0
         '
-        'Button1
+        'btnTambah
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 386)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnTambah.Location = New System.Drawing.Point(12, 368)
+        Me.btnTambah.Name = "btnTambah"
+        Me.btnTambah.Size = New System.Drawing.Size(75, 23)
+        Me.btnTambah.TabIndex = 1
+        Me.btnTambah.Text = "Tambah"
+        Me.btnTambah.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnEdit
         '
-        Me.Button2.Location = New System.Drawing.Point(93, 386)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnEdit.Location = New System.Drawing.Point(93, 368)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(75, 23)
+        Me.btnEdit.TabIndex = 2
+        Me.btnEdit.Text = "Edit"
+        Me.btnEdit.UseVisualStyleBackColor = True
         '
         'FrmKategori
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(378, 421)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(341, 401)
+        Me.Controls.Add(Me.btnEdit)
+        Me.Controls.Add(Me.btnTambah)
         Me.Controls.Add(Me.DGKategori)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmKategori"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Kategori Barang"
@@ -94,7 +96,7 @@ Partial Class FrmKategori
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents btnTambah As System.Windows.Forms.Button
+    Friend WithEvents btnEdit As System.Windows.Forms.Button
     Public WithEvents DGKategori As System.Windows.Forms.DataGridView
 End Class

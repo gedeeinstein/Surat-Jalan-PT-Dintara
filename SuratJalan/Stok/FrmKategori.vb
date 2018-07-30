@@ -11,11 +11,14 @@ Public Class FrmKategori
 
     Private Sub FrmKategori_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Data_Kategori()
+        Edit()
 
     End Sub
 
 
+    Sub Edit()
 
+    End Sub
 
 
     Public Sub Data_Kategori()
@@ -32,14 +35,14 @@ Public Class FrmKategori
         Me.DGKategori.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
         Me.DGKategori.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-        Me.DGKategori.Columns(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+        'Me.DGKategori.Columns(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
         Me.DGKategori.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
         'Me.DGKategori.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
         'Me.DGKategori.Columns(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
         DGKategori.GridColor = Color.White
         DGKategori.DefaultCellStyle.ForeColor = Color.White
-        DGKategori.AlternatingRowsDefaultCellStyle.BackColor = Color.DarkBlue
+        DGKategori.AlternatingRowsDefaultCellStyle.BackColor = Color.Gray
         DGKategori.RowsDefaultCellStyle.BackColor = Color.Black
         'total_item()
     End Sub
