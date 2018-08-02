@@ -15,6 +15,10 @@ SuratJalan
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:SuratJalan.My.Resources.Resources._90_20">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:SuratJalan.My.Resources.Resources._exit">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -24,6 +28,10 @@ SuratJalan
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member><member name="P:SuratJalan.My.Resources.Resources.close_20">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:SuratJalan.My.Resources.Resources.close_24">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -51,6 +59,10 @@ SuratJalan
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:SuratJalan.My.Resources.Resources.edit_button_201">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:SuratJalan.My.Resources.Resources.emergency_exit">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -62,6 +74,14 @@ SuratJalan
 </member><member name="P:SuratJalan.My.Resources.Resources.favicon">
 	<summary>
   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member><member name="P:SuratJalan.My.Resources.Resources.floppy_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:SuratJalan.My.Resources.Resources.floppy_20">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member><member name="P:SuratJalan.My.Resources.Resources.folder">
 	<summary>
@@ -84,6 +104,22 @@ SuratJalan
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member><member name="P:SuratJalan.My.Resources.Resources.google_plus">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:SuratJalan.My.Resources.Resources.icons8_add_24">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:SuratJalan.My.Resources.Resources.icons8_Close_Window_24">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:SuratJalan.My.Resources.Resources.icons8_Maximize_Window_24">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:SuratJalan.My.Resources.Resources.icons8_Unavailable_Filled">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -124,6 +160,10 @@ SuratJalan
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member><member name="P:SuratJalan.My.Resources.Resources.remove_button_20">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:SuratJalan.My.Resources.Resources.remove_button_201">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

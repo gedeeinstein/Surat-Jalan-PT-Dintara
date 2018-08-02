@@ -90,4 +90,21 @@ Public Class FrmMasterBarang
 
 
     End Sub
+
+    Private Sub MerkToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MerkToolStripMenuItem.Click
+        Try
+            If str_status > 0 Then
+                Proses.OpenConn()
+                'FrmMerk.Text = ""
+                FrmMerk.ShowDialog()
+                Proses.CloseConn()
+            Else
+                Koneksi_Error()
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message + vbCr + "Ada kesalahan, harap ulangi proses atau restart aplikasi", "Gagak membuka form pencarian perusahaan", MessageBoxButtons.OK)
+            FrmLogin.Connect()
+        End Try
+    End Sub
 End Class

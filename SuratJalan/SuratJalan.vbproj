@@ -289,6 +289,12 @@
     <Compile Include="Stok\FrmKategori.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Stok\FrmKategoriEdit.Designer.vb">
+      <DependentUpon>FrmKategoriEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stok\FrmKategoriEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Stok\FrmMasterBarang.Designer.vb">
       <DependentUpon>FrmMasterBarang.vb</DependentUpon>
     </Compile>
@@ -398,6 +404,9 @@
     <EmbeddedResource Include="Stok\FrmKategori.resx">
       <DependentUpon>FrmKategori.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Stok\FrmKategoriEdit.resx">
+      <DependentUpon>FrmKategoriEdit.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Stok\FrmMasterBarang.resx">
       <DependentUpon>FrmMasterBarang.vb</DependentUpon>
     </EmbeddedResource>
@@ -487,6 +496,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\icons8-add-24.png" />
+    <None Include="Resources\remove-button-201.png" />
+    <None Include="Resources\icons8-Unavailable Filled.png" />
+    <None Include="Resources\icons8-Maximize Window-24.png" />
+    <None Include="Resources\icons8-Close Window-24.png" />
+    <None Include="Resources\floppy-20.png" />
+    <None Include="Resources\floppy-16.png" />
+    <None Include="Resources\edit-button-201.png" />
+    <None Include="Resources\close-24.png" />
+    <None Include="Resources\90-20.png" />
     <None Include="Resources\Print_font_awesome.svg.png" />
     <None Include="Resources\save, save as icon icon %282%29.png" />
     <None Include="Resources\edit-button-20.png" />

@@ -124,7 +124,6 @@ Public Class FrmCariPerusahaan
                     FrmUtama.txtBarang.Focus()
                     MySqlConnection.ClearAllPools()
 
-
                 Case "Pilih Perusahaan CV"
                     'FrmUtamaATM.txtKodePerusahaan.Text = DGPerusahaan.SelectedCells(0).Value
                     'FrmUtamaATM.txtPerusahaan.Text = DGPerusahaan.SelectedCells(1).Value
