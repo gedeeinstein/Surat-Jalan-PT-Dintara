@@ -39,8 +39,32 @@ Public Class FrmKategori
     End Sub
 
 
-    Public Sub EditKategori()
-       
+    Public Sub PilihKategori()
+        Dim i = DGKategori.CurrentRow.Index
+        Dim row As DataGridViewRow = DGKategori.CurrentRow
+
+        Try
+            Select Case Me.Text
+
+                Case "Pilih Kategori"
+                    FrmBarangUpdate.txtKodeGol.Text = row.Cells(0).Value
+                    FrmBarangUpdate.txtKategori.Text = row.Cells(1).Value
+                    Me.Close()
+                    Trim(FrmBarangUpdate.txtKodeGol.Text)
+                    Trim(FrmBarangUpdate.txtKategori.Text)
+                    'Trim(FrmUtama.txtPelanggan.Text)
+                    'Trim(FrmUtama.txtNoOrder.Text)
+                    'Trim(FrmUtama.txtAlamat.Text)
+                    FrmBarangUpdate.txtKategori.Enabled = False
+                    FrmBarangUpdate.txtMerk.Focus()
+                    MySqlConnection.ClearAllPools()
+
+            End Select
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Maaf terjadi kesalahan pemrosesan data, harap ulangi lagi prosesnya. Jika hal yang sama masih terjadi catat kode error dibawah ini" + vbNewLine + ex.Message, "Hubungi IT", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
+        End Try
+
     End Sub
 
     Private Sub btnEdit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEdit.Click
@@ -62,11 +86,11 @@ Public Class FrmKategori
 
 
     Private Sub DGPerusahaan_CellDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGKategori.CellDoubleClick
-        EditKategori()
+        'EditKategori()
     End Sub
 
     Private Sub DGPerusahaan_DoubleClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DGKategori.DoubleClick
-        EditKategori()
+        'EditKategori()
     End Sub
 
     Private Sub DGKategori_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGKategori.CellContentClick
@@ -160,7 +184,19 @@ Public Class FrmKategori
         btnHapus.Enabled = False
         btnEdit.Enabled = True
 
-        BtnTambah.Enabled = False
+        btnTambah.Enabled = False
+
+
+        Try
+            Select Case Me.Text
+
+                Case "Pilih Kategori"
+                    PilihKategori()
+
+            End Select
+        Catch ex As Exception
+            MessageBox.Show("Maaf terjadi kesalahan pemrosesan data, harap ulangi lagi prosesnya. Jika hal yang sama masih terjadi catat kode error dibawah ini" + vbNewLine + ex.Message, "Hubungi IT", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
+        End Try
 
         '    Case "Data Warna Sepatu"
         ''FormMasterBarang.CmbWarna.Text = "" & DGMerk.SelectedCells(0).Value & "/" & DGMerk.SelectedCells(1).Value & ""

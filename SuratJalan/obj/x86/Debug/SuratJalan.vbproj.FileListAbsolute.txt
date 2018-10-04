@@ -34,4 +34,4 @@ D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Deb
 D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Debug\SuratJalan.FrmLoading.resources
 D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Debug\SuratJalan.FrmKategori.resources
 D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Debug\SuratJalan.FrmMerk.resources
-D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Debug\SuratJalan.FrmKategoriEdit.resources
+D:\WORKS\PROGRAM\VS2010\SPKDintara\Surat-Jalan-PT-Dintara\SuratJalan\obj\x86\Debug\SuratJalan.FrmBarangUpdate.resources

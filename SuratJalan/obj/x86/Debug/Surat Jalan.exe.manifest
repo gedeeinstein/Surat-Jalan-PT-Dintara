@@ -139,7 +139,7 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="MySql.Data" version="6.8.8.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="MySql.Data" version="6.1.3.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
     </dependentAssembly>
   </dependency>
   <dependency>
@@ -153,14 +153,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Surat Jalan.exe" size="24913920">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Surat Jalan.exe" size="25815552">
       <assemblyIdentity name="Surat Jalan" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>MaN9SfbGNbAgfnzFbpayoEbrBSc=</dsig:DigestValue>
+        <dsig:DigestValue>DTft/y9Qtm4EdeK0ABYyCin4igo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

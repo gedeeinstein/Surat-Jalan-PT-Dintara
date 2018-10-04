@@ -146,6 +146,11 @@
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="mBarang.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mBarang.xsd</DependentUpon>
+    </Compile>
     <Compile Include="RptNoAll_ATM.vb">
       <DependentUpon>RptNoAll_ATM.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -289,10 +294,10 @@
     <Compile Include="Stok\FrmKategori.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Stok\FrmKategoriEdit.Designer.vb">
-      <DependentUpon>FrmKategoriEdit.vb</DependentUpon>
+    <Compile Include="Stok\FrmBarangUpdate.Designer.vb">
+      <DependentUpon>FrmBarangUpdate.vb</DependentUpon>
     </Compile>
-    <Compile Include="Stok\FrmKategoriEdit.vb">
+    <Compile Include="Stok\FrmBarangUpdate.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Stok\FrmMasterBarang.Designer.vb">
@@ -404,8 +409,8 @@
     <EmbeddedResource Include="Stok\FrmKategori.resx">
       <DependentUpon>FrmKategori.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Stok\FrmKategoriEdit.resx">
-      <DependentUpon>FrmKategoriEdit.vb</DependentUpon>
+    <EmbeddedResource Include="Stok\FrmBarangUpdate.resx">
+      <DependentUpon>FrmBarangUpdate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stok\FrmMasterBarang.resx">
       <DependentUpon>FrmMasterBarang.vb</DependentUpon>
@@ -450,6 +455,17 @@
     </None>
     <None Include="DataSet2.xss">
       <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="mBarang.xsc">
+      <DependentUpon>mBarang.xsd</DependentUpon>
+    </None>
+    <None Include="mBarang.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mBarang.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mBarang.xss">
+      <DependentUpon>mBarang.xsd</DependentUpon>
     </None>
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
@@ -496,6 +512,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\BG1.jpg" />
+    <None Include="Resources\BG.jpg" />
+    <None Include="Resources\if_gnome-searchtool_23273.png" />
     <None Include="Resources\icons8-add-24.png" />
     <None Include="Resources\remove-button-201.png" />
     <None Include="Resources\icons8-Unavailable Filled.png" />

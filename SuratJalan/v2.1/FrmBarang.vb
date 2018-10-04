@@ -37,7 +37,8 @@ Public Class FrmBarang
         Catch ex As Exception
             MessageBox.Show("Maaf terjadi kesalahan pemrosesan data, harap ulangi lagi prosesnya. Jika hal yang sama masih terjadi catat kode error dibawah ini" + vbNewLine + ex.Message, "Hubungi IT", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
         End Try
-    End Sub
+    End Sub
+
     Private Sub total_item()
         Dim hitung As Integer
         For baris As Integer = 0 To DGBarang.RowCount - 1
@@ -75,7 +76,7 @@ Public Class FrmBarang
         DGBarang.RowsDefaultCellStyle.BackColor = Color.Black
         'total_item()
 
-       
+
     End Sub
 
     Private Sub btnBatal_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBatal.Click

@@ -83,6 +83,26 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property BG() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("BG", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property BG1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("BG1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property businessman() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("businessman", resourceCulture)
@@ -326,6 +346,16 @@ Namespace My.Resources
         Friend ReadOnly Property icons8_Unavailable_Filled() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("icons8-Unavailable Filled", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property if_gnome_searchtool_23273() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("if_gnome-searchtool_23273", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

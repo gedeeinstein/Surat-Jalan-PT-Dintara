@@ -33,6 +33,32 @@ Public Class FrmMerk
 
     End Sub
 
+    Public Sub PilihMerk()
+        Dim i = DGMerk.CurrentRow.Index
+        Dim row As DataGridViewRow = DGMerk.CurrentRow
+
+        Try
+            Select Case Me.Text
+
+                Case "Pilih Merk"
+                    FrmBarangUpdate.txtKodeMerk.Text = row.Cells(0).Value
+                    FrmBarangUpdate.txtMerk.Text = row.Cells(1).Value
+                    Me.Close()
+                    Trim(FrmBarangUpdate.txtKodeMerk.Text)
+                    Trim(FrmBarangUpdate.txtMerk.Text)
+
+                    FrmBarangUpdate.txtMerk.Enabled = False
+
+                    FrmBarangUpdate.txtHPP.Focus()
+                    MySqlConnection.ClearAllPools()
+
+            End Select
+        Catch ex As Exception
+            MessageBox.Show("Maaf terjadi kesalahan pemrosesan data, harap ulangi lagi prosesnya. Jika hal yang sama masih terjadi catat kode error dibawah ini" + vbNewLine + ex.Message, "Hubungi IT", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
+        End Try
+
+    End Sub
+
     Sub Kode_Otomatis()
         my_merk = Proses.ExecuteQuery("SELECT * FROM merk order by kode desc")
 
@@ -76,24 +102,22 @@ Public Class FrmMerk
 
     'Klik Dua Kali di Data Grid View
     Private Sub DGMerk_CellContentClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DGMerk.DoubleClick
-
-        'Select Case Me.Text()
-        '    Case "Data Warna"
         txtKodeMerk.Text = DGMerk.SelectedCells(0).Value
         txtNamaMerk.Text = DGMerk.SelectedCells(1).Value
-
         txtNamaMerk.Focus()
-
-
         btnHapus.Enabled = True
         btnEdit.Enabled = True
-
         btnTambah.Enabled = False
 
-        '    Case "Data Warna Sepatu"
-        ''FormMasterBarang.CmbWarna.Text = "" & DGMerk.SelectedCells(0).Value & "/" & DGMerk.SelectedCells(1).Value & ""
-        'Me.Close()
-        'End Select
+        Try
+            Select Case Me.Text
+
+                Case "Pilih Merk"
+                    PilihMerk()
+            End Select
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
+        End Try
 
     End Sub
 

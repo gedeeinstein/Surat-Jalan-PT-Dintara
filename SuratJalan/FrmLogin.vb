@@ -89,10 +89,14 @@ Public Class FrmLogin
                         userlogin = txtNama.Text
                         If rbATM.Checked = True Then
                             MsgBox("Selamat Datang " + userlogin, MsgBoxStyle.Information, "Login Berhasil")
-                            FrmUtamaATM.Show()
+                            'FrmUtamaATM.Show()
+                            FrmMasterBarang.Text = "MASTER DATA"
+                            FrmMasterBarang.Show()
                         ElseIf rbDIN.Checked = True Then
                             MsgBox("Selamat Datang " + userlogin, MsgBoxStyle.Information, "Login Berhasil")
-                            FrmUtama.Show()
+                            'FrmUtama.Show()
+                            FrmMasterBarang.Text = "MASTER DATA"
+                            FrmMasterBarang.Show()
                         Else
                             MsgBox("Silahkan Pilih Login Tipe Terlebih Dahulu", MsgBoxStyle.Exclamation, "Pilih Salah Satu")
                         End If
@@ -282,4 +286,7 @@ Public Class FrmLogin
         proses.CloseConn()
     End Sub
 
+    Private Sub lbl_constatus_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lbl_constatus.Click
+        ReconectDB()
+    End Sub
 End Class

@@ -36,6 +36,7 @@ Public Class FrmCariPerusahaan
             perusahaan = Proses.ExecuteQuery(SQL)
 
             Try
+                Proses.CloseConn()
                 Proses.OpenConn()
                 Me.DGPerusahaan.DataSource = perusahaan
                 'Me.DGPerusahaan.Columns(0).Visible = False

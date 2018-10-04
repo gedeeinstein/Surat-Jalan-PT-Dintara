@@ -23,6 +23,14 @@ SuratJalan
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:SuratJalan.My.Resources.Resources.BG">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:SuratJalan.My.Resources.Resources.BG1">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:SuratJalan.My.Resources.Resources.businessman">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -123,6 +131,10 @@ SuratJalan
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:SuratJalan.My.Resources.Resources.if_gnome_searchtool_23273">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:SuratJalan.My.Resources.Resources.instagram">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -194,6 +206,10 @@ SuratJalan
 </member><member name="T:SuratJalan.My.Resources.Resources">
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:SuratJalan.mBarang">
+	<summary>
+Represents a strongly typed in-memory cache of data.
 </summary>
 </member><member name="T:SuratJalan.DataSet2">
 	<summary>

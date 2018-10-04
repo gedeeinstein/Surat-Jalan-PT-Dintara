@@ -1081,7 +1081,6 @@ Public Class FrmUtama
 
     Private Sub btn_delete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_delete.Click
         Kurangi_Details()
-
     End Sub
 
 
@@ -1123,7 +1122,7 @@ Public Class FrmUtama
     Private Sub btnStok_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStok.Click
         Try
             If str_status > 0 Then
-                FrmMasterBarang.Text = "MASTER DATA BARANG"
+
                 FrmMasterBarang.ShowDialog()
 
                 MySqlConnection.ClearAllPools()
@@ -1137,4 +1136,5 @@ Public Class FrmUtama
             FrmLogin.Connect()
         End Try
     End Sub
+
 End Class
