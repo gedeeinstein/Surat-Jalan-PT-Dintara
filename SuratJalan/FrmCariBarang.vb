@@ -264,8 +264,6 @@ Public Class FrmCariBarang
                 Trim(FrmUtamaATM.txtStokGudang.Text)
                 Trim(FrmUtamaATM.txtQtyBeliCust.Text)
 
-
-
             Case "Pilih Barang"
                 FrmUtama.txtQtyBeliCust.Text = QtyOrder
                 FrmUtama.txtStokGudang.Text = Stok
