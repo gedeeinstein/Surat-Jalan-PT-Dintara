@@ -325,8 +325,6 @@ Public Class FrmCariBarang
 
                             FrmUtama.txtQty.Text = Val(Jumlah)
                             FrmUtama.btnTambah.Focus()
-
-
                             FrmUtama.txtKodeBarang.Text = DGBarang.SelectedCells(0).Value
                             FrmUtama.txtBarang.Text = DGBarang.SelectedCells(1).Value
                             FrmUtama.txtMerkBarang.Text = DGBarang.SelectedCells(2).Value

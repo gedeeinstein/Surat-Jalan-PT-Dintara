@@ -530,15 +530,15 @@ Public Class FrmUtama
             Else
                 Try
                     ''Cek STOK GUDANG APAKAH LEBIH BESAR DARI QTY KIRIM
-                    'If Val(txtStokGudang.Text) < (txtQty.Text) Then
-                    '    MessageBox.Show("Pastikan ada stok barang, tanyakan purchasing apabila barang belum di update stoknya", "Stok Kurang", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop) : Exit Sub
-                    'ElseIf Val(txtQty.Text) > Val(txtQtyBeliCust.Text) Then
-                    If Val(txtQty.Text) > Val(txtQtyBeliCust.Text) Then
+                    If Val(txtStokGudang.Text) < (txtQty.Text) Then
+                        MessageBox.Show("Pastikan ada stok barang, tanyakan purchasing apabila barang belum di update stoknya", "Stok Kurang", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop) : Exit Sub
+                    ElseIf Val(txtQty.Text) > Val(txtQtyBeliCust.Text) Then
+                        'If Val(txtQty.Text) > Val(txtQtyBeliCust.Text) Then
                         MessageBox.Show("Input qty kirim barang melebihi order dari penawaran, ", "Salah Input Qty", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop) : Exit Sub
                     Else
                         Call Simpan_Details_Surat()
                         Call total_item() 'Menjumlahkan Total Barang yang di kirim
-                        ' Call Kurangi_Stock() 'Untuk Mengurangi Stok di Gudang
+                        Call Kurangi_Stock() 'Untuk Mengurangi Stok di Gudang
 
                         btnReset.Enabled = False
                         txtKodeBarang.Text = Nothing
@@ -817,7 +817,6 @@ Public Class FrmUtama
     End Sub
 
     Private Sub btnCariPerusahaan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCariPerusahaan.Click
-
         Try
             If str_status > 0 Then
                 Proses.OpenConn()
@@ -828,7 +827,7 @@ Public Class FrmUtama
                 MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
                 str_status = 0
             End If
-            
+
         Catch ex As Exception
             MessageBox.Show(ex.Message + vbCr + "Ada kesalahan, harap ulangi proses atau restart aplikasi", "Gagak membuka form pencarian perusahaan", MessageBoxButtons.OK)
             FrmLogin.Connect()
@@ -858,7 +857,7 @@ Public Class FrmUtama
     Private Sub btnBatal_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBatal.Click
 
         If MsgBox("Membatalkan akan menyebabkan data yang sudah di input akan dihapus dan perlu melakukan penginputan lagi?", vbYesNo, "Apakah anda yakin ?") = vbYes Then
-            'Kembalikan_Stok() ' MENGEMBALIKAN STOK YANG SUDAH DI KURANGI KARENA BARANG DIPILIH AKAN DI KELUARKAN DARI STOK DATABASE
+            Kembalikan_Stok() ' MENGEMBALIKAN STOK YANG SUDAH DI KURANGI KARENA BARANG DIPILIH AKAN DI KELUARKAN DARI STOK DATABASE
 
             SQL = "DELETE FROM suratjalan_detail_atm WHERE nosurat = '" & txtNoSurat.Text & "'"
             Proses.ExecuteNonQuery(SQL)
@@ -1097,10 +1096,14 @@ Public Class FrmUtama
                     SQL = "DELETE FROM suratjalan_detail WHERE nosurat = '" & DGBarangKirim.Item(0, i).Value & "' AND kode = '" & DGBarangKirim.Item(1, i).Value & "' and kode_lokasi = '" & DGBarangKirim.Item(2, i).Value & "' "
                     Proses.ExecuteNonQuery(SQL)
                     MessageBox.Show("Barang Sudah dihapus dari detail pengiriman", "Sukses dihapus", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    
                     Call Data_Record_Pengiriman()
                     Call Data_Awal()
                     Jumlah_QTY()
                     txtBarang.Text = ""
+                    'Kembalikan nilai stok barang yang sudah di kurangi belum 
+
+
                     MySqlConnection.ClearAllPools()
                     'Mengembalikan button agar tidak bisa di klik save / cancel, serta mengembalikan button reset
                     If DGBarangKirim.RowCount = 0 Then
@@ -1138,3 +1141,6 @@ Public Class FrmUtama
     End Sub
 
 End Class
+
+
+'

@@ -24,36 +24,29 @@ Public Class FrmCariPerusahaan
         FrmUtama.txtAlamat.Text = Nothing
     End Sub
 
-
-    Sub Data_Perusahaan()
+    Sub LoadPerusahaan()
         Try
 
-            SQL = "SELECT tawar01.kode_pelanggan AS 'KODE PERUSAHAAN', " _
-                & "pelanggan.nama AS 'NAMA PERUSAHAAN', tawar01.att AS 'PENERIMA', tawar01.kode AS 'PENAWARAN', pelanggan.alamat as 'ALAMAT', tawar01.tgl AS 'TGL' " _
-                & "FROM tawar01 INNER JOIN pelanggan " _
-                & "ON pelanggan.kode = tawar01.kode_pelanggan " _
-                & "WHERE pelanggan.nama LIKE '%" & Rep(txtCariPerusahaan.Text) & "%' ORDER BY tawar01.tgl DESC"
-            perusahaan = Proses.ExecuteQuery(SQL)
+            perusahaan = Proses.ExecuteQuery("SELECT tawar01.kode_pelanggan AS 'KODE PERUSAHAAN', " _
+            & "pelanggan.nama AS 'NAMA PERUSAHAAN', tawar01.att AS 'PENERIMA', tawar01.kode AS 'PENAWARAN', pelanggan.alamat as 'ALAMAT', tawar01.tgl AS 'TGL' " _
+            & "FROM tawar01 INNER JOIN pelanggan " _
+            & "ON pelanggan.kode = tawar01.kode_pelanggan " _
+            & "WHERE pelanggan.nama LIKE '%" & Rep(txtCariPerusahaan.Text) & "%' ORDER BY tawar01.tgl DESC")
 
-            Try
-                Proses.CloseConn()
-                Proses.OpenConn()
-                Me.DGPerusahaan.DataSource = perusahaan
-                'Me.DGPerusahaan.Columns(0).Visible = False
-                Me.DGPerusahaan.Columns(0).Width = 100
-                Me.DGPerusahaan.Columns(1).Width = 380
-                Me.DGPerusahaan.Columns(2).Width = 180
-                Me.DGPerusahaan.Columns(3).Width = 190
-                Me.DGPerusahaan.Columns(4).Visible = False
-                Me.DGPerusahaan.Columns(5).Visible = False ' Untuk Memasukan Alamat ke Form utama
-                Proses.CloseConn()
-            Catch ex As Exception
-                MessageBox.Show(ex.Message)
-            Finally
-                MySqlConnection.ClearAllPools()
-            End Try
 
-            '850
+            'perusahaan = Proses.ExecuteQuery(SQL)
+
+
+            Me.DGPerusahaan.DataSource = perusahaan
+            Me.DGPerusahaan.Columns(0).Width = 100
+            Me.DGPerusahaan.Columns(1).Width = 380
+            Me.DGPerusahaan.Columns(2).Width = 180
+            Me.DGPerusahaan.Columns(3).Width = 190
+
+
+            Me.DGPerusahaan.Columns(4).Visible = False
+            Me.DGPerusahaan.Columns(5).Visible = False ' Untuk Memasukan Alamat ke Form utama
+
 
             DGPerusahaan.GridColor = Color.White
             DGPerusahaan.DefaultCellStyle.ForeColor = Color.White
@@ -62,8 +55,18 @@ Public Class FrmCariPerusahaan
             Proses.CloseConn()
             DGPerusahaan.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
-            Proses.OpenConn()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            MySqlConnection.ClearAllPools()
+            Proses.CloseConn()
+        End Try
+    End Sub
 
+    Sub Data_Perusahaan()
+        Try
+            LoadPerusahaan()
+            Proses.OpenConn()
             Dim myadapter As New MySqlDataAdapter
             Dim sqlquery = "SELECT * FROM tawar01"
             Dim mycommand As New MySqlCommand
@@ -82,10 +85,12 @@ Public Class FrmCariPerusahaan
             End If
             lbl_totalperusahaan.Text = Val(totalbarang)
 
-
         Catch ex As Exception
-            MessageBox.Show("Error. Hubungi IT atau periksa ulang data yang di input" + ex.Message, "Hubungi IT", MessageBoxButtons.OK) : Exit Sub
+
+            MessageBox.Show("Error. Hubungi IT atau periksa ulang data yang di input - LINE 89 " + ex.Message, "Hubungi IT", MessageBoxButtons.OK) : Exit Sub
+
         Finally
+            MySqlConnection.ClearAllPools()
             Proses.CloseConn()
         End Try
     End Sub
@@ -99,6 +104,7 @@ Public Class FrmCariPerusahaan
 
     Private Sub DGPerusahaan_DoubleClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DGPerusahaan.DoubleClick
         PilihPerusahaan()
+        MySqlConnection.ClearAllPools()
     End Sub
 
 
@@ -149,6 +155,7 @@ Public Class FrmCariPerusahaan
             End Select
         Catch ex As Exception
             MessageBox.Show("Maaf terjadi kesalahan pemrosesan data, harap ulangi lagi prosesnya. Jika hal yang sama masih terjadi catat kode error dibawah ini" + vbNewLine + ex.Message, "Hubungi IT", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
+            MessageBox.Show(ex.Message)
         End Try
 
     End Sub
