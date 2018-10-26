@@ -821,7 +821,7 @@ Public Class FrmUtama
             If str_status > 0 Then
                 Proses.OpenConn()
                 FrmCariPerusahaan.Text = "Pilih Perusahaan PT"
-                FrmCariPerusahaan.ShowDialog()
+                FrmCariPerusahaan.Show()
                 Proses.CloseConn()
             Else
                 MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
