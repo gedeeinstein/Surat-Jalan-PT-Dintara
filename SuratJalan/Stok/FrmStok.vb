@@ -26,7 +26,7 @@ Public Class FrmStok
         Dim SqlAdapter As New MySqlDataAdapter
         Dim SqlCommand As New MySqlCommand
         Dim TabelBarang As New DataTable
-        Dim i As Integer
+        'Dim i As Integer
 
         With SqlCommand
             .CommandText = SqlQuery

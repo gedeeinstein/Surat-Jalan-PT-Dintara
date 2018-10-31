@@ -48,6 +48,8 @@ Partial Class FrmMasterSurat
         Me.rb_nosurat = New System.Windows.Forms.RadioButton()
         Me.rb_nopenawaran = New System.Windows.Forms.RadioButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.label_user = New System.Windows.Forms.Label()
+        Me.txtUser = New System.Windows.Forms.TextBox()
         CType(Me.DGMasterSurat, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBPencarian.SuspendLayout()
         CType(Me.DGDetailsMasterSurat, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -354,12 +356,33 @@ Partial Class FrmMasterSurat
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Print Berdasarkan"
         '
+        'label_user
+        '
+        Me.label_user.AutoSize = True
+        Me.label_user.Location = New System.Drawing.Point(1201, 673)
+        Me.label_user.Name = "label_user"
+        Me.label_user.Size = New System.Drawing.Size(10, 13)
+        Me.label_user.TabIndex = 46
+        Me.label_user.Text = "-"
+        '
+        'txtUser
+        '
+        Me.txtUser.BackColor = System.Drawing.Color.Teal
+        Me.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtUser.Location = New System.Drawing.Point(911, 673)
+        Me.txtUser.Name = "txtUser"
+        Me.txtUser.Size = New System.Drawing.Size(300, 13)
+        Me.txtUser.TabIndex = 47
+        Me.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
         'FrmMasterSurat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Teal
         Me.ClientSize = New System.Drawing.Size(1220, 691)
+        Me.Controls.Add(Me.txtUser)
+        Me.Controls.Add(Me.label_user)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.txtNoSurat)
         Me.Controls.Add(Me.txtNoOrder)
@@ -415,4 +438,6 @@ Partial Class FrmMasterSurat
     Friend WithEvents rb_nosurat As System.Windows.Forms.RadioButton
     Friend WithEvents rb_nopenawaran As System.Windows.Forms.RadioButton
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents label_user As System.Windows.Forms.Label
+    Friend WithEvents txtUser As System.Windows.Forms.TextBox
 End Class

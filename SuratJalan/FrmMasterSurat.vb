@@ -11,6 +11,7 @@ Public Class FrmMasterSurat
     Dim Data As DataSet
     Dim a As Integer
     Dim haha As Integer
+
     'Dim kode_barang, search_name, search_condition, search_d As String
 
     Sub Data_Riwayat_Surat()
@@ -82,6 +83,8 @@ Public Class FrmMasterSurat
 
     Private Sub FrmMasterSurat_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Call Data_Riwayat_Surat()
+        Call FrmUtamaATM.Pengguna()
+        txtUser.Text = FrmUtamaATM.loged_in.Text
     End Sub
 
     Sub Details_Surat_Jalan()
@@ -334,7 +337,8 @@ Public Class FrmMasterSurat
                 Case "Riwayat Surat Jalan ATM"
                     If print = vbOK Then
                         FrmReportAll_ATM.Text = "Cetak Riwayat Surat Jalan ATM"
-                        FrmReportAll_ATM.ShowDialog()
+                        FrmReportAll_ATM.CrystalReportViewer1.Show()
+                        FrmReportAll_ATM.Show()
                         MySqlConnection.ClearAllPools()
                     Else
 
@@ -387,5 +391,9 @@ Public Class FrmMasterSurat
     Private Sub btnBatal_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBatal.Click
         btnClose_Click(sender, e)
         MySqlConnection.ClearAllPools()
+    End Sub
+
+    Private Sub title_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles title.Click
+
     End Sub
 End Class

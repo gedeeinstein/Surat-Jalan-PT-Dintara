@@ -258,6 +258,7 @@ Public Class FrmUtama
 
 
     Private Sub FrmUtama_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Check_Users()
         Call Data_Awal()
         Call Data_Record_Pengiriman()
         btnBatal.Enabled = False
@@ -702,9 +703,9 @@ Public Class FrmUtama
             If str_status > 0 Then
 
                 SQL = "insert into suratjalan " _
-                    & "(nosurat, kode_perusahaan, nama_perusahaan, att, tanggal, no_order, total, alamat, user) VALUES " _
+                    & "(nosurat, kode_perusahaan, nama_perusahaan, att, tanggal, no_order, total, alamat, user, telp) VALUES " _
                     & "('" & txtNoSurat.Text & "','" & Trim(txtKodePerusahaan.Text) & "','" & Rep(txtPerusahaan.Text) & "','" & Rep(txtPelanggan.Text) & "' " _
-                    & ",'" + tgl_surat + "','" & Trim(txtNoOrder.Text) & "', '" & Label_TotalBarang.Text & "', '" & Rep(txtAlamat.Text) & "', '" & loged_in.Text & "')"
+                    & ",'" + tgl_surat + "','" & Trim(txtNoOrder.Text) & "', '" & Label_TotalBarang.Text & "', '" & Rep(txtAlamat.Text) & "', '" & loged_in.Text & "', '" & Rep(txtTelepon.Text) & "')"
 
                 If MsgBox("Apakah anda yakin akan menyimpan Data Pengiriman Barang" & vbNewLine & "Data yang sudah disimpan tidak dapat di ubah atau hapus lagi !", vbYesNo, "Konfirmasi") = vbYes Then
                     Proses.OpenConn()
@@ -712,13 +713,14 @@ Public Class FrmUtama
 
                     MessageBox.Show("Data surat pengiriman barang berhasil disimpan. " + vbNewLine + "Harap tunggu sistem akan mencetak surat Anda ", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                    FrmRptSPK.Text = "Cetak Surat Jalan PT No " + txtNoSurat.Text
+                    FrmRptSPK.Text = "Cetak Surat Jalan PT No "
                     FrmRptSPK.ShowDialog()
                     Call Data_Awal()
                     Call Reset()
                     Call No_Surat_Otomatis()
                     Call Data_Record_Pengiriman()
-
+                    txtKodeBarang.Text = ""
+                    txtQty.Text = ""
                     btnSimpan.Enabled = False
                     btnBatal.Enabled = False
                     Proses.CloseConn()
@@ -829,7 +831,7 @@ Public Class FrmUtama
             End If
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message + vbCr + "Ada kesalahan, harap ulangi proses atau restart aplikasi", "Gagak membuka form pencarian perusahaan", MessageBoxButtons.OK)
+            MessageBox.Show(ex.Message + vbCr + "Ada kesalahan, harap ulangi proses atau restart aplikasi", "Gagal membuka form pencarian perusahaan", MessageBoxButtons.OK)
             FrmLogin.Connect()
         End Try
 
@@ -914,43 +916,6 @@ Public Class FrmUtama
         End If
 
     End Sub
-
-    'Public Sub FBLink()
-    '    System.Diagnostics.Process.Start("https://facebook.com/igedeadisuryaekapramanaputra")
-    'End Sub
-
-    'Public Sub TwitterLink()
-    '    System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
-    'End Sub
-
-
-    'Public Sub IGLink()
-    '    System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
-    'End Sub
-
-    'Public Sub GPlusLink()
-    '    System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
-    'End Sub
-
-    'Public Sub WALink()
-    '    System.Diagnostics.Process.Start("tel:081337353585")
-    'End Sub
-
-    'Public Sub MapsLink()
-    '    System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
-    'End Sub
-
-    'Public Sub LinkedIn_Links()
-    '    System.Diagnostics.Process.Start("https://instagram.com/gedeeinstein")
-    'End Sub
-
-    'Private Sub fb_Click(sender As System.Object, e As System.EventArgs) Handles fb.Click
-    '    FBLink()
-    'End Sub
-
-    'Private Sub whatsapp_Click(sender As System.Object, e As System.EventArgs) Handles whatsapp.Click
-    '    WALink()
-    'End Sub
 
 
     Private Sub btnMasterSurat_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMasterSurat.Click
@@ -1080,23 +1045,74 @@ Public Class FrmUtama
 
     Private Sub btn_delete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_delete.Click
         Kurangi_Details()
+        'Kembalikan_Stok()
     End Sub
 
+    
 
+    'Sub Stok_kembali()
+    '    Dim i As Integer
+
+    '    i = DGBarangKirim.SelectedRows(0).Index
+
+    '    For i = 0 To DGBarangKirim.Rows.Count - 1
+    '        barang = Proses.ExecuteQuery("SELECT * FROM barang where kode = '" & DGBarangKirim.Item(1, i).Value & "'")
+    '        If barang.Rows.Count = 0 Then
+    '            'do nothing here ?
+    '        Else
+    '            Dim jumlah = CInt(barang.Rows(0).Item("qty")) + CInt(DGBarangKirim.Item(5, i).Value)
+    '            Dim SQL = "UPDATE barang set qty = '" & CInt(jumlah) & "' where kode = '" & DGBarangKirim.Item(1, i).Value & "'"
+    '            Proses.ExecuteNonQuery(SQL)
+    '            MessageBox.Show("Transaksi sudah dibatalkan & semua details input telah dihapus", "Pembatalan Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    '        End If
+    '    Next
+    'End Sub
+
+    'Public Sub Kembalikan_Stok()
+    '    Dim i As Integer
+
+    '    i = DGBarangKirim.CurrentRow.Index
+
+    '    For i = 0 To DGBarangKirim.Rows.Count - 1
+    '        barang = Proses.ExecuteQuery("SELECT * FROM barang where kode = '" & DGBarangKirim.Item(1, i).Value & "'")
+    '        If barang.Rows.Count = 0 Then
+    '            'do nothing here ?
+    '        Else
+    '            Dim jumlah = CInt(barang.Rows(0).Item("qty")) + CInt(DGBarangKirim.Item(5, i).Value)
+    '            Dim SQL = "UPDATE barang set qty = '" & CInt(jumlah) & "' where kode = '" & DGBarangKirim.Item(1, i).Value & "'"
+    '            Proses.ExecuteNonQuery(SQL)
+    '            MessageBox.Show("Transaksi sudah dibatalkan & semua details input telah dihapus", "Pembatalan Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    '        End If
+    '    Next
+    'End Sub
+
+    Public Sub KembalikanStokJikaDetailDiHapus()
+        Dim i As Integer
+
+        i = DGBarangKirim.CurrentRow.Index
+        barang = Proses.ExecuteQuery("select * from barang where kode = '" & DGBarangKirim.Item(1, i).Value & "'")
+        Dim jumlah = CInt(barang.Rows(0).Item("qty")) + CInt(DGBarangKirim.Item(5, i).Value)
+        Dim SQL2 = "UPDATE barang set qty ='" & CInt(jumlah) & "' where kode = '" & DGBarangKirim.Item(1, i).Value & "'"
+        Proses.ExecuteNonQuery(SQL2)
+    End Sub
 
     Public Sub Kurangi_Details()
         Dim i As Integer
+
+
         If DGBarangKirim.RowCount = 0 Then
             MessageBox.Show("Tidak ada data yang bisa dihapus", "Data Kosong", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
         Else
             Try
                 i = DGBarangKirim.SelectedRows(0).Index
                 If MsgBox("Hapus Detail Barang ", vbYesNo, "Apakah anda yakin ?") = vbYes Then
-                   
+
+                    KembalikanStokJikaDetailDiHapus()
+
                     SQL = "DELETE FROM suratjalan_detail WHERE nosurat = '" & DGBarangKirim.Item(0, i).Value & "' AND kode = '" & DGBarangKirim.Item(1, i).Value & "' and kode_lokasi = '" & DGBarangKirim.Item(2, i).Value & "' "
                     Proses.ExecuteNonQuery(SQL)
                     MessageBox.Show("Barang Sudah dihapus dari detail pengiriman", "Sukses dihapus", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    
+
                     Call Data_Record_Pengiriman()
                     Call Data_Awal()
                     Jumlah_QTY()
@@ -1140,7 +1156,39 @@ Public Class FrmUtama
         End Try
     End Sub
 
+
+    Public Sub Check_Users()
+        Dim masuk, sql2 As DataTable
+        Dim con As New ClsKoneksi
+        Try
+            con.OpenConn()
+            masuk = con.ExecuteQuery("SELECT a.username, a.nama_user, b.level_name, b.jabatan FROM karyawan a INNER JOIN suratjalan_level b ON a.level_id = b.level_id WHERE a.level_id='2'")
+            If masuk.Rows.Count = 0 Then
+                MsgBox("Maaf User Tersebut Belum Terdaftar", MsgBoxStyle.Critical, "Error")
+                Call Reset()
+                : Exit Sub
+            Else
+                Me.txtAdminAR.Text = masuk.Rows(0).Item("nama_user").ToString
+            End If
+
+            sql2 = con.ExecuteQuery("SELECT a.username, a.nama_user, b.level_name, b.jabatan FROM karyawan a INNER JOIN suratjalan_level b ON a.level_id = b.level_id WHERE a.level_id='3'")
+            If sql2.Rows.Count = 0 Then
+                MsgBox("Maaf User Tersebut Belum Terdaftar", MsgBoxStyle.Critical, "Error")
+                Call Reset()
+                : Exit Sub
+            Else
+                Me.txtGudang.Text = sql2.Rows(0).Item("nama_user").ToString
+            End If
+
+        Catch ex As Exception
+            MsgBox("Silahkan Ulangi / Restart Aplikasi", MsgBoxStyle.Critical, "Error")
+        Finally
+
+            con.CloseConn()
+            MySqlConnection.ClearAllPools()
+        End Try
+    End Sub
+
 End Class
 
 
-'

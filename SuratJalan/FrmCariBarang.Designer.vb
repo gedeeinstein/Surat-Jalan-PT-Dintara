@@ -37,6 +37,7 @@ Partial Class FrmCariBarang
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.DGBarangTerkirim = New System.Windows.Forms.DataGridView()
+        Me.btnRefresh = New System.Windows.Forms.Button()
         CType(Me.DGBarang, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGBarangTerkirim, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -109,7 +110,7 @@ Partial Class FrmCariBarang
         Me.btnPilih.BackColor = System.Drawing.Color.Snow
         Me.btnPilih.FlatAppearance.BorderSize = 0
         Me.btnPilih.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPilih.Location = New System.Drawing.Point(973, 522)
+        Me.btnPilih.Location = New System.Drawing.Point(883, 522)
         Me.btnPilih.Name = "btnPilih"
         Me.btnPilih.Size = New System.Drawing.Size(85, 40)
         Me.btnPilih.TabIndex = 17
@@ -195,12 +196,27 @@ Partial Class FrmCariBarang
         Me.DGBarangTerkirim.Size = New System.Drawing.Size(1159, 186)
         Me.DGBarangTerkirim.TabIndex = 22
         '
+        'btnRefresh
+        '
+        Me.btnRefresh.BackColor = System.Drawing.Color.Chartreuse
+        Me.btnRefresh.FlatAppearance.BorderSize = 0
+        Me.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRefresh.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRefresh.ForeColor = System.Drawing.Color.Blue
+        Me.btnRefresh.Location = New System.Drawing.Point(986, 522)
+        Me.btnRefresh.Name = "btnRefresh"
+        Me.btnRefresh.Size = New System.Drawing.Size(85, 40)
+        Me.btnRefresh.TabIndex = 23
+        Me.btnRefresh.Text = "Refresh"
+        Me.btnRefresh.UseVisualStyleBackColor = False
+        '
         'FrmCariBarang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SeaGreen
         Me.ClientSize = New System.Drawing.Size(1183, 574)
+        Me.Controls.Add(Me.btnRefresh)
         Me.Controls.Add(Me.DGBarangTerkirim)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label5)
@@ -234,4 +250,5 @@ Partial Class FrmCariBarang
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents DGBarangTerkirim As System.Windows.Forms.DataGridView
+    Friend WithEvents btnRefresh As System.Windows.Forms.Button
 End Class

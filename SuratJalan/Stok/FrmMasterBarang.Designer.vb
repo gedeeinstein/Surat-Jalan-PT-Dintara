@@ -33,6 +33,7 @@ Partial Class FrmMasterBarang
         Me.BarangMasukToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BarangKeluarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BarangToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -63,7 +64,7 @@ Partial Class FrmMasterBarang
         Me.BarangToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control
         Me.BarangToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BarangToolStripMenuItem.Name = "BarangToolStripMenuItem"
-        Me.BarangToolStripMenuItem.Size = New System.Drawing.Size(152, 24)
+        Me.BarangToolStripMenuItem.Size = New System.Drawing.Size(128, 24)
         Me.BarangToolStripMenuItem.Text = "&Barang"
         '
         'KategoriToolStripMenuItem
@@ -71,7 +72,7 @@ Partial Class FrmMasterBarang
         Me.KategoriToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control
         Me.KategoriToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.KategoriToolStripMenuItem.Name = "KategoriToolStripMenuItem"
-        Me.KategoriToolStripMenuItem.Size = New System.Drawing.Size(152, 24)
+        Me.KategoriToolStripMenuItem.Size = New System.Drawing.Size(128, 24)
         Me.KategoriToolStripMenuItem.Text = "&Kategori"
         '
         'MerkToolStripMenuItem
@@ -79,7 +80,7 @@ Partial Class FrmMasterBarang
         Me.MerkToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control
         Me.MerkToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.MerkToolStripMenuItem.Name = "MerkToolStripMenuItem"
-        Me.MerkToolStripMenuItem.Size = New System.Drawing.Size(152, 24)
+        Me.MerkToolStripMenuItem.Size = New System.Drawing.Size(128, 24)
         Me.MerkToolStripMenuItem.Text = "&Merk"
         '
         'KeluarToolStripMenuItem
@@ -87,12 +88,12 @@ Partial Class FrmMasterBarang
         Me.KeluarToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control
         Me.KeluarToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.KeluarToolStripMenuItem.Name = "KeluarToolStripMenuItem"
-        Me.KeluarToolStripMenuItem.Size = New System.Drawing.Size(152, 24)
+        Me.KeluarToolStripMenuItem.Size = New System.Drawing.Size(128, 24)
         Me.KeluarToolStripMenuItem.Text = "Keluar"
         '
         'StokToolStripMenuItem
         '
-        Me.StokToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BarangMasukToolStripMenuItem, Me.BarangKeluarToolStripMenuItem})
+        Me.StokToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BarangMasukToolStripMenuItem, Me.BarangKeluarToolStripMenuItem, Me.BarangToolStripMenuItem1})
         Me.StokToolStripMenuItem.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StokToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.StokToolStripMenuItem.Name = "StokToolStripMenuItem"
@@ -102,14 +103,14 @@ Partial Class FrmMasterBarang
         'BarangMasukToolStripMenuItem
         '
         Me.BarangMasukToolStripMenuItem.Name = "BarangMasukToolStripMenuItem"
-        Me.BarangMasukToolStripMenuItem.Size = New System.Drawing.Size(163, 24)
+        Me.BarangMasukToolStripMenuItem.Size = New System.Drawing.Size(201, 24)
         Me.BarangMasukToolStripMenuItem.Text = "Barang &Masuk"
         '
         'BarangKeluarToolStripMenuItem
         '
         Me.BarangKeluarToolStripMenuItem.Name = "BarangKeluarToolStripMenuItem"
-        Me.BarangKeluarToolStripMenuItem.Size = New System.Drawing.Size(163, 24)
-        Me.BarangKeluarToolStripMenuItem.Text = "Barang &Keluar"
+        Me.BarangKeluarToolStripMenuItem.Size = New System.Drawing.Size(201, 24)
+        Me.BarangKeluarToolStripMenuItem.Text = "Barang &Keluar (DIN)"
         '
         'TransaksiToolStripMenuItem
         '
@@ -118,6 +119,12 @@ Partial Class FrmMasterBarang
         Me.TransaksiToolStripMenuItem.Name = "TransaksiToolStripMenuItem"
         Me.TransaksiToolStripMenuItem.Size = New System.Drawing.Size(69, 24)
         Me.TransaksiToolStripMenuItem.Text = "&Laporan"
+        '
+        'BarangToolStripMenuItem1
+        '
+        Me.BarangToolStripMenuItem1.Name = "BarangToolStripMenuItem1"
+        Me.BarangToolStripMenuItem1.Size = New System.Drawing.Size(201, 24)
+        Me.BarangToolStripMenuItem1.Text = "Barang Keluar (&ATM)"
         '
         'FrmMasterBarang
         '
@@ -154,4 +161,5 @@ Partial Class FrmMasterBarang
     Friend WithEvents BarangMasukToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BarangKeluarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents KeluarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BarangToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 End Class

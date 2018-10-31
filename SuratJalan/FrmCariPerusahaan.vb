@@ -28,7 +28,7 @@ Public Class FrmCariPerusahaan
         Try
 
             perusahaan = Proses.ExecuteQuery("SELECT tawar01.kode_pelanggan AS 'KODE PERUSAHAAN', " _
-            & "pelanggan.nama AS 'NAMA PERUSAHAAN', tawar01.att AS 'PENERIMA', tawar01.kode AS 'PENAWARAN', pelanggan.alamat as 'ALAMAT', tawar01.tgl AS 'TGL' " _
+            & "pelanggan.nama AS 'NAMA PERUSAHAAN', tawar01.att AS 'PENERIMA', tawar01.kode AS 'PENAWARAN', pelanggan.alamat as 'ALAMAT', tawar01.tgl AS 'TGL', pelanggan.telepon " _
             & "FROM tawar01 INNER JOIN pelanggan " _
             & "ON pelanggan.kode = tawar01.kode_pelanggan " _
             & "WHERE pelanggan.nama LIKE '%" & Rep(txtCariPerusahaan.Text) & "%' ORDER BY tawar01.tgl DESC")
@@ -46,7 +46,7 @@ Public Class FrmCariPerusahaan
 
             Me.DGPerusahaan.Columns(4).Visible = False
             Me.DGPerusahaan.Columns(5).Visible = False ' Untuk Memasukan Alamat ke Form utama
-
+            Me.DGPerusahaan.Columns(6).Visible = False ' Untuk Memasukan Alamat ke Form utama
 
             DGPerusahaan.GridColor = Color.White
             DGPerusahaan.DefaultCellStyle.ForeColor = Color.White
@@ -121,6 +121,7 @@ Public Class FrmCariPerusahaan
                     FrmUtama.txtPelanggan.Text = row.Cells(2).Value
                     FrmUtama.txtNoOrder.Text = row.Cells(3).Value
                     FrmUtama.txtAlamat.Text = row.Cells(4).Value
+                    FrmUtama.txtTelepon.Text = row.Cells(6).Value
                     FrmUtama.cmbPerusahaan.Text = "" & DGPerusahaan.SelectedCells(0).Value & "/" & DGPerusahaan.SelectedCells(1).Value & ""
                     Me.Close()
                     Trim(FrmUtama.txtKodePerusahaan.Text)
@@ -128,6 +129,7 @@ Public Class FrmCariPerusahaan
                     Trim(FrmUtama.txtPelanggan.Text)
                     Trim(FrmUtama.txtNoOrder.Text)
                     Trim(FrmUtama.txtAlamat.Text)
+                    Trim(FrmUtama.txtTelepon.Text)
                     FrmUtama.txtBarang.Focus()
                     MySqlConnection.ClearAllPools()
 
@@ -142,7 +144,7 @@ Public Class FrmCariPerusahaan
                     FrmUtamaATM.txtPelanggan.Text = row.Cells(2).Value
                     FrmUtamaATM.txtNoOrder.Text = row.Cells(3).Value
                     FrmUtamaATM.txtAlamat.Text = row.Cells(4).Value
-
+                    FrmUtamaATM.txtTelp.Text = row.Cells(6).Value
                     FrmUtamaATM.cmbPerusahaan.Text = "" & DGPerusahaan.SelectedCells(0).Value & "/" & DGPerusahaan.SelectedCells(1).Value & ""
                     Me.Close()
                     Trim(FrmUtamaATM.txtKodePerusahaan.Text)
@@ -150,6 +152,7 @@ Public Class FrmCariPerusahaan
                     Trim(FrmUtamaATM.txtPelanggan.Text)
                     Trim(FrmUtamaATM.txtNoOrder.Text)
                     Trim(FrmUtamaATM.txtAlamat.Text)
+                    Trim(FrmUtamaATM.txtTelp.Text)
                     FrmUtamaATM.txtBarang.Focus()
                     MySqlConnection.ClearAllPools()
             End Select
@@ -173,7 +176,7 @@ Public Class FrmCariPerusahaan
     Private Sub txtCariPerusahaan_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtCariPerusahaan.TextChanged
         If RbNama.Checked = True Then
             SQL = "SELECT tawar01.kode_pelanggan as 'KODE' , " _
-                & "pelanggan.nama as 'NAMA PERUSAHAAN', tawar01.att as 'PENERIMA', tawar01.kode AS 'PENAWARAN', tawar01.alamat as 'ALAMAT', tawar01.tgl AS 'TGL' " _
+                & "pelanggan.nama as 'NAMA PERUSAHAAN', tawar01.att as 'PENERIMA', tawar01.kode AS 'PENAWARAN', tawar01.alamat as 'ALAMAT', tawar01.tgl AS 'TGL', pelanggan.telepon " _
                 & "FROM tawar01 INNER JOIN pelanggan " _
                 & "ON pelanggan.kode = tawar01.kode_pelanggan " _
                 & "WHERE pelanggan.nama LIKE '%" & Rep(txtCariPerusahaan.Text) & "%' ORDER BY tawar01.tgl DESC"
@@ -183,7 +186,7 @@ Public Class FrmCariPerusahaan
             txtCariPerusahaan.Focus()
         ElseIf RbPenerima.Checked = True Then
             SQL = "SELECT tawar01.kode_pelanggan as 'KODE' , " _
-               & "pelanggan.nama as 'NAMA PERUSAHAAN', tawar01.att as 'PENERIMA', tawar01.kode AS 'PENAWARAN', tawar01.alamat as 'ALAMAT', tawar01.tgl AS 'TGL' " _
+               & "pelanggan.nama as 'NAMA PERUSAHAAN', tawar01.att as 'PENERIMA', tawar01.kode AS 'PENAWARAN', tawar01.alamat as 'ALAMAT', tawar01.tgl AS 'TGL', pelanggan.telepon " _
                & "FROM tawar01 INNER JOIN pelanggan " _
                & "ON pelanggan.kode = tawar01.kode_pelanggan " _
                & "WHERE tawar01.att LIKE '%" & Rep(txtCariPerusahaan.Text) & "%' ORDER BY tawar01.tgl DESC"
@@ -193,7 +196,7 @@ Public Class FrmCariPerusahaan
             txtCariPerusahaan.Focus()
         ElseIf RbNoOrder.Checked = True Then
             SQL = "SELECT tawar01.kode_pelanggan as 'KODE' , " _
-               & "pelanggan.nama as 'NAMA PERUSAHAAN', tawar01.att as 'PENERIMA', tawar01.kode AS 'PENAWARAN', tawar01.alamat as 'ALAMAT', tawar01.tgl AS 'TGL' " _
+               & "pelanggan.nama as 'NAMA PERUSAHAAN', tawar01.att as 'PENERIMA', tawar01.kode AS 'PENAWARAN', tawar01.alamat as 'ALAMAT', tawar01.tgl AS 'TGL', pelanggan.telepon " _
                & "FROM tawar01 INNER JOIN pelanggan " _
                & "ON pelanggan.kode = tawar01.kode_pelanggan " _
                & "WHERE tawar01.kode LIKE '%" & Rep(txtCariPerusahaan.Text) & "%' ORDER BY tawar01.tgl DESC"

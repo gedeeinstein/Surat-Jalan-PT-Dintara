@@ -36,7 +36,7 @@ Partial Class FrmUtama
         Me.txtNoOrder = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtTelepon = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtAlamat = New System.Windows.Forms.TextBox()
         Me.btnCariPerusahaan = New System.Windows.Forms.Button()
@@ -88,6 +88,8 @@ Partial Class FrmUtama
         Me.btn_delete = New System.Windows.Forms.Button()
         Me.btnStok = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtGudang = New System.Windows.Forms.TextBox()
+        Me.txtAdminAR = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGBarangKirim, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -204,7 +206,7 @@ Partial Class FrmUtama
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.Control
         Me.GroupBox1.Controls.Add(Me.Label15)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.txtTelepon)
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.txtAlamat)
         Me.GroupBox1.Controls.Add(Me.btnCariPerusahaan)
@@ -238,13 +240,13 @@ Partial Class FrmUtama
         Me.Label15.TabIndex = 25
         Me.Label15.Text = "Telp"
         '
-        'TextBox1
+        'txtTelepon
         '
-        Me.TextBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.TextBox1.Location = New System.Drawing.Point(593, 103)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(239, 20)
-        Me.TextBox1.TabIndex = 24
+        Me.txtTelepon.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.txtTelepon.Location = New System.Drawing.Point(593, 103)
+        Me.txtTelepon.Name = "txtTelepon"
+        Me.txtTelepon.Size = New System.Drawing.Size(239, 20)
+        Me.txtTelepon.TabIndex = 24
         '
         'Label10
         '
@@ -904,6 +906,20 @@ Partial Class FrmUtama
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'txtGudang
+        '
+        Me.txtGudang.Location = New System.Drawing.Point(78, 361)
+        Me.txtGudang.Name = "txtGudang"
+        Me.txtGudang.Size = New System.Drawing.Size(147, 20)
+        Me.txtGudang.TabIndex = 57
+        '
+        'txtAdminAR
+        '
+        Me.txtAdminAR.Location = New System.Drawing.Point(231, 361)
+        Me.txtAdminAR.Name = "txtAdminAR"
+        Me.txtAdminAR.Size = New System.Drawing.Size(173, 20)
+        Me.txtAdminAR.TabIndex = 58
+        '
         'FrmUtama
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -911,6 +927,8 @@ Partial Class FrmUtama
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(1366, 768)
         Me.ControlBox = False
+        Me.Controls.Add(Me.txtAdminAR)
+        Me.Controls.Add(Me.txtGudang)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnStok)
         Me.Controls.Add(Me.btn_delete)
@@ -1030,6 +1048,8 @@ Partial Class FrmUtama
     Friend WithEvents btn_delete As System.Windows.Forms.Button
     Friend WithEvents btnStok As System.Windows.Forms.Button
     Friend WithEvents Label15 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtTelepon As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents txtGudang As System.Windows.Forms.TextBox
+    Friend WithEvents txtAdminAR As System.Windows.Forms.TextBox
 End Class

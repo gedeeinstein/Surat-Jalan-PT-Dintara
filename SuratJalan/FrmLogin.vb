@@ -211,7 +211,7 @@ Public Class FrmLogin
 
     Public Sub nama_user()
         Try
-            masuk = proses.ExecuteQuery("SELECT nama_user FROM karyawan WHERE username ='" & txtusername.Text & "'")
+            masuk = proses.ExecuteQuery("SELECT a.username, a.nama_user, b.level_name, b.jabatan FROM karyawan a INNER JOIN suratjalan_level b ON a.level_id = b.level_id WHERE a.username ='" & txtusername.Text & "'")
             If masuk.Rows.Count = 0 Then
                 MsgBox("Maaf User Tersebut Belum Terdaftar", MsgBoxStyle.Critical, "Error")
                 Call reset()
@@ -219,6 +219,8 @@ Public Class FrmLogin
                 : Exit Sub
             Else
                 txtNama.Text = masuk.Rows(0).Item("nama_user").ToString
+                'FrmUtama.txtNamaUser.Text = txtNama.Text
+                'FrmUtama.txtJabatan.Text = masuk.Rows(0).Item("jabatan").ToString
             End If
         Catch ex As Exception
             MsgBox("Silahkan Ulangi / Restart Aplikasi", MsgBoxStyle.Critical, "Error")

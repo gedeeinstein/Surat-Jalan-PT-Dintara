@@ -141,4 +141,17 @@ Public Class FrmMasterBarang
     Private Sub StokToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles StokToolStripMenuItem.Click
 
     End Sub
+
+    Private Sub BarangToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BarangToolStripMenuItem1.Click
+        'Memanggil Form Barang Keluar / Surat Jalan
+        Try
+            Proses.OpenConn()
+            FrmUtamaATM.Show()
+            Me.Close()
+            MySqlConnection.ClearAllPools()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message + vbCr + "Error", "Kesalahan Membuka Data Master Barang", MessageBoxButtons.OK)
+            FrmLogin.Connect()
+        End Try
+    End Sub
 End Class

@@ -22,7 +22,7 @@ Partial Class FrmUtamaATM
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmUtamaATM))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -85,6 +85,9 @@ Partial Class FrmUtamaATM
         Me.Label15 = New System.Windows.Forms.Label()
         Me.btn_delete = New System.Windows.Forms.Button()
         Me.btnStok = New System.Windows.Forms.Button()
+        Me.txtAdminAR = New System.Windows.Forms.TextBox()
+        Me.txtGudang = New System.Windows.Forms.TextBox()
+        Me.txtTelp = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGBarangKirim, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -199,6 +202,7 @@ Partial Class FrmUtamaATM
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.Control
+        Me.GroupBox1.Controls.Add(Me.txtTelp)
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.txtAlamat)
         Me.GroupBox1.Controls.Add(Me.btnCariPerusahaan)
@@ -304,14 +308,14 @@ Partial Class FrmUtamaATM
         Me.DGBarangKirim.Location = New System.Drawing.Point(8, 387)
         Me.DGBarangKirim.Name = "DGBarangKirim"
         Me.DGBarangKirim.ReadOnly = True
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGBarangKirim.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGBarangKirim.RowHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGBarangKirim.RowHeadersWidth = 5
         Me.DGBarangKirim.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DGBarangKirim.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -856,6 +860,29 @@ Partial Class FrmUtamaATM
         Me.btnStok.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnStok.UseVisualStyleBackColor = False
         '
+        'txtAdminAR
+        '
+        Me.txtAdminAR.Location = New System.Drawing.Point(231, 365)
+        Me.txtAdminAR.Name = "txtAdminAR"
+        Me.txtAdminAR.Size = New System.Drawing.Size(173, 20)
+        Me.txtAdminAR.TabIndex = 60
+        Me.txtAdminAR.Visible = False
+        '
+        'txtGudang
+        '
+        Me.txtGudang.Location = New System.Drawing.Point(78, 365)
+        Me.txtGudang.Name = "txtGudang"
+        Me.txtGudang.Size = New System.Drawing.Size(147, 20)
+        Me.txtGudang.TabIndex = 59
+        Me.txtGudang.Visible = False
+        '
+        'txtTelp
+        '
+        Me.txtTelp.Location = New System.Drawing.Point(593, 103)
+        Me.txtTelp.Name = "txtTelp"
+        Me.txtTelp.Size = New System.Drawing.Size(238, 20)
+        Me.txtTelp.TabIndex = 24
+        '
         'FrmUtamaATM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -863,6 +890,8 @@ Partial Class FrmUtamaATM
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(1366, 768)
         Me.ControlBox = False
+        Me.Controls.Add(Me.txtAdminAR)
+        Me.Controls.Add(Me.txtGudang)
         Me.Controls.Add(Me.btnStok)
         Me.Controls.Add(Me.btn_delete)
         Me.Controls.Add(Me.Label15)
@@ -981,4 +1010,7 @@ Partial Class FrmUtamaATM
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents btn_delete As System.Windows.Forms.Button
     Friend WithEvents btnStok As System.Windows.Forms.Button
+    Friend WithEvents txtAdminAR As System.Windows.Forms.TextBox
+    Friend WithEvents txtGudang As System.Windows.Forms.TextBox
+    Friend WithEvents txtTelp As System.Windows.Forms.TextBox
 End Class

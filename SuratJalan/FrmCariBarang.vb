@@ -401,4 +401,8 @@ Public Class FrmCariBarang
     Private Sub btnBatal_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBatal.Click
         Me.Close()
     End Sub
+
+    Private Sub btnRefresh_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRefresh.Click
+        Data_Barang()
+    End Sub
 End Class
